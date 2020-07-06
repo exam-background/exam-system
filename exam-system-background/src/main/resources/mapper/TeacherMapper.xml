@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yyhn.exam.mapper.TeacherMapper">
+
+    <resultMap id="teacherResult" type="Teacher">
+        <id property="id" column="id"/>
+        <result column="teacher_name" property="teacherName"/>
+        <result column="teacher_desc" property="teacherDesc"/>
+        <result column="teacher_position" property="teacherPosition"></result>
+        <association property="professional" javaType="Professional">
+            <id property="id" column="professional_id"/>
+            <result column="professionalname" property="professionalName"></result>
+        </association>
+
+    </resultMap>
+
+    <sql id="base_column_list">
+        t.id,t.teacher_name,t.teacher_position,t.teacher_desc,p.id professional_id,p.professional_name professionalname
+    </sql>
+
+    <select id="getAllTeacherNoPage" parameterType="java.lang.String" resultMap="teacherResult">
+        SELECT t.id,t.teacher_name,t.teacher_position,t.teacher_desc  FROM exam_teacher t where 1=1
+        <if test="positionName!=null">
+            and t.teacher_position=#{positionName}
+        </if>
+    </select>
+
+
+
+    <select id="getAllTeacher" resultMap="teacherResult" parameterType="map">
+          SELECT
+             <include refid="base_column_list" />
+          FROM exam_teacher t,exam_professional p
+          WHERE p.id = t.professional_id
+          <include refid="condition"/>
+          order by id desc
+              limit #{startRow},#{pageSize}
+    </select>
+
+    <select id="getCount" resultType="int"  parameterType="map">
+        select count(1) from exam_teacher
+        <where>
+            <include refid="condition"/>
+        </where>
+    </select>
+
+    <sql id="condition">
+
+        <if test="teacherName!=null">
+            and teacher_name like concat('%',#{teacherName},'%')
+        </if>
+        <if test="professionalId!=null">
+            and professional_id = #{professionalId}
+        </if>
+    </sql>
+
+    <insert id="addTeacher" parameterType="Teacher">
+        insert into exam_teacher(teacher_name,teacher_position,teacher_desc,professional_id)
+        values(#{teacherName},#{teacherPosition},#{teacherDesc},#{professional.id})
+    </insert>
+
+    <update id="updateTeacher" parameterType="Teacher">
+        update exam_teacher
+        <set>
+            <if test="teacherName!=null">
+                teacher_name = #{teacherName},
+            </if>
+            <if  test="teacherPosition!=null">
+                teacher_position = #{teacherPosition},
+            </if>
+            <if  test="teacherDesc!=null">
+                teacher_desc = #{teacherDesc},
+            </if>
+            <if  test="professional.id!=null">
+                professional_id = #{professional.id},
+            </if>
+
+        </set>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteTeacher" parameterType="int">
+        delete from exam_teacher where id = #{id}
+    </delete>
+
+
+
+</mapper>

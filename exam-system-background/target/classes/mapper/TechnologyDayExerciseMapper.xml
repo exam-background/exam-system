@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper  namespace="com.yyhn.exam.mapper.TechnologyDayExerciseMapper">
+
+    <resultMap id="dayExerciseResult" type="TechnologyDayExercise">
+        <id property="id" column="id"/>
+        <result column="title" property="title"/>
+        <result column="standard_answer" property="standardAnswer"/>
+        <result column="set_score" property="setScore"></result>
+        <result column="analysis" property="analysis"></result>
+        <result column="remark" property="remark"></result>
+        <result column="build_exercise_date" property="buildExerciseDate"></result>
+        <result column="update_exercise_date" property="updateExerciseDate"></result>
+
+        <association property="course" javaType="Course">
+            <id property="id" column="courseId"/>
+            <result column="course_name" property="courseName"></result>
+        </association>
+
+        <association property="professional" javaType="Professional">
+            <id property="id" column="professionalId"/>
+            <result column="professional_name" property="professionalName"></result>
+        </association>
+
+    </resultMap>
+
+    <sql id="base_column_list">
+          de.id,de.title,de.types,de.standard_answer,
+          de.set_score,de.analysis,de.professional_id,
+          de.course_id,de.remark,de.build_exercise_date,
+          de.update_exercise_date ,p.id professionalId,
+          p.professional_name ,
+          c.id courseId ,c.course_name
+    </sql>
+
+    <select id="getAllTechnologyDayExercise" resultMap="dayExerciseResult" parameterType="map">
+        select
+        <include refid="base_column_list" />
+        FROM
+        exam_technology_day_exercise de,
+        exam_professional p,
+        exam_course  c
+        WHERE
+        de.professional_id = p.id
+        AND
+        de.course_id = c.id
+        <include refid="condition"/>
+        order by id desc
+        limit #{startRow},#{pageSize}
+    </select>
+
+    <select id="getCount" resultType="int"  parameterType="map">
+        SELECT
+            COUNT(1)
+        FROM
+            exam_technology_day_exercise de,
+            exam_professional p,
+            exam_course  c
+        WHERE
+            de.professional_id = p.id
+        AND
+            de.course_id = c.id
+        <include refid="condition"/>
+    </select>
+
+    <sql id="condition">
+            <if test="professionId!=null">
+                and de.professional_id  = #{professionalId}
+            </if>
+            <if test="courseId!=null">
+                and de.course_Id =#{courseId}
+            </if>
+            <if test="title!=null">
+                and de.title like concat('%',#{title},'%')
+            </if>
+            <if test="types!=null">
+                and de.types = #{title}
+            </if>
+    </sql>
+
+    <insert id="addTechnologyDayExercise" parameterType="TechnologyDayExercise">
+        <selectKey resultType="java.lang.Integer" keyProperty="id" order="BEFORE" >//AFTER
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into exam_technology_day_exercise
+
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="title != null">
+                title,
+            </if>
+            <if test="types != null">
+                types,
+            </if>
+            <if test="standardAnswer != null">
+                standard_answer,
+            </if>
+            <if test="setScore != null">
+                set_score,
+            </if>
+            <if test="professional.id != null">
+                professional_id,
+            </if>
+            <if test="course.id != null">
+                course_id,
+            </if>
+            <if test="remark != null">
+                remark,
+            </if>
+            <if test="buildExerciseDate != null">
+                build_exercise_date,
+            </if>
+            <if test="updateExerciseDate != null">
+                update_exercise_date,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="title != null">
+                #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="types != null">
+                #{types,jdbcType=VARCHAR},
+            </if>
+            <if test="standardAnswer != null">
+                #{standardAnswer,jdbcType=VARCHAR},
+            </if>
+            <if test="setScore != null">
+                #{setScore,jdbcType=INTEGER},
+            </if>
+            <if test="professional.id != null">
+                #{professional.id,jdbcType=INTEGER},
+            </if>
+            <if test="course.id != null">
+                #{course.id,jdbcType=INTEGER},
+            </if>
+            <if test="remark != null">
+                #{remark,jdbcType=VARCHAR},
+            </if>
+            <if test="buildExerciseDate != null">
+                #{buildExerciseDate,jdbcType=DATE},
+            </if>
+            <if test="updateExerciseDate != null">
+                #{updateExerciseDate,jdbcType=DATE},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateTechnologyDayExercise" parameterType="TechnologyDayExercise">
+        update exam_technology_day_exercise
+        <set>
+            <if test="title!=null">
+                title = #{title},
+            </if>
+            <if  test="types!=null">
+                types = #{types},
+            </if>
+            <if  test="standardAnswer!=null">
+                standard_answer = #{standardAnswer},
+            </if>
+            <if  test="setScore!=null">
+                set_score = #{setScore},
+            </if>
+            <if  test="professional.id!=null">
+                professional_id = #{professional.id},
+            </if>
+            <if  test="course.id!=null">
+                course_id = #{course.id},
+            </if>
+            <if  test="remark!=null">
+                remark = #{remark},
+            </if>
+            <if  test="buildExerciseDate!=null">
+                buildExerciseDate = #{buildExerciseDate},
+            </if>
+            <if  test="updateExerciseDate!=null">
+                updateExerciseDate = #{updateExerciseDate},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteTechnologyDayExercise" parameterType="int">
+        delete from exam_technology_day_exercise where id = #{id}
+    </delete>
+
+    <select id="getTechnologyDayExerciseById" parameterType="int">
+        select
+        <include refid="base_column_list" />
+        FROM
+        exam_technology_day_exercise de,
+        exam_professional p,
+        exam_course  c
+        WHERE
+        de.professional_id = p.id
+        AND
+        de.course_id = c.id
+        AND
+        de.id = #{id}
+    </select>
+</mapper>

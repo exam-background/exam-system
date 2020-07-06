@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yyhn.exam.mapper.JobExampleStudyMapper">
+    <resultMap id="jobExampleStudyResult" type="JobExampleStudy">
+        <id property="id" column="id"/>
+        <result column="title" property="title"/>
+        <result column="answer" property="answer"></result>
+        <result column="viedoConvertContent" property="viedoConvertContent"></result>
+        <result column="viedoUrl" property="viedoUrl"></result>
+        <result column="score" property="score"></result>
+        <result column="remark" property="remark"></result>
+        <association property="professional" javaType="Professional">
+            <id column="professionalId" property="id"></id>
+            <result column="professional_name" property="professionalName"></result>
+        </association>
+        <association property="course" javaType="Course">
+            <id column="course_id" property="id"></id>
+            <result column="course_name" property="courseName"></result>
+        </association>
+    </resultMap>
+
+    <select id="getAllJobExampleStudy" resultMap="jobExampleStudyResult" parameterType="map">
+               SELECT
+                    es.* ,p.`professional_name`,p.id professionalId,c.`course_name`,c.id course_id
+               FROM
+                    exam_job_example_study es , exam_professional p,exam_course c
+               WHERE
+                    es.`professional_id` = p.`id`
+               AND
+                     es.`course_id` = c.`id`
+
+              <include refid="jobExampleStudy_condition"/>
+
+              order by  es.id desc
+              limit #{startRow},#{pageSize}
+    </select>
+
+
+    <select id="getCount" resultType="int">
+        select count(1) from exam_job_example_study es
+        <where>
+            <include refid="jobExampleStudy_condition"/>
+        </where>
+    </select>
+
+
+    <sql id="jobExampleStudy_condition">
+        <if test="title!=null">
+            and title like concat('%',#{title},'%')
+        </if>
+
+        <if test="professionalId!=null">
+            and  es.`professional_id` = #{professionalId}
+        </if>
+
+        <if test="courseId!=null">
+            and  es.course_id = #{courseId}
+        </if>
+    </sql>
+
+
+    <insert id="addJobExampleStudy" parameterType="JobExampleStudy">
+        insert into exam_job_example_study
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="title != null">
+                title,
+            </if>
+            <if test="answer != null">
+                answer,
+            </if>
+            <if test="viedoConvertContent != null">
+                viedo_convert_content,
+            </if>
+            <if test="viedoUrl != null">
+                viedo_url,
+            </if>
+            <if test="remark != null">
+                remark,
+            </if>
+            <if test="score != null">
+                score,
+            </if>
+            <if test="professional.id != null">
+                professional_id,
+            </if>
+            <if test="course.id != null">
+                course_id,
+            </if>
+
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+           <if test="title != null">
+               #{title,jdbcType=VARCHAR},
+           </if>
+            <if test="answer != null">
+                #{answer,jdbcType=VARCHAR},
+            </if>
+            <if test="viedoConvertContent != null">
+                #{viedoConvertContent,jdbcType=VARCHAR},
+            </if>
+            <if test="viedoUrl != null">
+                #{viedoUrl,jdbcType=VARCHAR},
+            </if>
+            <if test="remark != null">
+                #{remark,jdbcType=VARCHAR},
+            </if>
+            <if test="score != null">
+                #{score,jdbcType=INTEGER},
+            </if>
+            <if test="professional.id != null">
+                #{professional.id,jdbcType=INTEGER},
+            </if>
+            <if test="course.id != null">
+                #{course.id,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateJobExampleStudy" parameterType="JobExampleStudy">
+        update exam_job_example_study
+        <set>
+            <if test="title!=null">
+                title = #{title},
+            </if>
+            <if  test="answer!=null">
+                answer =#{answer},
+            </if>
+            <if  test="viedoConvertContent!=null">
+                viedo_convert_content =#{viedoConvertContent},
+            </if>
+            <if  test="viedoUrl!=null">
+                viedo_url =#{viedoUrl},
+            </if>
+            <if  test="score!=null">
+                score =#{score},
+            </if>
+            <if  test="remark!=null">
+                remark =#{remark},
+            </if>
+            <if  test="professional.id!=null">
+                professional_id =#{professional.id},
+            </if>
+            <if  test="course.id!=null">
+                course_id =#{course.id},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteJobExampleStudy" parameterType="int">
+        delete from  exam_job_example_study  where  id =  #{id}
+    </delete>
+
+    <select id="getJobExampleStudyById" resultMap="jobExampleStudyResult">
+              SELECT
+                    es.* ,p.`professional_name`,c.`course_name`
+               FROM
+                    exam_job_example_study es , exam_professional p,exam_course c
+               WHERE
+                    es.`professional_id` = p.`id`
+               AND
+                     es.`course_id` = c.`id`
+               AND
+                    es.id = #{id}
+    </select>
+
+
+</mapper>

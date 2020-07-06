@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yyhn.exam.mapper.StudentMapper">
+
+    <resultMap id="studentResult" type="Student">
+        <id property="id" column="id"/>
+        <result column="stu_name" property="stuName"/>
+        <result column="open_class_time" property="openClassTime"/>
+
+        <association property="clazz" javaType="Class">
+            <id property="id" column="class_id"/>
+            <result column="class_name" property="className"></result>
+        </association>
+        <association property="professional" javaType="Professional">
+            <id property="id" column="professional_id"/>
+            <result column="professional_name" property="professionalName"></result>
+        </association>
+    </resultMap>
+
+    <sql id="base_column_list">
+        s.*,c.id AS class_id ,c.class_name,p.id AS professional_id ,p.professional_name
+    </sql>
+
+    <select id="getAllStudentNoPage" resultMap="studentResult">
+         SELECT s.id,s.stu_name,s.open_class_time FROM exam_student s
+    </select>
+
+    <select id="getAllStudent" resultMap="studentResult" parameterType="map">
+          SELECT
+               <include refid="base_column_list" />
+          FROM
+               exam_student s,exam_class c,exam_professional  p
+          WHERE
+               s.class_id = c.id AND s.professional_id = p.id
+
+              <include refid="condition"/>
+
+          order by id desc
+              limit #{startRow},#{pageSize}
+    </select>
+
+    <select id="getCount" resultType="int"  parameterType="map">
+        select count(1) from exam_student
+        <where>
+            <include refid="condition"/>
+        </where>
+    </select>
+
+    <sql id="condition">
+        <if test="stuName!=null and stuName!=''">
+            and stu_name like concat('%',#{stuName},'%')
+        </if>
+        <if test="professionalId!=null">
+            and professional_id =#{professionalId}
+        </if>
+        <if test="classId!=null">
+            and class_id =#{classId}
+        </if>
+    </sql>
+
+    <insert id="addStudent" parameterType="Student">
+        insert into exam_student(stu_name,open_class_time,class_id,professional_id)
+        values(#{stuName},#{openClassTime},#{clazz.id},#{professional.id})
+    </insert>
+
+    <update id="updateStudent" parameterType="Student">
+        update exam_student
+        <set>
+            <if test="stuName!=null">
+                stu_name = #{stuName},
+            </if>
+            <if  test="openClassTime!=null">
+                open_class_time = #{openClassTime},
+            </if>
+            <if  test="clazz.id!=null">
+                class_id = #{clazz.id},
+            </if>
+            <if  test="professional.id!=null">
+                professional_id = #{professional.id},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteStudent" parameterType="int">
+        delete from exam_student where id = #{id}
+    </delete>
+
+
+
+</mapper>

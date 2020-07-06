@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="examsystemapi" />
+        <module name="examsystembackground" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="exam_system_background" target="1.7" />
+      <module name="examsystemgen" target="1.8" />
+      <module name="examsystemgenerator" target="1.8" />
+      <module name="examsystemshiro" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="exam_system_background" options="-parameters" />
+      <module name="examsystemapi" options="-parameters" />
+      <module name="examsystembackground" options="-parameters" />
+      <module name="examsystemgen" options="-parameters" />
+      <module name="examsystemgenerator" options="-parameters" />
+      <module name="examsystemshiro" options="-parameters" />
+    </option>
+  </component>
+</project>

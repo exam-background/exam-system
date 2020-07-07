@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yyhn.exam.mapper.SysUserMapper">
+    <select id="getSysUserByPage" resultType="SysUser">
+        select * from exam_sys_user where 1=1
+        <if test="department != null and department != ''">
+            and department like concat('%',#{department},'%')
+        </if>
+        <if test="position != null and position != ''">
+            and position = #{position}
+        </if>
+        <if test="page != null">
+            limit #{page},#{pageSize}
+        </if>
+    </select>
+    <delete id="deleteSysUser" parameterType="int">
+        delete from exam_sys_user where id = #{id}
+    </delete>
+    <insert id="addSysUser" parameterType="SysUser">
+        insert into exam_sys_user(login_name,real_name,login_password,department,
+        <if test="position != null">
+            position,
+        </if>
+        <if test="mobile_phone != null">
+            mobile_phone,
+        </if>
+        create_time
+        <if test="remark != null">
+            ,remark
+        </if>
+        ) values(#{login_name},#{real_name},#{login_password},#{department}
+        <if test="position != null">
+            ,#{position}
+        </if>
+        <if test="mobile_phone != null">
+            ,#{mobile_phone}
+        </if>
+        , now()
+        <if test="remark != null">
+            ,#{remark}
+        </if>
+        )
+    </insert>
+</mapper>

@@ -65,7 +65,7 @@ public class TechnologyDayExerciseController {
             consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE,
             produces = {MediaType.APPLICATION_ATOM_XML_VALUE, MediaType.APPLICATION_JSON_VALUE,})
     public Dto<Object> addTechnologyDayExercise(TechnologyDayExercise technologyDayExercise,Integer professionalId,Integer courseId){
-        System.out.println(".. addTechnologDayExercise ........  ");
+        System.out.println(".. addTechnologDayExercise ........ okok......   ");
         try {
             technologyDayExercise.getProfessional().setId(professionalId);
             technologyDayExercise.getCourse().setId(courseId);

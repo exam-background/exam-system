@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d8fc02de-56d0-42cf-a083-a16bf3593831" name="Default Changelist" comment="第一次提交" />
+    <list default="true" id="d8fc02de-56d0-42cf-a083-a16bf3593831" name="Default Changelist" comment="第一次提交">
+      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/controller/TechnologyDayExerciseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/controller/TechnologyDayExerciseController.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/exam-system-api/target/" />
     <ignored path="$PROJECT_DIR$/exam-system-shiro/target/" />
@@ -70,8 +72,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/controller/TechnologyDayExerciseController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="69" column="24" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="24" />
+            <state relative-caret-position="137">
+              <caret line="67" column="76" selection-start-line="67" selection-start-column="76" selection-end-line="67" selection-end-column="76" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -555,7 +557,7 @@
       <workItem from="1593564764299" duration="30798000" />
       <workItem from="1593736419743" duration="424000" />
       <workItem from="1593759018258" duration="19186000" />
-      <workItem from="1594105132356" duration="506000" />
+      <workItem from="1594105132356" duration="810000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交">
       <created>1594027400448</created>
@@ -582,7 +584,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="359795000" />
+    <option name="totallyTimeSpent" value="360099000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1114,8 +1116,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/controller/TechnologyDayExerciseController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="69" column="24" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="24" />
+        <state relative-caret-position="137">
+          <caret line="67" column="76" selection-start-line="67" selection-start-column="76" selection-end-line="67" selection-end-column="76" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

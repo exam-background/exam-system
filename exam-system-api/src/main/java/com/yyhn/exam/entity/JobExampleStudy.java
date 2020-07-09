@@ -1,11 +1,18 @@
 package com.yyhn.exam.entity;
 
+import com.baomidou.mybatisplus.annotations.TableId;
+import com.baomidou.mybatisplus.annotations.TableName;
+import com.baomidou.mybatisplus.enums.IdType;
+import io.swagger.models.auth.In;
+
 /**
  * 就业示范学习
  */
+
+
 public class JobExampleStudy {
 
-    private int id;
+    private Integer id;
 
     /**
      * 题目题干
@@ -17,20 +24,11 @@ public class JobExampleStudy {
      */
     private String answer;
 
-    /**
-     * 音频转换后的文字信息
-     */
-    private String viedoConvertContent;
-
-    /**
-     * 示范音频存储地址
-     */
-    private String viedoUrl;
 
     /**
      * 分数
      */
-    private int score;
+    private Integer score;
 
     /**
      * 备注信息
@@ -40,22 +38,23 @@ public class JobExampleStudy {
     /**
      * 专业
      */
-    private Professional professional = new Professional();
+    private Integer professionalId;
+
+    private Professional professional;
 
     /**
      * 科目
      */
-    private Course course = new Course();
+    private Integer courseId;
 
-    public String toString(){
-        return "{ id :"+id+" \t title :"+title+" \t  answer:"+answer+" \t "+viedoConvertContent+" \t  viedoUrl: "+viedoUrl+" \t score : "+score+"\t remark :"+remark+" \t professional :"+professional+"\t course:"+course+"}";
-    }
+    private Course course;
 
-    public int getId() {
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -75,27 +74,11 @@ public class JobExampleStudy {
         this.answer = answer;
     }
 
-    public String getViedoConvertContent() {
-        return viedoConvertContent;
-    }
-
-    public void setViedoConvertContent(String viedoConvertContent) {
-        this.viedoConvertContent = viedoConvertContent;
-    }
-
-    public String getViedoUrl() {
-        return viedoUrl;
-    }
-
-    public void setViedoUrl(String viedoUrl) {
-        this.viedoUrl = viedoUrl;
-    }
-
-    public int getScore() {
+    public Integer getScore() {
         return score;
     }
 
-    public void setScore(int score) {
+    public void setScore(Integer score) {
         this.score = score;
     }
 
@@ -107,12 +90,28 @@ public class JobExampleStudy {
         this.remark = remark;
     }
 
+    public Integer getProfessionalId() {
+        return professionalId;
+    }
+
+    public void setProfessionalId(Integer professionalId) {
+        this.professionalId = professionalId;
+    }
+
     public Professional getProfessional() {
         return professional;
     }
 
     public void setProfessional(Professional professional) {
         this.professional = professional;
+    }
+
+    public Integer getCourseId() {
+        return courseId;
+    }
+
+    public void setCourseId(Integer courseId) {
+        this.courseId = courseId;
     }
 
     public Course getCourse() {

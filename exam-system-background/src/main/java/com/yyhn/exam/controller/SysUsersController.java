@@ -46,6 +46,7 @@ public class SysUsersController {
             "<p>0 : 查询成功 </p>" )
     @RequestMapping(value = "/insertSysUser", method = RequestMethod.POST)
     public Object insertSysUser(SysUser sysUser){
+        System.out.println(sysUser);
         if(sysUserService.addSysUser(sysUser) > 0){
             return ResultMsg.BY_SUCCESS("增加成功", null);
         }else{
@@ -60,7 +61,7 @@ public class SysUsersController {
             "<p>100101 : 查询失败 </p>" +
             "<p>0 : 查询成功 </p>" )
     @RequestMapping(value = "/getSysUserByPage",method = RequestMethod.POST)
-    public Object getSysUserByPage(@RequestParam(required = false, defaultValue = "")String department,@RequestParam(required = false, defaultValue = "") String position, int page, int pageSize){
+    public Object getSysUserByPage(@RequestParam(required = false, defaultValue = "")String department,@RequestParam(required = false, defaultValue = "") String position, Integer page, Integer pageSize){
         List<SysUser> list = sysUserService.getSysUserByPage(department, position, page, pageSize);
         if(list != null && list.size()>0){
             return ResultMsg.BY_SUCCESS("查询成功", list);

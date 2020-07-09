@@ -6,9 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="examsystemapi" />
         <module name="exam-system-api" />
         <module name="exam-system-background" />
-        <module name="examsystemapi" />
         <module name="examsystembackground" />
       </profile>
     </annotationProcessing>

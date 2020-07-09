@@ -26,8 +26,10 @@ public class SysUserServiceImpl implements SysUserService {
     }
 
     @Override
-    public List<SysUser> getSysUserByPage(String department, String position, int page, int pageSize) {
-        page = (page-1)*pageSize;
+    public List<SysUser> getSysUserByPage(String department, String position, Integer page, Integer pageSize) {
+        if(page != null){
+            page = (page-1)*pageSize;
+        }
         HashMap<String, Object> map = new HashMap<String, Object>();
         map.put("department", department);
         map.put("position", position);

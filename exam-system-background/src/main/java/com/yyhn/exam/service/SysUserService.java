@@ -29,5 +29,5 @@ public interface SysUserService {
      * @param pageSize
      * @return
      */
-    public List<SysUser> getSysUserByPage(String department, String position, int page, int pageSize);
+    public List<SysUser> getSysUserByPage(String department, String position, Integer page, Integer pageSize);
 }

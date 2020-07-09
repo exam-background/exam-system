@@ -29,76 +29,38 @@
         <item name="GROUP_NODE:maven" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:maven" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0d90f18-a47d-4b60-87d1-3cfdc91a4cba" name="Default Changelist" comment="增加了用户管理的内容，增加了系统用户实体类，dao层和mapper文件。增加了service和serviceimpl。创建了控制层，提供了删除用户，新增用户，分页查询，根据部门和职位进行分页查询的Swagger接口">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/qaplug_profiles.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/entity/SysUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/mapper/SysUserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/SysUser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/SysUserMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/controller/SysUsersController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/SysUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/impl/SysUserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/src/main/resources/mapper/SysUserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/App.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/config/CorsConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/ClassController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/CourseController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/JobDayExerciseController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/JobExampleStudyController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/ProfessionalController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/StudentController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/SysUsersController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/TeacherController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/TechnologyDayExerciseController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/filter/CrosFilter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/ClassService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/CourseService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/JobDayExerciseService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/JobExampleStudyService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/ProfessionalService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/StudentService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/SysUserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/TeacherService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/TechnologyDayExerciseService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/ClassServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/CourseServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/JobDayExerciseServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/JobExampleStudyServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/ProfessionalServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/StudentServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/SysUserServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/TeacherServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/TechnologyDayExerciseServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/swagger/Swagger2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/mapper/ClassMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/mapper/CourseMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/mapper/JobDayExerciseMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/mapper/JobExampleStudyMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/mapper/ProfessionalMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/mapper/StudentMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/mapper/SysUserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/mapper/TeacherMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/mapper/TechnologyDayExerciseItemMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/classes/mapper/TechnologyDayExerciseMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/target/test-classes/com/yyhn/exam/AppTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/exam-system-api.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/META-INF/exam-system-api.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/exam-system-background.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/entity/SysUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/entity/SysUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/controller/SysUsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/controller/SysUsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/SysUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/SysUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/impl/SysUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/impl/SysUserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/SysUsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/SysUsersController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/SysUserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/SysUserServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -118,13 +80,17 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/controller" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -154,8 +120,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1594120573425</updated>
-      <workItem from="1594120589865" duration="953000" />
+      <workItem from="1594120589865" duration="1322000" />
+      <workItem from="1594194658034" duration="7634000" />
+      <workItem from="1594252911391" duration="7819000" />
     </task>
+    <task id="LOCAL-00001" summary="增加了用户管理的内容，增加了系统用户实体类，dao层和mapper文件。增加了service和serviceimpl。创建了控制层，提供了删除用户，新增用户，分页查询，根据部门和职位进行分页查询的Swagger接口">
+      <created>1594121568996</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1594121568996</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,19 +147,84 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="增加了用户管理的内容，增加了系统用户实体类，dao层和mapper文件。增加了service和serviceimpl。创建了控制层，提供了删除用户，新增用户，分页查询，根据部门和职位进行分页查询的Swagger接口" />
     <option name="LAST_COMMIT_MESSAGE" value="增加了用户管理的内容，增加了系统用户实体类，dao层和mapper文件。增加了service和serviceimpl。创建了控制层，提供了删除用户，新增用户，分页查询，根据部门和职位进行分页查询的Swagger接口" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1594200797850">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1594200797850" />
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1594120911274">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1594120911274" />
-    <state x="461" y="164" key="SettingsEditor" timestamp="1594121334307">
+    <state width="1877" height="286" key="GridCell.Tab.0.bottom" timestamp="1594264356754">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1594121334307" />
+    <state width="1877" height="286" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594264356754" />
+    <state width="1877" height="286" key="GridCell.Tab.0.center" timestamp="1594264356754">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="286" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594264356754" />
+    <state width="1877" height="286" key="GridCell.Tab.0.left" timestamp="1594264356754">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="286" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594264356754" />
+    <state width="1877" height="286" key="GridCell.Tab.0.right" timestamp="1594264356754">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="286" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594264356754" />
+    <state width="1877" height="286" key="GridCell.Tab.1.bottom" timestamp="1594264356755">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="286" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594264356755" />
+    <state width="1877" height="286" key="GridCell.Tab.1.center" timestamp="1594264356755">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="286" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594264356755" />
+    <state width="1877" height="286" key="GridCell.Tab.1.left" timestamp="1594264356755">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="286" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594264356755" />
+    <state width="1877" height="286" key="GridCell.Tab.1.right" timestamp="1594264356755">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="286" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594264356755" />
+    <state width="1877" height="348" key="GridCell.Tab.2.bottom" timestamp="1594208430336">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594208430336" />
+    <state width="1877" height="348" key="GridCell.Tab.2.center" timestamp="1594208430336">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594208430336" />
+    <state width="1877" height="348" key="GridCell.Tab.2.left" timestamp="1594208430336">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594208430336" />
+    <state width="1877" height="348" key="GridCell.Tab.2.right" timestamp="1594208430336">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594208430336" />
+    <state x="540" y="254" key="IDE.errors.dialog" timestamp="1594253283140">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="540" y="254" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594253283140" />
+    <state x="461" y="164" key="SettingsEditor" timestamp="1594253271048">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1594253271048" />
+    <state x="562" y="156" key="Vcs.Push.Dialog.v2" timestamp="1594195021930">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="562" y="156" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1594195021930" />
+    <state x="629" y="306" key="git4idea.merge.GitPullDialog" timestamp="1594195318485">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="629" y="306" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594195318485" />
   </component>
 </project>

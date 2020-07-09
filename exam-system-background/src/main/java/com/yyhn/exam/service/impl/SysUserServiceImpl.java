@@ -26,6 +26,11 @@ public class SysUserServiceImpl implements SysUserService {
     }
 
     @Override
+    public int updateSysUser(SysUser sysUser) {
+        return sysUserMapper.updateSysUser(sysUser);
+    }
+
+    @Override
     public List<SysUser> getSysUserByPage(String department, String position, Integer page, Integer pageSize) {
         if(page != null){
             page = (page-1)*pageSize;

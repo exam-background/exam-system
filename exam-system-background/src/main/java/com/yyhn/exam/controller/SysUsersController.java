@@ -54,7 +54,7 @@ public class SysUsersController {
         }
     }
 
-    @ApiOperation(value = "查询所有学生信息", httpMethod = "POST",
+    @ApiOperation(value = "查询用户信息", httpMethod = "POST",
             protocols = "HTTP",
             response = Dto.class, notes = "查询所有学生信息" +
             "<p>成功：success = ‘true’ | 失败：success = ‘false’ 并返回错误码，如下：</p>" +
@@ -66,7 +66,22 @@ public class SysUsersController {
         if(list != null && list.size()>0){
             return ResultMsg.BY_SUCCESS("查询成功", list);
         }else{
-            return ResultMsg.BY_FAIL("增加失败");
+            return ResultMsg.BY_FAIL("查询失败");
+        }
+    }
+
+    @ApiOperation(value = "修改用户信息", httpMethod = "POST",
+            protocols = "HTTP",
+            response = Dto.class, notes = "修改用户信息" +
+            "<p>成功：success = ‘true’ | 失败：success = ‘false’ 并返回错误码，如下：</p>" +
+            "<p>100101 : 查询失败 </p>" +
+            "<p>0 : 查询成功 </p>" )
+    @RequestMapping(value = "/updateSysUser",method = RequestMethod.POST)
+    public Object updateSysUser(SysUser sysUser){
+        if(sysUserService.updateSysUser(sysUser)>0){
+            return ResultMsg.BY_SUCCESS("修改成功", null);
+        }else{
+            return ResultMsg.BY_FAIL("修改失败");
         }
     }
 }

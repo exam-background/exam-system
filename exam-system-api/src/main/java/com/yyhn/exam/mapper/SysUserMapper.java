@@ -25,9 +25,17 @@ public interface SysUserMapper {
     public int addSysUser(SysUser sysUser);
 
     /**
+     * 修改用户
+     * @param sysUser
+     * @return
+     */
+    public int updateSysUser(SysUser sysUser);
+
+    /**
      * 根据条件分页查询
      * @param map
      * @return
      */
     public List<SysUser> getSysUserByPage(Map<String, Object> map);
+
 }

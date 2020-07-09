@@ -1,5 +1,7 @@
 package com.yyhn.exam.entity;
 
+import com.alibaba.fastjson.annotation.JSONField;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
@@ -37,6 +39,8 @@ public class SysUser{
      * 创建时间
      */
     @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @JSONField(format = "yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date create_time;
     /**
      * 备注信息

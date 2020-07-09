@@ -84,4 +84,19 @@ public class SysUsersController {
             return ResultMsg.BY_FAIL("修改失败");
         }
     }
+
+    @ApiOperation(value = "批量删除用户信息", httpMethod = "POST",
+            protocols = "HTTP",
+            response = Dto.class, notes = "修改用户信息" +
+            "<p>成功：success = ‘true’ | 失败：success = ‘false’ 并返回错误码，如下：</p>" +
+            "<p>100101 : 查询失败 </p>" +
+            "<p>0 : 查询成功 </p>" )
+    @RequestMapping(value = "/deleteSysUsers",method = RequestMethod.POST)
+    public Object deleteSysUsers(List<SysUser> list){
+        if(sysUserService.deleteSysUsers(list)>0){
+            return ResultMsg.BY_SUCCESS("批量删除成功", null);
+        }else{
+            return ResultMsg.BY_FAIL("批量失败");
+        }
+    }
 }

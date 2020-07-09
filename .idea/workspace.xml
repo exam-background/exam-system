@@ -40,9 +40,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0d90f18-a47d-4b60-87d1-3cfdc91a4cba" name="Default Changelist" comment="针对与前端的连接增加了新的功能">
+    <list default="true" id="f0d90f18-a47d-4b60-87d1-3cfdc91a4cba" name="Default Changelist" comment="新增了用户修改的功能">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/entity/SysUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/entity/SysUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/mapper/SysUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/mapper/SysUserMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/SysUserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/SysUserMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/controller/SysUsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/controller/SysUsersController.java" afterDir="false" />
@@ -126,7 +125,7 @@
       <updated>1594120573425</updated>
       <workItem from="1594120589865" duration="1322000" />
       <workItem from="1594194658034" duration="7634000" />
-      <workItem from="1594252911391" duration="10835000" />
+      <workItem from="1594252911391" duration="15470000" />
     </task>
     <task id="LOCAL-00001" summary="增加了用户管理的内容，增加了系统用户实体类，dao层和mapper文件。增加了service和serviceimpl。创建了控制层，提供了删除用户，新增用户，分页查询，根据部门和职位进行分页查询的Swagger接口">
       <created>1594121568996</created>
@@ -142,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594265178577</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="新增了用户修改的功能">
+      <created>1594270610859</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1594270610860</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,49 +169,54 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="增加了用户管理的内容，增加了系统用户实体类，dao层和mapper文件。增加了service和serviceimpl。创建了控制层，提供了删除用户，新增用户，分页查询，根据部门和职位进行分页查询的Swagger接口" />
     <MESSAGE value="针对与前端的连接增加了新的功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="针对与前端的连接增加了新的功能" />
+    <MESSAGE value="新增了用户修改的功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增了用户修改的功能" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1594268583616">
+    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1594276254609">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1594268583616" />
+    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1594276254609" />
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1594120911274">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1594120911274" />
-    <state width="1877" height="286" key="GridCell.Tab.0.bottom" timestamp="1594268825086">
+    <state x="771" y="420" key="Github.CreateGistDialog" timestamp="1594277673946">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="286" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594268825086" />
-    <state width="1877" height="286" key="GridCell.Tab.0.center" timestamp="1594268825086">
+    <state x="771" y="420" key="Github.CreateGistDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594277673946" />
+    <state width="1877" height="286" key="GridCell.Tab.0.bottom" timestamp="1594278158774">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="286" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594268825086" />
-    <state width="1877" height="286" key="GridCell.Tab.0.left" timestamp="1594268825086">
+    <state width="1877" height="286" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594278158774" />
+    <state width="1877" height="286" key="GridCell.Tab.0.center" timestamp="1594278158774">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="286" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594268825086" />
-    <state width="1877" height="286" key="GridCell.Tab.0.right" timestamp="1594268825086">
+    <state width="1877" height="286" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594278158774" />
+    <state width="1877" height="286" key="GridCell.Tab.0.left" timestamp="1594278158774">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="286" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594268825086" />
-    <state width="1877" height="286" key="GridCell.Tab.1.bottom" timestamp="1594268825087">
+    <state width="1877" height="286" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594278158774" />
+    <state width="1877" height="286" key="GridCell.Tab.0.right" timestamp="1594278158774">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="286" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594268825087" />
-    <state width="1877" height="286" key="GridCell.Tab.1.center" timestamp="1594268825087">
+    <state width="1877" height="286" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594278158774" />
+    <state width="1877" height="286" key="GridCell.Tab.1.bottom" timestamp="1594278158775">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="286" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594268825087" />
-    <state width="1877" height="286" key="GridCell.Tab.1.left" timestamp="1594268825086">
+    <state width="1877" height="286" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594278158775" />
+    <state width="1877" height="286" key="GridCell.Tab.1.center" timestamp="1594278158775">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="286" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594268825086" />
-    <state width="1877" height="286" key="GridCell.Tab.1.right" timestamp="1594268825087">
+    <state width="1877" height="286" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594278158775" />
+    <state width="1877" height="286" key="GridCell.Tab.1.left" timestamp="1594278158774">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="286" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594268825087" />
+    <state width="1877" height="286" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594278158774" />
+    <state width="1877" height="286" key="GridCell.Tab.1.right" timestamp="1594278158775">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="286" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594278158775" />
     <state width="1877" height="348" key="GridCell.Tab.2.bottom" timestamp="1594208430336">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -230,13 +241,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1594253271048" />
-    <state x="562" y="156" key="Vcs.Push.Dialog.v2" timestamp="1594265279159">
+    <state x="562" y="156" key="Vcs.Push.Dialog.v2" timestamp="1594270658591">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="562" y="156" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1594265279159" />
-    <state x="629" y="306" key="git4idea.merge.GitPullDialog" timestamp="1594195318485">
+    <state x="562" y="156" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1594270658591" />
+    <state x="629" y="306" key="git4idea.merge.GitPullDialog" timestamp="1594275534698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="629" y="306" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594195318485" />
+    <state x="629" y="306" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594275534698" />
   </component>
 </project>

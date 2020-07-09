@@ -18,6 +18,12 @@
     <delete id="deleteSysUser" parameterType="int">
         delete from exam_sys_user where id = #{id}
     </delete>
+    <delete id="deleteSysUsers" parameterType="int">
+        delete from exam_sys_user where id IN
+        <foreach collection="list" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
     <insert id="addSysUser" parameterType="SysUser">
         insert into exam_sys_user(login_name,real_name,login_password,department,
         <if test="position != null">

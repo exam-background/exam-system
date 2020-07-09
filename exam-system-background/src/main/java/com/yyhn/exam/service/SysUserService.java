@@ -15,6 +15,13 @@ public interface SysUserService {
     public int deleteSysUser(int id);
 
     /**
+     * 批量删除
+     * @param list
+     * @return
+     */
+    public int deleteSysUsers(List<SysUser> list);
+
+    /**
      * 添加用户
      * @param sysUser
      * @return

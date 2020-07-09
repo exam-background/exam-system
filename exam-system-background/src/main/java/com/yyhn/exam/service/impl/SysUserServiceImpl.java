@@ -6,9 +6,9 @@ import com.yyhn.exam.service.SysUserService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @Service
 public class SysUserServiceImpl implements SysUserService {
@@ -18,6 +18,15 @@ public class SysUserServiceImpl implements SysUserService {
     @Override
     public int deleteSysUser(int id) {
         return sysUserMapper.deleteSysUser(id);
+    }
+
+    @Override
+    public int deleteSysUsers(List<SysUser> list) {
+        List<Integer> lists = new ArrayList<Integer>();
+        for(SysUser sysUser : list){
+            lists.add(sysUser.getId());
+        }
+        return sysUserMapper.deleteSysUsers(lists);
     }
 
     @Override

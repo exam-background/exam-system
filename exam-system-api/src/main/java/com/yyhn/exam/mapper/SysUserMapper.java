@@ -18,6 +18,13 @@ public interface SysUserMapper {
     public int deleteSysUser(int id);
 
     /**
+     * 批量删除
+     * @param list
+     * @return
+     */
+    public int deleteSysUsers(List<Integer> list);
+
+    /**
      * 添加用户
      * @param sysUser
      * @return
@@ -37,5 +44,4 @@ public interface SysUserMapper {
      * @return
      */
     public List<SysUser> getSysUserByPage(Map<String, Object> map);
-
 }

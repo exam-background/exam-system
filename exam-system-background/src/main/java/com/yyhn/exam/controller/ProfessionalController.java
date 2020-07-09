@@ -30,7 +30,7 @@ public class ProfessionalController {
             "<p>0 : 查询成功 </p>" )
     @RequestMapping(value = "/professionalForPage",method = RequestMethod.GET)
     public Dto<List<Professional>> professionalForPage(String pname,
-                                                    @RequestParam(defaultValue = "2")
+                                                    @RequestParam(defaultValue = "5")
                                                             String pageSize,
                                                     @RequestParam(defaultValue = "1")
                                                             Integer currentPage){

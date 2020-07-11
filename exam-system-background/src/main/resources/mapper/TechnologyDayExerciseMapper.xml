@@ -9,6 +9,7 @@
         <result column="title" property="title"/>
         <result column="standard_answer" property="standardAnswer"/>
         <result column="set_score" property="setScore"></result>
+        <result column="types" property="types"></result>
         <result column="analysis" property="analysis"></result>
         <result column="remark" property="remark"></result>
         <result column="build_exercise_date" property="buildExerciseDate"></result>
@@ -24,6 +25,11 @@
             <result column="professional_name" property="professionalName"></result>
         </association>
 
+        <association property="sysDictionary" javaType="SysDictionary">
+            <id property="id" column="types"/>
+            <result column="dictionary_name" property="dictionaryName"></result>
+        </association>
+
     </resultMap>
 
     <sql id="base_column_list">
@@ -32,7 +38,7 @@
           de.course_id,de.remark,de.build_exercise_date,
           de.update_exercise_date ,p.id professionalId,
           p.professional_name ,
-          c.id courseId ,c.course_name
+          c.id courseId ,c.course_name ,s.dictionary_name dictionary_name
     </sql>
 
     <select id="getAllTechnologyDayExercise" resultMap="dayExerciseResult" parameterType="map">
@@ -41,14 +47,19 @@
         FROM
         exam_technology_day_exercise de,
         exam_professional p,
-        exam_course  c
+        exam_course  c,
+        exam_sys_dictionary s
         WHERE
         de.professional_id = p.id
         AND
         de.course_id = c.id
+        AND
+        de.types = s.id
         <include refid="condition"/>
         order by id desc
-        limit #{startRow},#{pageSize}
+        <if test="startRow != null">
+            limit #{startRow},#{pageSize}
+        </if>
     </select>
 
     <select id="getCount" resultType="int"  parameterType="map">
@@ -66,24 +77,24 @@
     </select>
 
     <sql id="condition">
-            <if test="professionId!=null">
-                and de.professional_id  = #{professionalId}
+            <if test="professionId!=null and professionId!=''">
+                and de.professional_id  = #{professionId}
             </if>
-            <if test="courseId!=null">
+            <if test="courseId!=null and courseId!=''">
                 and de.course_Id =#{courseId}
             </if>
-            <if test="title!=null">
+            <if test="title!=null and title!=''">
                 and de.title like concat('%',#{title},'%')
             </if>
-            <if test="types!=null">
-                and de.types = #{title}
+            <if test="types!=null and types!=''">
+                and de.types = #{types}
             </if>
     </sql>
 
     <insert id="addTechnologyDayExercise" parameterType="TechnologyDayExercise">
-        <selectKey resultType="java.lang.Integer" keyProperty="id" order="BEFORE" >//AFTER
-            SELECT LAST_INSERT_ID()
-        </selectKey>
+<!--        <selectKey resultType="java.lang.Integer" keyProperty="id" order="BEFORE" >//AFTER-->
+<!--            SELECT LAST_INSERT_ID()-->
+<!--        </selectKey>-->
         insert into exam_technology_day_exercise
 
         <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -108,6 +119,15 @@
             <if test="remark != null">
                 remark,
             </if>
+            <if test="analysis != null">
+                analysis,
+            </if>
+            <if test="professionalId != null">
+                Professional_id,
+            </if>
+            <if test="courseId != null">
+                course_id,
+            </if>
             <if test="buildExerciseDate != null">
                 build_exercise_date,
             </if>
@@ -128,11 +148,14 @@
             <if test="setScore != null">
                 #{setScore,jdbcType=INTEGER},
             </if>
-            <if test="professional.id != null">
-                #{professional.id,jdbcType=INTEGER},
+            <if test="analysis != null">
+                #{analysis,jdbcType=VARCHAR},
             </if>
-            <if test="course.id != null">
-                #{course.id,jdbcType=INTEGER},
+            <if test="professionalId != null">
+                #{professionalId,jdbcType=INTEGER},
+            </if>
+            <if test="courseId != null">
+                #{courseId,jdbcType=INTEGER},
             </if>
             <if test="remark != null">
                 #{remark,jdbcType=VARCHAR},
@@ -161,20 +184,20 @@
             <if  test="setScore!=null">
                 set_score = #{setScore},
             </if>
-            <if  test="professional.id!=null">
-                professional_id = #{professional.id},
+            <if test="analysis != null">
+                analysis = #{analysis},
             </if>
-            <if  test="course.id!=null">
-                course_id = #{course.id},
+            <if  test="professionalId!=null">
+                professional_id = #{professionalId},
+            </if>
+            <if  test="courseId!=null">
+                course_id = #{courseId},
             </if>
             <if  test="remark!=null">
                 remark = #{remark},
             </if>
-            <if  test="buildExerciseDate!=null">
-                buildExerciseDate = #{buildExerciseDate},
-            </if>
             <if  test="updateExerciseDate!=null">
-                updateExerciseDate = #{updateExerciseDate},
+                update_exercise_date = #{updateExerciseDate},
             </if>
         </set>
         where id = #{id}
@@ -182,6 +205,13 @@
 
     <delete id="deleteTechnologyDayExercise" parameterType="int">
         delete from exam_technology_day_exercise where id = #{id}
+    </delete>
+
+    <delete id="deleteTechnologyDayExercises" parameterType="int">
+        delete from exam_technology_day_exercise where id IN
+        <foreach collection="list" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
     </delete>
 
     <select id="getTechnologyDayExerciseById" parameterType="int">

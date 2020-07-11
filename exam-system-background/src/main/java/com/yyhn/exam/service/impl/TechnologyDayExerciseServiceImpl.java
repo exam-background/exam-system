@@ -1,12 +1,14 @@
 package com.yyhn.exam.service.impl;
 
 import com.yyhn.exam.common.Page;
+import com.yyhn.exam.entity.SysUser;
 import com.yyhn.exam.entity.TechnologyDayExercise;
 import com.yyhn.exam.mapper.TechnologyDayExerciseMapper;
 import com.yyhn.exam.service.TechnologyDayExerciseService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -23,12 +25,24 @@ public class TechnologyDayExerciseServiceImpl implements TechnologyDayExerciseSe
         map.put("types",types);
         map.put("professionId",profesionalId);
         map.put("courseId",courseId);
-        map.put("startRow",(page.getCurPage()-1)*page.getPageSize());
-        map.put("pageSize",page.getPageSize());
+        if (page != null){
+            map.put("startRow",(page.getCurPage()-1)*page.getPageSize());
+            map.put("pageSize",page.getPageSize());
+        }
         List<TechnologyDayExercise> technologyDayExerciseList = technologyDayExerciseMapper.getAllTechnologyDayExercise(map);
         int total = technologyDayExerciseMapper.getCount(map);
         page.setData(technologyDayExerciseList);
         page.setTotal(total);
+    }
+
+    @Override
+    public List<TechnologyDayExercise> getTechnologyDayExercise(String title, String types, Integer profesionalId, Integer courseId) {
+        Map<String,Object> map = new HashMap<String,Object>();
+        map.put("title",title);
+        map.put("types",types);
+        map.put("professionId",profesionalId);
+        map.put("courseId",courseId);
+        return technologyDayExerciseMapper.getAllTechnologyDayExercise(map);
     }
 
     @Override
@@ -48,6 +62,20 @@ public class TechnologyDayExerciseServiceImpl implements TechnologyDayExerciseSe
     public int deleteTechnologyDayExercise(int id) {
         int count = technologyDayExerciseMapper.deleteTechnologyDayExercise(id);
         return count;
+    }
+
+    @Override
+    public int deleteTechnologyDayExercises(List<TechnologyDayExercise> list) {
+        List<Integer> lists = new ArrayList<Integer>();
+        for(TechnologyDayExercise technologyDayExercise : list){
+            lists.add(technologyDayExercise.getId());
+        }
+        return technologyDayExerciseMapper.deleteTechnologyDayExercises(lists);
+    }
+
+    @Override
+    public int insertTechnologyDayExercise(TechnologyDayExercise technologyDayExercise) {
+        return technologyDayExerciseMapper.addTechnologyDayExercise(technologyDayExercise);
     }
 
     @Override

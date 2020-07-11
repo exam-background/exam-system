@@ -3,16 +3,15 @@ package com.yyhn.exam.controller;
 import com.yyhn.exam.common.Dto;
 import com.yyhn.exam.common.DtoUtil;
 import com.yyhn.exam.common.Page;
+import com.yyhn.exam.dto.ResultMsg;
 import com.yyhn.exam.entity.JobDayExercise;
+import com.yyhn.exam.entity.SysUser;
 import com.yyhn.exam.entity.TechnologyDayExercise;
 import com.yyhn.exam.service.TechnologyDayExerciseService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -23,7 +22,6 @@ public class TechnologyDayExerciseController {
 
     @Resource
     private TechnologyDayExerciseService technologyDayExerciseService;
-
 
     @ApiOperation(value = "查询所有技术每日一练信息，并分页显示", httpMethod = "GET",
             protocols = "HTTP",
@@ -52,6 +50,24 @@ public class TechnologyDayExerciseController {
         }
         return  DtoUtil.returnDataSuccess(page);
     }
+
+    @ApiOperation(value = "查询所有技术每日一练信息", httpMethod = "POST",
+            protocols = "HTTP",
+            response = Dto.class, notes = "根据条件查询技术每日一练信息" +
+            "<p>成功：success = ‘true’ | 失败：success = ‘false’ 并返回错误码，如下：</p>" +
+            "<p>100101 : 查询失败 </p>" +
+            "<p>0 : 查询成功 </p>" )
+    @RequestMapping(value = "/getTechnologyDayExercise",method = RequestMethod.POST)
+    public ResultMsg getTechnologyDayExercise(String title, String types, Integer profesionalId, Integer courseId){
+        System.out.println(title+":"+types+":"+profesionalId+":"+courseId);
+        List<TechnologyDayExercise> list = technologyDayExerciseService.getTechnologyDayExercise(title,types,profesionalId,courseId);
+        if(list != null){
+            return ResultMsg.BY_SUCCESS("查询成功", list);
+        }else{
+            return ResultMsg.BY_FAIL("查询失败");
+        }
+    }
+
 
     @ApiOperation(value = "增加技术每日一练信息", httpMethod = "POST",
             protocols = "HTTP", produces = "application/json",
@@ -83,6 +99,65 @@ public class TechnologyDayExerciseController {
         return null;
     }
 
+    @ApiOperation(value = "增加每日一练", httpMethod = "POST",
+            protocols = "HTTP",
+            response = Dto.class, notes = "增加每日一练" +
+            "<p>成功：success = ‘true’ | 失败：success = ‘false’ 并返回错误码，如下：</p>" +
+            "<p>100101 : 查询失败 </p>" +
+            "<p>0 : 查询成功 </p>" )
+    @RequestMapping(value = "/insertTechnologyDayExercise",method = RequestMethod.POST)
+    public ResultMsg insertTechnologyDayExercise(TechnologyDayExercise technologyDayExercise){
+        if(technologyDayExerciseService.insertTechnologyDayExercise(technologyDayExercise) > 0){
+            return ResultMsg.BY_SUCCESS("增加成功", null);
+        }else{
+            return ResultMsg.BY_FAIL("增加失败");
+        }
+    }
+
+    @ApiOperation(value = "修改每日一练", httpMethod = "POST",
+            protocols = "HTTP",
+            response = Dto.class, notes = "修改每日一练" +
+            "<p>成功：success = ‘true’ | 失败：success = ‘false’ 并返回错误码，如下：</p>" +
+            "<p>100101 : 查询失败 </p>" +
+            "<p>0 : 查询成功 </p>" )
+    @RequestMapping(value = "/updateTechnologyDayExercise",method = RequestMethod.POST)
+    public ResultMsg updateTechnologyDayExercise(TechnologyDayExercise technologyDayExercise){
+        if(technologyDayExerciseService.updateTechnologyDayExercise(technologyDayExercise) > 0){
+            return ResultMsg.BY_SUCCESS("修改成功", null);
+        }else{
+            return ResultMsg.BY_FAIL("修改失败");
+        }
+    }
+
+    @ApiOperation(value = "删除每日一练", httpMethod = "POST",
+            protocols = "HTTP",
+            response = Dto.class, notes = "删除每日一练" +
+            "<p>成功：success = ‘true’ | 失败：success = ‘false’ 并返回错误码，如下：</p>" +
+            "<p>100101 : 查询失败 </p>" +
+            "<p>0 : 查询成功 </p>" )
+    @RequestMapping(value = "/deleteTechnologyDayExercise",method = RequestMethod.POST)
+    public ResultMsg deleteTechnologyDayExercise(Integer id){
+        if(technologyDayExerciseService.deleteTechnologyDayExercise(id) > 0){
+            return ResultMsg.BY_SUCCESS("删除成功", null);
+        }else{
+            return ResultMsg.BY_FAIL("删除成功");
+        }
+    }
+
+    @ApiOperation(value = "批量删除用户信息", httpMethod = "POST",
+            protocols = "HTTP",
+            response = Dto.class, notes = "修改用户信息" +
+            "<p>成功：success = ‘true’ | 失败：success = ‘false’ 并返回错误码，如下：</p>" +
+            "<p>100101 : 查询失败 </p>" +
+            "<p>0 : 查询成功 </p>" )
+    @RequestMapping(value = "/deleteTechnologyDayExercises",method = RequestMethod.POST)
+    public Object deleteTechnologyDayExercises(@RequestBody List<TechnologyDayExercise> list){
+        if(technologyDayExerciseService.deleteTechnologyDayExercises(list)>0){
+            return ResultMsg.BY_SUCCESS("批量删除成功", null);
+        }else{
+            return ResultMsg.BY_FAIL("批量失败");
+        }
+    }
 
 
 }

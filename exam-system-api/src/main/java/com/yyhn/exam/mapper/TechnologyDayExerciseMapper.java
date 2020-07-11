@@ -1,5 +1,6 @@
 package com.yyhn.exam.mapper;
 
+import com.baomidou.mybatisplus.mapper.BaseMapper;
 import com.yyhn.exam.entity.Teacher;
 import com.yyhn.exam.entity.TechnologyDayExercise;
 import org.apache.ibatis.annotations.Mapper;
@@ -9,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 @Mapper
-public interface TechnologyDayExerciseMapper {
+public interface TechnologyDayExerciseMapper{
 
     /**
      * 根据条件获取每日一练信息
@@ -40,6 +41,13 @@ public interface TechnologyDayExerciseMapper {
      * @return
      */
     public int deleteTechnologyDayExercise(@Param("id") int id);
+
+    /**
+     * 删除多个每日一练
+     * @param list
+     * @return
+     */
+    public int deleteTechnologyDayExercises(List<Integer> list);
 
     /**
      * 根据ID 获取每日一练信息

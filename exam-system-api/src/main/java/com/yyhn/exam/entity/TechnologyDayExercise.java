@@ -1,5 +1,8 @@
 package com.yyhn.exam.entity;
 
+import com.baomidou.mybatisplus.annotations.TableId;
+import com.baomidou.mybatisplus.annotations.TableName;
+import com.baomidou.mybatisplus.enums.IdType;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.util.ArrayList;
@@ -42,6 +45,11 @@ public class TechnologyDayExercise {
     private String analysis;
 
     /**
+     * 专业id
+     */
+    private Integer professionalId;
+
+    /**
      * 对应专业
      */
     private Professional professional = new Professional();
@@ -50,6 +58,11 @@ public class TechnologyDayExercise {
      * 对应科目
      */
     private Course course = new Course();
+
+    /**
+     * 科目id
+     */
+    private String courseId;
 
     /**
      * 备注
@@ -77,6 +90,32 @@ public class TechnologyDayExercise {
      *每日一练作答信息
      */
     private List<TechnologyDayExerciseSubmit> submitList = new ArrayList<TechnologyDayExerciseSubmit>();
+
+    private SysDictionary sysDictionary = new SysDictionary();
+
+    public SysDictionary getSysDictionary() {
+        return sysDictionary;
+    }
+
+    public void setSysDictionary(SysDictionary sysDictionary) {
+        this.sysDictionary = sysDictionary;
+    }
+
+    public Integer getProfessionalId() {
+        return professionalId;
+    }
+
+    public void setProfessionalId(Integer professionalId) {
+        this.professionalId = professionalId;
+    }
+
+    public String getCourseId() {
+        return courseId;
+    }
+
+    public void setCourseId(String courseId) {
+        this.courseId = courseId;
+    }
 
     public int getId() {
         return id;
@@ -180,5 +219,27 @@ public class TechnologyDayExercise {
 
     public void setExerciseItems(List<TechnologyDayExerciseItem> exerciseItems) {
         this.exerciseItems = exerciseItems;
+    }
+
+    @Override
+    public String toString() {
+        return "TechnologyDayExercise{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", types='" + types + '\'' +
+                ", standardAnswer='" + standardAnswer + '\'' +
+                ", setScore=" + setScore +
+                ", analysis='" + analysis + '\'' +
+                ", professionalId=" + professionalId +
+                ", professional=" + professional +
+                ", course=" + course +
+                ", courseId='" + courseId + '\'' +
+                ", remark='" + remark + '\'' +
+                ", buildExerciseDate=" + buildExerciseDate +
+                ", updateExerciseDate=" + updateExerciseDate +
+                ", exerciseItems=" + exerciseItems +
+                ", submitList=" + submitList +
+                ", sysDictionary=" + sysDictionary +
+                '}';
     }
 }

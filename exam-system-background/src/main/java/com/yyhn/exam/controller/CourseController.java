@@ -3,6 +3,7 @@ package com.yyhn.exam.controller;
 import com.yyhn.exam.common.Dto;
 import com.yyhn.exam.common.DtoUtil;
 import com.yyhn.exam.common.Page;
+import com.yyhn.exam.dto.ResultMsg;
 import com.yyhn.exam.entity.Course;
 import com.yyhn.exam.entity.Professional;
 import com.yyhn.exam.service.CourseService;
@@ -104,9 +105,6 @@ public class CourseController {
         return null;
     }
 
-
-
-
     @ApiOperation(value = "删除科目", httpMethod = "GET",
             protocols = "HTTP", produces = "application/json",
             response = Dto.class, notes = "删除科目 ： " +
@@ -122,6 +120,28 @@ public class CourseController {
                 return DtoUtil.returnSuccess("删除成功！");
             }else {
                 return DtoUtil.returnFail("删除失败！","100101");
+            }
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
+        return null;
+    }
+
+    @ApiOperation(value = "查询所有科目", httpMethod = "GET",
+            protocols = "HTTP", produces = "application/json",
+            response = Dto.class, notes = "查询所有科目 ： " +
+            "<p>成功：success = ‘true’ | 失败：success = ‘false’ 并返回错误码，如下：</p>" +
+            "<p>错误码：</p>" +
+            "<p>100101 : 删除科目失败 </p>" +
+            "<p>0 : 删除科目成功 </p>" )
+    @RequestMapping(value = "/getAllCourse",method = RequestMethod.GET)
+    public ResultMsg getAllCourse(){
+        try {
+            List<Course> list = courseService.getCourse();
+            if(list.size()>0){
+                return ResultMsg.BY_SUCCESS("查询成功", list);
+            }else {
+                return ResultMsg.BY_FAIL("查询失败");
             }
         }catch (Exception ex){
             ex.printStackTrace();

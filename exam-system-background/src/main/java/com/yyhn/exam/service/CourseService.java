@@ -14,6 +14,10 @@ public interface CourseService {
      */
     public void getCourse(String courseName, Page<List<Course>> page);
     /**
+     * 查询所有
+     */
+    public List<Course> getCourse();
+    /**
      * 添加课程信息
      * @return
      */

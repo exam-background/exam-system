@@ -5,6 +5,8 @@ import static org.junit.Assert.assertTrue;
 import com.yyhn.exam.entity.Student;
 import com.yyhn.exam.mapper.ClassMapper;
 import com.yyhn.exam.mapper.StudentMapper;
+import com.yyhn.exam.mapper.SysDictionaryMapper;
+import com.yyhn.exam.mapper.SysUserMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,16 +22,11 @@ import java.util.List;
 @SpringBootTest
 @WebAppConfiguration
 public class AppTest {
-
-
     @Resource
-    StudentMapper studentMapper;
-
-    @Resource
-    ClassMapper classMapper;
+    SysUserMapper sysUserMapper;
 
     @Test
     public void test01(){
-        System.out.println("classMapper = " + classMapper);
+        sysUserMapper.deleteSysUser(9);
     }
 }

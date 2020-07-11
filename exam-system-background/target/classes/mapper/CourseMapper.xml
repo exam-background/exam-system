@@ -24,7 +24,9 @@
               p.id = c.professional_id
             <include refid="condition"/>
           order by id desc
-          limit #{startRow},#{pageSize}
+          <if test="startRow != null">
+              limit #{startRow},#{pageSize}
+          </if>
     </select>
 
     <select id="getCount" resultType="int"  parameterType="map">
@@ -35,7 +37,7 @@
     </select>
 
     <sql id="condition">
-        <if test="courseName!=null">
+        <if test="courseName!=null and courseName!=''">
             and course_name like concat('%',#{courseName},'%')
         </if>
     </sql>

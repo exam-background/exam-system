@@ -27,7 +27,7 @@ public class JobExamStudySearchVO implements Serializable {
     }
 
     public String getTitle() {
-        return title=="" ? null : title;
+        return title;
     }
 
     public void setTitle(String title) {

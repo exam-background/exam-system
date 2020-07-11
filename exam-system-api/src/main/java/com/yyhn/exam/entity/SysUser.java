@@ -1,15 +1,21 @@
 package com.yyhn.exam.entity;
 
+import com.baomidou.mybatisplus.annotations.TableId;
+import com.baomidou.mybatisplus.annotations.TableName;
+import com.baomidou.mybatisplus.enums.IdType;
+
 import java.util.Date;
 
 public class SysUser{
     /**
      * 主键
      */
+    @TableId(value = "id",type = IdType.AUTO)
     private int id;
     /**
      * 登录名
      */
+
     private String login_name;
     /**
      * 真实名称

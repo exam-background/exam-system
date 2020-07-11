@@ -3,6 +3,7 @@ package com.yyhn.exam.controller;
 import com.yyhn.exam.common.Dto;
 import com.yyhn.exam.common.DtoUtil;
 import com.yyhn.exam.common.Page;
+import com.yyhn.exam.dto.ResultMsg;
 import com.yyhn.exam.entity.Class;
 import com.yyhn.exam.entity.JobExampleStudy;
 import com.yyhn.exam.service.ClassService;
@@ -27,19 +28,10 @@ public class JobExampleStudyController {
     JobExampleStudyService jobExampleStudyService;
 
 
-    @ApiOperation(value = "查询所有示范学习信息，并分页显示", httpMethod = "GET",
-            protocols = "HTTP",
-            response = Dto.class, notes = "根据条件查询示范学习信息，并分页显示" +
-            "<p>成功：success = ‘true’ | 失败：success = ‘false’ 并返回错误码，如下：</p>" +
-            "<p>100101 : 查询失败 </p>" +
-            "<p>0 : 查询成功 </p>" )
-    @RequestMapping(value = "/jobExampleStudyForPage")
-    public Dto<List<JobExampleStudy>> jobExampleStudyForPage(
+    @PostMapping("/jobExampleStudyForPage")
+    public Dto<List<JobExampleStudy>> jobExampleStudyForPagePOST(
                                          JobExamStudySearchVO vo){
-
         System.out.println("vo.toString() = " + vo.toString());
-
-
         Page<List<JobExampleStudy>> page = new Page<List<JobExampleStudy>>();
         try {
             page.setPageSize(vo.getPageSize());
@@ -52,30 +44,44 @@ public class JobExampleStudyController {
         return  DtoUtil.returnDataSuccess(page);
     }
 
+   @GetMapping("/jobExampleStudyForPage")
+    public Dto<List<JobExampleStudy>> jobExampleStudyForPageGET(
+            @RequestParam(value = "pageSize",defaultValue = "8",required = false) Integer pageSize,
+            @RequestParam(value = "currentPage",defaultValue = "1",required = false) Integer currentPage
+            ){
+       System.out.println("pageSize----currentPage = " + pageSize + "----" + currentPage);
+       Page<List<JobExampleStudy>> page = new Page<List<JobExampleStudy>>();
+        try {
+            page.setPageSize(pageSize);
+            page.setCurPage(currentPage);
+            jobExampleStudyService.getAllJobExampleStudy(null,null,null,page);
+        }catch (Exception ex){
+            ex.printStackTrace();;
+            DtoUtil.returnFail("查询失败","100101");
+        }
+        return  DtoUtil.returnDataSuccess(page);
+    }
+
 
 
    @PostMapping("/addJobExampleStudy")
-    public Dto<Object> addJobExampleStudy(JobExampleStudy jobExampleStudy, Integer professionalId, Integer courseId, HttpServletResponse response){
+    public Dto<Object> addJobExampleStudy(JobExampleStudy jobExampleStudy, HttpServletResponse response){
         response.setHeader("Access-Control-Allow-Origin","*");
         try {
-            jobExampleStudy.getProfessional().setId(professionalId);
-            jobExampleStudy.getCourse().setId(courseId);
             int count = jobExampleStudyService.addJobExampleStudy(jobExampleStudy);
             if(count>0){
                 return DtoUtil.returnSuccess("添加成功！");
-            }else {
-                return DtoUtil.returnFail("添加失败","100101");
             }
         }catch (Exception ex){
             ex.printStackTrace();
         }
-        return null;
+        return DtoUtil.returnFail("添加失败","100101");
     }
 
 
     @PostMapping("/updateJobExampleStudy")
     public Dto<Object> updateJobExampleStudy(JobExampleStudy jobExampleStudy){
-
+        System.out.println("jobExampleStudy.getTitle() = " + jobExampleStudy.getTitle());
         try {
             int count = jobExampleStudyService.updateJobExampleStudy(jobExampleStudy);
             if(count>0){
@@ -108,6 +114,23 @@ public class JobExampleStudyController {
             ex.printStackTrace();
         }
         return DtoUtil.returnFail("删除失败，或是系统错误","100101");
+    }
+
+    @RequestMapping(value = "/deleteJobExampleStudys",method = RequestMethod.GET)
+    public ResultMsg deleteJobExampleStudys(@RequestParam("deleteArray[]") Integer[] deleteArray){
+        System.out.println("deleteArray = " + deleteArray);
+        int count=0;
+        try {
+            if(deleteArray.length>0){
+                for (int i = 0; i < deleteArray.length; i++) {
+                    count = jobExampleStudyService.deleteJobExampleStudy(deleteArray[i]);
+                }
+                if(count>0) return ResultMsg.BY_SUCCESS("删除成功",count);
+            }
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
+        return ResultMsg.BY_ERROR("系统错误，删除失败");
     }
 
     @ApiOperation(value = "根据ID查询示范学习", httpMethod = "GET",

@@ -78,6 +78,7 @@ public class ProfessionalController {
     @RequestMapping(value = "/getProfessionalNoPage",method = RequestMethod.GET)
     public Dto<Object> getProfessionalNoPage(){
         List<Professional> professionalList = null;
+
         try {
             professionalList = professionalService.getProfessionalNoPage();
         }catch (Exception ex){

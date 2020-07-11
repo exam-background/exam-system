@@ -1,5 +1,6 @@
 package com.yyhn.exam.mapper;
 
+import com.baomidou.mybatisplus.mapper.BaseMapper;
 import com.yyhn.exam.common.Page;
 import com.yyhn.exam.entity.SysUser;
 import org.apache.ibatis.annotations.Mapper;
@@ -9,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 @Mapper
-public interface SysUserMapper {
+public interface SysUserMapper extends BaseMapper<SysUser> {
     /**
      * 根据id删除用户
      * @param id

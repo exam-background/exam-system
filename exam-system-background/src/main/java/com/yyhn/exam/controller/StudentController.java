@@ -81,10 +81,8 @@ public class StudentController {
             method = RequestMethod.POST,
             consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE,
             produces = {MediaType.APPLICATION_ATOM_XML_VALUE, MediaType.APPLICATION_JSON_VALUE,})
-    public Dto<Object> addStudent(Student student,Integer professionalId,Integer classId){
+    public Dto<Object> addStudent(Student student){
         try {
-            student.getClazz().setId(classId);
-            student.getProfessional().setId(professionalId);
             System.out.println(" student : "+student);
             int count = studentService.addStudent(student);
             if(count>0){

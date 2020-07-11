@@ -15,58 +15,12 @@
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:maven" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
     </expand>
-    <select>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:maven" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </select>
+    <select />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0d90f18-a47d-4b60-87d1-3cfdc91a4cba" name="Default Changelist" comment="增加了用户批量删除相关的接口">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/entity/TechnologyDayExercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/entity/TechnologyDayExercise.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/mapper/TechnologyDayExerciseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/mapper/TechnologyDayExerciseMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/META-INF/exam-system-api.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/TechnologyDayExercise.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/TechnologyDayExercise.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/TechnologyDayExerciseMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/TechnologyDayExerciseMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/controller/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/controller/CourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/controller/TechnologyDayExerciseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/controller/TechnologyDayExerciseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/CourseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/TechnologyDayExerciseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/TechnologyDayExerciseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/impl/CourseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/impl/CourseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/impl/TechnologyDayExerciseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/impl/TechnologyDayExerciseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/resources/mapper/CourseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/resources/mapper/CourseMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/resources/mapper/TechnologyDayExerciseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/resources/mapper/TechnologyDayExerciseMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/test/java/com/yyhn/exam/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/test/java/com/yyhn/exam/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/CourseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/CourseController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/SysUsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/SysUsersController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/TechnologyDayExerciseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/TechnologyDayExerciseController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/CourseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/CourseService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/TechnologyDayExerciseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/TechnologyDayExerciseService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/CourseServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/CourseServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/TechnologyDayExerciseServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/TechnologyDayExerciseServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/mapper/CourseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/mapper/CourseMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/mapper/TechnologyDayExerciseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/mapper/TechnologyDayExerciseMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/test-classes/com/yyhn/exam/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/test-classes/com/yyhn/exam/AppTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -305,14 +259,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1594253271048" />
-    <state x="562" y="156" key="Vcs.Push.Dialog.v2" timestamp="1594279083839">
+    <state x="562" y="156" key="Vcs.Push.Dialog.v2" timestamp="1594428166131">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="562" y="156" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1594279083839" />
-    <state x="629" y="306" key="git4idea.merge.GitPullDialog" timestamp="1594279064067">
+    <state x="562" y="156" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1594428166131" />
+    <state x="629" y="306" key="git4idea.merge.GitPullDialog" timestamp="1594436388989">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="629" y="306" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594279064067" />
+    <state x="629" y="306" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594436388989" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

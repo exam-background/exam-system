@@ -92,9 +92,9 @@
     </sql>
 
     <insert id="addTechnologyDayExercise" parameterType="TechnologyDayExercise">
-<!--        <selectKey resultType="java.lang.Integer" keyProperty="id" order="BEFORE" >//AFTER-->
-<!--            SELECT LAST_INSERT_ID()-->
-<!--        </selectKey>-->
+        <selectKey resultType="java.lang.Integer" keyProperty="id" order="BEFORE" >//AFTER
+            SELECT LAST_INSERT_ID()
+        </selectKey>
         insert into exam_technology_day_exercise
 
         <trim prefix="(" suffix=")" suffixOverrides=",">

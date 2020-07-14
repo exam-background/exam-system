@@ -106,12 +106,14 @@ public class TechnologyDayExerciseController {
             "<p>100101 : 查询失败 </p>" +
             "<p>0 : 查询成功 </p>" )
     @RequestMapping(value = "/insertTechnologyDayExercise",method = RequestMethod.POST)
-    public ResultMsg insertTechnologyDayExercise(TechnologyDayExercise technologyDayExercise){
-        if(technologyDayExerciseService.insertTechnologyDayExercise(technologyDayExercise) > 0){
-            return ResultMsg.BY_SUCCESS("增加成功", null);
-        }else{
-            return ResultMsg.BY_FAIL("增加失败");
-        }
+    public ResultMsg insertTechnologyDayExercise(TechnologyDayExercise technologyDayExercise,String[] redioItem){
+        System.out.println(redioItem.length);
+//        if(technologyDayExerciseService.insertTechnologyDayExercise(technologyDayExercise) > 0){
+//            return ResultMsg.BY_SUCCESS("增加成功", null);
+//        }else{
+//            return ResultMsg.BY_FAIL("增加失败");
+//        }
+        return null;
     }
 
     @ApiOperation(value = "修改每日一练", httpMethod = "POST",

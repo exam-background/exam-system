@@ -35,11 +35,30 @@ public class JobDayExercise {
      */
     private Professional professional = new Professional();
 
-
     /**
      *所属科目
      */
     private Course course = new Course();
+
+    private Integer professionalId;
+
+    private Integer courseId;
+
+    public Integer getProfessionalId() {
+        return professionalId;
+    }
+
+    public void setProfessionalId(Integer professionalId) {
+        this.professionalId = professionalId;
+    }
+
+    public Integer getCourseId() {
+        return courseId;
+    }
+
+    public void setCourseId(Integer courseId) {
+        this.courseId = courseId;
+    }
 
     public int getId() {
         return id;

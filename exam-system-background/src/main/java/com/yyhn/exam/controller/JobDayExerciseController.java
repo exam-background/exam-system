@@ -3,6 +3,7 @@ package com.yyhn.exam.controller;
 import com.yyhn.exam.common.Dto;
 import com.yyhn.exam.common.DtoUtil;
 import com.yyhn.exam.common.Page;
+import com.yyhn.exam.dto.ResultMsg;
 import com.yyhn.exam.entity.JobDayExercise;
 import com.yyhn.exam.entity.JobExampleStudy;
 import com.yyhn.exam.service.JobDayExerciseService;
@@ -10,10 +11,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -112,14 +110,14 @@ public class JobDayExerciseController  {
     }
 
 
-    @ApiOperation(value = "删除就业每日一练", httpMethod = "GET",
+    @ApiOperation(value = "删除就业每日一练", httpMethod = "POST",
             protocols = "HTTP", produces = "application/json",
             response = Dto.class, notes = "删除就业每日一练 ： " +
             "<p>成功：success = ‘true’ | 失败：success = ‘false’ 并返回错误码，如下：</p>" +
             "<p>错误码：</p>" +
             "<p>100101 : 删除就业每日一练失败 </p>" +
             "<p>0 : 删除就业每日一练成功 </p>" )
-    @RequestMapping(value = "/deleteJobDayExercise",method = RequestMethod.GET)
+    @RequestMapping(value = "/deleteJobDayExercise",method = RequestMethod.POST)
     public Dto<Object> deleteJobDayExercise(String id){
         try {
             int count = jobDayExerciseService.deleteJobDayExercise(Integer.valueOf(id));
@@ -157,4 +155,38 @@ public class JobDayExerciseController  {
         return null;
     }
 
+
+
+    @ApiOperation(value = "查询所有每日一练", httpMethod = "POST",
+            protocols = "HTTP", produces = "application/json",
+            response = Dto.class, notes = "查询所有每日一练 ： " +
+            "<p>成功：success = ‘true’ | 失败：success = ‘false’ 并返回错误码，如下：</p>" +
+            "<p>错误码：</p>" +
+            "<p>100101 : 根据ID查询就业每日一练失败 </p>" +
+            "<p>0 : 根据ID查询就业每日一练成功 </p>" )
+    @RequestMapping(value = "/getAllJobDayExercise",method = RequestMethod.POST)
+    public ResultMsg getAllJobDayExercise(String title,Integer professionalId,Integer courseId){
+        List<JobDayExercise> list = jobDayExerciseService.getAllJobDayExercise(title,professionalId,courseId);
+        if(list != null){
+            return ResultMsg.BY_SUCCESS("查询成功", list);
+        }else{
+            return ResultMsg.BY_FAIL("查询失败");
+        }
+    }
+
+    @ApiOperation(value = "批量删除每日一练", httpMethod = "POST",
+            protocols = "HTTP", produces = "application/json",
+            response = Dto.class, notes = "批量删除每日一练 ： " +
+            "<p>成功：success = ‘true’ | 失败：success = ‘false’ 并返回错误码，如下：</p>" +
+            "<p>错误码：</p>" +
+            "<p>100101 : 根据ID查询就业每日一练失败 </p>" +
+            "<p>0 : 根据ID查询就业每日一练成功 </p>" )
+    @RequestMapping(value = "/deletesJobDayExercise",method = RequestMethod.POST)
+    public ResultMsg deletesJobDayExercise(@RequestBody List<JobDayExercise> list){
+        if(jobDayExerciseService.deletesJobDayExercise(list)>0){
+            return ResultMsg.BY_SUCCESS("批量删除成功", null);
+        }else{
+            return ResultMsg.BY_FAIL("批量失败");
+        }
+    }
 }

@@ -21,6 +21,20 @@ public interface JobDayExerciseService {
     public void getAllJobDayExercise(String title,Integer professionalId,Integer courseId, Page<List<JobDayExercise>> page);
 
     /**
+     * 查询所有就业每日一练信息
+     * @param jobDayExercise
+     * @return
+     */
+    public List<JobDayExercise> getAllJobDayExercise(String title, Integer professionalId, Integer courseId);
+
+    /**
+     * 批量删除就业每日一练信息
+     * @param list
+     * @return
+     */
+    public int deletesJobDayExercise(List<JobDayExercise> list);
+
+    /**
      * 增加就业每日一练信息
      * @return
      */

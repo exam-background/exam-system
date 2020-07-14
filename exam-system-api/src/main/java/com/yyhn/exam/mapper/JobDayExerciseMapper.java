@@ -22,6 +22,12 @@ public interface JobDayExerciseMapper {
      */
     public int getCount(Map<String,Object> map);
 
+    /**
+     * 批量删除就业每日一练信息
+     * @param list
+     * @return
+     */
+    public int deletesJobDayExercise(List<Integer> list);
 
     /**
      * 增加就业每日一练信息

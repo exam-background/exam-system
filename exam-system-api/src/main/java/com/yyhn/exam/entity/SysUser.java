@@ -1,11 +1,14 @@
 package com.yyhn.exam.entity;
 
+import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
 
 import java.util.Date;
+import java.util.List;
 
+@TableName("exam_sys_user")
 public class SysUser{
     /**
      * 主键
@@ -45,6 +48,21 @@ public class SysUser{
      * 备注信息
      */
     private String remark;
+
+    /**
+     * 一个用户拥有多个角色
+     */
+
+    @TableField(exist = false)
+    private List<SysRole> roles;
+
+    public List<SysRole> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<SysRole> roles) {
+        this.roles = roles;
+    }
 
     public int getId() {
         return id;

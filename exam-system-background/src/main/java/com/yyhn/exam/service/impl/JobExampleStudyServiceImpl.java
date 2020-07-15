@@ -34,24 +34,21 @@ public class JobExampleStudyServiceImpl implements JobExampleStudyService {
 
     @Override
     public int addJobExampleStudy(JobExampleStudy jobExampleStudy) {
-        int count = jobExampleStudyMapper.addJobExampleStudy(jobExampleStudy);
-        return count;
+        return jobExampleStudyMapper.addJobExampleStudy(jobExampleStudy);
     }
 
     @Override
     public int updateJobExampleStudy(JobExampleStudy jobExampleStudy) {
-        int count = jobExampleStudyMapper.updateJobExampleStudy(jobExampleStudy);
-        return count;
+        return  jobExampleStudyMapper.updateJobExampleStudy(jobExampleStudy);
+
     }
 
     @Override
     public int deleteJobExampleStudy(int id) {
-        int count = jobExampleStudyMapper.deleteJobExampleStudy(id);
-        return count;
+         return jobExampleStudyMapper.deleteJobExampleStudy(id);
 
     }
     public JobExampleStudy getJobExampleStudyById(int id){
-        JobExampleStudy jobExampleStudy = jobExampleStudyMapper.getJobExampleStudyById(id);
-        return jobExampleStudy;
+        return jobExampleStudyMapper.getJobExampleStudyById(id);
     }
 }

@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 @Mapper
-public interface StudentMapper  extends BaseMapper<Student> {
+public interface StudentMapper extends BaseMapper<Student>  {
 
     /**
      * 获取所有的学生信息，不分页显示

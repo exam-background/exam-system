@@ -30,7 +30,6 @@ public class StudentServiceImpl implements StudentService {
         map.put("stuName",stuName);
         map.put("professionalId",professionalId);
         map.put("classId",classId);
-
         map.put("startRow",(page.getCurPage()-1)*page.getPageSize());
         map.put("pageSize",page.getPageSize());
         //根据条件查询课程信息

@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.enums.IdType;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
@@ -54,6 +55,8 @@ public class TechnologyDayExercise {
      */
     private Professional professional = new Professional();
 
+    private Integer radio;
+
     /**
      * 对应科目
      */
@@ -68,6 +71,14 @@ public class TechnologyDayExercise {
      * 备注
      */
     private String remark;
+
+    public Integer getRadio() {
+        return radio;
+    }
+
+    public void setRadio(Integer radio) {
+        this.radio = radio;
+    }
 
     /**
      * 试题创建时间
@@ -85,6 +96,16 @@ public class TechnologyDayExercise {
      * 每日一练备选答案选项
      */
     private List<TechnologyDayExerciseItem> exerciseItems = new ArrayList<TechnologyDayExerciseItem>();
+
+    private String[] redioItem;
+
+    public String[] getRedioItem() {
+        return redioItem;
+    }
+
+    public void setRedioItem(String[] redioItem) {
+        this.redioItem = redioItem;
+    }
 
     /**
      *每日一练作答信息
@@ -232,12 +253,14 @@ public class TechnologyDayExercise {
                 ", analysis='" + analysis + '\'' +
                 ", professionalId=" + professionalId +
                 ", professional=" + professional +
+                ", radio=" + radio +
                 ", course=" + course +
                 ", courseId='" + courseId + '\'' +
                 ", remark='" + remark + '\'' +
                 ", buildExerciseDate=" + buildExerciseDate +
                 ", updateExerciseDate=" + updateExerciseDate +
                 ", exerciseItems=" + exerciseItems +
+                ", redioItem=" + Arrays.toString(redioItem) +
                 ", submitList=" + submitList +
                 ", sysDictionary=" + sysDictionary +
                 '}';

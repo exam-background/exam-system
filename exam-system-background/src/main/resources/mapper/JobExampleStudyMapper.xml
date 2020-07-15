@@ -11,30 +11,32 @@
         <result column="viedoUrl" property="viedoUrl"></result>
         <result column="score" property="score"></result>
         <result column="remark" property="remark"></result>
+        <result column="professional_id" property="professionalId"></result>
+        <result column="course_id" property="courseId"></result>
         <association property="professional" javaType="Professional">
-            <id column="professionalId" property="id"></id>
-            <result column="professional_name" property="professionalName"></result>
+            <id column="proId" property="id"></id>
+            <result column="professionalName" property="professionalName"></result>
         </association>
         <association property="course" javaType="Course">
-            <id column="course_id" property="id"></id>
+            <id column="courseId" property="id"></id>
             <result column="course_name" property="courseName"></result>
         </association>
     </resultMap>
 
     <select id="getAllJobExampleStudy" resultMap="jobExampleStudyResult" parameterType="map">
-               SELECT
-                    es.* ,p.`professional_name`,p.id professionalId,c.`course_name`,c.id course_id
-               FROM
-                    exam_job_example_study es , exam_professional p,exam_course c
-               WHERE
-                    es.`professional_id` = p.`id`
-               AND
-                     es.`course_id` = c.`id`
+        SELECT
+        es.* ,p.`professional_name` professionalName,p.id proId,c.`course_name`,c.id courseId
+        FROM
+        exam_job_example_study es , exam_professional p,exam_course c
+        WHERE
+        es.`professional_id` = p.`id`
+        AND
+        es.`course_id` = c.`id`
 
-              <include refid="jobExampleStudy_condition"/>
+        <include refid="jobExampleStudy_condition"/>
 
-              order by  es.id desc
-              limit #{startRow},#{pageSize}
+        order by  es.id desc
+
     </select>
 
 
@@ -70,50 +72,39 @@
             <if test="answer != null">
                 answer,
             </if>
-            <if test="viedoConvertContent != null">
-                viedo_convert_content,
-            </if>
-            <if test="viedoUrl != null">
-                viedo_url,
-            </if>
             <if test="remark != null">
                 remark,
             </if>
             <if test="score != null">
                 score,
             </if>
-            <if test="professional.id != null">
+            <if test="professionalId != null">
                 professional_id,
             </if>
-            <if test="course.id != null">
+            <if test="courseId != null">
                 course_id,
             </if>
 
         </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
-           <if test="title != null">
-               #{title,jdbcType=VARCHAR},
-           </if>
+            <if test="title != null">
+                #{title,jdbcType=VARCHAR},
+            </if>
             <if test="answer != null">
                 #{answer,jdbcType=VARCHAR},
             </if>
-            <if test="viedoConvertContent != null">
-                #{viedoConvertContent,jdbcType=VARCHAR},
-            </if>
-            <if test="viedoUrl != null">
-                #{viedoUrl,jdbcType=VARCHAR},
-            </if>
+
             <if test="remark != null">
                 #{remark,jdbcType=VARCHAR},
             </if>
             <if test="score != null">
                 #{score,jdbcType=INTEGER},
             </if>
-            <if test="professional.id != null">
-                #{professional.id,jdbcType=INTEGER},
+            <if test="professionalId != null">
+                #{professionalId,jdbcType=INTEGER},
             </if>
-            <if test="course.id != null">
-                #{course.id,jdbcType=INTEGER},
+            <if test="courseId != null">
+                #{courseId,jdbcType=INTEGER},
             </if>
         </trim>
     </insert>
@@ -127,23 +118,18 @@
             <if  test="answer!=null">
                 answer =#{answer},
             </if>
-            <if  test="viedoConvertContent!=null">
-                viedo_convert_content =#{viedoConvertContent},
-            </if>
-            <if  test="viedoUrl!=null">
-                viedo_url =#{viedoUrl},
-            </if>
+
             <if  test="score!=null">
                 score =#{score},
             </if>
             <if  test="remark!=null">
                 remark =#{remark},
             </if>
-            <if  test="professional.id!=null">
-                professional_id =#{professional.id},
+            <if  test="professionalId!=null">
+                professional_id =#{professionalId},
             </if>
-            <if  test="course.id!=null">
-                course_id =#{course.id},
+            <if  test="courseId!=null">
+                course_id =#{courseId},
             </if>
         </set>
         where id = #{id}
@@ -155,15 +141,15 @@
 
     <select id="getJobExampleStudyById" resultMap="jobExampleStudyResult">
               SELECT
-                    es.* ,p.`professional_name`,c.`course_name`
+                    es.* ,p.`professional_name` professionalName,p.id proId,c.`course_name`,c.id courseId
                FROM
                     exam_job_example_study es , exam_professional p,exam_course c
                WHERE
                     es.`professional_id` = p.`id`
                AND
                      es.`course_id` = c.`id`
-               AND
-                    es.id = #{id}
+
+               and  es.id=#{id}
     </select>
 
 

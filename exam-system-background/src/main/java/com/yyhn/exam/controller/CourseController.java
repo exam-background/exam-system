@@ -34,7 +34,7 @@ public class CourseController {
             "<p>0 : 查询成功 </p>" )
     @RequestMapping(value = "/courseForPage",method = RequestMethod.GET)
     public Dto<List<Course>> courseForPage(String courseName,
-                                           @RequestParam(defaultValue = "2")
+                                           @RequestParam(defaultValue = "5")
                                                                String pageSize,
                                            @RequestParam(defaultValue = "1")
                                                                Integer currentPage){
@@ -44,7 +44,7 @@ public class CourseController {
             page.setCurPage(currentPage);
             courseService.getCourse(courseName,page);
         }catch (Exception ex){
-            ex.printStackTrace();;
+            ex.printStackTrace();
             DtoUtil.returnFail("查询失败！","100101");
         }
         return  DtoUtil.returnDataSuccess(page);
@@ -104,6 +104,9 @@ public class CourseController {
         }
         return null;
     }
+
+
+
 
     @ApiOperation(value = "删除科目", httpMethod = "GET",
             protocols = "HTTP", produces = "application/json",

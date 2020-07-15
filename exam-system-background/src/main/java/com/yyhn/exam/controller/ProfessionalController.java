@@ -30,7 +30,7 @@ public class ProfessionalController {
             "<p>0 : 查询成功 </p>" )
     @RequestMapping(value = "/professionalForPage",method = RequestMethod.GET)
     public Dto<List<Professional>> professionalForPage(String pname,
-                                                    @RequestParam(defaultValue = "2")
+                                                    @RequestParam(defaultValue = "5")
                                                             String pageSize,
                                                     @RequestParam(defaultValue = "1")
                                                             Integer currentPage){
@@ -78,6 +78,7 @@ public class ProfessionalController {
     @RequestMapping(value = "/getProfessionalNoPage",method = RequestMethod.GET)
     public Dto<Object> getProfessionalNoPage(){
         List<Professional> professionalList = null;
+
         try {
             professionalList = professionalService.getProfessionalNoPage();
         }catch (Exception ex){

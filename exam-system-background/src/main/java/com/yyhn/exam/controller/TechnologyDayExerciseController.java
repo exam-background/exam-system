@@ -7,10 +7,14 @@ import com.yyhn.exam.dto.ResultMsg;
 import com.yyhn.exam.entity.JobDayExercise;
 import com.yyhn.exam.entity.SysUser;
 import com.yyhn.exam.entity.TechnologyDayExercise;
+import com.yyhn.exam.entity.TechnologyDayExerciseItem;
+import com.yyhn.exam.service.TechnologyDayExerciseItemService;
 import com.yyhn.exam.service.TechnologyDayExerciseService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.http.MediaType;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -22,6 +26,8 @@ public class TechnologyDayExerciseController {
 
     @Resource
     private TechnologyDayExerciseService technologyDayExerciseService;
+    @Resource
+    private TechnologyDayExerciseItemService technologyDayExerciseItemService;
 
     @ApiOperation(value = "查询所有技术每日一练信息，并分页显示", httpMethod = "GET",
             protocols = "HTTP",
@@ -106,13 +112,58 @@ public class TechnologyDayExerciseController {
             "<p>100101 : 查询失败 </p>" +
             "<p>0 : 查询成功 </p>" )
     @RequestMapping(value = "/insertTechnologyDayExercise",method = RequestMethod.POST)
-    public ResultMsg insertTechnologyDayExercise(TechnologyDayExercise technologyDayExercise,String[] redioItem){
-        System.out.println(redioItem.length);
-//        if(technologyDayExerciseService.insertTechnologyDayExercise(technologyDayExercise) > 0){
-//            return ResultMsg.BY_SUCCESS("增加成功", null);
-//        }else{
-//            return ResultMsg.BY_FAIL("增加失败");
-//        }
+    @Transactional(propagation= Propagation.SUPPORTS)
+    public ResultMsg insertTechnologyDayExercise(TechnologyDayExercise technologyDayExercise){
+        try {
+            if (technologyDayExercise.getTypes().equals("2")) {
+                Integer redio = technologyDayExercise.getRadio();
+                System.out.println(technologyDayExercise);
+                switch (redio) {
+                    case 1:
+                        technologyDayExercise.setStandardAnswer(technologyDayExercise.getRedioItem()[0]);
+                        break;
+                    case 2:
+                        technologyDayExercise.setStandardAnswer(technologyDayExercise.getRedioItem()[1]);
+                        break;
+                    case 3:
+                        technologyDayExercise.setStandardAnswer(technologyDayExercise.getRedioItem()[2]);
+                        break;
+                    case 4:
+                        technologyDayExercise.setStandardAnswer(technologyDayExercise.getRedioItem()[3]);
+                        break;
+                }
+                if (technologyDayExerciseService.insertTechnologyDayExercise(technologyDayExercise) > 0) {
+                    TechnologyDayExerciseItem technologyDayExerciseItem = null;
+
+                    String[] num = {"A", "B", "C", "D"};
+                    int a = 0;
+
+                    for (String content : technologyDayExercise.getRedioItem()) {
+                        technologyDayExerciseItem = new TechnologyDayExerciseItem();
+                        technologyDayExerciseItem.setExerciseId(technologyDayExercise.getId());
+
+                        technologyDayExerciseItem.setContent(content);
+                        technologyDayExerciseItem.setOrderNum(num[a]);
+
+                        if(technologyDayExerciseItemService.addTechnologyDayExerciseItem(technologyDayExerciseItem) <= 0){
+                            throw new RuntimeException("选择题添加失败");
+                        }
+                        a++;
+                    }
+                } else {
+                    throw new RuntimeException("题目添加失败");
+                }
+            } else {
+                if (technologyDayExerciseService.insertTechnologyDayExercise(technologyDayExercise) > 0) {
+                    System.out.println(technologyDayExercise.getId());
+                    return ResultMsg.BY_SUCCESS("增加成功", null);
+                } else {
+                    return ResultMsg.BY_FAIL("增加失败");
+                }
+            }
+        }catch (RuntimeException re) {
+            return ResultMsg.BY_FAIL(re.getMessage());
+        }
         return null;
     }
 

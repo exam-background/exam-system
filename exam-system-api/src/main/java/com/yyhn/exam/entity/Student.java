@@ -3,6 +3,7 @@ package com.yyhn.exam.entity;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
@@ -14,9 +15,12 @@ public class Student {
     private Integer id;
     private String stuName;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date openClassTime;
-    private Class clazz= new Class();
-    private Professional professional = new Professional();
+    private Class clazz;
+    private Professional professional;
+    private Integer classId;
+    private Integer professionalId;
 
     public Integer getId() {
         return id;
@@ -56,5 +60,34 @@ public class Student {
 
     public void setProfessional(Professional professional) {
         this.professional = professional;
+    }
+
+    public Integer getClassId() {
+        return classId;
+    }
+
+    public void setClassId(Integer classId) {
+        this.classId = classId;
+    }
+
+    public Integer getProfessionalId() {
+        return professionalId;
+    }
+
+    public void setProfessionalId(Integer professionalId) {
+        this.professionalId = professionalId;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", stuName='" + stuName + '\'' +
+                ", openClassTime=" + openClassTime +
+                ", clazz=" + clazz +
+                ", professional=" + professional +
+                ", classId=" + classId +
+                ", professionalId=" + professionalId +
+                '}';
     }
 }

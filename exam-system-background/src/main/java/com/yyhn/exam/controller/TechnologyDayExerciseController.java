@@ -174,12 +174,65 @@ public class TechnologyDayExerciseController {
             "<p>100101 : 查询失败 </p>" +
             "<p>0 : 查询成功 </p>" )
     @RequestMapping(value = "/updateTechnologyDayExercise",method = RequestMethod.POST)
+    @Transactional(propagation= Propagation.SUPPORTS)
     public ResultMsg updateTechnologyDayExercise(TechnologyDayExercise technologyDayExercise){
-        if(technologyDayExerciseService.updateTechnologyDayExercise(technologyDayExercise) > 0){
-            return ResultMsg.BY_SUCCESS("修改成功", null);
-        }else{
-            return ResultMsg.BY_FAIL("修改失败");
+        try {
+            if (technologyDayExercise.getTypes().equals("2")) {
+
+                Integer redio = technologyDayExercise.getRadio();
+
+                switch (redio) {
+                    case 1:
+                        technologyDayExercise.setStandardAnswer(technologyDayExercise.getRedioItem()[0]);
+                        break;
+                    case 2:
+                        technologyDayExercise.setStandardAnswer(technologyDayExercise.getRedioItem()[1]);
+                        break;
+                    case 3:
+                        technologyDayExercise.setStandardAnswer(technologyDayExercise.getRedioItem()[2]);
+                        break;
+                    case 4:
+                        technologyDayExercise.setStandardAnswer(technologyDayExercise.getRedioItem()[3]);
+                        break;
+                }
+
+                System.out.println(technologyDayExercise);
+
+                if (technologyDayExerciseService.updateTechnologyDayExercise(technologyDayExercise) > 0) {
+                    TechnologyDayExerciseItem technologyDayExerciseItem = null;
+
+                    String[] num = {"A", "B", "C", "D"};
+                    int a = 0;
+
+                    for (String content : technologyDayExercise.getRedioItem()) {
+                        if((a+1) == redio){
+                            technologyDayExerciseItem = new TechnologyDayExerciseItem();
+
+                            technologyDayExerciseItem.setId(Integer.parseInt(technologyDayExercise.getRedioId()[a]));
+                            technologyDayExerciseItem.setContent(content);
+
+                            System.out.println(technologyDayExerciseItem);
+                            if(technologyDayExerciseItemService.updateTechnologyDayExerciseItem(technologyDayExerciseItem) <= 0){
+                                throw new RuntimeException("选择题修改失败");
+                            }
+                        }
+                        a++;
+                    }
+                } else {
+                    throw new RuntimeException("题目修改失败");
+                }
+            } else {
+                if (technologyDayExerciseService.updateTechnologyDayExercise(technologyDayExercise) > 0) {
+                    System.out.println(technologyDayExercise.getId());
+                    return ResultMsg.BY_SUCCESS("修改成功", null);
+                } else {
+                    return ResultMsg.BY_FAIL("修改失败");
+                }
+            }
+        }catch (RuntimeException re) {
+            return ResultMsg.BY_FAIL(re.getMessage());
         }
+        return null;
     }
 
     @ApiOperation(value = "删除每日一练", httpMethod = "POST",

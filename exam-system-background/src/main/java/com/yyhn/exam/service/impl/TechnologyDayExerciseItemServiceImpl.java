@@ -16,4 +16,9 @@ public class TechnologyDayExerciseItemServiceImpl implements TechnologyDayExerci
     public int addTechnologyDayExerciseItem(TechnologyDayExerciseItem technologyDayExerciseItem) {
         return technologyDayExerciseItemMapper.addTechnologyDayExerciseItem(technologyDayExerciseItem);
     }
+
+    @Override
+    public int updateTechnologyDayExerciseItem(TechnologyDayExerciseItem technologyDayExerciseItem) {
+        return technologyDayExerciseItemMapper.updateTechnologyDayExerciseItem(technologyDayExerciseItem);
+    }
 }

@@ -99,12 +99,22 @@ public class TechnologyDayExercise {
 
     private String[] redioItem;
 
+    private String[] redioId;
+
     public String[] getRedioItem() {
         return redioItem;
     }
 
     public void setRedioItem(String[] redioItem) {
         this.redioItem = redioItem;
+    }
+
+    public String[] getRedioId() {
+        return redioId;
+    }
+
+    public void setRedioId(String[] redioId) {
+        this.redioId = redioId;
     }
 
     /**

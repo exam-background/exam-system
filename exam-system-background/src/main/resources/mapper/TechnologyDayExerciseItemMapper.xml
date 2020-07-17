@@ -41,7 +41,7 @@
         update exam_technology_day_exercise_item
         <set>
             <if test="exerciseId != null">
-                exercise_id = #{exerciseId}
+                exercise_id = #{exerciseId},
             </if>
             <if test="content != null">
                 content=#{content},

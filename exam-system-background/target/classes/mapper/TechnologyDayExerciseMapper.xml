@@ -30,6 +30,13 @@
             <result column="dictionary_name" property="dictionaryName"></result>
         </association>
 
+        <collection property="exerciseItems" javaType="TechnologyDayExerciseItem">
+            <id property="id" column="item_id"/>
+            <result column="exerciseId" property="exerciseId"></result>
+            <result column="content" property="content"></result>
+            <result column="orderNum" property="orderNum"></result>
+        </collection>
+
     </resultMap>
 
     <sql id="base_column_list">
@@ -38,7 +45,8 @@
           de.course_id,de.remark,de.build_exercise_date,
           de.update_exercise_date ,p.id professionalId,
           p.professional_name ,
-          c.id courseId ,c.course_name ,s.dictionary_name dictionary_name
+          c.id courseId ,c.course_name ,s.dictionary_name dictionary_name,
+          item.id item_id, item.content content, item.exercise_id exerciseId, item.order_num orderNum
     </sql>
 
     <select id="getAllTechnologyDayExercise" resultMap="dayExerciseResult" parameterType="map">
@@ -48,13 +56,16 @@
         exam_technology_day_exercise de,
         exam_professional p,
         exam_course  c,
-        exam_sys_dictionary s
+        exam_sys_dictionary s,
+        exam_technology_day_exercise_item item
         WHERE
         de.professional_id = p.id
         AND
         de.course_id = c.id
         AND
         de.types = s.id
+        AND
+        de.id = item.exercise_id
         <include refid="condition"/>
         order by id desc
         <if test="startRow != null">

@@ -9,4 +9,11 @@ public interface TechnologyDayExerciseItemService {
      * @return
      */
     public int addTechnologyDayExerciseItem(TechnologyDayExerciseItem technologyDayExerciseItem);
+
+    /**
+     * 修改选择题
+     * @param technologyDayExerciseItem
+     * @return
+     */
+    public int updateTechnologyDayExerciseItem(TechnologyDayExerciseItem technologyDayExerciseItem);
 }

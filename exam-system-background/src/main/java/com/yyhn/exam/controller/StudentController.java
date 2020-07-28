@@ -109,6 +109,7 @@ public class StudentController {
             consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE,
             produces = {MediaType.APPLICATION_ATOM_XML_VALUE, MediaType.APPLICATION_JSON_VALUE,})
     public Dto<Object> updateStudent(Student student,Integer professionalId,Integer classId){
+        System.out.println(student.toString()+":"+professionalId+":"+classId);
         try {
             student.getClazz().setId(classId);
             student.getProfessional().setId(professionalId);

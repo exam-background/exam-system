@@ -17,8 +17,8 @@ public class Student {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date openClassTime;
-    private Class clazz;
-    private Professional professional;
+    private Class clazz = new Class();
+    private Professional professional = new Professional();
     private Integer classId;
     private Integer professionalId;
 

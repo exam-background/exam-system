@@ -19,8 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0d90f18-a47d-4b60-87d1-3cfdc91a4cba" name="Default Changelist" comment="完善了技术管理每日一练修改时候的选择题功能">
+    <list default="true" id="f0d90f18-a47d-4b60-87d1-3cfdc91a4cba" name="Default Changelist" comment="增加了录音的上传功能">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/entity/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/Student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/controller/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/StudentController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +66,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/exam-system-background/src/main/resources/static/uploadFile" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
@@ -149,7 +153,9 @@
       <workItem from="1595204224186" duration="1867000" />
       <workItem from="1595316078927" duration="5592000" />
       <workItem from="1595376673444" duration="8046000" />
-      <workItem from="1595549381890" duration="2169000" />
+      <workItem from="1595549381890" duration="2273000" />
+      <workItem from="1595833749595" duration="5817000" />
+      <workItem from="1595894633724" duration="302000" />
     </task>
     <task id="LOCAL-00001" summary="增加了用户管理的内容，增加了系统用户实体类，dao层和mapper文件。增加了service和serviceimpl。创建了控制层，提供了删除用户，新增用户，分页查询，根据部门和职位进行分页查询的Swagger接口">
       <created>1594121568996</created>
@@ -200,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594973941290</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="增加了录音的上传功能">
+      <created>1595573897501</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1595573897501</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,7 +246,8 @@
     <MESSAGE value="修改了技术管理每日一练的选择题功能" />
     <MESSAGE value="完善了技术管理每日一练添加时候的选择题功能" />
     <MESSAGE value="完善了技术管理每日一练修改时候的选择题功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="完善了技术管理每日一练修改时候的选择题功能" />
+    <MESSAGE value="增加了录音的上传功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加了录音的上传功能" />
   </component>
   <component name="WindowStateProjectService">
     <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1594971035017">
@@ -252,38 +266,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="771" y="420" key="Github.CreateGistDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594972322611" />
-    <state width="1877" height="260" key="GridCell.Tab.0.bottom" timestamp="1595409738349">
+    <state width="1877" height="260" key="GridCell.Tab.0.bottom" timestamp="1595843196267">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="260" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1595409738349" />
-    <state width="1877" height="260" key="GridCell.Tab.0.center" timestamp="1595409738349">
+    <state width="1877" height="260" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1595843196267" />
+    <state width="1877" height="260" key="GridCell.Tab.0.center" timestamp="1595843196267">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="260" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1595409738349" />
-    <state width="1877" height="260" key="GridCell.Tab.0.left" timestamp="1595409738349">
+    <state width="1877" height="260" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1595843196267" />
+    <state width="1877" height="260" key="GridCell.Tab.0.left" timestamp="1595843196266">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="260" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1595409738349" />
-    <state width="1877" height="260" key="GridCell.Tab.0.right" timestamp="1595409738349">
+    <state width="1877" height="260" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1595843196266" />
+    <state width="1877" height="260" key="GridCell.Tab.0.right" timestamp="1595843196267">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="260" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595409738349" />
-    <state width="1877" height="260" key="GridCell.Tab.1.bottom" timestamp="1595409738350">
+    <state width="1877" height="260" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595843196267" />
+    <state width="1877" height="260" key="GridCell.Tab.1.bottom" timestamp="1595843196267">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="260" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1595409738350" />
-    <state width="1877" height="260" key="GridCell.Tab.1.center" timestamp="1595409738349">
+    <state width="1877" height="260" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1595843196267" />
+    <state width="1877" height="260" key="GridCell.Tab.1.center" timestamp="1595843196267">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="260" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1595409738349" />
-    <state width="1877" height="260" key="GridCell.Tab.1.left" timestamp="1595409738349">
+    <state width="1877" height="260" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1595843196267" />
+    <state width="1877" height="260" key="GridCell.Tab.1.left" timestamp="1595843196267">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="260" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1595409738349" />
-    <state width="1877" height="260" key="GridCell.Tab.1.right" timestamp="1595409738350">
+    <state width="1877" height="260" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1595843196267" />
+    <state width="1877" height="260" key="GridCell.Tab.1.right" timestamp="1595843196267">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="260" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595409738350" />
+    <state width="1877" height="260" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595843196267" />
     <state width="1877" height="215" key="GridCell.Tab.2.bottom" timestamp="1594978586946">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -308,10 +322,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1594632694330" />
-    <state x="562" y="156" key="Vcs.Push.Dialog.v2" timestamp="1594974093913">
+    <state x="562" y="156" key="Vcs.Push.Dialog.v2" timestamp="1595573912564">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="562" y="156" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1594974093913" />
+    <state x="562" y="156" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1595573912564" />
     <state x="753" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594801773744">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

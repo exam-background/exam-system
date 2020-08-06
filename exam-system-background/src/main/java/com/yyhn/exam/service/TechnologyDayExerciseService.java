@@ -3,6 +3,7 @@ package com.yyhn.exam.service;
 import com.yyhn.exam.common.Page;
 import com.yyhn.exam.entity.JobExampleStudy;
 import com.yyhn.exam.entity.TechnologyDayExercise;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -55,4 +56,21 @@ public interface TechnologyDayExerciseService {
      * @return
      */
     public TechnologyDayExercise getTechnologyDayExerciseById(int id);
+
+    /**
+     * 获取题库中该科目的总数量
+     * @param professionalId
+     * @param courseId
+     * @return
+     */
+    public int getTechnologyDayExerciseByCourse(Integer professionalId, Integer courseId);
+
+    /**
+     * 根据科目拿到到随机的题目
+     * @param professionalId
+     * @param courseId
+     * @param page
+     * @return
+     */
+    public TechnologyDayExercise getTechnologyDayExerciseBypProfessionalCourse(Integer professionalId, Integer courseId, Integer page);
 }

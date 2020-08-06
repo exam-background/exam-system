@@ -39,7 +39,7 @@
 
               <include refid="condition"/>
 
-          order by id desc
+          order by id descz
               limit #{startRow},#{pageSize}
     </select>
 
@@ -90,6 +90,8 @@
         delete from exam_student where id = #{id}
     </delete>
 
-
+    <select id="selectStudent" resultMap="studentResult">
+        select * from exam_student where class_id=#{id}
+    </select>
 
 </mapper>

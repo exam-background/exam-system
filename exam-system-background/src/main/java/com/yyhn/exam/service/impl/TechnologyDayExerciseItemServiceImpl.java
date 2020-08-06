@@ -6,6 +6,7 @@ import com.yyhn.exam.service.TechnologyDayExerciseItemService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Service
 public class TechnologyDayExerciseItemServiceImpl implements TechnologyDayExerciseItemService {
@@ -20,5 +21,10 @@ public class TechnologyDayExerciseItemServiceImpl implements TechnologyDayExerci
     @Override
     public int updateTechnologyDayExerciseItem(TechnologyDayExerciseItem technologyDayExerciseItem) {
         return technologyDayExerciseItemMapper.updateTechnologyDayExerciseItem(technologyDayExerciseItem);
+    }
+
+    @Override
+    public List<TechnologyDayExerciseItem> getTechnologyDayExerciseByExerciseId(int id) {
+        return technologyDayExerciseItemMapper.getTechnologyDayExerciseByExerciseId(id);
     }
 }

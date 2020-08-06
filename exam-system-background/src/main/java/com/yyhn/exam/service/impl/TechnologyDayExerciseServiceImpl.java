@@ -83,4 +83,14 @@ public class TechnologyDayExerciseServiceImpl implements TechnologyDayExerciseSe
         TechnologyDayExercise technologyDayExercise = technologyDayExerciseMapper.getTechnologyDayExerciseById(id);
         return technologyDayExercise;
     }
+
+    @Override
+    public int getTechnologyDayExerciseByCourse(Integer professionalId, Integer courseId) {
+        return technologyDayExerciseMapper.getTechnologyDayExerciseByCourse(professionalId, courseId);
+    }
+
+    @Override
+    public TechnologyDayExercise getTechnologyDayExerciseBypProfessionalCourse(Integer professionalId, Integer courseId, Integer page) {
+        return technologyDayExerciseMapper.getTechnologyDayExerciseBypProfessionalCourse(professionalId, courseId, page);
+    }
 }

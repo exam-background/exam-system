@@ -69,6 +69,8 @@
         delete from exam_course where id = #{id}
     </delete>
 
-
+    <select id="getCourseByProfessionalId" resultMap="courseResult">
+        select * from exam_course where professional_id=#{id}
+    </select>
 
 </mapper>

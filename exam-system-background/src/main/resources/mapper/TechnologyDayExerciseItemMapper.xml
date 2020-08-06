@@ -75,8 +75,7 @@
               id = #{id}
     </select>
 
-
-
-
-
+    <select id="getTechnologyDayExerciseByExerciseId" resultMap="dayExerciseItemResult">
+        select * from exam_technology_day_exercise_item where exercise_id=#{id}
+    </select>
 </mapper>

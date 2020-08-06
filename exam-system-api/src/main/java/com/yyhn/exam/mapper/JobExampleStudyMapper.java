@@ -1,7 +1,5 @@
 package com.yyhn.exam.mapper;
 
-import com.yyhn.exam.entity.Course;
-import com.yyhn.exam.entity.JobDayExercise;
 import com.yyhn.exam.entity.JobExampleStudy;
 import org.apache.ibatis.annotations.Mapper;
 

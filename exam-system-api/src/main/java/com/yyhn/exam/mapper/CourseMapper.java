@@ -39,4 +39,9 @@ public interface CourseMapper {
      * @return
      */
     public int deleteCourse(int id);
+
+    /**
+     * 根据专业id查询科目
+     */
+    public List<Course> getCourseByProfessionalId(Integer professionalId);
 }

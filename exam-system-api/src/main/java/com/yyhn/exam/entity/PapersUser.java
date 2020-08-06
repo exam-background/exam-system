@@ -1,0 +1,108 @@
+package com.yyhn.exam.entity;
+
+import com.baomidou.mybatisplus.annotations.TableId;
+import com.baomidou.mybatisplus.annotations.TableName;
+import com.baomidou.mybatisplus.enums.IdType;
+
+import java.io.Serializable;
+
+@TableName("exam_papers_user")
+public class PapersUser implements Serializable {
+    /**
+     * id，主键
+     */
+    @TableId(value = "id",type = IdType.AUTO)
+    private Integer id;
+    /**
+     * 试卷id
+     */
+    private Integer papersId;
+    /**
+     * 用户id
+     */
+    private Integer userId;
+    /**
+     * 正确题目数
+     */
+    private Integer rightExercise;
+    /**
+     * 错误题目数
+     */
+    private Integer errorExercise;
+    /**
+     * 题目总数
+     */
+    private Integer count;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Integer getPapersId() {
+        return papersId;
+    }
+
+    public void setPapersId(Integer papersId) {
+        this.papersId = papersId;
+    }
+
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
+
+    public Integer getRightExercise() {
+        return rightExercise;
+    }
+
+    public void setRightExercise(Integer rightExercise) {
+        this.rightExercise = rightExercise;
+    }
+
+    public Integer getErrorExercise() {
+        return errorExercise;
+    }
+
+    public void setErrorExercise(Integer errorExercise) {
+        this.errorExercise = errorExercise;
+    }
+
+    public Integer getCount() {
+        return count;
+    }
+
+    public void setCount(Integer count) {
+        this.count = count;
+    }
+
+    public PapersUser(Integer id, Integer papersId, Integer userId, Integer rightExercise, Integer errorExercise, Integer count) {
+        this.id = id;
+        this.papersId = papersId;
+        this.userId = userId;
+        this.rightExercise = rightExercise;
+        this.errorExercise = errorExercise;
+        this.count = count;
+    }
+
+    public PapersUser() {
+    }
+
+    @Override
+    public String toString() {
+        return "PapersUser{" +
+                "id=" + id +
+                ", papersId=" + papersId +
+                ", userId=" + userId +
+                ", rightExercise=" + rightExercise +
+                ", errorExercise=" + errorExercise +
+                ", count=" + count +
+                '}';
+    }
+}

@@ -15,5 +15,12 @@ import org.springframework.test.context.web.WebAppConfiguration;
 public class AppTest {
     @Test
     public void test01(){
+        int a = 50;
+        int b = 5;
+        if(a%b != 0){
+            System.out.println((a/b)+":"+((a/b)+a%b));
+        }else{
+            System.out.println(a/b);
+        }
     }
 }

@@ -3,6 +3,7 @@ package com.yyhn.exam.controller;
 import com.yyhn.exam.common.Dto;
 import com.yyhn.exam.common.DtoUtil;
 import com.yyhn.exam.common.Page;
+import com.yyhn.exam.dto.ResultMsg;
 import com.yyhn.exam.entity.Class;
 import com.yyhn.exam.entity.Student;
 import com.yyhn.exam.service.ClassService;
@@ -148,5 +149,13 @@ public class StudentController {
         return null;
     }
 
-
+    @RequestMapping(value = "/selectStudent",method = RequestMethod.GET)
+    public ResultMsg selectStudent(Integer classId){
+        List<Student> studentList = studentService.selectStudent(classId);
+        if(studentList!=null) {
+            return ResultMsg.BY_SUCCESS("查询成功", studentList);
+        }else{
+            return ResultMsg.BY_FAIL("查询失败");
+        }
+    }
 }

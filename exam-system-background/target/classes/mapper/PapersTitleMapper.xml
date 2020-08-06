@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yyhn.exam.mapper.PapersTitleMapper">
+
+    <resultMap id="papersTitleAll" type="PapersTitle">
+        <id property="id" column="id"></id>
+        <result property="papersId" column="papers_id"></result>
+        <result property="title" column="title"></result>
+        <result property="analysis" column="analysis"></result>
+        <result property="setScore" column="set_score"></result>
+        <result property="standardAnswer" column="standard_answer"></result>
+        <collection property="papersExercises" ofType="com.yyhn.exam.entity.PapersExercise">
+            <id property="id" column="papersExerciseId"></id>
+            <result property="content" column="content"></result>
+            <result property="orderNum" column="orderNum"></result>
+        </collection>
+    </resultMap>
+
+    <select id="getPapersTitleByPapersId" resultMap="papersTitleAll">
+        select exam_papers_title.*,exam_papers_exercise.id papersExerciseId,exam_papers_exercise.content,exam_papers_exercise.order_num orderNum
+        from exam_papers_title
+        left join exam_papers_exercise on exam_papers_title.id = exam_papers_exercise.title_id
+        where exam_papers_title.papers_id=#{id}
+    </select>
+</mapper>

@@ -56,4 +56,20 @@ public interface TechnologyDayExerciseMapper{
      */
     public TechnologyDayExercise getTechnologyDayExerciseById(@Param("id") int id);
 
+    /**
+     * 获取题库中该科目的总数量
+     * @param professionalId
+     * @param courseId
+     * @return
+     */
+    public int getTechnologyDayExerciseByCourse(@Param("professionalId") Integer professionalId, @Param("courseId") Integer courseId);
+
+    /**
+     * 根据科目拿到到随机的题目
+     * @param professionalId
+     * @param courseId
+     * @param page
+     * @return
+     */
+    public TechnologyDayExercise getTechnologyDayExerciseBypProfessionalCourse(@Param("professionalId") Integer professionalId, @Param("courseId") Integer courseId, @Param("page") Integer page);
 }

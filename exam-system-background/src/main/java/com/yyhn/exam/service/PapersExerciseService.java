@@ -10,12 +10,19 @@ public interface PapersExerciseService {
      * @param id
      * @return
      */
-    void deletePapersExercise(Integer id) throws RuntimeException;
+    public void deletePapersExercise(Integer id) throws RuntimeException;
 
     /**
      * 添加考试题目备选答案
      * @param papersExercise
      * @return
      */
-    void insertPapersExercise(PapersExercise papersExercise) throws RuntimeException;
+    public void insertPapersExercise(PapersExercise papersExercise) throws RuntimeException;
+
+    /**
+     * 根据题目id获取备选答案
+     * @param id
+     * @return
+     */
+    List<PapersExercise> getPapersExerciseByTitleId(Integer id);
 }

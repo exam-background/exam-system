@@ -14,4 +14,13 @@ public interface PapersMapper extends BaseMapper<Papers> {
      * @return
      */
     List<Papers> getPapersAll(Papers papers);
+
+    /**
+     * 条件查询已发布试卷
+     * @param papers
+     * @return
+     */
+    List<Papers> getPapersAllPublish(Papers papers);
+
+
 }

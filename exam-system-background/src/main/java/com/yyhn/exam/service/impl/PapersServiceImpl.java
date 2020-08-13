@@ -44,4 +44,9 @@ public class PapersServiceImpl implements PapersService {
         papers.setId(id);
         return papersMapper.updateById(papers);
     }
+
+    @Override
+    public List<Papers> getPapersAllPublish(Papers papers) {
+        return papersMapper.getPapersAllPublish(papers);
+    }
 }

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yyhn.exam.mapper.PapersUserResultMapper">
+
+    <resultMap id="papersUserResultAll" type="PapersUserResult">
+        <id property="id" column="id"></id>
+        <result property="papersId" column="papers_id"></result>
+        <result property="iexerciseId" column="exercise_id"></result>
+        <result property="userId" column="user_id"></result>
+        <result property="userExercise" column="user_exercise"></result>
+        <result property="papersExercise" column="papers_exercise"></result>
+        <result property="right" column="right"></result>
+        <result property="setScore" column="set_score"></result>
+        <result property="mark" column="mark"></result>
+        <association property="papersTitle" javaType="com.yyhn.exam.entity.PapersTitle">
+            <id property="id" column="papersTitleId"></id>
+            <result property="title" column="papersTitleTile"></result>
+            <result property="setScore" column="setScore"></result>
+        </association>
+        <association property="student" javaType="com.yyhn.exam.entity.Student">
+            <id property="id" column="stuId"></id>
+            <result property="stuName" column="stuName"></result>
+        </association>
+    </resultMap>
+
+    <select id="getPapersUserResultByPapersId" resultMap="papersUserResultAll">
+        select exam_papers_user_result.*, exam_papers_title.id papersTitleId, exam_papers_title.title papersTitleTile, exam_papers_title.set_score setScore, exam_student.id stuId, exam_student.stu_name stuName
+        from exam_papers_user_result
+        left join exam_papers_title on exam_papers_user_result.exercise_id = exam_papers_title.id
+        join exam_student on exam_papers_user_result.user_id = exam_student.id
+        where user_id=#{id}
+    </select>
+</mapper>

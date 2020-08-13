@@ -22,21 +22,48 @@
             <id property="id" column="courseId"></id>
             <result property="courseName" column="course_name"></result>
         </collection>
-<!--        <collection property="studentList" ofType="com.yyhn.exam.entity.Student">-->
-<!--            <id property="id" column="studentId"></id>-->
-<!--            <result property="classId" column="classId"></result>-->
-<!--        </collection>-->
+        <collection property="studentList" ofType="com.yyhn.exam.entity.Student">
+            <id property="id" column="studentId"></id>
+            <result property="classId" column="classId"></result>
+        </collection>
+        <collection property="papersUserResultList" ofType="com.yyhn.exam.entity.PapersUserResult">
+            <id property="" column=""></id>
+            <result property="" column=""></result>
+        </collection>
     </resultMap>
 
     <select id="getPapersAll" resultMap="papersAll">
-        select exam_papers.*,exam_course.id courseId,exam_course.course_name,exam_professional.id professionalId,exam_professional.professional_name
+        select exam_papers.*,exam_course.id courseId,exam_course.course_name,exam_professional.id professionalId,exam_professional.professional_name,exam_student.id studentId,exam_student.class_id classId
         from exam_papers
         left join exam_papers_course on exam_papers.id = exam_papers_course.papers_id
         left join exam_course on exam_papers_course.course_id = exam_course.id
         join exam_professional on exam_papers_course.professional_id = exam_professional.id
---         join exam_papers_user on exam_papers.id = exam_papers_user.papers_id
---         left join exam_student on exam_papers_user.user_id = exam_student.id
+        join exam_papers_user on exam_papers.id = exam_papers_user.papers_id
+        left join exam_student on exam_papers_user.user_id = exam_student.id
         where 1=1
+        <if test="name!=null and name!=''">
+            and name like concat('%',#{name},'%')
+        </if>
+        <if test="papersName!=null and papersName!=''">
+            and papers_name like concat('%',#{papersName},'%')
+        </if>
+        <if test="type!=null">
+            and type = #{type}
+        </if>
+        <if test="course_id!=null">
+            and exam_course.id = #{course_id}
+        </if>
+    </select>
+
+    <select id="getPapersAllPublish" resultMap="papersAll">
+        select exam_papers.*,exam_course.id courseId,exam_course.course_name,exam_professional.id professionalId,exam_professional.professional_name,exam_student.id studentId,exam_student.class_id classId
+        from exam_papers
+        left join exam_papers_course on exam_papers.id = exam_papers_course.papers_id
+        left join exam_course on exam_papers_course.course_id = exam_course.id
+        join exam_professional on exam_papers_course.professional_id = exam_professional.id
+        join exam_papers_user on exam_papers.id = exam_papers_user.papers_id
+        left join exam_student on exam_papers_user.user_id = exam_student.id
+        where ispublish=1
         <if test="name!=null and name!=''">
             and name like concat('%',#{name},'%')
         </if>

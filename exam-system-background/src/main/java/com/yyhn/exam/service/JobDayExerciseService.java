@@ -60,4 +60,5 @@ public interface JobDayExerciseService {
      * @return
      */
     public JobDayExercise getJobDayExerciseById(int id);
+
 }

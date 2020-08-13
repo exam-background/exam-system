@@ -45,4 +45,11 @@ public class PapersTitleServiceImpl implements PapersTitleService {
         }
         return papersTitleList;
     }
+
+    @Override
+    public void updatePapersTitleByScore(PapersTitle papersTitle) {
+        if(papersTitleMapper.updatePapersTitleByScore(papersTitle) < 0){
+            throw new RuntimeException("试卷题目查询失败");
+        }
+    }
 }

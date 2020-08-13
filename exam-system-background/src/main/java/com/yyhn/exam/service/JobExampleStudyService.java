@@ -1,8 +1,10 @@
 package com.yyhn.exam.service;
 
 import com.yyhn.exam.common.Page;
+import com.yyhn.exam.entity.JobDayExercise;
 import com.yyhn.exam.entity.JobExampleStudy;
 import com.yyhn.exam.entity.Professional;
+import com.yyhn.exam.entity.TechnologyDayExercise;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -42,4 +44,21 @@ public interface JobExampleStudyService {
      * @return
      */
     public JobExampleStudy getJobExampleStudyById(int id);
+
+    /**
+     * 获取题库中该科目的总数量
+     * @param professionalId
+     * @param courseId
+     * @return
+     */
+    public int getJobExampleStudyByCourse(Integer professionalId, Integer courseId);
+
+    /**
+     * 根据科目拿到到随机的题目
+     * @param professionalId
+     * @param courseId
+     * @param page
+     * @return
+     */
+    public JobExampleStudy getJobExampleStudyBypProfessionalCourse(Integer professionalId, Integer courseId, Integer page);
 }

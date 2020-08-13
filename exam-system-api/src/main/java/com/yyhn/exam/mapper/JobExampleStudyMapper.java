@@ -2,6 +2,7 @@ package com.yyhn.exam.mapper;
 
 import com.yyhn.exam.entity.JobExampleStudy;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 import java.util.Map;
@@ -49,4 +50,21 @@ public interface JobExampleStudyMapper {
      * @return
      */
     public JobExampleStudy getJobExampleStudyById(int id);
+
+    /**
+     * 获取题库中该科目的总数量
+     * @param professionalId
+     * @param courseId
+     * @return
+     */
+    public int getJobExampleStudyByCourse(@Param("professionalId") Integer professionalId, @Param("courseId") Integer courseId);
+
+    /**
+     * 根据科目拿到到随机的题目
+     * @param professionalId
+     * @param courseId
+     * @param page
+     * @return
+     */
+    public JobExampleStudy getJobExampleStudyBypProfessionalCourse(@Param("professionalId") Integer professionalId, @Param("courseId") Integer courseId, @Param("page") Integer page);
 }

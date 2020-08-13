@@ -51,4 +51,14 @@ public class JobExampleStudyServiceImpl implements JobExampleStudyService {
     public JobExampleStudy getJobExampleStudyById(int id){
         return jobExampleStudyMapper.getJobExampleStudyById(id);
     }
+
+    @Override
+    public int getJobExampleStudyByCourse(Integer professionalId, Integer courseId) {
+        return jobExampleStudyMapper.getJobExampleStudyByCourse(professionalId, courseId);
+    }
+
+    @Override
+    public JobExampleStudy getJobExampleStudyBypProfessionalCourse(Integer professionalId, Integer courseId, Integer page) {
+        return jobExampleStudyMapper.getJobExampleStudyBypProfessionalCourse(professionalId, courseId, page);
+    }
 }

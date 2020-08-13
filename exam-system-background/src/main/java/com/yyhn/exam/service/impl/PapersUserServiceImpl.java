@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Service
@@ -33,5 +34,10 @@ public class PapersUserServiceImpl implements PapersUserService {
             throw new RuntimeException("试卷考试学生新增失败");
         }
         System.out.println("考试学生增加完成");
+    }
+
+    @Override
+    public List<PapersUser> getPapersUserByPapersId(Integer id) {
+        return papersUserMapper.getPapersUserByPapersId(id);
     }
 }

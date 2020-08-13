@@ -32,4 +32,11 @@ public interface PapersService {
      * @return
      */
     public int publishPapers(Integer id);
+
+    /**
+     * 条件查询已发布试卷
+     * @param papers
+     * @return
+     */
+    List<Papers> getPapersAllPublish(Papers papers);
 }

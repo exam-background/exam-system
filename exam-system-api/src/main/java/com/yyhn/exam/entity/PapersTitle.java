@@ -36,6 +36,10 @@ public class PapersTitle implements Serializable {
      * 标准答案
      */
     private String standardAnswer;
+    /**
+     * 题目类型
+     */
+    private Integer types;
 
     /**
      * 题目备选答案
@@ -99,16 +103,25 @@ public class PapersTitle implements Serializable {
         this.papersExercises = papersExercises;
     }
 
-    public PapersTitle(Integer id, Integer papersId, String title, String analysis, Integer setScore, String standardAnswer) {
+    public Integer getType() {
+        return types;
+    }
+
+    public void setType(Integer type) {
+        this.types = type;
+    }
+
+    public PapersTitle() {
+    }
+
+    public PapersTitle(Integer id, Integer papersId, String title, String analysis, Integer setScore, String standardAnswer, Integer type) {
         this.id = id;
         this.papersId = papersId;
         this.title = title;
         this.analysis = analysis;
         this.setScore = setScore;
         this.standardAnswer = standardAnswer;
-    }
-
-    public PapersTitle() {
+        this.types = type;
     }
 
     @Override
@@ -120,6 +133,8 @@ public class PapersTitle implements Serializable {
                 ", analysis='" + analysis + '\'' +
                 ", setScore=" + setScore +
                 ", standardAnswer='" + standardAnswer + '\'' +
+                ", type=" + types +
+                ", papersExercises=" + papersExercises +
                 '}';
     }
 }

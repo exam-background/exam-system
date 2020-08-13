@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Service
@@ -33,5 +34,12 @@ public class PapersExerciseServiceImpl implements PapersExerciseService {
             throw new RuntimeException("题目备选答案删除失败");
         }
         System.out.println("题目备选答案增加完成");
+    }
+
+    @Override
+    public List<PapersExercise> getPapersExerciseByTitleId(Integer id) {
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("title_id", id);
+        return papersExerciseMapper.selectByMap(map);
     }
 }

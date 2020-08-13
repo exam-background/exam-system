@@ -125,6 +125,11 @@ public class Papers implements Serializable {
      */
     @TableField(exist = false)
     private List<Student> studentList = new ArrayList<Student>();
+    /**
+     * 试卷考试作答
+     */
+    @TableField(exist = false)
+    private List<PapersUserResult> papersUserResultList = new ArrayList<PapersUserResult>();
 
     public Integer getId() {
         return id;
@@ -304,7 +309,15 @@ public class Papers implements Serializable {
         this.ispublish = ispublish;
     }
 
-    public Papers(Integer id, String name, Integer type, Integer sum, String papersName, Date buildPapersDate, Date papersStartDate, Date papersOverDate, Integer ispublish, Integer course_id, Integer professionalId, String course, String typeString, String[] courseId, String[] userId, List<Course> courseList, Professional professional, List<SysUser> sysUserList, List<PapersTitle> papersTitleList, List<PapersCourse> papersCourseList, List<Student> studentList) {
+    public List<PapersUserResult> getPapersUserResultList() {
+        return papersUserResultList;
+    }
+
+    public void setPapersUserResultList(List<PapersUserResult> papersUserResultList) {
+        this.papersUserResultList = papersUserResultList;
+    }
+
+    public Papers(Integer id, String name, Integer type, Integer sum, String papersName, Date buildPapersDate, Date papersStartDate, Date papersOverDate, Integer ispublish, Integer course_id, Integer professionalId, String course, String typeString, String[] courseId, String[] userId, String ispublishString, List<Course> courseList, Professional professional, List<SysUser> sysUserList, List<PapersTitle> papersTitleList, List<PapersCourse> papersCourseList, List<Student> studentList, List<PapersUserResult> papersUserResultList) {
         this.id = id;
         this.name = name;
         this.type = type;
@@ -320,12 +333,14 @@ public class Papers implements Serializable {
         this.typeString = typeString;
         this.courseId = courseId;
         this.userId = userId;
+        this.ispublishString = ispublishString;
         this.courseList = courseList;
         this.professional = professional;
         this.sysUserList = sysUserList;
         this.papersTitleList = papersTitleList;
         this.papersCourseList = papersCourseList;
         this.studentList = studentList;
+        this.papersUserResultList = papersUserResultList;
     }
 
     public Papers() {
@@ -349,12 +364,14 @@ public class Papers implements Serializable {
                 ", typeString='" + typeString + '\'' +
                 ", courseId=" + Arrays.toString(courseId) +
                 ", userId=" + Arrays.toString(userId) +
+                ", ispublishString='" + ispublishString + '\'' +
                 ", courseList=" + courseList +
                 ", professional=" + professional +
                 ", sysUserList=" + sysUserList +
                 ", papersTitleList=" + papersTitleList +
                 ", papersCourseList=" + papersCourseList +
                 ", studentList=" + studentList +
+                ", papersUserResultList=" + papersUserResultList +
                 '}';
     }
 }

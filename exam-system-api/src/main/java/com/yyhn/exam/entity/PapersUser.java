@@ -1,5 +1,6 @@
 package com.yyhn.exam.entity;
 
+import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
@@ -33,6 +34,12 @@ public class PapersUser implements Serializable {
      * 题目总数
      */
     private Integer count;
+
+    /**
+     * 学生信息
+     */
+    @TableField(exist = false)
+    private Student student;
 
     public Integer getId() {
         return id;
@@ -80,6 +87,14 @@ public class PapersUser implements Serializable {
 
     public void setCount(Integer count) {
         this.count = count;
+    }
+
+    public Student getStudent() {
+        return student;
+    }
+
+    public void setStudent(Student student) {
+        this.student = student;
     }
 
     public PapersUser(Integer id, Integer papersId, Integer userId, Integer rightExercise, Integer errorExercise, Integer count) {

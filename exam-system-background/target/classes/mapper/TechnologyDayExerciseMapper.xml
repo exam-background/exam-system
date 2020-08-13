@@ -238,6 +238,11 @@
     </select>
 
     <select id="getTechnologyDayExerciseBypProfessionalCourse" resultMap="dayExerciseResult">
-        select * from exam_technology_day_exercise where Professional_id=#{professionalId} and course_id=#{courseId} limit #{page},1
+        select exam_technology_day_exercise.id id, exam_technology_day_exercise.title title,
+          exam_technology_day_exercise.standard_answer standardAnswer, exam_technology_day_exercise.set_score setScore,
+          exam_technology_day_exercise.types types, exam_technology_day_exercise.analysis analysis,
+          exam_technology_day_exercise.remark remark, exam_technology_day_exercise.build_exercise_date buildExerciseDate,
+          exam_technology_day_exercise.update_exercise_date updateExerciseDate
+          from exam_technology_day_exercise where Professional_id=#{professionalId} and course_id=#{courseId} limit #{page},1
     </select>
 </mapper>

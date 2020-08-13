@@ -1,6 +1,7 @@
 package com.yyhn.exam.mapper;
 
 import com.baomidou.mybatisplus.mapper.BaseMapper;
+import com.yyhn.exam.entity.Papers;
 import com.yyhn.exam.entity.PapersTitle;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -14,4 +15,11 @@ public interface PapersTitleMapper extends BaseMapper<PapersTitle> {
      * @return
      */
     public List<PapersTitle> getPapersTitleByPapersId(Integer id);
+
+    /**
+     * 修改题目分数
+     * @param PapersTitle
+     * @return
+     */
+    int updatePapersTitleByScore(PapersTitle papersTitle);
 }

@@ -24,4 +24,8 @@
         left join exam_papers_exercise on exam_papers_title.id = exam_papers_exercise.title_id
         where exam_papers_title.papers_id=#{id}
     </select>
+
+    <update id="updatePapersTitleByScore" parameterType="PapersTitle">
+        update exam_papers_title set set_score = #{setScore} where types not in (#{type}) and papers_id = #{papersId}
+    </update>
 </mapper>

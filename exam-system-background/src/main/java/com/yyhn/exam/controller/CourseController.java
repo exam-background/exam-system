@@ -152,8 +152,9 @@ public class CourseController {
         return null;
     }
 
-    @RequestMapping(value = "/getCourseByProfessionalId",method = RequestMethod.GET)
+    @RequestMapping(value = "/getCourseByProfessionalId")
     public ResultMsg getCourseByProfessionalId(Integer professionalId){
+        System.out.println(professionalId);
         try {
             List<Course> list = courseService.getCourseByProfessionalId(professionalId);
             if(list != null){

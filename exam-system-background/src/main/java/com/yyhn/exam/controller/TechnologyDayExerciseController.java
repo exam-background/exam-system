@@ -118,20 +118,36 @@ public class TechnologyDayExerciseController {
             if (technologyDayExercise.getTypes().equals("2")) {
                 Integer redio = technologyDayExercise.getRadio();
                 System.out.println(technologyDayExercise);
+                //标准答案只有选项
                 switch (redio) {
                     case 1:
-                        technologyDayExercise.setStandardAnswer(technologyDayExercise.getRedioItem()[0]);
+                        technologyDayExercise.setStandardAnswer("A");
                         break;
                     case 2:
-                        technologyDayExercise.setStandardAnswer(technologyDayExercise.getRedioItem()[1]);
+                        technologyDayExercise.setStandardAnswer("B");
                         break;
                     case 3:
-                        technologyDayExercise.setStandardAnswer(technologyDayExercise.getRedioItem()[2]);
+                        technologyDayExercise.setStandardAnswer("C");
                         break;
                     case 4:
-                        technologyDayExercise.setStandardAnswer(technologyDayExercise.getRedioItem()[3]);
+                        technologyDayExercise.setStandardAnswer("D");
                         break;
                 }
+                //标准答案为选项和详细内容的拼接
+//                switch (redio) {
+//                    case 1:
+//                        technologyDayExercise.setStandardAnswer("A"+technologyDayExercise.getRedioItem()[0]);
+//                        break;
+//                    case 2:
+//                        technologyDayExercise.setStandardAnswer("B"+technologyDayExercise.getRedioItem()[1]);
+//                        break;
+//                    case 3:
+//                        technologyDayExercise.setStandardAnswer("C"+technologyDayExercise.getRedioItem()[2]);
+//                        break;
+//                    case 4:
+//                        technologyDayExercise.setStandardAnswer("D"+technologyDayExercise.getRedioItem()[3]);
+//                        break;
+//                }
                 if (technologyDayExerciseService.insertTechnologyDayExercise(technologyDayExercise) > 0) {
                     TechnologyDayExerciseItem technologyDayExerciseItem = null;
 

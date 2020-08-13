@@ -26,4 +26,11 @@ public interface PapersTitleService {
      * @return
      */
     List<PapersTitle> getPapersTitleByPapersId(Integer id);
+
+    /**
+     * 修改题目分数
+     * @param papersTitle
+     * @return
+     */
+    void updatePapersTitleByScore(PapersTitle papersTitle);
 }

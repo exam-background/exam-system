@@ -20,157 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0d90f18-a47d-4b60-87d1-3cfdc91a4cba" name="Default Changelist" comment="完成了人工阅卷的功能">
-      <change afterPath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/entity/JobDayExerciseSubmit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/mapper/JobDayExerciseSubmitMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/JobDayExerciseSubmit.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/JobDayExerciseSubmitMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/controller/AppJobDayExerciesSubmitController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/service/JobDayExerciseSubmitService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/service/impl/JobDayExerciseSubmitServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_7_11_8_39__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_7_11_8_39__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/entity/PapersUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/entity/PapersUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/entity/TechnologyDayExerciseSubmit.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/entity/TechnologyDayExerciseSubmit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/mapper/JobDayExerciseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/mapper/JobDayExerciseMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/mapper/PapersUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/mapper/PapersUserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/mapper/PapersUserResultMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/mapper/PapersUserResultMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/mapper/TechnologyDayExerciseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/mapper/TechnologyDayExerciseMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/mapper/TechnologyDayExerciseSubmitMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/mapper/TechnologyDayExerciseSubmitMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/common/AutoPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/common/AutoPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/common/Dto.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/common/Dto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/common/DtoUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/common/DtoUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/common/Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/common/Page.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/common/RandomMaxMin.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/common/RandomMaxMin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/dto/ResultMsg.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/dto/ResultMsg.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/Class.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/Class.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/Course.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/Course.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/JobDayExercise.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/JobDayExercise.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/JobExampleStudy.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/JobExampleStudy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/Papers.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/Papers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/PapersCourse.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/PapersCourse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/PapersExercise.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/PapersExercise.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/PapersTitle.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/PapersTitle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/PapersUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/PapersUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/PapersUserResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/PapersUserResult.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/Professional.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/Professional.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/RoleHasPermission.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/RoleHasPermission.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/SysDictionary.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/SysDictionary.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/SysPermission.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/SysPermission.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/SysRole.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/SysRole.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/SysUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/SysUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/Teacher.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/Teacher.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/TechnologyDayExercise.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/TechnologyDayExercise.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/TechnologyDayExerciseItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/TechnologyDayExerciseItem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/TechnologyDayExerciseSubmit.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/TechnologyDayExerciseSubmit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/UserHasRole.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/UserHasRole.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/ClassMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/ClassMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/CourseMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/CourseMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/JobDayExerciseMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/JobDayExerciseMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/JobExampleStudyMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/JobExampleStudyMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/PapersMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/PapersMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/PapersTitleMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/PapersTitleMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/PapersUserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/PapersUserMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/PapersUserResultMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/PapersUserResultMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/ProfessionalMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/ProfessionalMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/StudentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/StudentMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/SysUserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/SysUserMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/TeacherMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/TeacherMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/TechnologyDayExerciseItemMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/TechnologyDayExerciseItemMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/TechnologyDayExerciseMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/TechnologyDayExerciseMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/TechnologyDayExerciseSubmitMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/TechnologyDayExerciseSubmitMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/vo/JobExamStudySearchVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/vo/JobExamStudySearchVO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/vo/SysRoleSearchVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/vo/SysRoleSearchVO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/exam-system-api-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/exam-system-api-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/controller/JobDayExerciseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/controller/JobDayExerciseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/controller/JobExampleStudyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/controller/JobExampleStudyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/controller/PapersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/controller/PapersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/controller/PapersUserResultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/controller/PapersUserResultController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/controller/TechnologyDayExerciseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/controller/TechnologyDayExerciseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/JobDayExerciseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/JobDayExerciseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/PapersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/PapersService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/PapersTitleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/PapersTitleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/PapersUserResultService.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/PapersUserResultService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/TechnologyDayExerciseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/TechnologyDayExerciseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/impl/JobDayExerciseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/impl/JobDayExerciseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/impl/PapersExerciseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/impl/PapersExerciseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/impl/PapersServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/impl/PapersServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/impl/PapersTitleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/impl/PapersTitleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/impl/PapersUserResultServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/impl/PapersUserResultServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/impl/PapersUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/impl/PapersUserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/impl/TechnologyDayExerciseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/impl/TechnologyDayExerciseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/resources/mapper/PapersUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/resources/mapper/PapersUserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/resources/mapper/PapersUserResultMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/resources/mapper/PapersUserResultMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/config/CorsConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/config/CorsConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/ClassController.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/ClassController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/CourseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/CourseController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/JobDayExerciseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/JobDayExerciseController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/JobExampleStudyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/JobExampleStudyController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/PapersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/PapersController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/PapersTitleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/PapersTitleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/PapersUserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/PapersUserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/PapersUserResultController.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/PapersUserResultController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/PermissionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/PermissionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/ProfessionalController.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/ProfessionalController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/StudentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/SysDictionaryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/SysDictionaryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/SysRoleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/SysRoleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/SysUsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/SysUsersController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/TeacherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/TeacherController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/TechnologyDayExerciseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/TechnologyDayExerciseController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/VoiceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/VoiceController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/filter/CrosFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/filter/CrosFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/ClassService.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/ClassService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/CourseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/CourseService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/JobDayExerciseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/JobDayExerciseService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/JobExampleStudyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/JobExampleStudyService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/PapersCourseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/PapersCourseService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/PapersExerciseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/PapersExerciseService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/PapersService.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/PapersService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/PapersTitleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/PapersTitleService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/PapersUserResultService.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/PapersUserResultService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/PapersUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/PapersUserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/ProfessionalService.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/ProfessionalService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/StudentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/SysPermissionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/SysPermissionService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/SysRoleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/SysRoleService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/SysUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/SysUserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/TeacherService.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/TeacherService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/TechnologyDayExerciseItemService.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/TechnologyDayExerciseItemService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/TechnologyDayExerciseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/TechnologyDayExerciseService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/ClassServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/ClassServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/CourseServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/CourseServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/JobDayExerciseServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/JobDayExerciseServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/JobExampleStudyServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/JobExampleStudyServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/PapersCourseServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/PapersCourseServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/PapersExerciseServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/PapersExerciseServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/PapersServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/PapersServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/PapersTitleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/PapersTitleServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/PapersUserResultServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/PapersUserResultServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/PapersUserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/PapersUserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/ProfessionalServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/ProfessionalServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/StudentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/StudentServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/SysPermissionServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/SysPermissionServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/SysRoleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/SysRoleServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/SysUserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/SysUserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/TeacherServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/TeacherServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/TechnologyDayExerciseItemServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/TechnologyDayExerciseItemServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/TechnologyDayExerciseServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/TechnologyDayExerciseServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/swagger/Swagger2.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/swagger/Swagger2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/mapper/PapersUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/mapper/PapersUserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/mapper/PapersUserResultMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/mapper/PapersUserResultMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,16 +45,27 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="D:/software/apache-maven-3.6.3" />
-        <option name="userSettingsFile" value="D:\software\apache-maven-3.6.3\conf\settings.xml" />
+        <option name="alwaysUpdateSnapshots" value="true" />
+        <option name="localRepository" value="D:\1\mavenFiles1" />
+        <option name="mavenHome" value="D:/apache-maven-3.6.3" />
+        <option name="printErrorStackTraces" value="true" />
+        <option name="usePluginRegistry" value="true" />
+        <option name="userSettingsFile" value="D:/apache-maven-3.6.3\conf\settings.xml" />
       </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
     </option>
   </component>
   <component name="MavenRunner">
     <option name="delegateBuildToMaven" value="true" />
   </component>
   <component name="ProjectId" id="1eM9PXobhSSC5MMGGVA9FO0dWX7" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -220,7 +84,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -293,6 +157,18 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -345,6 +221,7 @@
       <workItem from="1597888155527" duration="20082000" />
       <workItem from="1598074263259" duration="3052000" />
       <workItem from="1598078433602" duration="1065000" />
+      <workItem from="1598083664607" duration="99000" />
     </task>
     <task id="LOCAL-00001" summary="增加了用户管理的内容，增加了系统用户实体类，dao层和mapper文件。增加了service和serviceimpl。创建了控制层，提供了删除用户，新增用户，分页查询，根据部门和职位进行分页查询的Swagger接口">
       <created>1594121568996</created>
@@ -427,7 +304,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -441,12 +318,12 @@
                   <entry key="3" value="113" />
                 </map>
               </option>
+              <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="增加了用户管理的内容，增加了系统用户实体类，dao层和mapper文件。增加了service和serviceimpl。创建了控制层，提供了删除用户，新增用户，分页查询，根据部门和职位进行分页查询的Swagger接口" />
@@ -479,9 +356,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="695" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597892172922" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1596782378022">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="191" y="0" key="CommitChangelistDialog2" timestamp="1598083785829">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
+    <state x="191" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1598083785829" />
+    <state x="526" y="194" key="FileChooserDialogImpl" timestamp="1598083717955">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="526" y="194" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1598083717955" />
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1596782378022" />
     <state x="771" y="420" key="Github.CreateGistDialog" timestamp="1596724145698">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -539,9 +421,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="540" y="254" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594253283140" />
-    <state x="461" y="164" key="SettingsEditor" timestamp="1597893350512">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="328" y="20" key="SettingsEditor" timestamp="1598083724994">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
+    <state x="328" y="20" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1598083724994" />
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1597893350512" />
     <state x="562" y="156" key="Vcs.Push.Dialog.v2" timestamp="1597278801400">
       <screen x="0" y="0" width="1920" height="1040" />

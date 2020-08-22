@@ -9,6 +9,8 @@ import java.io.Serializable;
 
 @TableName("exam_papers_user")
 public class PapersUser implements Serializable {
+
+
     /**
      * id，主键
      */
@@ -39,7 +41,17 @@ public class PapersUser implements Serializable {
      * 学生信息
      */
     @TableField(exist = false)
-    private Student student;
+    private Student student = new Student();
+    /**
+     * 试卷信息
+     */
+    @TableField(exist = false)
+    private Papers papers = new Papers();
+    /**
+     * 专业信息
+     */
+    @TableField(exist = false)
+    private Professional professional = new Professional();
 
     public Integer getId() {
         return id;
@@ -95,6 +107,22 @@ public class PapersUser implements Serializable {
 
     public void setStudent(Student student) {
         this.student = student;
+    }
+
+    public Papers getPapers() {
+        return papers;
+    }
+
+    public void setPapers(Papers papers) {
+        this.papers = papers;
+    }
+
+    public Professional getProfessional() {
+        return professional;
+    }
+
+    public void setProfessional(Professional professional) {
+        this.professional = professional;
     }
 
     public PapersUser(Integer id, Integer papersId, Integer userId, Integer rightExercise, Integer errorExercise, Integer count) {

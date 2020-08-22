@@ -22,8 +22,7 @@ import java.util.List;
 
 @RestController
 @Api( value = "针对示范学习信息进行维护",description = "示范学习控制器类")
-public class JobExampleStudyController {
-
+public class JobExampleStudyController{
     @Resource
     JobExampleStudyService jobExampleStudyService;
 
@@ -152,7 +151,6 @@ public class JobExampleStudyController {
         }
         return DtoUtil.returnFail("系统错误，或者没有此示例","100101");
     }
-
 
 }
 

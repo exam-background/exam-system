@@ -1,11 +1,12 @@
 package com.yyhn.exam.service.impl;
 
 import com.yyhn.exam.common.Page;
-import com.yyhn.exam.entity.SysUser;
 import com.yyhn.exam.entity.TechnologyDayExercise;
 import com.yyhn.exam.mapper.TechnologyDayExerciseMapper;
 import com.yyhn.exam.service.TechnologyDayExerciseService;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
@@ -79,18 +80,34 @@ public class TechnologyDayExerciseServiceImpl implements TechnologyDayExerciseSe
     }
 
     @Override
-    public TechnologyDayExercise getTechnologyDayExerciseById(int id) {
+    public TechnologyDayExercise getTechnologyDayExerciseById(Integer id) {
         TechnologyDayExercise technologyDayExercise = technologyDayExerciseMapper.getTechnologyDayExerciseById(id);
         return technologyDayExercise;
     }
 
     @Override
-    public int getTechnologyDayExerciseByCourse(Integer professionalId, Integer courseId) {
-        return technologyDayExerciseMapper.getTechnologyDayExerciseByCourse(professionalId, courseId);
+    @Transactional(propagation= Propagation.REQUIRED)
+    public int getTechnologyDayExerciseByCourse(Integer professionalId, Integer courseId, Integer a, Integer b) throws RuntimeException{
+        int sum = technologyDayExerciseMapper.getTechnologyDayExerciseByCourse(professionalId, courseId);
+        if((a/b)>sum){
+            throw new RuntimeException("当前科目题目不足"+a/b+"个");
+        }
+        return sum;
     }
 
     @Override
     public TechnologyDayExercise getTechnologyDayExerciseBypProfessionalCourse(Integer professionalId, Integer courseId, Integer page) {
         return technologyDayExerciseMapper.getTechnologyDayExerciseBypProfessionalCourse(professionalId, courseId, page);
+    }
+
+    @Override
+    public List<TechnologyDayExercise> getTechnologyDayExerciseByProfessionalId(Integer professionalId) {
+        if(professionalId != 0) {
+            Map<String, Object> map = new HashMap<String, Object>();
+            map.put("Professional_id", professionalId);
+            return technologyDayExerciseMapper.getAllTechnologyDayExercise(map);
+        }else{
+            return technologyDayExerciseMapper.getAllTechnologyDayExercise(null);
+        }
     }
 }

@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 @Mapper
-public interface TechnologyDayExerciseMapper{
+public interface TechnologyDayExerciseMapper extends BaseMapper<TechnologyDayExercise>{
 
     /**
      * 根据条件获取每日一练信息

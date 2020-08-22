@@ -3,6 +3,7 @@ package com.yyhn.exam.mapper;
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 import com.yyhn.exam.entity.PapersUserResult;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -13,5 +14,5 @@ public interface PapersUserResultMapper extends BaseMapper<PapersUserResult> {
      * @param id
      * @return
      */
-    public List<PapersUserResult> getPapersUserResultByPapersId(Integer id);
+    public List<PapersUserResult> getPapersUserResultByPapersId(@Param("id") Integer id,@Param("papersId") Integer papersId);
 }

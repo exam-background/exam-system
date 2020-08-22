@@ -32,9 +32,9 @@ public class PapersUserResultController {
     }
 
     @RequestMapping("/getPapersUserByUserId")
-    public ResultMsg getPapersUserByUserId(Integer id){
+    public ResultMsg getPapersUserByUserId(Integer id, Integer papersId){
         //查询考生答题内容和外键题目信息
-        List<PapersUserResult> papersUserResultList = papersUserResultService.getPapersUserResultByUserId(id);
+        List<PapersUserResult> papersUserResultList = papersUserResultService.getPapersUserResultByUserId(id, papersId);
         if(papersUserResultList != null){
             //根据题目信息获取备选答案
             List<PapersUserResult> papersUserResults = new ArrayList<PapersUserResult>();

@@ -55,7 +55,7 @@ public interface TechnologyDayExerciseService {
      * @param id
      * @return
      */
-    public TechnologyDayExercise getTechnologyDayExerciseById(int id);
+    public TechnologyDayExercise getTechnologyDayExerciseById(Integer id);
 
     /**
      * 获取题库中该科目的总数量
@@ -63,7 +63,7 @@ public interface TechnologyDayExerciseService {
      * @param courseId
      * @return
      */
-    public int getTechnologyDayExerciseByCourse(Integer professionalId, Integer courseId);
+    public int getTechnologyDayExerciseByCourse(Integer professionalId, Integer courseId, Integer a, Integer b) throws RuntimeException;
 
     /**
      * 根据科目拿到到随机的题目
@@ -73,4 +73,11 @@ public interface TechnologyDayExerciseService {
      * @return
      */
     public TechnologyDayExercise getTechnologyDayExerciseBypProfessionalCourse(Integer professionalId, Integer courseId, Integer page);
+
+    /**
+     * 根据科目id查询所有题目
+     * @param professionalId
+     * @return
+     */
+    public List<TechnologyDayExercise> getTechnologyDayExerciseByProfessionalId(Integer professionalId);
 }

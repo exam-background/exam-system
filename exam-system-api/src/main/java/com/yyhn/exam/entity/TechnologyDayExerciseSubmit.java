@@ -1,31 +1,23 @@
 package com.yyhn.exam.entity;
 
+import com.baomidou.mybatisplus.annotations.TableField;
+import com.baomidou.mybatisplus.annotations.TableId;
+import com.baomidou.mybatisplus.annotations.TableName;
+import com.baomidou.mybatisplus.enums.IdType;
+
 import java.util.Date;
 
 /**
  * 技术每日一练作答
  */
+@TableName("exam_technology_day_exercise_submit")
 public class TechnologyDayExerciseSubmit {
 
     /**
      * ID
      */
+    @TableId(value = "id",type = IdType.AUTO)
     private int id;
-
-    /**
-     * 所属每日一练题目
-     */
-    private TechnologyDayExercise technologyDayExercise = new TechnologyDayExercise();
-
-    /**
-     * 学生
-     */
-    private Student student;
-
-    /**
-     * 提交的答案
-     */
-    private String submitAnswer;
 
     /**
      * 提交时间
@@ -36,6 +28,28 @@ public class TechnologyDayExerciseSubmit {
      * 得分
      */
     private int score;
+
+    /**
+     * 学生id
+     */
+    private int studentId;
+
+    /**
+     * 题目id
+     */
+    private int exerciseId;
+
+    /**
+     * 学生
+     */
+    @TableField(exist = false)
+    private Student student = new Student();
+
+    /**
+     * 所属每日一练题目
+     */
+    @TableField(exist = false)
+    private TechnologyDayExercise technologyDayExercise = new TechnologyDayExercise();
 
     public int getId() {
         return id;
@@ -61,14 +75,6 @@ public class TechnologyDayExerciseSubmit {
         this.student = student;
     }
 
-    public String getSubmitAnswer() {
-        return submitAnswer;
-    }
-
-    public void setSubmitAnswer(String submitAnswer) {
-        this.submitAnswer = submitAnswer;
-    }
-
     public Date getSubmitDate() {
         return submitDate;
     }
@@ -83,5 +89,21 @@ public class TechnologyDayExerciseSubmit {
 
     public void setScore(int score) {
         this.score = score;
+    }
+
+    public int getStudentId() {
+        return studentId;
+    }
+
+    public void setStudentId(int studentId) {
+        this.studentId = studentId;
+    }
+
+    public int getExerciseId() {
+        return exerciseId;
+    }
+
+    public void setExerciseId(int exerciseId) {
+        this.exerciseId = exerciseId;
     }
 }

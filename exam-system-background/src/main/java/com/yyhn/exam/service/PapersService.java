@@ -39,4 +39,10 @@ public interface PapersService {
      * @return
      */
     List<Papers> getPapersAllPublish(Papers papers);
+
+    /**
+     * 添加试卷和对应的表数据
+     * @param papers
+     */
+    public void insertPapersAll(Papers papers) throws Exception;
 }

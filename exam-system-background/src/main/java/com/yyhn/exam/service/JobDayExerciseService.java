@@ -55,10 +55,16 @@ public interface JobDayExerciseService {
     public int deleteJobDayExercise(int id);
 
     /**
-     * 根据ID 获取就业每日一练信息
+     * 根据科目id查询所有题目
+     * @param professionalId
+     * @return
+     */
+    public List<JobDayExercise> getJobDayExerciseByProfessionalId(Integer professionalId);
+
+    /**
+     * 根据题目id查询题目信息
      * @param id
      * @return
      */
-    public JobDayExercise getJobDayExerciseById(int id);
-
+    public JobDayExercise getJobDayExerciseById(Integer id);
 }

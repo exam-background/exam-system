@@ -76,8 +76,19 @@ public class JobDayExerciseServiceImpl implements JobDayExerciseService {
     }
 
     @Override
-    public JobDayExercise getJobDayExerciseById(int id) {
+    public JobDayExercise getJobDayExerciseById(Integer id) {
         JobDayExercise jobDayExercise = jobDayExerciseMapper.getJobDayExerciseById(id);
         return  jobDayExercise;
+    }
+
+    @Override
+    public List<JobDayExercise> getJobDayExerciseByProfessionalId(Integer professionalId) {
+        if(professionalId != 0) {
+            Map<String, Object> map = new HashMap<String, Object>();
+            map.put("Professional_id", professionalId);
+            return jobDayExerciseMapper.getAllJobDayExercise(map);
+        }else{
+            return jobDayExerciseMapper.getAllJobDayExercise(null);
+        }
     }
 }

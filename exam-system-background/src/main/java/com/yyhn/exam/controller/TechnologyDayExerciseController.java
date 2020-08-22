@@ -281,5 +281,23 @@ public class TechnologyDayExerciseController {
         }
     }
 
+    @RequestMapping("/getTechnologyDayExerciseByProfessionalId")
+    public ResultMsg getTechnologyDayExerciseByProfessionalId(Integer id){
+        List<TechnologyDayExercise> list = technologyDayExerciseService.getTechnologyDayExerciseByProfessionalId(id);
+        if(list != null){
+            return ResultMsg.BY_SUCCESS("查询成功", list);
+        }else{
+            return ResultMsg.BY_FAIL("查询失败");
+        }
+    }
 
+    @RequestMapping("/getTechnologyDayExerciseById")
+    public ResultMsg getTechnologyDayExerciseById(Integer id){
+        TechnologyDayExercise technologyDayExercise = technologyDayExerciseService.getTechnologyDayExerciseById(id);
+        if(technologyDayExercise != null){
+            return ResultMsg.BY_SUCCESS("查询成功", technologyDayExercise);
+        }else{
+            return ResultMsg.BY_FAIL("查询失败");
+        }
+    }
 }

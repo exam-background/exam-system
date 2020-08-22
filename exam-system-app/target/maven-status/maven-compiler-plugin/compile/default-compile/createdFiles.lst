@@ -1,0 +1,10 @@
+com\yyhn\exam\controller\AppJobDayExerciesSubmitController.class
+com\yyhn\exam\controller\AppPapersController.class
+com\yyhn\exam\service\impl\TechnologyDayExerciseSubmitServiceImpl.class
+com\yyhn\exam\swagger\Swagger2.class
+com\yyhn\exam\service\impl\JobDayExerciseSubmitServiceImpl.class
+com\yyhn\exam\service\PapersUserService.class
+com\yyhn\exam\service\JobDayExerciseSubmitService.class
+com\yyhn\exam\service\TechnologyDayExerciseSubmitService.class
+com\yyhn\exam\controller\AppTechnologyDayExerciseSubmitController.class
+com\yyhn\exam\service\impl\PapersUserServiceImpl.class

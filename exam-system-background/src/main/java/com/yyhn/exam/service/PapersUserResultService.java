@@ -23,5 +23,5 @@ public interface PapersUserResultService {
      * @param id
      * @return
      */
-    public List<PapersUserResult> getPapersUserResultByUserId(Integer id);
+    public List<PapersUserResult> getPapersUserResultByUserId(Integer id, Integer papersId);
 }

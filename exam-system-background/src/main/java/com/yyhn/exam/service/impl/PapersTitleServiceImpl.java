@@ -18,7 +18,7 @@ public class PapersTitleServiceImpl implements PapersTitleService {
     private PapersTitleMapper papersTitleMapper;
 
     @Override
-    @Transactional(propagation= Propagation.SUPPORTS)
+    @Transactional(propagation= Propagation.REQUIRED)
     public void deletePapersTitle(Integer id)  throws RuntimeException{
         Map<String, Object> map = new HashMap<String, Object>();
         map.put("papers_id", id);
@@ -28,7 +28,7 @@ public class PapersTitleServiceImpl implements PapersTitleService {
     }
 
     @Override
-    @Transactional(propagation= Propagation.SUPPORTS)
+    @Transactional(propagation= Propagation.REQUIRED)
     public void insertPapersTitle(PapersTitle papersTitle)  throws RuntimeException{
         if(papersTitleMapper.insert(papersTitle) <= 0){
             throw new RuntimeException("试卷题目新增失败");
@@ -37,7 +37,7 @@ public class PapersTitleServiceImpl implements PapersTitleService {
     }
 
     @Override
-    @Transactional(propagation= Propagation.SUPPORTS)
+    @Transactional(propagation= Propagation.REQUIRED)
     public List<PapersTitle> getPapersTitleByPapersId(Integer id)  throws RuntimeException{
         List<PapersTitle> papersTitleList = papersTitleMapper.getPapersTitleByPapersId(id);
         if(papersTitleList.size() < 0){
@@ -47,9 +47,10 @@ public class PapersTitleServiceImpl implements PapersTitleService {
     }
 
     @Override
-    public void updatePapersTitleByScore(PapersTitle papersTitle) {
+    @Transactional(propagation= Propagation.REQUIRED)
+    public void updatePapersTitleByScore(PapersTitle papersTitle) throws RuntimeException{
         if(papersTitleMapper.updatePapersTitleByScore(papersTitle) < 0){
-            throw new RuntimeException("试卷题目查询失败");
+            throw new RuntimeException("试卷题目修改失败");
         }
     }
 }

@@ -32,5 +32,5 @@ public interface PapersTitleService {
      * @param papersTitle
      * @return
      */
-    void updatePapersTitleByScore(PapersTitle papersTitle);
+    void updatePapersTitleByScore(PapersTitle papersTitle) throws RuntimeException;
 }

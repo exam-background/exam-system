@@ -1,5 +1,6 @@
 package com.yyhn.exam.mapper;
 
+import com.baomidou.mybatisplus.mapper.BaseMapper;
 import com.yyhn.exam.entity.JobDayExercise;
 import com.yyhn.exam.entity.JobExampleStudy;
 import org.apache.ibatis.annotations.Mapper;
@@ -8,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 @Mapper
-public interface JobDayExerciseMapper {
+public interface JobDayExerciseMapper extends BaseMapper<JobDayExercise> {
 
     /**
      * 根据条件获取就业每日一练信息

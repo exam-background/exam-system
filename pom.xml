@@ -21,6 +21,7 @@
         <!--<module>exam-system-gen</module>-->
         <!--<module>exam-system-generator</module>-->
         <module>exam-system-background</module>
+        <module>exam-system-app</module>
     </modules>
     <properties>
         <commons-lang-version>2.6</commons-lang-version>

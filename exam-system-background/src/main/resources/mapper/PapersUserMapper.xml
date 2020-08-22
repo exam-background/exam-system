@@ -15,12 +15,31 @@
             <id property="id" column="stuId"></id>
             <result property="stuName" column="stuName"></result>
         </association>
+        <association property="papers" javaType="Papers">
+            <id property="id" column="papers_id"></id>
+            <result property="name" column="name"></result>
+        </association>
+        <association property="professional" javaType="Professional">
+            <id property="id" column="professional_id"></id>
+            <result property="professionalName" column="professional_name"></result>
+        </association>
     </resultMap>
 
     <select id="getPapersUserByPapersId" resultMap="papersUserAll">
-        select exam_papers_user.*, exam_student.id stuId, exam_student.stu_name stuName
+        select exam_papers_user.*, exam_student.id stuId, exam_student.stu_name stuName, exam_papers.`name`, exam_professional.professional_name, exam_professional.id  professional_id
         from exam_papers_user
         left join exam_student on exam_papers_user.user_id = exam_student.id
-        where papers_id=#{id}
+        join exam_papers on exam_papers_user.papers_id = exam_papers.id
+        join exam_papers_course on exam_papers_user.papers_id = exam_papers_course.papers_id
+        join exam_professional on exam_papers_course.professional_id = exam_professional.id
+        where exam_papers_user.papers_id=#{id}
+    </select>
+
+    <select id="getPapersUserByUserId" resultMap="papersUserAll">
+        select exam_papers_user.*, exam_papers.`name`, exam_professional.professional_name
+        from exam_papers_user left join exam_papers on exam_papers_user.papers_id = exam_papers.id
+        join exam_papers_course on exam_papers_user.papers_id = exam_papers_course.papers_id
+        join exam_professional on exam_papers_course.professional_id = exam_professional.id
+        where exam_papers_user.user_id=#{id}
     </select>
 </mapper>

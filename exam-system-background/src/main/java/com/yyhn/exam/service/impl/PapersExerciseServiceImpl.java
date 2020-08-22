@@ -18,7 +18,7 @@ public class PapersExerciseServiceImpl implements PapersExerciseService {
     private PapersExerciseMapper papersExerciseMapper;
 
     @Override
-    @Transactional(propagation= Propagation.SUPPORTS)
+    @Transactional(propagation= Propagation.REQUIRED)
     public void deletePapersExercise(Integer id) throws RuntimeException{
         Map<String, Object> map = new HashMap<String, Object>();
         map.put("title_id", id);
@@ -28,10 +28,10 @@ public class PapersExerciseServiceImpl implements PapersExerciseService {
     }
 
     @Override
-    @Transactional(propagation= Propagation.SUPPORTS)
+    @Transactional(propagation= Propagation.REQUIRED)
     public void insertPapersExercise(PapersExercise papersExercise) throws RuntimeException{
         if(papersExerciseMapper.insert(papersExercise) < 0){
-            throw new RuntimeException("题目备选答案删除失败");
+            throw new RuntimeException("题目备选答案添加失败");
         }
         System.out.println("题目备选答案增加完成");
     }

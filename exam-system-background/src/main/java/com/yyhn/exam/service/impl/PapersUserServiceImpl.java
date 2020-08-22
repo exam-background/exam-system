@@ -18,7 +18,7 @@ public class PapersUserServiceImpl implements PapersUserService {
     private PapersUserMapper papersUserMapper;
 
     @Override
-    @Transactional(propagation= Propagation.SUPPORTS)
+    @Transactional(propagation= Propagation.REQUIRED)
     public void deletePapersUser(Integer id)  throws RuntimeException{
         Map<String, Object> map = new HashMap<String, Object>();
         map.put("papers_id", id);
@@ -28,7 +28,7 @@ public class PapersUserServiceImpl implements PapersUserService {
     }
 
     @Override
-    @Transactional(propagation= Propagation.SUPPORTS)
+    @Transactional(propagation= Propagation.REQUIRED)
     public void insertPapersUser(PapersUser papersUser)  throws RuntimeException{
         if(papersUserMapper.insert(papersUser) <= 0){
             throw new RuntimeException("试卷考试学生新增失败");

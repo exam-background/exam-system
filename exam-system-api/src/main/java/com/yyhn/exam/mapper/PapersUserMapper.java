@@ -14,4 +14,10 @@ public interface PapersUserMapper extends BaseMapper<PapersUser> {
      * @return
      */
     List<PapersUser> getPapersUserByPapersId(Integer id);
+    /**
+     * 根据试学生id查询试卷信息
+     * @param id
+     * @return
+     */
+    List<PapersUser> getPapersUserByUserId(Integer id);
 }

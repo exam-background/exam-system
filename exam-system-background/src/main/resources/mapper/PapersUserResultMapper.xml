@@ -25,11 +25,11 @@
         </association>
     </resultMap>
 
-    <select id="getPapersUserResultByPapersId" resultMap="papersUserResultAll">
+    <select id="getPapersUserResultByPapersId" resultMap="papersUserResultAll" parameterType="Integer">
         select exam_papers_user_result.*, exam_papers_title.id papersTitleId, exam_papers_title.title papersTitleTile, exam_papers_title.set_score setScore, exam_student.id stuId, exam_student.stu_name stuName
         from exam_papers_user_result
         left join exam_papers_title on exam_papers_user_result.exercise_id = exam_papers_title.id
         join exam_student on exam_papers_user_result.user_id = exam_student.id
-        where user_id=#{id}
+        where user_id=#{id} and papers_id=#{papersId}
     </select>
 </mapper>

@@ -19,7 +19,7 @@ public class PapersUserResultServiceImpl implements PapersUserResultService {
     private PapersUserResultMapper papersUserResultMapper;
 
     @Override
-    @Transactional(propagation= Propagation.SUPPORTS)
+    @Transactional(propagation= Propagation.REQUIRED)
     public void deletePapersUserResult(Integer id) throws RuntimeException{
         Map<String, Object> map = new HashMap<String, Object>();
         map.put("papers_id", id);
@@ -35,7 +35,7 @@ public class PapersUserResultServiceImpl implements PapersUserResultService {
     }
 
     @Override
-    public List<PapersUserResult> getPapersUserResultByUserId(Integer id) {
-        return papersUserResultMapper.getPapersUserResultByPapersId(id);
+    public List<PapersUserResult> getPapersUserResultByUserId(Integer id, Integer papersId) {
+        return papersUserResultMapper.getPapersUserResultByPapersId(id, papersId);
     }
 }

@@ -9,4 +9,6 @@ public interface TechnologyDayExerciseSubmitService {
      * @return
      */
     public int addTechnologyDayExerciseSubmit(TechnologyDayExerciseSubmit technologyDayExerciseSubmit);
+
+    public int getTechnologyDayExerciseSubmit(TechnologyDayExerciseSubmit technologyDayExerciseSubmit);
 }

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper  namespace="com.yyhn.exam.mapper.AppTechnologyDayExerciseMapper">
+    <resultMap id="dayExerciseResult" type="TechnologyDayExercise">
+        <id property="id" column="id"/>
+        <result column="title" property="title"/>
+        <result column="standardAnswer" property="standardAnswer"/>
+        <result column="setScore" property="setScore"></result>
+        <result column="types" property="types"></result>
+        <result column="analysis" property="analysis"></result>
+        <result column="remark" property="remark"></result>
+        <result column="buildExerciseDate" property="buildExerciseDate"></result>
+        <result column="updateExerciseDate" property="updateExerciseDate"></result>
+    </resultMap>
+    <select id="getTechnologyDayExerciseSubmit" resultMap="dayExerciseResult">
+        select * from exam_technology_day_exercise where 1=1
+        <if test="id != 0">
+            and Professional_id=#{id}
+        </if>
+    </select>
+</mapper>

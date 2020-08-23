@@ -177,5 +177,10 @@
                     de.id = #{id}
     </select>
 
-
+    <select id="getJobDayExerciseByProfessid" resultMap="jobDayExerciseResult">
+        select * from exam_job_day_exercise where 1=1
+        <if test="id != 0">
+            Professional_id=#{id}
+        </if>
+    </select>
 </mapper>

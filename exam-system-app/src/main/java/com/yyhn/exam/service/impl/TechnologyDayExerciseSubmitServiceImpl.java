@@ -16,4 +16,9 @@ public class TechnologyDayExerciseSubmitServiceImpl implements TechnologyDayExer
     public int addTechnologyDayExerciseSubmit(TechnologyDayExerciseSubmit technologyDayExerciseSubmit) {
         return (technologyDayExerciseSubmitMapper.insert(technologyDayExerciseSubmit));
     }
+
+    @Override
+    public int getTechnologyDayExerciseSubmit(TechnologyDayExerciseSubmit technologyDayExerciseSubmit) {
+        return 0;
+    }
 }

@@ -2,6 +2,8 @@ com\yyhn\exam\vo\TechnologyDayExerciseVO.class
 com\yyhn\exam\entity\Papers.class
 com\yyhn\exam\mapper\CourseMapper.class
 com\yyhn\exam\entity\Course.class
+com\yyhn\exam\mapper\AppJobDayExerciseMapper.class
+com\yyhn\exam\mapper\AppTechnologyDayExerciseMapper.class
 com\yyhn\exam\mapper\SysRoleMapper.class
 com\yyhn\exam\entity\SysPermission.class
 com\yyhn\exam\entity\SysRole.class

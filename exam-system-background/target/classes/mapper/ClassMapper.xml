@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yyhn.exam.mapper.ClassMapper">
+
+    <resultMap id="courseResult" type="Class">
+        <id property="id" column="id"/>
+        <result column="class_name" property="className"/>
+        <result column="class_desc" property="classDesc"/>
+        <result column="grade" property="grade"></result>
+        <result column="open_time" property="openTime"></result>
+
+        <association property="classTeacher" javaType="Teacher">
+            <id property="id" column="classteacherid"/>
+            <result column="classteachername" property="teacherName"></result>
+        </association>
+
+        <association property="professionalTeacher" javaType="Teacher">
+            <id property="id" column="professionalteacherid"/>
+            <result column="professionalteachername" property="teacherName"></result>
+        </association>
+
+    </resultMap>
+
+    <sql id="base_column_list">
+        c.id ,c.class_name ,c.grade,c.class_desc,c.open_time,c.grade,c.class_teacher_id,c.professional_teacher_id ,
+        t1.id classteacherid,t1.teacher_name classteachername,
+        t2.id professionalteacherid, t2.teacher_name professionalteachername
+    </sql>
+
+    <select id="getAllClassNoPage" resultMap="courseResult">
+
+        select
+        <include refid="base_column_list" />
+        from
+        exam_class c,
+        exam_teacher t1,
+        exam_teacher t2
+        WHERE
+        c.`class_teacher_id` = t1.id
+        AND  c.`Professional_teacher_id` =  t2.id
+    </select>
+
+    <select id="getAllClass" resultMap="courseResult" parameterType="map">
+          select
+            <include refid="base_column_list" />
+          from
+            exam_class c,
+            exam_teacher t1,
+            exam_teacher t2
+          WHERE
+        c.`class_teacher_id` = t1.id
+        AND  c.`Professional_teacher_id` =  t2.id
+
+
+        <include refid="condition"/>
+
+          order by id desc
+              limit #{startRow},#{pageSize}
+    </select>
+
+    <select id="getCount" resultType="int"  parameterType="map">
+        select count(1) from exam_class
+        <where>
+            <include refid="condition"/>
+        </where>
+    </select>
+
+    <sql id="condition">
+
+            <if test="grade!=null and grade!=''">
+                and grade  = #{grade}
+            </if>
+            <if test="classTeacherId!=null">
+                and class_teacher_id =#{classTeacherId}
+            </if>
+            <if test="professionalTeacherId!=null">
+                and professional_teacher_id = #{professionalTeacherId}
+            </if>
+
+    </sql>
+
+    <insert id="addClass" parameterType="Class">
+        insert into exam_class(class_name,class_desc,grade,class_teacher_id,Professional_teacher_id)
+        values(#{className},#{classDesc},#{grade},#{classTeacher.id},#{professionalTeacher.id})
+    </insert>
+
+    <update id="updateClass" parameterType="Class">
+        update exam_class
+        <set>
+            <if test="className!=null">
+                class_name = #{className},
+            </if>
+            <if  test="classDesc!=null">
+                class_desc = #{classDesc},
+            </if>
+            <if  test="grade!=null">
+                grade = #{grade},
+            </if>
+            <if  test="classTeacher.id!=null">
+                class_teacher_id = #{classTeacher.id},
+            </if>
+            <if  test="professionalTeacher.id!=null">
+                professional_teacher_id = #{professionalTeacher.id},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteClass" parameterType="int">
+        delete from exam_class where id = #{id}
+    </delete>
+
+    <select id="checkClassInStudent" parameterType="int" resultType="int">
+        select count(1) from exam_student where class_id = #{id}
+    </select>
+
+
+
+</mapper>

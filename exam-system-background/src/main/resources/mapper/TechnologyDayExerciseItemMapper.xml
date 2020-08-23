@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper  namespace="com.yyhn.exam.mapper.TechnologyDayExerciseItemMapper">
+
+    <resultMap id="dayExerciseItemResult" type="TechnologyDayExerciseItem">
+        <id property="id" column="id"/>
+        <result column="content" property="content"/>
+        <result column="exercise_id" property="exerciseId"></result>
+        <result column="order_num" property="orderNum"></result>
+    </resultMap>
+
+    <insert id="addTechnologyDayExerciseItem" parameterType="TechnologyDayExerciseItem">
+        insert into exam_technology_day_exercise_item
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="exerciseId != null">
+                exercise_id,
+            </if>
+            <if test="content != null">
+                content,
+            </if>
+            <if test="orderNum != null">
+                order_num,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="exerciseId != null">
+                #{exerciseId,jdbcType=INTEGER},
+            </if>
+            <if test="content != null">
+                #{content,jdbcType=VARCHAR},
+            </if>
+            <if test="orderNum != null">
+                #{orderNum,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateTechnologyDayExerciseItem" parameterType="TechnologyDayExerciseItem">
+        update exam_technology_day_exercise_item
+        <set>
+            <if test="exerciseId != null">
+                exercise_id = #{exerciseId},
+            </if>
+            <if test="content != null">
+                content=#{content},
+            </if>
+            <if test="orderNum != null">
+                order_num=#{orderNum},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteTechnologyDayExerciseItem" parameterType="int">
+        delete from exam_technology_day_exercise_item where id = #{id}
+    </delete>
+
+    <select id="getItemByTechnologyDayExerciseId" parameterType="int">
+        select
+              id,exercise_id,content,order_num
+        from
+              exam_technology_day_exercise_item
+        where
+              exercise_id = #{technologyDayExerciseId}
+    </select>
+
+    <select id="getTechnologyDayExerciseById" parameterType="int">
+        select
+              id,exercise_id,content,order_num
+        from
+              exam_technology_day_exercise_item
+        where
+              id = #{id}
+    </select>
+
+
+
+
+
+</mapper>

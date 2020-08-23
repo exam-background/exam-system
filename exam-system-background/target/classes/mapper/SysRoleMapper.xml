@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yyhn.exam.mapper.SysRoleMapper">
+    <select id="getUserRolesByUserId" resultMap="userRoles">
+SELECT r.* FROM `exam_sys_role` r
+, `exam_sys_user` u , exam_user_role ur
+WHERE ur.`role_id` = r.`id` AND ur.`user_id` = u.`id`
+AND u.`id` = #{id}
+    </select>
+    <resultMap id="userRoles" type="com.yyhn.exam.entity.SysRole">
+        <result property="id" column="id"/>
+        <result property="roleName" column="role_name"/>
+        <result property="roleMark" column="role_mark"/>
+        <result property="roleDescription" column="role_description"/>
+        <result property="createTime" column="create_time"/>
+    </resultMap>
+</mapper>

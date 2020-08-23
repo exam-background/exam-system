@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yyhn.exam.mapper.ProfessionalMapper">
+    <resultMap id="professionalResult" type="Professional">
+        <id property="id" column="id"/>
+        <result column="professional_name" property="professionalName"/>
+        <result column="professional_desc" property="professionalDesc"></result>
+    </resultMap>
+
+    <select id="getAllProfessional" resultMap="professionalResult" parameterType="map">
+          select  * from exam_professional
+          <where>
+            <include refid="professional_condition"/>
+          </where>
+          order by id desc
+          limit #{startRow},#{pageSize}
+    </select>
+
+    <select id="getProfessionalNoPage" resultMap="professionalResult">
+        select  * from exam_professional
+    </select>
+
+    <select id="getCount" resultType="int">
+        select count(1) from exam_professional
+        <where>
+            <include refid="professional_condition"/>
+        </where>
+    </select>
+
+
+    <sql id="professional_condition">
+        <if test="professionalName!=null">
+            and professional_name like concat('%',#{professionalName},'%')
+        </if>
+    </sql>
+
+
+    <insert id="addProfessional" parameterType="Professional">
+        insert into exam_professional(professional_name,professional_desc) values(#{professionalName},#{professionalDesc})
+    </insert>
+
+    <update id="updateProfessional" parameterType="Professional">
+        update exam_professional
+        <set>
+            <if test="professionalName!=null">
+                professional_name = #{professionalName},
+            </if>
+            <if  test="professionalDesc!=null">
+                professional_desc =#{professionalDesc},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteProfessional" parameterType="int">
+        delete from exam_professional where id = #{id}
+    </delete>
+
+
+
+</mapper>

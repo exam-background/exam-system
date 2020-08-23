@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yyhn.exam.mapper.JobDayExerciseMapper">
+    <resultMap id="jobDayExerciseResult" type="JobDayExercise">
+        <id property="id" column="id"/>
+        <result column="title" property="title"/>
+        <result column="answer" property="answer"></result>
+        <result column="set_standard" property="setStandard"></result>
+        <result column="submit_answer" property="submitAnswer"></result>
+        <result column="score" property="score"></result>
+        <result column="remark" property="remark"></result>
+        <association property="professional" javaType="Professional">
+            <id column="professionalId" property="id"></id>
+            <result column="professional_name" property="professionalName"></result>
+        </association>
+        <association property="course" javaType="Course">
+            <id column="course_id" property="id"></id>
+            <result column="course_name" property="courseName"></result>
+        </association>
+    </resultMap>
+
+    <select id="getAllJobDayExercise" resultMap="jobDayExerciseResult" parameterType="map">
+               SELECT
+                    de.* ,p.`professional_name`,p.id professionalId, c.`course_name`,c.id  `course_id`
+               FROM
+                    exam_job_day_exercise de , exam_professional p,exam_course c
+               WHERE
+                    de.`professional_id` = p.`id`
+               AND
+                    de.`course_id` = c.`id`
+
+               <include refid="jobDayExercise_condition"/>
+
+          order by id desc
+          <if test="startRow != null">
+              limit #{startRow},#{pageSize}
+          </if>
+    </select>
+
+
+    <select id="getCount" resultType="int">
+        select count(1) from exam_job_day_exercise de
+        <where>
+            <include refid="jobDayExercise_condition"/>
+        </where>
+    </select>
+
+
+    <sql id="jobDayExercise_condition">
+        <if test="title!=null and title!=''">
+            and title like concat('%',#{title},'%')
+        </if>
+
+        <if test="professionalId!=null">
+            and  de.professional_id = #{professionalId}
+        </if>
+
+        <if test="courseId!=null">
+            and  de.course_id = #{courseId}
+        </if>
+    </sql>
+
+
+    <insert id="addJobDayExercise" parameterType="JobDayExercise">
+        insert into exam_job_day_exercise
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="title != null">
+                title,
+            </if>
+            <if test="answer != null">
+                answer,
+            </if>
+            <if test="setStandard != null">
+                set_standard,
+            </if>
+            <if test="submitAnswer != null">
+                submit_answer,
+            </if>
+            <if test="score != null">
+                score,
+            </if>
+            <if test="remark != null">
+                remark,
+            </if>
+
+            <if test="professionalId != null">
+                professional_id,
+            </if>
+            <if test="courseId != null">
+                course_id,
+            </if>
+
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+           <if test="title != null">
+               #{title,jdbcType=VARCHAR},
+           </if>
+            <if test="answer != null">
+                #{answer,jdbcType=VARCHAR},
+            </if>
+            <if test="setStandard != null">
+                #{setStandard,jdbcType=VARCHAR},
+            </if>
+            <if test="submitAnswer != null">
+                #{submitAnswer,jdbcType=VARCHAR},
+            </if>
+            <if test="score != null">
+                #{score,jdbcType=INTEGER},
+            </if>
+            <if test="remark != null">
+                #{remark,jdbcType=VARCHAR},
+            </if>
+
+            <if test="professionalId != null">
+                #{professionalId,jdbcType=INTEGER},
+            </if>
+            <if test="courseId != null">
+                #{professionalId,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateJobDayExercise" parameterType="JobDayExercise">
+        update exam_job_day_exercise
+        <set>
+            <if test="title!=null">
+                title = #{title},
+            </if>
+            <if  test="answer!=null">
+                answer =#{answer},
+            </if>
+            <if  test="setStandard!=null">
+                set_standard =#{setStandard},
+            </if>
+            <if  test="submitAnswer!=null">
+                submit_answer =#{submitAnswer},
+            </if>
+            <if  test="score!=null">
+                score =#{score},
+            </if>
+            <if  test="remark!=null">
+                remark =#{remark},
+            </if>
+            <if  test="professionalId!=null">
+                professional_id =#{professionalId},
+            </if>
+            <if  test="courseId!=null">
+                course_id =#{courseId},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteJobDayExercise" parameterType="int">
+        delete from  exam_job_day_exercise  where  id =  #{id}
+    </delete>
+
+    <delete id="deletesJobDayExercise" parameterType="int">
+        delete from exam_job_day_exercise where id IN
+        <foreach collection="list" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <select id="getJobDayExerciseById" resultMap="jobDayExerciseResult">
+               SELECT
+                    de.* ,p.`professional_name`,p.id professionalId, c.`course_name`,c.id  `course_id`
+               FROM
+                    exam_job_day_exercise de , exam_professional p,exam_course c
+               WHERE
+                    de.`professional_id` = p.`id`
+               AND
+                    de.`course_id` = c.`id`
+               and
+                    de.id = #{id}
+    </select>
+
+
+</mapper>

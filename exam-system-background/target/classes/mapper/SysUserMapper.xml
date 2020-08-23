@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yyhn.exam.mapper.SysUserMapper">
+    <select id="getSysUserByPage" resultType="com.yyhn.exam.entity.SysUser">
+        select id,login_name,real_name,department,POSITION,mobile_phone,create_time,remark from exam_sys_user where 1=1
+        <if test="department != null and department != ''">
+            and department like concat('%',#{department},'%')
+        </if>
+        <if test="position != null and position != ''">
+            and position = #{position}
+        </if>
+        <if test="page != null">
+            limit #{page},#{pageSize}
+        </if>
+    </select>
+    <delete id="deleteSysUser" parameterType="int">
+        delete from exam_sys_user where id = #{id}
+    </delete>
+    <delete id="deleteSysUsers" parameterType="int">
+        delete from exam_sys_user where id IN
+        <foreach collection="list" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+    <insert id="addSysUser" parameterType="com.yyhn.exam.entity.SysUser">
+        insert into exam_sys_user(login_name,real_name,login_password,department,
+        <if test="position != null">
+            position,
+        </if>
+        <if test="mobile_phone != null">
+            mobile_phone,
+        </if>
+        create_time
+        <if test="remark != null">
+            ,remark
+        </if>
+        ) values(#{login_name},#{real_name},#{login_password},#{department}
+        <if test="position != null">
+            ,#{position}
+        </if>
+        <if test="mobile_phone != null">
+            ,#{mobile_phone}
+        </if>
+        , now()
+        <if test="remark != null">
+            ,#{remark}
+        </if>
+        )
+    </insert>
+    <update id="updateSysUser" parameterType="com.yyhn.exam.entity.SysUser">
+        update exam_sys_user set
+        <if test="login_name != null">
+            login_name = #{login_name}
+        </if>
+        <if test="real_name != null">
+            , real_name = #{real_name}
+        </if>
+        <if test="login_password != null and '' != login_password">
+            , login_password = #{login_password}
+        </if>
+        <if test="department != null">
+            , department = #{department}
+        </if>
+        <if test="position != null">
+            , position = #{position}
+        </if>
+        <if test="mobile_phone != null">
+            , mobile_phone = #{mobile_phone}
+        </if>
+        <if test="create_time != null">
+            , create_time = #{create_time}
+        </if>
+        <if test="remark != null">
+            , remark = #{remark}
+        </if>
+        where id = #{id}
+    </update>
+</mapper>

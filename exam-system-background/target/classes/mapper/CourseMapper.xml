@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yyhn.exam.mapper.CourseMapper">
+
+    <resultMap id="courseResult" type="Course">
+        <id property="id" column="id"/>
+        <result column="course_name" property="courseName"/>
+        <result column="course_desc" property="courseDesc"></result>
+        <association property="professional"  javaType="com.yyhn.exam.entity.Professional">
+            <id property="id" column="professional_id"/>
+            <result column="professional_name" property="professionalName"/>
+            <result column="professional_desc" property="professionalDesc"></result>
+        </association>
+    </resultMap>
+
+    <select id="getAllCourse" resultMap="courseResult" parameterType="map">
+          select
+              c.* ,p.id professional_id, p.professional_name,p.professional_desc
+          from
+              exam_course c ,exam_professional p
+          where
+              p.id = c.professional_id
+            <include refid="condition"/>
+          order by id desc
+          <if test="startRow != null">
+              limit #{startRow},#{pageSize}
+          </if>
+    </select>
+
+    <select id="getCount" resultType="int"  parameterType="map">
+        select count(1) from exam_course
+        <where>
+            <include refid="condition"/>
+        </where>
+    </select>
+
+    <sql id="condition">
+        <if test="courseName!=null and courseName!=''">
+            and course_name like concat('%',#{courseName},'%')
+        </if>
+    </sql>
+
+    <insert id="addCourse" parameterType="Course">
+        insert into exam_course(course_name,course_desc,professional_id) values(#{courseName},#{courseDesc},#{professional.id})
+    </insert>
+
+    <update id="updateCourse" parameterType="Course">
+        update exam_course
+        <set>
+
+            <if test="courseName!=null">
+                course_name = #{courseName},
+            </if>
+
+            <if  test="courseDesc!=null">
+                course_desc = #{courseDesc},
+            </if>
+
+            <if  test="professional.id!=null">
+                professional_id = #{professional.id},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteCourse" parameterType="int">
+        delete from exam_course where id = #{id}
+    </delete>
+
+
+
+</mapper>

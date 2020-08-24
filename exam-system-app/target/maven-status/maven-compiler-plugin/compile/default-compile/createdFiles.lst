@@ -6,6 +6,7 @@ com\yyhn\exam\service\PapersUserService.class
 com\yyhn\exam\service\JobDayExerciseSubmitService.class
 com\yyhn\exam\service\TechnologyDayExerciseSubmitService.class
 com\yyhn\exam\controller\AppTechnologyDayExerciseController.class
+com\yyhn\exam\service\AppPapersUserService.class
 com\yyhn\exam\service\impl\TechnologyDayExerciseSubmitServiceImpl.class
 com\yyhn\exam\service\impl\AppTechnologyDayExerciseServiceImpl.class
 com\yyhn\exam\service\AppJobDayExerciseService.class
@@ -14,4 +15,5 @@ com\yyhn\exam\service\impl\JobDayExerciseSubmitServiceImpl.class
 com\yyhn\exam\controller\AppJobDayExerciseController.class
 com\yyhn\exam\controller\AppTechnologyDayExerciseSubmitController.class
 com\yyhn\exam\service\impl\PapersUserServiceImpl.class
+com\yyhn\exam\service\impl\AppPapersUserServiceImpl.class
 com\yyhn\exam\service\AppTechnologyDayExerciseService.class

@@ -16,5 +16,8 @@ public interface SysRoleService {
 
     List<SysRole> getRoleByList(String roleName);
 
-
+    List<SysRole> getUserRolesByUserId(Integer id);
+    Integer addRoleMenu(Integer roleId , Integer menuId);
+    Integer findIdByMark(String roleMark);
+    Integer updateUserRole(Integer userId,Integer roleId);
 }

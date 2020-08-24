@@ -1,9 +1,13 @@
 package com.yyhn.exam.controller;
 
 import com.yyhn.exam.dto.ResultMsg;
+import com.yyhn.exam.entity.PapersExercise;
+import com.yyhn.exam.entity.PapersTitle;
 import com.yyhn.exam.entity.PapersUserResult;
 import com.yyhn.exam.service.PapersExerciseService;
+import com.yyhn.exam.service.PapersTitleService;
 import com.yyhn.exam.service.PapersUserResultService;
+import com.yyhn.exam.service.PapersUserService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

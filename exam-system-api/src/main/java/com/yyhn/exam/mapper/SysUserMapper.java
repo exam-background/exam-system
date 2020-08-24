@@ -5,6 +5,7 @@ import com.yyhn.exam.common.Page;
 import com.yyhn.exam.entity.SysUser;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 import java.util.Map;
@@ -45,4 +46,7 @@ public interface SysUserMapper extends BaseMapper<SysUser> {
      * @return
      */
     public List<SysUser> getSysUserByPage(Map<String, Object> map);
+
+    @Select("select id from exam_sys_user where login_Name = #{loginName} or login_password = #{password}")
+    public Integer getUserIdByUserNameAndPassword(String loginName,String password);
 }

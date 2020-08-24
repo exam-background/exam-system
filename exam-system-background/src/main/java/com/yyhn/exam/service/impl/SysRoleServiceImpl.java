@@ -95,4 +95,24 @@ public class SysRoleServiceImpl implements SysRoleService {
 
         return sysRoleList;
     }
+
+    @Override
+    public List<SysRole> getUserRolesByUserId(Integer id) {
+        return sysRoleMapper.getUserRolesByUserId(id);
+    }
+
+    @Override
+    public Integer addRoleMenu(Integer roleId, Integer menuId) {
+        return sysRoleMapper.addRoleMenu(roleId,menuId);
+    }
+
+    @Override
+    public Integer findIdByMark(String roleMark) {
+        return sysRoleMapper.findIdByMark(roleMark);
+    }
+
+    @Override
+    public Integer updateUserRole(Integer userId, Integer roleId) {
+        return sysRoleMapper.updateUserRole(userId,roleId);
+    }
 }

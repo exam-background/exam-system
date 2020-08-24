@@ -3,10 +3,12 @@ package com.yyhn.exam.service;
 import com.yyhn.exam.entity.SysUser;
 import org.apache.ibatis.annotations.Param;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Map;
 
 public interface SysUserService {
+    public Integer getUserIdByUserNameAndPassword(String loginName,String password);
     /**
      * 根据id删除用户
      * @param id
@@ -44,4 +46,6 @@ public interface SysUserService {
      * @return
      */
     public List<SysUser> getSysUserByPage(String department, String position, Integer page, Integer pageSize);
+
+    public String login(String username , String pasword , HttpServletRequest request);
 }

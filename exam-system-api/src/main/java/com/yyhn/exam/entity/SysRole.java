@@ -15,7 +15,7 @@ public class SysRole {
 
     private String roleName;
 
-    private String roleMark;
+        private String roleMark;
 
     private String roleDescription;
 

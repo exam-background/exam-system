@@ -3,12 +3,10 @@ package com.yyhn.exam.service;
 import com.yyhn.exam.common.Page;
 import com.yyhn.exam.entity.JobExampleStudy;
 import com.yyhn.exam.entity.TechnologyDayExercise;
-import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
 public interface TechnologyDayExerciseService {
-
     /**
      * 根据条件获取就业示范学习信息
      * @return

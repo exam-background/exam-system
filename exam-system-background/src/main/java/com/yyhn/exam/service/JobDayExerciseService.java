@@ -18,7 +18,7 @@ public interface JobDayExerciseService {
      * 根据条件获取就业每日一练信息
      * @return
      */
-    public void getAllJobDayExercise(String title,Integer professionalId,Integer courseId, Page<List<JobDayExercise>> page);
+    public void getAllJobDayExercise(String title, Integer professionalId, Integer courseId, Page<List<JobDayExercise>> page);
 
     /**
      * 查询所有就业每日一练信息

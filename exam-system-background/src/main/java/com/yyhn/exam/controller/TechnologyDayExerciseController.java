@@ -118,36 +118,20 @@ public class TechnologyDayExerciseController {
             if (technologyDayExercise.getTypes().equals("2")) {
                 Integer redio = technologyDayExercise.getRadio();
                 System.out.println(technologyDayExercise);
-                //标准答案只有选项
                 switch (redio) {
                     case 1:
-                        technologyDayExercise.setStandardAnswer("A");
+                        technologyDayExercise.setStandardAnswer(technologyDayExercise.getRedioItem()[0]);
                         break;
                     case 2:
-                        technologyDayExercise.setStandardAnswer("B");
+                        technologyDayExercise.setStandardAnswer(technologyDayExercise.getRedioItem()[1]);
                         break;
                     case 3:
-                        technologyDayExercise.setStandardAnswer("C");
+                        technologyDayExercise.setStandardAnswer(technologyDayExercise.getRedioItem()[2]);
                         break;
                     case 4:
-                        technologyDayExercise.setStandardAnswer("D");
+                        technologyDayExercise.setStandardAnswer(technologyDayExercise.getRedioItem()[3]);
                         break;
                 }
-                //标准答案为选项和详细内容的拼接
-//                switch (redio) {
-//                    case 1:
-//                        technologyDayExercise.setStandardAnswer("A"+technologyDayExercise.getRedioItem()[0]);
-//                        break;
-//                    case 2:
-//                        technologyDayExercise.setStandardAnswer("B"+technologyDayExercise.getRedioItem()[1]);
-//                        break;
-//                    case 3:
-//                        technologyDayExercise.setStandardAnswer("C"+technologyDayExercise.getRedioItem()[2]);
-//                        break;
-//                    case 4:
-//                        technologyDayExercise.setStandardAnswer("D"+technologyDayExercise.getRedioItem()[3]);
-//                        break;
-//                }
                 if (technologyDayExerciseService.insertTechnologyDayExercise(technologyDayExercise) > 0) {
                     TechnologyDayExerciseItem technologyDayExerciseItem = null;
 
@@ -281,23 +265,5 @@ public class TechnologyDayExerciseController {
         }
     }
 
-    @RequestMapping("/getTechnologyDayExerciseByProfessionalId")
-    public ResultMsg getTechnologyDayExerciseByProfessionalId(Integer id){
-        List<TechnologyDayExercise> list = technologyDayExerciseService.getTechnologyDayExerciseByProfessionalId(id);
-        if(list != null){
-            return ResultMsg.BY_SUCCESS("查询成功", list);
-        }else{
-            return ResultMsg.BY_FAIL("查询失败");
-        }
-    }
 
-    @RequestMapping("/getTechnologyDayExerciseById")
-    public ResultMsg getTechnologyDayExerciseById(Integer id){
-        TechnologyDayExercise technologyDayExercise = technologyDayExerciseService.getTechnologyDayExerciseById(id);
-        if(technologyDayExercise != null){
-            return ResultMsg.BY_SUCCESS("查询成功", technologyDayExercise);
-        }else{
-            return ResultMsg.BY_FAIL("查询失败");
-        }
-    }
 }

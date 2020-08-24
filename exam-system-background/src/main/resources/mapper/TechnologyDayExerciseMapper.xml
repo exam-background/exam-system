@@ -68,37 +68,37 @@
 
     <select id="getCount" resultType="int"  parameterType="map">
         SELECT
-            COUNT(1)
+        COUNT(1)
         FROM
-            exam_technology_day_exercise de,
-            exam_professional p,
-            exam_course  c
+        exam_technology_day_exercise de,
+        exam_professional p,
+        exam_course  c
         WHERE
-            de.professional_id = p.id
+        de.professional_id = p.id
         AND
-            de.course_id = c.id
+        de.course_id = c.id
         <include refid="condition"/>
     </select>
 
     <sql id="condition">
-            <if test="professionId!=null and professionId!=''">
-                and exam_technology_day_exercise.professional_id  = #{professionId}
-            </if>
-            <if test="courseId!=null and courseId!=''">
-                and exam_technology_day_exercise.course_Id =#{courseId}
-            </if>
-            <if test="title!=null and title!=''">
-                and exam_technology_day_exercise.title like concat('%',#{title},'%')
-            </if>
-            <if test="types!=null and types!=''">
-                and exam_technology_day_exercise.types = #{types}
-            </if>
+        <if test="professionId!=null and professionId!=''">
+            and exam_technology_day_exercise.professional_id  = #{professionId}
+        </if>
+        <if test="courseId!=null and courseId!=''">
+            and exam_technology_day_exercise.course_Id =#{courseId}
+        </if>
+        <if test="title!=null and title!=''">
+            and exam_technology_day_exercise.title like concat('%',#{title},'%')
+        </if>
+        <if test="types!=null and types!=''">
+            and exam_technology_day_exercise.types = #{types}
+        </if>
     </sql>
 
     <insert id="addTechnologyDayExercise" parameterType="TechnologyDayExercise" useGeneratedKeys="true" keyProperty="id">
-<!--        <selectKey resultType="java.lang.Integer" keyProperty="id" order="BEFORE" >//AFTER-->
-<!--            SELECT LAST_INSERT_ID()-->
-<!--        </selectKey>-->
+        <!--        <selectKey resultType="java.lang.Integer" keyProperty="id" order="BEFORE" >//AFTER-->
+        <!--            SELECT LAST_INSERT_ID()-->
+        <!--        </selectKey>-->
         insert into exam_technology_day_exercise
 
         <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -232,7 +232,7 @@
         AND
         de.id = #{id}
     </select>
-    
+
     <select id="getTechnologyDayExerciseByCourse" resultType="Integer">
         select COUNT(id) from exam_technology_day_exercise where Professional_id=#{professionalId} and course_id=#{courseId}
     </select>

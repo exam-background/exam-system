@@ -152,20 +152,4 @@ public class CourseController {
         return null;
     }
 
-    @RequestMapping(value = "/getCourseByProfessionalId")
-    public ResultMsg getCourseByProfessionalId(Integer professionalId){
-        System.out.println(professionalId);
-        try {
-            List<Course> list = courseService.getCourseByProfessionalId(professionalId);
-            if(list != null){
-                return ResultMsg.BY_SUCCESS("查询成功", list);
-            }else {
-                return ResultMsg.BY_FAIL("查询失败");
-            }
-        }catch (Exception ex){
-            ex.printStackTrace();
-        }
-        return null;
-    }
-
 }

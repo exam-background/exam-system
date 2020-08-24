@@ -10,6 +10,8 @@
         <result column="open_class_time" property="openClassTime"/>
         <result column="csId" property="classId"/>
         <result column="proId" property="professionalId"/>
+        <result column="login_name" property="loginName"/>
+        <result column="login_password" property="loginPassword"/>
         <association property="clazz" javaType="Class">
             <id property="id" column="class_id"/>
             <result column="class_name" property="className"></result>
@@ -21,7 +23,7 @@
     </resultMap>
 
     <sql id="base_column_list">
-        s.id as id,s.stu_name as stu_name,s.open_class_time AS open_class_time
+        s.id as id,s.stu_name as stu_name,s.open_class_time AS open_class_time,s.login_name as login_name,s.login_password as login_password
         ,s.class_id as csId,s.professional_id as proId,c.id AS class_id ,c.class_name,p.id AS professional_id ,p.professional_name
     </sql>
 
@@ -39,7 +41,7 @@
 
               <include refid="condition"/>
 
-          order by id descz
+          order by id desc
               limit #{startRow},#{pageSize}
     </select>
 
@@ -63,8 +65,8 @@
     </sql>
 
     <insert id="addStudent" parameterType="Student">
-        insert into exam_student(stu_name,open_class_time,class_id,professional_id)
-        values(#{stuName},#{openClassTime},#{classId},#{professionalId})
+        insert into exam_student(stu_name,open_class_time,class_id,professional_id,login_name,login_password)
+        values(#{stuName},#{openClassTime},#{classId},#{professionalId},#{loginName},#{loginPassword})
     </insert>
 
     <update id="updateStudent" parameterType="Student">
@@ -82,6 +84,12 @@
             <if  test="professional.id!=null">
                 professional_id = #{professional.id},
             </if>
+            <if  test="loginName!=null and loginName != ''">
+                login_name = #{loginName},
+            </if>
+            <if  test="loginPassword!=null and loginPassword != ''">
+                login_password = #{loginPassword},
+            </if>
         </set>
         where id = #{id}
     </update>
@@ -90,8 +98,6 @@
         delete from exam_student where id = #{id}
     </delete>
 
-    <select id="selectStudent" resultMap="studentResult">
-        select * from exam_student where class_id=#{id}
-    </select>
+
 
 </mapper>

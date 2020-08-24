@@ -47,9 +47,4 @@ public interface StudentMapper extends BaseMapper<Student>  {
      * @return
      */
     public int deleteStudent(int id);
-
-    /**
-     * 根据班级id查询学生信息
-     */
-    public List<Student> selectStudent(Integer Id);
 }

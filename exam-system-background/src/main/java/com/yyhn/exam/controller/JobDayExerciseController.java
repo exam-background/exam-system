@@ -144,7 +144,7 @@ public class JobDayExerciseController  {
     public Dto<Object> getJobDayExerciseById(String id){
         try {
             JobDayExercise jobDayExercise = jobDayExerciseService.getJobDayExerciseById(Integer.valueOf(id));
-            if(jobDayExercise != null){
+            if(jobDayExercise!=null){
                 return DtoUtil.returnSuccess("查询成功！",jobDayExercise);
             }else {
                 return DtoUtil.returnFail("查询失败","100101");
@@ -187,16 +187,6 @@ public class JobDayExerciseController  {
             return ResultMsg.BY_SUCCESS("批量删除成功", null);
         }else{
             return ResultMsg.BY_FAIL("批量失败");
-        }
-    }
-
-    @RequestMapping("/getJobDayExerciseByProfessionalId")
-    public ResultMsg getJobDayExerciseByProfessionalId(Integer id){
-        List<JobDayExercise> list = jobDayExerciseService.getJobDayExerciseByProfessionalId(id);
-        if(list != null){
-            return ResultMsg.BY_SUCCESS("查询成功", list);
-        }else{
-            return ResultMsg.BY_FAIL("查询失败");
         }
     }
 }

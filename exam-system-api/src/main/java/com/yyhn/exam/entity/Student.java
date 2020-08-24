@@ -14,6 +14,23 @@ public class Student {
     @TableId(value = "id",type = IdType.AUTO)
     private Integer id;
     private String stuName;
+
+    public String getLoginName() {
+        return loginName;
+    }
+
+    public void setLoginName(String loginName) {
+        this.loginName = loginName;
+    }
+
+    public String getLoginPassword() {
+        return loginPassword;
+    }
+
+    public void setLoginPassword(String loginPassword) {
+        this.loginPassword = loginPassword;
+    }
+
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date openClassTime;
@@ -21,6 +38,8 @@ public class Student {
     private Professional professional = new Professional();
     private Integer classId;
     private Integer professionalId;
+    private String loginName;
+    private String loginPassword;
 
     public Integer getId() {
         return id;

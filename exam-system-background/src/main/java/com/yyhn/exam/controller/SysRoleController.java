@@ -28,7 +28,9 @@ public class SysRoleController {
 
     @PostMapping("/addSysRole")
     public ResultMsg addSysRole(SysRole sysRole){
-        if(sysRole== null)return  ResultMsg.BY_NULL("对象为空");
+        if(sysRole== null){
+            return  ResultMsg.BY_NULL("对象为空");
+        }
         if (sysRoleService.findRoleNameCount(sysRole.getRoleName())>0){
             return ResultMsg.BY_FAIL("添加失败,已有此名称");
         }
@@ -72,7 +74,9 @@ public class SysRoleController {
         System.out.println("roleName = " + roleName);
         try {
                 roleByList = sysRoleService.getRoleByList(roleName);
-            if(roleByList.size()>0) return ResultMsg.BY_SUCCESS("查询角色成功",roleByList);
+            if(roleByList.size()>0) {
+                return ResultMsg.BY_SUCCESS("查询角色成功",roleByList);
+            }
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -82,9 +86,13 @@ public class SysRoleController {
     @GetMapping("/getSysRoleById/{id}")
     public ResultMsg getSysRoleById(@PathVariable Integer id){
         try {
-            if(id==null) return ResultMsg.BY_ERROR("ID为空");
+            if(id==null) {
+                return ResultMsg.BY_ERROR("ID为空");
+            }
             SysRole role = sysRoleService.getRoleById(id);
-            if(role!=null)return ResultMsg.BY_SUCCESS("成功获取数据",role);
+            if(role!=null){
+                return ResultMsg.BY_SUCCESS("成功获取数据",role);
+            }
 
         }catch (Exception e){
             e.printStackTrace();
@@ -96,7 +104,9 @@ public class SysRoleController {
     @PostMapping("/updateSysRole")
     public ResultMsg updateSysRole(SysRole sysRole){
         try {
-            if(sysRole== null) return ResultMsg.BY_NULL("数据为空");
+            if(sysRole== null) {
+                return ResultMsg.BY_NULL("数据为空");
+            }
            boolean ax = sysRoleService.updateRoles(sysRole);
            return ResultMsg.BY_SUCCESS("修改成功",null);
         }catch (Exception e){
@@ -107,7 +117,9 @@ public class SysRoleController {
 
     @GetMapping("/deleteSysRole/{id}")
     public ResultMsg deleteSysRole(@PathVariable Integer id){
-        if(id == null) return ResultMsg.BY_NULL("ID为空");
+        if(id == null) {
+            return ResultMsg.BY_NULL("ID为空");
+        }
         try {
             sysRoleService.removeRoles(id);
             return ResultMsg.BY_SUCCESS("删除成功",null);

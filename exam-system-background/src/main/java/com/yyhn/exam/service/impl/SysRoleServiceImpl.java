@@ -102,8 +102,23 @@ public class SysRoleServiceImpl implements SysRoleService {
     }
 
     @Override
+    public Integer findRoleMarkCount(String roleMark) {
+        return sysRoleMapper.findRoleMarkCount(roleMark);
+    }
+
+    @Override
+    public Integer findRoleNameCount(String roleName) {
+        return sysRoleMapper.findRoleNameCount(roleName);
+    }
+
+    @Override
     public Integer addRoleMenu(Integer roleId, Integer menuId) {
         return sysRoleMapper.addRoleMenu(roleId,menuId);
+    }
+
+    @Override
+    public Integer getRoleIdByMark(String mark) {
+        return sysRoleMapper.getRoleIdByMark(mark);
     }
 
     @Override

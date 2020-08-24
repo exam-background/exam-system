@@ -35,7 +35,7 @@
         where exam_papers_user.papers_id=#{id}
     </select>
 
-    <select id="getPapersUserByUserId" resultMap="papersUserAll">
+    <select id="getPapersUserByUserId" resultMap="papersUserAll" parameterType="int">
         select exam_papers_user.*, exam_papers.`name`, exam_professional.professional_name
         from exam_papers_user left join exam_papers on exam_papers_user.papers_id = exam_papers.id
         join exam_papers_course on exam_papers_user.papers_id = exam_papers_course.papers_id

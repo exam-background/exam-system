@@ -4,7 +4,7 @@ import com.yyhn.exam.entity.PapersUser;
 
 import java.util.List;
 
-public interface PapersUserService {
+public interface AppPapersUserService {
     /**
      * 根据学生id查询所有考试试卷
      * @param id

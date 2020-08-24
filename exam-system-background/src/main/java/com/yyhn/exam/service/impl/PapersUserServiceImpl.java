@@ -2,6 +2,7 @@ package com.yyhn.exam.service.impl;
 
 import com.yyhn.exam.entity.PapersUser;
 import com.yyhn.exam.mapper.PapersUserMapper;
+import com.yyhn.exam.service.AppPapersUserService;
 import com.yyhn.exam.service.PapersUserService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;

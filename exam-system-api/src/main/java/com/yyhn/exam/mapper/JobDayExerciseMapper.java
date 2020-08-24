@@ -1,26 +1,28 @@
 package com.yyhn.exam.mapper;
 
+import com.baomidou.mybatisplus.mapper.BaseMapper;
 import com.yyhn.exam.entity.JobDayExercise;
 import com.yyhn.exam.entity.JobExampleStudy;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 import java.util.Map;
 
 @Mapper
-public interface JobDayExerciseMapper {
+public interface JobDayExerciseMapper extends BaseMapper<JobDayExercise> {
 
     /**
      * 根据条件获取就业每日一练信息
      * @return
      */
-    public List<JobDayExercise> getAllJobDayExercise(Map<String,Object> map);
+    public List<JobDayExercise> getAllJobDayExercise(Map<String, Object> map);
 
     /**
      * 获取总记录数
      * @return
      */
-    public int getCount(Map<String,Object> map);
+    public int getCount(Map<String, Object> map);
 
     /**
      * 批量删除就业每日一练信息

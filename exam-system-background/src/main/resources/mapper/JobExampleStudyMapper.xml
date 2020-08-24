@@ -153,4 +153,22 @@
     </select>
 
 
+    <select id="getJobExampleStudyByCourse" resultType="Integer">
+        select COUNT(id) from exam_job_example_study where Professional_id=#{professionalId} and course_id=#{courseId}
+    </select>
+
+    <select id="getJobExampleStudyBypProfessionalCourse" resultMap="jobExampleStudyResult">
+        SELECT
+        es.* ,p.`professional_name` professionalName,p.id proId,c.`course_name`,c.id courseId
+        FROM
+        exam_job_example_study es , exam_professional p,exam_course c
+        WHERE
+        es.`professional_id` = p.`id`
+        AND
+        es.`course_id` = c.`id`
+        and
+        es.Professional_id=#{professionalId}
+        and
+        es.course_id=#{courseId} limit #{page},1
+    </select>
 </mapper>

@@ -7,7 +7,6 @@ import com.yyhn.exam.entity.TechnologyDayExercise;
 import java.util.List;
 
 public interface TechnologyDayExerciseService {
-
     /**
      * 根据条件获取就业示范学习信息
      * @return
@@ -54,5 +53,29 @@ public interface TechnologyDayExerciseService {
      * @param id
      * @return
      */
-    public TechnologyDayExercise getTechnologyDayExerciseById(int id);
+    public TechnologyDayExercise getTechnologyDayExerciseById(Integer id);
+
+    /**
+     * 获取题库中该科目的总数量
+     * @param professionalId
+     * @param courseId
+     * @return
+     */
+    public int getTechnologyDayExerciseByCourse(Integer professionalId, Integer courseId, Integer a, Integer b) throws RuntimeException;
+
+    /**
+     * 根据科目拿到到随机的题目
+     * @param professionalId
+     * @param courseId
+     * @param page
+     * @return
+     */
+    public TechnologyDayExercise getTechnologyDayExerciseBypProfessionalCourse(Integer professionalId, Integer courseId, Integer page);
+
+    /**
+     * 根据科目id查询所有题目
+     * @param professionalId
+     * @return
+     */
+    public List<TechnologyDayExercise> getTechnologyDayExerciseByProfessionalId(Integer professionalId);
 }

@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 @Mapper
-public interface TechnologyDayExerciseMapper{
+public interface TechnologyDayExerciseMapper extends BaseMapper<TechnologyDayExercise>{
 
     /**
      * 根据条件获取每日一练信息
@@ -56,4 +56,20 @@ public interface TechnologyDayExerciseMapper{
      */
     public TechnologyDayExercise getTechnologyDayExerciseById(@Param("id") int id);
 
+    /**
+     * 获取题库中该科目的总数量
+     * @param professionalId
+     * @param courseId
+     * @return
+     */
+    public int getTechnologyDayExerciseByCourse(@Param("professionalId") Integer professionalId, @Param("courseId") Integer courseId);
+
+    /**
+     * 根据科目拿到到随机的题目
+     * @param professionalId
+     * @param courseId
+     * @param page
+     * @return
+     */
+    public TechnologyDayExercise getTechnologyDayExerciseBypProfessionalCourse(@Param("professionalId") Integer professionalId, @Param("courseId") Integer courseId, @Param("page") Integer page);
 }

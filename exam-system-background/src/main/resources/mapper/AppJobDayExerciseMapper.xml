@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yyhn.exam.mapper.AppJobDayExerciseMapper">
+    <resultMap id="jobDayExerciseResult" type="JobDayExercise">
+        <id property="id" column="id"/>
+        <result column="title" property="title"/>
+        <result column="answer" property="answer"></result>
+        <result column="set_standard" property="setStandard"></result>
+        <result column="submit_answer" property="submitAnswer"></result>
+        <result column="score" property="score"></result>
+        <result column="remark" property="remark"></result>
+    </resultMap>
+
+    <select id="getJobDayExerciseByProfessid" resultMap="jobDayExerciseResult">
+        select * from exam_job_day_exercise where 1=1
+        <if test="id != 0">
+            and Professional_id=#{id}
+        </if>
+    </select>
+</mapper>

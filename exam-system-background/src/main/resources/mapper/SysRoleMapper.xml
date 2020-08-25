@@ -3,6 +3,9 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.yyhn.exam.mapper.SysRoleMapper">
+    <insert id="addRoleMenu" parameterType="com.yyhn.exam.entity.RoleHasMenu">
+        insert into exam_role_menu(role_id,menu_id) values(#{roleId},#{menuId})
+    </insert>
     <select id="getUserRolesByUserId" resultMap="userRoles">
 SELECT r.* FROM `exam_sys_role` r
 , `exam_sys_user` u , exam_user_role ur

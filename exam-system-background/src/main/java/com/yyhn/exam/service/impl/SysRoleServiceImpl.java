@@ -1,6 +1,7 @@
 package com.yyhn.exam.service.impl;
 
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
+import com.yyhn.exam.entity.RoleHasMenu;
 import com.yyhn.exam.entity.RoleHasPermission;
 import com.yyhn.exam.entity.SysPermission;
 import com.yyhn.exam.entity.SysRole;
@@ -113,7 +114,10 @@ public class SysRoleServiceImpl implements SysRoleService {
 
     @Override
     public Integer addRoleMenu(Integer roleId, Integer menuId) {
-        return sysRoleMapper.addRoleMenu(roleId,menuId);
+        RoleHasMenu roleHasMenu = new RoleHasMenu();
+        roleHasMenu.setMenuId(menuId);
+        roleHasMenu.setRoleId(roleId);
+        return sysRoleMapper.addRoleMenu(roleHasMenu);
     }
 
     @Override

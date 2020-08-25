@@ -47,6 +47,8 @@ public interface SysUserMapper extends BaseMapper<SysUser> {
      */
     public List<SysUser> getSysUserByPage(Map<String, Object> map);
 
+    Integer getUserIdByUserNameAndPassword(SysUser sysUser);
+
     @Select("select id from exam_sys_user where login_Name = #{loginName} or login_password = #{password}")
-    public Integer getUserIdByUserNameAndPassword(String loginName,String password);
+    Integer getUserIdByUserNameOrPassword(String loginName,String password);
 }

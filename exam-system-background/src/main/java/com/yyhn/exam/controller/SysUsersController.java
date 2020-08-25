@@ -102,7 +102,7 @@ public class SysUsersController {
         }
         if(sysUserService.updateSysUser(sysUser)>0){
           Integer roleId =  sysRoleService.getRoleIdByMark(sysUser.getPosition());
-          Integer userId = sysUserService.getUserIdByUserNameAndPassword(sysUser.getLogin_name(),sysUser.getLogin_password());
+          Integer userId = sysUserService.getUserIdByUserNameOrPassword(sysUser.getLogin_name(),sysUser.getLogin_password());
           sysRoleService.updateUserRole(userId,roleId);
             if(sysUser.getLogin_password() != null && sysUser.getLogin_password() != ""){
                 System.out.println("用户密码更改");

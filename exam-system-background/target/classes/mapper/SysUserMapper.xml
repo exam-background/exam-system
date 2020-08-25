@@ -3,6 +3,11 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.yyhn.exam.mapper.SysUserMapper">
+    <select id="getUserIdByUserNameAndPassword" resultType="integer" parameterType="com.yyhn.exam.entity.SysUser">
+        select id from exam_sys_user where login_Name = #{login_name} and login_password = #{login_password}
+    </select>
+
+
     <select id="getSysUserByPage" resultType="com.yyhn.exam.entity.SysUser">
         select id,login_name,real_name,department,POSITION,mobile_phone,create_time,remark from exam_sys_user where 1=1
         <if test="department != null and department != ''">

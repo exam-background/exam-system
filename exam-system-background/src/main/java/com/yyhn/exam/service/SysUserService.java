@@ -8,7 +8,10 @@ import java.util.List;
 import java.util.Map;
 
 public interface SysUserService {
-    public Integer getUserIdByUserNameAndPassword(String loginName,String password);
+
+
+    public Integer getUserIdByUserNameOrPassword(String login_Name,String login_password);
+    public Integer getUserIdByUserNameAndPassword(String login_Name,String login_password);
     /**
      * 根据id删除用户
      * @param id

@@ -14,6 +14,9 @@ public class SysUserRoleServiceImpl implements SysUserRoleService {
     private SysUserRoleMapper sysUserRoleMapper;
     @Override
     public Integer insert(Integer userId,Integer roleId) {
-        return sysUserRoleMapper.insert(userId,roleId);
+        UserHasRole userHasRole = new UserHasRole();
+        userHasRole.setUserId(userId);
+        userHasRole.setRoleId(roleId);
+        return sysUserRoleMapper.insert(userHasRole);
     }
 }

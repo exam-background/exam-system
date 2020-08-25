@@ -67,7 +67,7 @@ public class JobDayExerciseController  {
         try {
             jobDayExercise.getProfessional().setId(professionalId);
             jobDayExercise.getCourse().setId(courseId);
-
+            System.out.println(jobDayExercise.toString());
             int count = jobDayExerciseService.addJobDayExercise(jobDayExercise);
             if(count>0){
                 return DtoUtil.returnSuccess("添加成功！");

@@ -39,7 +39,7 @@
 
               <include refid="condition"/>
 
-          order by id descz
+          order by id desc
               limit #{startRow},#{pageSize}
     </select>
 

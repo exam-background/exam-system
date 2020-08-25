@@ -99,11 +99,7 @@ public class PapersServiceImpl implements PapersService {
                 //记录拿过哪些题目的id
                 List<Integer> list = new ArrayList<Integer>();
                 for(int a=0;a<professional;a++){
-                    int result = RandomMaxMin.getRandomMaxMin(courseCount, 0, list);
-                    System.out.println(result+":"+courseCount);
-                    if(result >= courseCount){
-                        result--;
-                    }
+                    int result = RandomMaxMin.getRandomMaxMin(courseCount-1, 0, list);
                     list.add(result);
                     //拿到本张试卷没拿过的题目
                     JobExampleStudy jobExampleStudy = jobExampleStudyService.getJobExampleStudyBypProfessionalCourse(papers.getProfessionalId(), Integer.valueOf(papers.getCourseId()[i]), result);

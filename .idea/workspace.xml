@@ -19,18 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0d90f18-a47d-4b60-87d1-3cfdc91a4cba" name="Default Changelist" comment="完成了一些前端APP页面所需的接口">
+    <list default="true" id="f0d90f18-a47d-4b60-87d1-3cfdc91a4cba" name="Default Changelist" comment="修复了一些添加数据时产生的bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/src/test/java/com/yyhn/exam/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/src/test/java/com/yyhn/exam/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/test-classes/com/yyhn/exam/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/test-classes/com/yyhn/exam/AppTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/controller/JobDayExerciseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/controller/JobDayExerciseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/impl/PapersServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/impl/PapersServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/resources/mapper/JobDayExerciseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/resources/mapper/JobDayExerciseMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/resources/mapper/StudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/resources/mapper/StudentMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/JobDayExerciseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/JobDayExerciseController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/PapersServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/PapersServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/mapper/JobDayExerciseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/mapper/JobDayExerciseMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/mapper/StudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/mapper/StudentMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exam-system-background/target/exam-system-background-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/exam-system-background-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exam-system-background/target/exam-system-background-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/exam-system-background-1.0-SNAPSHOT.jar.original" afterDir="false" />
     </list>
@@ -259,7 +249,7 @@
       <workItem from="1598182189233" duration="1186000" />
       <workItem from="1598275669777" duration="5523000" />
       <workItem from="1598315529386" duration="21288000" />
-      <workItem from="1598357906982" duration="5179000" />
+      <workItem from="1598357906982" duration="7360000" />
     </task>
     <task id="LOCAL-00001" summary="增加了用户管理的内容，增加了系统用户实体类，dao层和mapper文件。增加了service和serviceimpl。创建了控制层，提供了删除用户，新增用户，分页查询，根据部门和职位进行分页查询的Swagger接口">
       <created>1594121568996</created>
@@ -352,7 +342,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598341468062</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="修复了一些添加数据时产生的bug">
+      <created>1598366364876</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1598366364876</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -391,7 +388,8 @@
     <MESSAGE value="完成了人工阅卷的功能" />
     <MESSAGE value="增加了手机APP模块相应的接口" />
     <MESSAGE value="完成了一些前端APP页面所需的接口" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成了一些前端APP页面所需的接口" />
+    <MESSAGE value="修复了一些添加数据时产生的bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复了一些添加数据时产生的bug" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1597902690964">
@@ -422,38 +420,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="771" y="420" key="Github.CreateGistDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596724145698" />
-    <state width="1877" height="298" key="GridCell.Tab.0.bottom" timestamp="1598366062263">
+    <state width="1877" height="229" key="GridCell.Tab.0.bottom" timestamp="1598368215580">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="298" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598366062263" />
-    <state width="1877" height="298" key="GridCell.Tab.0.center" timestamp="1598366062263">
+    <state width="1877" height="229" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598368215580" />
+    <state width="1877" height="229" key="GridCell.Tab.0.center" timestamp="1598368215580">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="298" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598366062263" />
-    <state width="1877" height="298" key="GridCell.Tab.0.left" timestamp="1598366062263">
+    <state width="1877" height="229" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598368215580" />
+    <state width="1877" height="229" key="GridCell.Tab.0.left" timestamp="1598368215580">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="298" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598366062263" />
-    <state width="1877" height="298" key="GridCell.Tab.0.right" timestamp="1598366062263">
+    <state width="1877" height="229" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598368215580" />
+    <state width="1877" height="229" key="GridCell.Tab.0.right" timestamp="1598368215580">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="298" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598366062263" />
-    <state width="1877" height="298" key="GridCell.Tab.1.bottom" timestamp="1598366062251">
+    <state width="1877" height="229" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598368215580" />
+    <state width="1877" height="229" key="GridCell.Tab.1.bottom" timestamp="1598368215581">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="298" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598366062251" />
-    <state width="1877" height="298" key="GridCell.Tab.1.center" timestamp="1598366062250">
+    <state width="1877" height="229" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598368215581" />
+    <state width="1877" height="229" key="GridCell.Tab.1.center" timestamp="1598368215580">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="298" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598366062250" />
-    <state width="1877" height="298" key="GridCell.Tab.1.left" timestamp="1598366062250">
+    <state width="1877" height="229" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598368215580" />
+    <state width="1877" height="229" key="GridCell.Tab.1.left" timestamp="1598368215580">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="298" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598366062250" />
-    <state width="1877" height="298" key="GridCell.Tab.1.right" timestamp="1598366062250">
+    <state width="1877" height="229" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598368215580" />
+    <state width="1877" height="229" key="GridCell.Tab.1.right" timestamp="1598368215581">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="298" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598366062250" />
+    <state width="1877" height="229" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598368215581" />
     <state width="1877" height="273" key="GridCell.Tab.2.bottom" timestamp="1598346572284">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -474,14 +472,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="540" y="254" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594253283140" />
+    <state x="58" y="0" width="1862" height="869" key="MergeDialog" timestamp="1598368395870">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="58" y="0" width="1862" height="869" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598368395870" />
+    <state x="416" y="94" width="847" height="563" key="MultipleFileMergeDialog" timestamp="1598368409766">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="416" y="94" width="847" height="563" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598368409766" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1598320508453">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1598320508453" />
-    <state x="562" y="156" key="Vcs.Push.Dialog.v2" timestamp="1598341601488">
+    <state x="562" y="156" key="Vcs.Push.Dialog.v2" timestamp="1598368222661">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="562" y="156" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1598341601488" />
+    <state x="562" y="156" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1598368222661" />
     <state x="753" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598256064911">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -550,10 +556,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="dock-window-9/0.0.1920.1040@0.0.1920.1040" timestamp="1597891734031" />
-    <state x="629" y="306" key="git4idea.merge.GitPullDialog" timestamp="1598341549693">
+    <state x="629" y="306" key="git4idea.merge.GitPullDialog" timestamp="1598367177781">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="629" y="306" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598341549693" />
+    <state x="629" y="306" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598367177781" />
     <state x="334" y="180" key="new project wizard" timestamp="1597894408590">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

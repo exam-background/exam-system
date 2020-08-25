@@ -16,13 +16,13 @@ public interface JobDayExerciseMapper extends BaseMapper<JobDayExercise> {
      * 根据条件获取就业每日一练信息
      * @return
      */
-    public List<JobDayExercise> getAllJobDayExercise(Map<String,Object> map);
+    public List<JobDayExercise> getAllJobDayExercise(Map<String, Object> map);
 
     /**
      * 获取总记录数
      * @return
      */
-    public int getCount(Map<String,Object> map);
+    public int getCount(Map<String, Object> map);
 
     /**
      * 批量删除就业每日一练信息

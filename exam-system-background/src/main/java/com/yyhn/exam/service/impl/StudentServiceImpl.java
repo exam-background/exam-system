@@ -5,6 +5,8 @@ import com.yyhn.exam.entity.Class;
 import com.yyhn.exam.entity.Student;
 import com.yyhn.exam.mapper.StudentMapper;
 import com.yyhn.exam.service.StudentService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -17,6 +19,8 @@ public class StudentServiceImpl implements StudentService {
 
     @Resource
     StudentMapper studentMapper;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     @Override
     public List<Student> getAllStudentNoPage() {
@@ -41,6 +45,8 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public int addStudent(Student student) {
+        System.out.println("9999999999999999999999999---"+student.getLoginName());
+        student.setLoginPassword(passwordEncoder.encode(student.getLoginPassword()));
         int count = studentMapper.addStudent(student);
         return count;
     }
@@ -53,10 +59,5 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public int deleteStudent(int id) {
         return studentMapper.deleteStudent(id);
-    }
-
-    @Override
-    public List<Student> selectStudent(Integer Id) {
-        return studentMapper.selectStudent(Id);
     }
 }

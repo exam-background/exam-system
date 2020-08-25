@@ -16,7 +16,7 @@ public interface JobExampleStudyService {
      * 根据条件获取就业示范学习信息
      * @return
      */
-    public void getAllJobExampleStudy(String title,Integer profesionalId,Integer courseId, Page<List<JobExampleStudy>> page);
+    public void getAllJobExampleStudy(String title, Integer profesionalId, Integer courseId, Page<List<JobExampleStudy>> page);
 
     /**
      * 增加就业示范学习信息

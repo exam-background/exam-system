@@ -16,10 +16,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 //@ComponentScan(basePackages={"com.yyhn.exam.controller"})
 //@EnableSwagger2
 //@Configuration
-public class SwaggerApp2 extends WebMvcConfigurationSupport {
-    public SwaggerApp2(){
-        System.out.println("SwaggerApp2");
-    }
+public class Swagger2 extends WebMvcConfigurationSupport {
     @Bean
     public Docket createRestApi() {
         return new Docket(DocumentationType.SWAGGER_2)

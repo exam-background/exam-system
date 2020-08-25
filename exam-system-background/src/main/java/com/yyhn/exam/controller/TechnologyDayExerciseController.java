@@ -4,7 +4,10 @@ import com.yyhn.exam.common.Dto;
 import com.yyhn.exam.common.DtoUtil;
 import com.yyhn.exam.common.Page;
 import com.yyhn.exam.dto.ResultMsg;
-import com.yyhn.exam.entity.*;
+import com.yyhn.exam.entity.JobDayExercise;
+import com.yyhn.exam.entity.SysUser;
+import com.yyhn.exam.entity.TechnologyDayExercise;
+import com.yyhn.exam.entity.TechnologyDayExerciseItem;
 import com.yyhn.exam.service.TechnologyDayExerciseItemService;
 import com.yyhn.exam.service.TechnologyDayExerciseService;
 import io.swagger.annotations.Api;
@@ -15,7 +18,6 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -116,36 +118,20 @@ public class TechnologyDayExerciseController {
             if (technologyDayExercise.getTypes().equals("2")) {
                 Integer redio = technologyDayExercise.getRadio();
                 System.out.println(technologyDayExercise);
-                //标准答案只有选项
                 switch (redio) {
                     case 1:
-                        technologyDayExercise.setStandardAnswer("A");
+                        technologyDayExercise.setStandardAnswer(technologyDayExercise.getRedioItem()[0]);
                         break;
                     case 2:
-                        technologyDayExercise.setStandardAnswer("B");
+                        technologyDayExercise.setStandardAnswer(technologyDayExercise.getRedioItem()[1]);
                         break;
                     case 3:
-                        technologyDayExercise.setStandardAnswer("C");
+                        technologyDayExercise.setStandardAnswer(technologyDayExercise.getRedioItem()[2]);
                         break;
                     case 4:
-                        technologyDayExercise.setStandardAnswer("D");
+                        technologyDayExercise.setStandardAnswer(technologyDayExercise.getRedioItem()[3]);
                         break;
                 }
-                //标准答案为选项和详细内容的拼接
-//                switch (redio) {
-//                    case 1:
-//                        technologyDayExercise.setStandardAnswer("A"+technologyDayExercise.getRedioItem()[0]);
-//                        break;
-//                    case 2:
-//                        technologyDayExercise.setStandardAnswer("B"+technologyDayExercise.getRedioItem()[1]);
-//                        break;
-//                    case 3:
-//                        technologyDayExercise.setStandardAnswer("C"+technologyDayExercise.getRedioItem()[2]);
-//                        break;
-//                    case 4:
-//                        technologyDayExercise.setStandardAnswer("D"+technologyDayExercise.getRedioItem()[3]);
-//                        break;
-//                }
                 if (technologyDayExerciseService.insertTechnologyDayExercise(technologyDayExercise) > 0) {
                     TechnologyDayExerciseItem technologyDayExerciseItem = null;
 
@@ -279,26 +265,5 @@ public class TechnologyDayExerciseController {
         }
     }
 
-    @RequestMapping("/getTechnologyDayExerciseByProfessionalId")
-    public ResultMsg getTechnologyDayExerciseByProfessionalId(Integer id){
-        List<TechnologyDayExercise> list = technologyDayExerciseService.getTechnologyDayExerciseByProfessionalId(id);
-        if(list != null){
-            return ResultMsg.BY_SUCCESS("查询成功", list);
-        }else{
-            return ResultMsg.BY_FAIL("查询失败");
-        }
-    }
 
-    @RequestMapping("/getTechnologyDayExerciseById")
-    public ResultMsg getTechnologyDayExerciseById(Integer id){
-        TechnologyDayExercise technologyDayExercise = technologyDayExerciseService.getTechnologyDayExerciseById(id);
-        if(technologyDayExercise != null){
-           if(Integer.parseInt(technologyDayExercise.getTypes()) == 2){
-               technologyDayExercise.setExerciseItems(technologyDayExerciseItemService.getTechnologyDayExerciseByExerciseId(technologyDayExercise.getId()));
-           }
-            return ResultMsg.BY_SUCCESS("查询成功", technologyDayExercise);
-        }else{
-            return ResultMsg.BY_FAIL("查询失败");
-        }
-    }
 }

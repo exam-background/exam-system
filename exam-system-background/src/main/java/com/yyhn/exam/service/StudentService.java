@@ -38,9 +38,4 @@ public interface StudentService {
      * @return
      */
     public int deleteStudent(int id);
-
-    /**
-     * 根据班级查询学生id
-     */
-    public List<Student> selectStudent(Integer Id);
 }

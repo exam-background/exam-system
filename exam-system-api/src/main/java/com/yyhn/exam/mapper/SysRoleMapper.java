@@ -1,6 +1,7 @@
 package com.yyhn.exam.mapper;
 
 import com.baomidou.mybatisplus.mapper.BaseMapper;
+import com.yyhn.exam.entity.RoleHasMenu;
 import com.yyhn.exam.entity.SysRole;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
@@ -11,8 +12,7 @@ import java.util.List;
 
 @Mapper
 public interface SysRoleMapper extends BaseMapper<SysRole> {
-    @Insert("insert into exam_role_menu(role_id,menu_id) values(#{roleId},#{menuId})")
-    Integer addRoleMenu(Integer roleId , Integer menuId);
+    Integer addRoleMenu(RoleHasMenu roleHasMenu);
 
     List<SysRole> getUserRolesByUserId(Integer id);
 

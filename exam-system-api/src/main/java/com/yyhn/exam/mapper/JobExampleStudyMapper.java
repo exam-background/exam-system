@@ -14,13 +14,13 @@ public interface JobExampleStudyMapper {
      * 根据条件获取就业示范学习信息
      * @return
      */
-    public List<JobExampleStudy> getAllJobExampleStudy(Map<String,Object> map);
+    public List<JobExampleStudy> getAllJobExampleStudy(Map<String, Object> map);
 
     /**
      * 获取总记录数
      * @return
      */
-    public int getCount(Map<String,Object> map);
+    public int getCount(Map<String, Object> map);
 
 
     /**

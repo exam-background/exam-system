@@ -3,8 +3,13 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.yyhn.exam.mapper.SysUserMapper">
-    <select id="getSysUserByPage" resultType="SysUser">
-        select * from exam_sys_user where 1=1
+    <select id="getUserIdByUserNameAndPassword" resultType="integer" parameterType="com.yyhn.exam.entity.SysUser">
+        select id from exam_sys_user where login_Name = #{login_name} and login_password = #{login_password}
+    </select>
+
+
+    <select id="getSysUserByPage" resultType="com.yyhn.exam.entity.SysUser">
+        select id,login_name,real_name,department,POSITION,mobile_phone,create_time,remark from exam_sys_user where 1=1
         <if test="department != null and department != ''">
             and department like concat('%',#{department},'%')
         </if>
@@ -24,7 +29,7 @@
             #{id}
         </foreach>
     </delete>
-    <insert id="addSysUser" parameterType="SysUser">
+    <insert id="addSysUser" parameterType="com.yyhn.exam.entity.SysUser">
         insert into exam_sys_user(login_name,real_name,login_password,department,
         <if test="position != null">
             position,
@@ -49,7 +54,7 @@
         </if>
         )
     </insert>
-    <update id="updateSysUser" parameterType="SysUser">
+    <update id="updateSysUser" parameterType="com.yyhn.exam.entity.SysUser">
         update exam_sys_user set
         <if test="login_name != null">
             login_name = #{login_name}
@@ -57,7 +62,7 @@
         <if test="real_name != null">
             , real_name = #{real_name}
         </if>
-        <if test="login_password != null">
+        <if test="login_password != null and '' != login_password">
             , login_password = #{login_password}
         </if>
         <if test="department != null">

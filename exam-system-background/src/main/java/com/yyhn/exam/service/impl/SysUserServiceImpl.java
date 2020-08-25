@@ -54,8 +54,17 @@ public class SysUserServiceImpl implements SysUserService {
     private StringRedisTemplate stringRedisTemplate;
 
     @Override
-    public Integer getUserIdByUserNameAndPassword(String loginName, String password) {
-        return sysUserMapper.getUserIdByUserNameAndPassword(loginName,password);
+    public Integer getUserIdByUserNameOrPassword(String loginName, String password) {
+        return sysUserMapper.getUserIdByUserNameOrPassword(loginName,password);
+    }
+
+    @Override
+    public Integer getUserIdByUserNameAndPassword(String login_Name, String login_password) {
+        System.out.println(login_Name+"--------------"+login_password);
+        SysUser sysUser = new SysUser();
+        sysUser.setLogin_password(login_password);
+        sysUser.setLogin_name(login_Name);
+        return sysUserMapper.getUserIdByUserNameAndPassword(sysUser);
     }
 
     @Override

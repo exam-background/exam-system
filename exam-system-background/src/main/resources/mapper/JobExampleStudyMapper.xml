@@ -153,7 +153,7 @@
     </select>
 
 
-    <select id="getJobExampleStudyByCourse" resultType="Integer">
+    <select id="getJobExampleStudyByCourse" resultType="int">
         select COUNT(id) from exam_job_example_study where Professional_id=#{professionalId} and course_id=#{courseId}
     </select>
 

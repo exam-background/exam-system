@@ -69,6 +69,7 @@ com\yyhn\exam\entity\JobDayExercise.class
 com\yyhn\exam\mapper\SysUserRoleMapper.class
 com\yyhn\exam\vo\SysRoleSearchVO.class
 com\yyhn\exam\entity\TechnologyDayExercise.class
+com\yyhn\exam\entity\RoleHasMenu.class
 com\yyhn\exam\mapper\UserHasRoleMapper.class
 com\yyhn\exam\mapper\SysUserMapper.class
 com\yyhn\exam\entity\PapersUser.class

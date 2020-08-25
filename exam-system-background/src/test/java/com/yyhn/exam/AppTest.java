@@ -1,6 +1,8 @@
 package com.yyhn.exam;
 
-import com.yyhn.exam.common.RandomMaxMin;
+import com.yyhn.exam.entity.SysRole;
+import com.yyhn.exam.mapper.SysRoleMapper;
+import com.yyhn.exam.service.SysRoleService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +11,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
-import java.util.ArrayList;
+import javax.annotation.Resource;
 import java.util.List;
 
 
@@ -17,9 +19,11 @@ import java.util.List;
 @SpringBootTest
 @WebAppConfiguration
 public class AppTest {
+    @Resource
+    SysRoleMapper sysRoleMapper;
     @Test
     public void test01(){
-        int sum = (100-1*10)/(2-1);
-        System.out.println(sum);
+        List<SysRole> roles =  sysRoleMapper.getUserRolesByUserId(Integer.valueOf(1));
+        System.out.println(roles.get(0).getRoleName());
     }
 }

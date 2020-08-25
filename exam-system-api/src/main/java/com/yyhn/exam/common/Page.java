@@ -93,4 +93,14 @@ public class Page<T> {
     public void setRows(List<T> rows) {
         this.rows = rows;
     }
+
+    public Page(Integer curPage, Integer total, Integer pageSize, Integer pageCount, Integer beginPos, T data, List<T> rows) {
+        this.curPage = curPage;
+        this.total = total;
+        this.pageSize = pageSize;
+        this.pageCount = pageCount;
+        this.beginPos = beginPos;
+        this.data = data;
+        this.rows = rows;
+    }
 }

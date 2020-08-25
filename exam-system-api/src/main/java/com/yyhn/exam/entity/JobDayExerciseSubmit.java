@@ -35,6 +35,16 @@ public class JobDayExerciseSubmit {
     private int studentId;
 
     /**
+     * 提交的答案
+     */
+    private String submitAnswer;
+
+    /**
+     * 题目是否正确
+     */
+    private int right;
+
+    /**
      * 题目id
      */
     private int exerciseId;
@@ -92,6 +102,14 @@ public class JobDayExerciseSubmit {
         this.score = score;
     }
 
+    public String getSubmitAnswer() {
+        return submitAnswer;
+    }
+
+    public void setSubmitAnswer(String submitAnswer) {
+        this.submitAnswer = submitAnswer;
+    }
+
     public int getStudentId() {
         return studentId;
     }
@@ -102,6 +120,14 @@ public class JobDayExerciseSubmit {
 
     public int getExerciseId() {
         return exerciseId;
+    }
+
+    public int getRight() {
+        return right;
+    }
+
+    public void setRight(int right) {
+        this.right = right;
     }
 
     public void setExerciseId(int exerciseId) {

@@ -145,7 +145,8 @@ public class PapersUserResult implements Serializable {
         this.student = student;
     }
 
-    public PapersUserResult(Integer id, Integer papersId, Integer iexerciseId, Integer userId, String userExercise, String papersExercise, Integer right, Integer setScore, Integer mark, PapersTitle papersTitle, Student student) {
+
+    public PapersUserResult(Integer id, Integer papersId, Integer iexerciseId, Integer userId, String userExercise, String papersExercise, Integer right, Integer setScore, Integer mark) {
         this.id = id;
         this.papersId = papersId;
         this.iexerciseId = iexerciseId;
@@ -155,8 +156,6 @@ public class PapersUserResult implements Serializable {
         this.right = right;
         this.setScore = setScore;
         this.mark = mark;
-        this.papersTitle = papersTitle;
-        this.student = student;
     }
 
     public PapersUserResult() {

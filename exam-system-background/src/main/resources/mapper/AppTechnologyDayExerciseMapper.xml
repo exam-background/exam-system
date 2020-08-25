@@ -13,9 +13,23 @@
         <result column="remark" property="remark"></result>
         <result column="buildExerciseDate" property="buildExerciseDate"></result>
         <result column="updateExerciseDate" property="updateExerciseDate"></result>
+        <association property="professional" javaType="Professional">
+            <id column="professionalId" property="id"></id>
+            <result column="professional_name" property="professionalName"></result>
+        </association>
     </resultMap>
     <select id="getTechnologyDayExerciseSubmit" resultMap="dayExerciseResult">
-        select * from exam_technology_day_exercise where 1=1
+        select exam_technology_day_exercise.* , exam_professional.id professionalId, exam_professional.professional_name
+        from exam_technology_day_exercise left join exam_professional on exam_technology_day_exercise.Professional_id = exam_professional.id
+        where 1=1
+        <if test="id != 0">
+            and Professional_id=#{id}
+        </if>
+        limit #{startRow},#{pageSize}
+    </select>
+
+    <select id="getTechnologyDayExerciseSubmitCount" resultType="Integer">
+        select count(id) from exam_technology_day_exercise where 1=1
         <if test="id != 0">
             and Professional_id=#{id}
         </if>

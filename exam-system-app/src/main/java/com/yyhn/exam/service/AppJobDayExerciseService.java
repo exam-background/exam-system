@@ -1,5 +1,6 @@
 package com.yyhn.exam.service;
 
+import com.yyhn.exam.common.Page;
 import com.yyhn.exam.entity.JobDayExercise;
 
 import java.util.List;
@@ -10,5 +11,5 @@ public interface AppJobDayExerciseService {
      * @param id
      * @return
      */
-    public List<JobDayExercise> getJobDayExerciseByProfessid(Integer id);
+    public void getJobDayExerciseByProfessid(Integer id, Page<List<JobDayExercise>> page);
 }

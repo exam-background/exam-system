@@ -8,4 +8,17 @@ import java.util.List;
 
 @Mapper
 public interface JobDayExerciseSubmitMapper extends BaseMapper<JobDayExerciseSubmit> {
+    /**
+     * 根据学生id查询做过的就业每日一练
+     * @param id
+     * @return
+     */
+    List<JobDayExerciseSubmit> getJobDayExerciseSubmitByUserId(Integer id);
+
+    /**
+     * 根据用户id查询就业训练错题
+     * @param userid
+     * @return
+     */
+    List<JobDayExerciseSubmit> getJobDayExerciseSubmitByRight(Integer userid);
 }

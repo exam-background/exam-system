@@ -24,6 +24,7 @@ com\yyhn\exam\mapper\JobDayExerciseMapper.class
 com\yyhn\exam\mapper\TechnologyDayExerciseItemMapper.class
 com\yyhn\exam\entity\TechnologyDayExerciseSubmit.class
 com\yyhn\exam\mapper\PapersUserResultMapper.class
+com\yyhn\exam\mapper\AppPapersUserResultMapper.class
 com\yyhn\exam\entity\PapersTitle.class
 com\yyhn\exam\mapper\PapersCourseMapper.class
 com\yyhn\exam\common\RandomMaxMin.class
@@ -31,6 +32,7 @@ com\yyhn\exam\entity\SysDictionary.class
 com\yyhn\exam\common\DtoUtil.class
 com\yyhn\exam\mapper\PapersExerciseMapper.class
 com\yyhn\exam\mapper\StudentMapper.class
+com\yyhn\exam\mapper\AppPapersTitleMapper.class
 com\yyhn\exam\common\AutoPage.class
 com\yyhn\exam\entity\Class.class
 com\yyhn\exam\entity\Professional.class
@@ -41,6 +43,7 @@ com\yyhn\exam\mapper\RoleHasPermissionMapper.class
 com\yyhn\exam\common\TokenServiceImpl.class
 com\yyhn\exam\common\Dto.class
 com\yyhn\exam\mapper\PapersTitleMapper.class
+com\yyhn\exam\common\Levenshtein.class
 com\yyhn\exam\App.class
 com\yyhn\exam\entity\UserHasRole.class
 com\yyhn\exam\mapper\ClassMapper.class

@@ -26,6 +26,7 @@ C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\jav
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\common\RandomMaxMin.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\mapper\TechnologyDayExerciseMapper.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\vo\SyspermissionSaveVO.java
+C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\mapper\AppPapersUserResultMapper.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\mapper\JobExampleStudyMapper.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\entity\JobDayExerciseSubmit.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\entity\TechnologyDayExercise.java
@@ -36,12 +37,14 @@ C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\jav
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\common\TokenServiceImpl.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\entity\SysDictionary.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\mapper\PapersMapper.java
+C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\common\Levenshtein.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\mapper\UserHasRoleMapper.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\entity\UserHasRole.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\entity\PapersExercise.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\mapper\CourseMapper.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\mapper\ClassMapper.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\mapper\SysUserMapper.java
+C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\mapper\AppPapersTitleMapper.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\mapper\SysDictionaryMapper.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\vo\TechnologyDayExerciseVO.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\mapper\PapersUserMapper.java

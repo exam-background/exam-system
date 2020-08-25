@@ -1,5 +1,7 @@
 package com.yyhn.exam.service.impl;
 
+import com.yyhn.exam.common.Page;
+import com.yyhn.exam.entity.JobDayExercise;
 import com.yyhn.exam.entity.TechnologyDayExercise;
 import com.yyhn.exam.mapper.AppTechnologyDayExerciseMapper;
 import com.yyhn.exam.service.AppTechnologyDayExerciseService;
@@ -14,7 +16,11 @@ public class AppTechnologyDayExerciseServiceImpl implements AppTechnologyDayExer
     private AppTechnologyDayExerciseMapper appTechnologyDayExerciseMapper;
 
     @Override
-    public List<TechnologyDayExercise> getTechnologyDayExerciseSubmit(Integer id) {
-        return appTechnologyDayExerciseMapper.getTechnologyDayExerciseSubmit(id);
+    public void getTechnologyDayExerciseSubmit(Integer id, Page<List<TechnologyDayExercise>> page) {
+        List<TechnologyDayExercise> list = appTechnologyDayExerciseMapper.getTechnologyDayExerciseSubmit(id, (page.getCurPage()-1)*page.getPageSize(), page.getPageSize());
+        int total = appTechnologyDayExerciseMapper.getTechnologyDayExerciseSubmitCount(id);
+        page.setData(list);
+        page.setTotal(total);
+        System.out.println(page);
     }
 }

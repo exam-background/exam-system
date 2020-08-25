@@ -1,5 +1,7 @@
 package com.yyhn.exam.service.impl;
 
+import com.yyhn.exam.common.Page;
+import com.yyhn.exam.entity.Class;
 import com.yyhn.exam.entity.JobDayExercise;
 import com.yyhn.exam.mapper.AppJobDayExerciseMapper;
 import com.yyhn.exam.mapper.JobDayExerciseMapper;
@@ -15,7 +17,11 @@ public class AppJobDayExerciseServiceImpl implements AppJobDayExerciseService {
     private AppJobDayExerciseMapper appJobDayExerciseMapper;
 
     @Override
-    public List<JobDayExercise> getJobDayExerciseByProfessid(Integer id) {
-        return appJobDayExerciseMapper.getJobDayExerciseByProfessid(id);
+    public void getJobDayExerciseByProfessid(Integer id, Page<List<JobDayExercise>> page) {
+        List<JobDayExercise> list = appJobDayExerciseMapper.getJobDayExerciseByProfessid(id, (page.getCurPage()-1)*page.getPageSize(), page.getPageSize());
+        int total = appJobDayExerciseMapper.getJobDayExerciseByCount(id);
+        page.setData(list);
+        page.setTotal(total);
+        System.out.println(page);
     }
 }

@@ -4,7 +4,21 @@ import com.baomidou.mybatisplus.mapper.BaseMapper;
 import com.yyhn.exam.entity.TechnologyDayExerciseSubmit;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
 @Mapper
 public interface TechnologyDayExerciseSubmitMapper extends BaseMapper<TechnologyDayExerciseSubmit> {
+    /**
+     * 根据学生id查询技术训练每日一练
+     * @param id
+     * @return
+     */
+    List<TechnologyDayExerciseSubmit> getTechnologyDayExerciseSubmitByUserId(Integer id);
 
+    /**
+     * 根据学生id查询错误的技术训练每日一练
+     * @param userid
+     * @return
+     */
+    List<TechnologyDayExerciseSubmit> getTechnologyDayExerciseSubmitByRight(Integer userid);
 }

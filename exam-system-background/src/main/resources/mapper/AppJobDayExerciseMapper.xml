@@ -11,12 +11,27 @@
         <result column="submit_answer" property="submitAnswer"></result>
         <result column="score" property="score"></result>
         <result column="remark" property="remark"></result>
+        <association property="professional" javaType="Professional">
+            <id column="professionalId" property="id"></id>
+            <result column="professional_name" property="professionalName"></result>
+        </association>
     </resultMap>
 
     <select id="getJobDayExerciseByProfessid" resultMap="jobDayExerciseResult">
-        select * from exam_job_day_exercise where 1=1
+        select exam_job_day_exercise.*, exam_professional.id professionalId, exam_professional.professional_name
+        from exam_job_day_exercise left join exam_professional on exam_job_day_exercise.Professional_id = exam_professional.id
+        where 1=1
+        <if test="id != 0">
+            and Professional_id=#{id}
+        </if>
+        limit #{startRow},#{pageSize}
+    </select>
+
+    <select id="getJobDayExerciseByCount" resultType="Integer">
+        select count(id) from exam_job_day_exercise where 1=1
         <if test="id != 0">
             and Professional_id=#{id}
         </if>
     </select>
+
 </mapper>

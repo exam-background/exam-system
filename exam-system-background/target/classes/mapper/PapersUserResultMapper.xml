@@ -30,6 +30,6 @@
         from exam_papers_user_result
         left join exam_papers_title on exam_papers_user_result.exercise_id = exam_papers_title.id
         join exam_student on exam_papers_user_result.user_id = exam_student.id
-        where user_id=#{id} and papers_id=#{papersId}
+        where exam_papers_user_result.user_id=#{id} and exam_papers_user_result.papers_id=#{papersId}
     </select>
 </mapper>

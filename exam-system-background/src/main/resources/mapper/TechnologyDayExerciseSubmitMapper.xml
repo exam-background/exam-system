@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper  namespace="com.yyhn.exam.mapper.TechnologyDayExerciseSubmitMapper">
+
+    <resultMap id="TechnologyDayExerciseSubmitAll" type="TechnologyDayExerciseSubmit">
+        <id property="id" column="id"/>
+        <result column="submit_date" property="submitDate"/>
+        <result column="score" property="score"></result>
+        <result column="student_id" property="studentId"></result>
+        <result column="exercise_id" property="exerciseId"></result>
+        <result column="submit_answer" property="submitAnswer"></result>
+        <result column="right" property="right"></result>
+        <association property="technologyDayExercise" javaType="TechnologyDayExercise">
+            <id property="id" column="exercise_id"/>
+            <result column="title" property="title"></result>
+            <result column="standardAnswer" property="standard_answer"></result>
+            <result column="types" property="types"></result>
+            <association property="professional" javaType="Professional">
+                <id property="id" column="Professional_id"/>
+                <result column="professionalName" property="professional_name"></result>
+            </association>
+        </association>
+    </resultMap>
+
+    <select id="getTechnologyDayExerciseSubmitByUserId" resultMap="TechnologyDayExerciseSubmitAll">
+        select exam_technology_day_exercise_submit.*, exam_technology_day_exercise.title, exam_technology_day_exercise.standard_answer, exam_technology_day_exercise.Professional_id, exam_professional.professional_name
+        from exam_technology_day_exercise_submit left join exam_technology_day_exercise on exam_technology_day_exercise_submit.exercise_id = exam_technology_day_exercise.id
+        join exam_professional on exam_technology_day_exercise.Professional_id = exam_professional.id
+        where exam_technology_day_exercise_submit.student_id = #{id}
+    </select>
+
+    <select id="getTechnologyDayExerciseSubmitByRight" resultMap="TechnologyDayExerciseSubmitAll">
+        select exam_technology_day_exercise_submit.*, exam_technology_day_exercise.title, exam_technology_day_exercise.types
+        from exam_technology_day_exercise_submit left join exam_technology_day_exercise on exam_technology_day_exercise_submit.exercise_id = exam_technology_day_exercise.id
+        where `right` = 0 and student_id = #{id}
+    </select>
+</mapper>

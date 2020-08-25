@@ -40,6 +40,11 @@ public class TechnologyDayExerciseSubmit {
     private int exerciseId;
 
     /**
+     * 题目是否正确
+     */
+    private int right;
+
+    /**
      * 学生
      */
     @TableField(exist = false)
@@ -101,6 +106,14 @@ public class TechnologyDayExerciseSubmit {
 
     public int getExerciseId() {
         return exerciseId;
+    }
+
+    public int getRight() {
+        return right;
+    }
+
+    public void setRight(int right) {
+        this.right = right;
     }
 
     public void setExerciseId(int exerciseId) {

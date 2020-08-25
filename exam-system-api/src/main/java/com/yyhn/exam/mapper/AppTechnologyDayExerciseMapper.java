@@ -10,5 +10,7 @@ import java.util.List;
 
 @Mapper
 public interface AppTechnologyDayExerciseMapper extends BaseMapper<TechnologyDayExercise> {
-    public List<TechnologyDayExercise> getTechnologyDayExerciseSubmit(@Param("id") Integer id);
+    public List<TechnologyDayExercise> getTechnologyDayExerciseSubmit(@Param("id") Integer id, @Param("startRow") Integer startRow, @Param("pageSize") Integer pageSize);
+
+    public int getTechnologyDayExerciseSubmitCount(@Param("id") Integer id);
 }

@@ -4,10 +4,7 @@ import com.yyhn.exam.common.Dto;
 import com.yyhn.exam.common.DtoUtil;
 import com.yyhn.exam.common.Page;
 import com.yyhn.exam.dto.ResultMsg;
-import com.yyhn.exam.entity.JobDayExercise;
-import com.yyhn.exam.entity.SysUser;
-import com.yyhn.exam.entity.TechnologyDayExercise;
-import com.yyhn.exam.entity.TechnologyDayExerciseItem;
+import com.yyhn.exam.entity.*;
 import com.yyhn.exam.service.TechnologyDayExerciseItemService;
 import com.yyhn.exam.service.TechnologyDayExerciseService;
 import io.swagger.annotations.Api;
@@ -18,6 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -295,6 +293,9 @@ public class TechnologyDayExerciseController {
     public ResultMsg getTechnologyDayExerciseById(Integer id){
         TechnologyDayExercise technologyDayExercise = technologyDayExerciseService.getTechnologyDayExerciseById(id);
         if(technologyDayExercise != null){
+           if(Integer.parseInt(technologyDayExercise.getTypes()) == 2){
+               technologyDayExercise.setExerciseItems(technologyDayExerciseItemService.getTechnologyDayExerciseByExerciseId(technologyDayExercise.getId()));
+           }
             return ResultMsg.BY_SUCCESS("查询成功", technologyDayExercise);
         }else{
             return ResultMsg.BY_FAIL("查询失败");

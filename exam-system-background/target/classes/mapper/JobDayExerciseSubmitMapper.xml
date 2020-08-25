@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yyhn.exam.mapper.JobDayExerciseSubmitMapper">
+
+    <resultMap id="JobDayExerciseSubmitAll" type="JobDayExerciseSubmit">
+        <id property="id" column="id"/>
+        <result column="submit_date" property="submitDate"/>
+        <result column="score" property="score"></result>
+        <result column="student_id" property="studentId"></result>
+        <result column="exercise_id" property="exerciseId"></result>
+        <result column="submit_answer" property="submitAnswer"></result>
+        <result column="right" property="right"></result>
+        <association property="jobDayExercise" javaType="JobDayExercise">
+            <id column="exercise_id" property="id"></id>
+            <result column="title" property="title"></result>
+            <result column="answer" property="answer"></result>
+            <association property="professional" javaType="Professional">
+                <id column="Professional_id" property="id"></id>
+                <id column="professional_name" property="professionalName"></id>
+            </association>
+        </association>
+    </resultMap>
+
+    <select id="getJobDayExerciseSubmitByUserId" resultMap="JobDayExerciseSubmitAll">
+        select exam_job_day_exercise_submit.*,  exam_job_day_exercise.title, exam_job_day_exercise.answer, exam_professional.professional_name
+        from exam_job_day_exercise_submit left join exam_job_day_exercise on exam_job_day_exercise_submit.exercise_id = exam_job_day_exercise.id
+        join exam_professional on exam_job_day_exercise.Professional_id = exam_professional.id
+        where exam_job_day_exercise_submit.student_id = #{id}
+    </select>
+
+    <select id="getJobDayExerciseSubmitByRight" resultMap="JobDayExerciseSubmitAll">
+        select * from exam_job_day_exercise_submit where `right` = 0 and student_id = #{id}
+    </select>
+</mapper>

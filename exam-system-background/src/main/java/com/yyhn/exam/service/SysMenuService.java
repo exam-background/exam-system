@@ -8,6 +8,10 @@ public interface SysMenuService {
 
     List<SysMenu> selectMenuList(int userId);
 
+    List<Integer> selectMenuIdListByRoleId(int roleId);
+
     List<SysMenu> selectMenuList(SysMenu sysMenu,int userId);
     List<SysMenu> getAllMenu();
+
+    int deleteRoleMenu(int roleId);
 }

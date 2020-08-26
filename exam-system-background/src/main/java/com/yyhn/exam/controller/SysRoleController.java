@@ -26,6 +26,24 @@ public class SysRoleController {
     private SysMenuService sysMenuService;
 
 
+    @GetMapping("/getMenuIdList/{roleId}")
+    public ResultMsg getMenuIdListByRoleId(@PathVariable("roleId") int roleId){
+        List<Integer> menuIdList = sysMenuService.selectMenuIdListByRoleId(roleId);
+        return ResultMsg.BY_SUCCESS("成功",menuIdList);
+    }
+
+    @PostMapping("/updateRoleMenu")
+    public ResultMsg updateRoleMenu(int [] menus,String roleMark){
+        System.out.println(menus[0]+"-===-=--==-=-·1 "+roleMark);
+        sysMenuService.deleteRoleMenu(Integer.valueOf(roleMark));
+        Integer roleId = Integer.valueOf(roleMark);
+        for(int menuId : menus){
+            System.out.println("=-=-=-=-=-=-=-=-=-=-=-="+roleId);
+            sysRoleService.addRoleMenu(roleId,Integer.valueOf(menuId));
+        }
+        return ResultMsg.BY_FAIL("成功");
+    }
+
     @PostMapping("/addSysRole")
     public ResultMsg addSysRole(SysRole sysRole){
         if(sysRole== null){

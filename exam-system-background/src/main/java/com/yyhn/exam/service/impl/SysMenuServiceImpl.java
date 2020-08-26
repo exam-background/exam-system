@@ -19,6 +19,11 @@ public class SysMenuServiceImpl implements SysMenuService {
     }
 
     @Override
+    public List<Integer> selectMenuIdListByRoleId(int roleId) {
+        return sysMenuMapper.selectMenuIdListByRoleId(roleId);
+    }
+
+    @Override
     public List<SysMenu> selectMenuList(SysMenu menu, int userId) {
         List<SysMenu> menuList = null;
             menuList = sysMenuMapper.getPermissionList(userId);
@@ -28,5 +33,10 @@ public class SysMenuServiceImpl implements SysMenuService {
     @Override
     public List<SysMenu> getAllMenu() {
         return sysMenuMapper.getAllMenu();
+    }
+
+    @Override
+    public int deleteRoleMenu(int roleId) {
+        return sysMenuMapper.deleteRoleMenu(roleId);
     }
 }

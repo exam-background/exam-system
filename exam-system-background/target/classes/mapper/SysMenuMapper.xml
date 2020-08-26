@@ -21,4 +21,13 @@
         <result property="sort" column="sort"/>
         <result property="power" column="power"/>
     </resultMap>
+    
+    <select id="selectMenuIdListByRoleId" parameterType="int" resultType="int">
+       select m.id  from `exam_sys_role` r , `exam_menu` m , `exam_role_menu` rm where r.`id` = rm.`role_id` and m.`id` = rm.`menu_id`
+and r.id = #{roleId}
+    </select>
+
+    <delete id="deleteRoleMenu" parameterType="int">
+        delete from exam_role_menu where role_id = #{roleId}
+    </delete>
 </mapper>

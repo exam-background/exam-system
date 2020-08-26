@@ -152,4 +152,25 @@ public class CourseController {
         return null;
     }
 
+    @ApiOperation(value = "根据专业查询科目", httpMethod = "GET",
+            protocols = "HTTP", produces = "application/json",
+            response = Dto.class, notes = "根据专业查询科目 ： " +
+            "<p>成功：success = ‘true’ | 失败：success = ‘false’ 并返回错误码，如下：</p>" +
+            "<p>错误码：</p>" +
+            "<p>100101 : 查询科目失败 </p>" +
+            "<p>0 : 查询科目成功 </p>" )
+    @RequestMapping(value = "/getCourseByProfessionalId",method = RequestMethod.GET)
+    public ResultMsg getCourseByProfessionalId(Integer professionalId){
+        try {
+            List<Course> list = courseService.getCourseByProfessionalId(professionalId);
+            if(list != null){
+                return ResultMsg.BY_SUCCESS("查询成功", list);
+            }else {
+                return ResultMsg.BY_FAIL("查询失败");
+            }
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
+        return null;
+    }
 }

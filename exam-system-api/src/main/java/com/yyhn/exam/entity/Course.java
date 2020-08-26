@@ -1,10 +1,16 @@
 package com.yyhn.exam.entity;
 
+import com.baomidou.mybatisplus.annotations.TableField;
+import com.baomidou.mybatisplus.annotations.TableId;
+import com.baomidou.mybatisplus.annotations.TableName;
+import com.baomidou.mybatisplus.enums.IdType;
+
 /**
  * 科目实体类
  */
+@TableName("exam_course")
 public class Course  implements java.io.Serializable{
-
+    @TableId(value = "id",type = IdType.AUTO)
     private  Integer id;
     /**
      * 科目名称
@@ -18,6 +24,7 @@ public class Course  implements java.io.Serializable{
     /**
      * 所属专业
      */
+    @TableField(exist = false)
     private  Professional professional = new Professional();
 
     public String toString(){

@@ -1,5 +1,6 @@
 package com.yyhn.exam.mapper;
 
+import com.baomidou.mybatisplus.mapper.BaseMapper;
 import com.yyhn.exam.entity.Course;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -7,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 @Mapper
-public interface CourseMapper {
+public interface CourseMapper extends BaseMapper<Course> {
 
     /**
      * 根据条件获取课程信息

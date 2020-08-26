@@ -5,6 +5,7 @@ import com.yyhn.exam.entity.Course;
 import com.yyhn.exam.entity.Professional;
 import com.yyhn.exam.mapper.CourseMapper;
 import com.yyhn.exam.service.CourseService;
+import org.apache.commons.collections.map.HashedMap;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -57,5 +58,12 @@ public class CourseServiceImpl implements CourseService {
     @Override
     public int deleteCourse(int id) {
         return courseMapper.deleteCourse(id);
+    }
+
+    @Override
+    public List<Course> getCourseByProfessionalId(Integer id) {
+        Map<String,Object> map = new HashedMap();
+        map.put("professional_id",id);
+        return courseMapper.selectByMap(map);
     }
 }

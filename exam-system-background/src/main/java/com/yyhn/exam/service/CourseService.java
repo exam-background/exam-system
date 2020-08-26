@@ -35,4 +35,11 @@ public interface CourseService {
      */
     public int deleteCourse(int id);
 
+    /**
+     * 根据专业id查询课程
+     * @param id
+     * @return
+     */
+    public List<Course> getCourseByProfessionalId(Integer id);
+
 }

@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0d90f18-a47d-4b60-87d1-3cfdc91a4cba" name="Default Changelist" comment="修复了一些添加数据时产生的bug">
+    <list default="true" id="f0d90f18-a47d-4b60-87d1-3cfdc91a4cba" name="Default Changelist" comment="增加了根据专业id查询科目的方法">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/entity/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/entity/Course.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/mapper/CourseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/mapper/CourseMapper.java" afterDir="false" />
@@ -259,7 +259,7 @@
       <workItem from="1598275669777" duration="5523000" />
       <workItem from="1598315529386" duration="21288000" />
       <workItem from="1598357906982" duration="9937000" />
-      <workItem from="1598421670263" duration="2488000" />
+      <workItem from="1598421670263" duration="2800000" />
     </task>
     <task id="LOCAL-00001" summary="增加了用户管理的内容，增加了系统用户实体类，dao层和mapper文件。增加了service和serviceimpl。创建了控制层，提供了删除用户，新增用户，分页查询，根据部门和职位进行分页查询的Swagger接口">
       <created>1594121568996</created>
@@ -373,7 +373,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598368721270</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="增加了根据专业id查询科目的方法">
+      <created>1598424508850</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1598424508850</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -413,7 +420,8 @@
     <MESSAGE value="增加了手机APP模块相应的接口" />
     <MESSAGE value="完成了一些前端APP页面所需的接口" />
     <MESSAGE value="修复了一些添加数据时产生的bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复了一些添加数据时产生的bug" />
+    <MESSAGE value="增加了根据专业id查询科目的方法" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加了根据专业id查询科目的方法" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1597902690964">
@@ -444,22 +452,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="771" y="420" key="Github.CreateGistDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596724145698" />
-    <state width="1877" height="305" key="GridCell.Tab.0.bottom" timestamp="1598424080101">
+    <state width="1877" height="305" key="GridCell.Tab.0.bottom" timestamp="1598424222591">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="305" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598424080101" />
-    <state width="1877" height="305" key="GridCell.Tab.0.center" timestamp="1598424080101">
+    <state width="1877" height="305" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598424222591" />
+    <state width="1877" height="305" key="GridCell.Tab.0.center" timestamp="1598424222591">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="305" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598424080101" />
-    <state width="1877" height="305" key="GridCell.Tab.0.left" timestamp="1598424080101">
+    <state width="1877" height="305" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598424222591" />
+    <state width="1877" height="305" key="GridCell.Tab.0.left" timestamp="1598424222591">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="305" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598424080101" />
-    <state width="1877" height="305" key="GridCell.Tab.0.right" timestamp="1598424080101">
+    <state width="1877" height="305" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598424222591" />
+    <state width="1877" height="305" key="GridCell.Tab.0.right" timestamp="1598424222591">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="305" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598424080101" />
+    <state width="1877" height="305" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598424222591" />
     <state width="1877" height="305" key="GridCell.Tab.1.bottom" timestamp="1598423947985">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -36,7 +36,7 @@ public class JobExampleStudyController {
         try {
             page.setPageSize(vo.getPageSize());
             page.setCurPage(vo.getCurrentPage());
-            jobExampleStudyService.getAllJobExampleStudy(vo.getTitle(),vo.getProName(),vo.getCoName(),page);
+            jobExampleStudyService.getAllJobExampleStudy(vo.getTitle(),vo.getProName(),vo.getCsName(),page);
         }catch (Exception ex){
             ex.printStackTrace();;
             DtoUtil.returnFail("查询失败","100101");

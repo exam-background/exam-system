@@ -42,14 +42,6 @@ public class JobExamStudySearchVO implements Serializable {
         this.proName = proName;
     }
 
-    public Integer getCoName() {
-        return csName;
-    }
-
-    public void setCoName(Integer csName) {
-        this.csName = csName;
-    }
-
     public Integer getPageSize() {
         return pageSize;
     }
@@ -60,6 +52,14 @@ public class JobExamStudySearchVO implements Serializable {
 
     public Integer getCurrentPage() {
         return currentPage;
+    }
+
+    public Integer getCsName() {
+        return csName;
+    }
+
+    public void setCsName(Integer csName) {
+        this.csName = csName;
     }
 
     public void setCurrentPage(Integer currentPage) {

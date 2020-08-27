@@ -62,8 +62,20 @@ public class Levenshtein {
     public static void main(String[] args)
     {
         Levenshtein lt = new Levenshtein();
-        String str = "中华人民共和国";
-        String target = "这是我的中华民国";
+        String str0 = "SSM指的是Spring，SpringMVC，Mybatis组成";
+        String target0 = "SSM是Spring，SpringMVC";
+        System.out.println("similarityRatio_0=" + lt.getSimilarityRatio(str0, target0));
+
+        String str = "SSM指的是Spring，SpringMVC，Mybatis组成";
+        String target = "SSM指的是Spring，SpringMVC组成";
         System.out.println("similarityRatio=" + lt.getSimilarityRatio(str, target));
+
+        String str1 = "SSM指的是Spring，SpringMVC，Mybatis组成";
+        String target1 = "SSM指的是Spring组成";
+        System.out.println("similarityRatio_1=" + lt.getSimilarityRatio(str1, target1));
+
+        String str2 = "SSM指的是Spring，SpringMVC，Mybatis组成";
+        String target2 = "SSM指的是SpringBoot";
+        System.out.println("similarityRatio_2=" + lt.getSimilarityRatio(str2, target2));
     }
 }

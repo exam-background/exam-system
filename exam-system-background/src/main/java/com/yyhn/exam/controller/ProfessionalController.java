@@ -34,6 +34,7 @@ public class ProfessionalController {
                                                             String pageSize,
                                                     @RequestParam(defaultValue = "1")
                                                             Integer currentPage){
+        System.out.println(pname+":"+pageSize+":"+currentPage);
         Page<List<Professional>> page = new Page<List<Professional>>();
         try {
             page.setPageSize(Integer.valueOf(pageSize));

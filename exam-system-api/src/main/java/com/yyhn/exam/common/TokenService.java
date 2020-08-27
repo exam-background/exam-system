@@ -1,5 +1,6 @@
 package com.yyhn.exam.common;
 
+import com.yyhn.exam.entity.Student;
 import com.yyhn.exam.entity.SysUser;
 
 /**
@@ -25,19 +26,17 @@ public interface TokenService {
 	/**
 	 * 生成token
 	 * @param agent Http头中的user-agent信息
-	 * @param user 用户信息
 	 * @return Token格式<br/>
 	 * 		PC：“前缀PC-USERCODE-USERID-CREATIONDATE-RONDEM[6位]” 
 	 *  	<BR/>
 	 *  	Android：“前缀ANDROID-USERCODE-USERID-CREATIONDATE-RONDEM[6位]”
 	 */
-	public String generateToken(String agent, SysUser user);
+	public String generateToken(String agent, SysUser sysUser);
 	/**
 	 * 保存用户信息至redis
 	 * @param token
-	 * @param user
 	 */
-	public void save(String token, SysUser user);
+	public void save(String token, SysUser sysUser);
 	/**
 	 * 从redis获取用户信息
 	 * @param token

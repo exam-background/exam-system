@@ -26,4 +26,6 @@ public class AppTest {
         List<SysRole> roles =  sysRoleMapper.getUserRolesByUserId(Integer.valueOf(1));
         System.out.println(roles.get(0).getRoleName());
     }
+
+
 }

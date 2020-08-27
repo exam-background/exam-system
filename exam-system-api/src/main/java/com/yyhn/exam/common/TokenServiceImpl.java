@@ -10,6 +10,7 @@ import java.util.concurrent.TimeUnit;
 import javax.annotation.Resource;
 
 
+import com.yyhn.exam.entity.Student;
 import com.yyhn.exam.entity.SysUser;
 import org.apache.log4j.Logger;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -50,7 +51,6 @@ public class TokenServiceImpl implements TokenService {
 
 	/***
 	 * @param agent Http头中的user-agent信息
-	 * @param user 用户信息
 	 * @return Token格式<br/>
 	 * 	PC：“前缀PC-USERCODE-USERID-CREATIONDATE-RONDEM[6位]” 
 	 *  <br/>
@@ -60,7 +60,8 @@ public class TokenServiceImpl implements TokenService {
 	public String generateToken(String agent, SysUser user) {
 		// TODO Auto-generated method stub
 		try {
-			UserAgentInfo userAgentInfo = UserAgentUtil.getUasParser().parse(
+			UserAgentInfo userAgentInfo =
+					UserAgentUtil.getUasParser().parse(
 					agent);
 			StringBuilder sb = new StringBuilder();
 			sb.append(tokenPrefix);//统一前缀

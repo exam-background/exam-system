@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.yyhn.exam.mapper.StudentMapper">
 
-    <resultMap id="studentResult" type="Student">
+    <resultMap id="studentResult" type="com.yyhn.exam.entity.Student">
         <id property="id" column="id"/>
         <result column="stu_name" property="stuName"/>
         <result column="open_class_time" property="openClassTime"/>
@@ -93,5 +93,16 @@
     <select id="selectStudent" resultMap="studentResult">
         select * from exam_student where class_id=#{id}
     </select>
-
+<select id="doLogin" resultMap="loginStudent">
+    select * from exam_student where login_name = #{loginName}
+</select>
+    <resultMap id="loginStudent" type="com.yyhn.exam.entity.Student">
+        <id property="id" column="id"/>
+        <result column="stu_name" property="stuName"/>
+        <result column="open_class_time" property="openClassTime"/>
+        <result column="class_id" property="classId"/>
+        <result column="professional_id" property="professionalId"/>
+        <result column="login_name" property="loginName"/>
+        <result column="login_password" property="loginPassword"/>
+    </resultMap>
 </mapper>

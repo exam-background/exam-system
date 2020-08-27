@@ -3,10 +3,13 @@ C:\Users\Administrator\Desktop\学生管理系统\后台后端\exam-system\exam-
 C:\Users\Administrator\Desktop\学生管理系统\后台后端\exam-system\exam-system-app\src\main\java\com\yyhn\exam\service\impl\AppTechnologyDayExerciseServiceImpl.java
 C:\Users\Administrator\Desktop\学生管理系统\后台后端\exam-system\exam-system-app\src\main\java\com\yyhn\exam\service\AppTechnologyDayExerciseService.java
 C:\Users\Administrator\Desktop\学生管理系统\后台后端\exam-system\exam-system-app\src\main\java\com\yyhn\exam\service\impl\AppPapersExerciseServiceImpl.java
+C:\Users\Administrator\Desktop\学生管理系统\后台后端\exam-system\exam-system-app\src\main\java\com\yyhn\exam\service\AppStudentService.java
 C:\Users\Administrator\Desktop\学生管理系统\后台后端\exam-system\exam-system-app\src\main\java\com\yyhn\exam\service\AppJobDayExerciseSubmitService.java
 C:\Users\Administrator\Desktop\学生管理系统\后台后端\exam-system\exam-system-app\src\main\java\com\yyhn\exam\service\AppPapersUserService.java
 C:\Users\Administrator\Desktop\学生管理系统\后台后端\exam-system\exam-system-app\src\main\java\com\yyhn\exam\controller\AppJobDayExerciesSubmitController.java
+C:\Users\Administrator\Desktop\学生管理系统\后台后端\exam-system\exam-system-app\src\main\java\com\yyhn\exam\service\impl\AppStudentServiceImpl.java
 C:\Users\Administrator\Desktop\学生管理系统\后台后端\exam-system\exam-system-app\src\main\java\com\yyhn\exam\service\AppPapersExerciseService.java
+C:\Users\Administrator\Desktop\学生管理系统\后台后端\exam-system\exam-system-app\src\main\java\com\yyhn\exam\service\StudentTokenService.java
 C:\Users\Administrator\Desktop\学生管理系统\后台后端\exam-system\exam-system-app\src\main\java\com\yyhn\exam\service\PapersUserService.java
 C:\Users\Administrator\Desktop\学生管理系统\后台后端\exam-system\exam-system-app\src\main\java\com\yyhn\exam\service\AppTechnologyDayExerciseSubmitService.java
 C:\Users\Administrator\Desktop\学生管理系统\后台后端\exam-system\exam-system-app\src\main\java\com\yyhn\exam\service\impl\AppPapersUserServiceImpl.java
@@ -24,4 +27,5 @@ C:\Users\Administrator\Desktop\学生管理系统\后台后端\exam-system\exam-
 C:\Users\Administrator\Desktop\学生管理系统\后台后端\exam-system\exam-system-app\src\main\java\com\yyhn\exam\controller\AppTechnologyDayExerciseController.java
 C:\Users\Administrator\Desktop\学生管理系统\后台后端\exam-system\exam-system-app\src\main\java\com\yyhn\exam\service\AppTechnologyDayExerciseItemService.java
 C:\Users\Administrator\Desktop\学生管理系统\后台后端\exam-system\exam-system-app\src\main\java\com\yyhn\exam\service\AppPapersUserResultService.java
+C:\Users\Administrator\Desktop\学生管理系统\后台后端\exam-system\exam-system-app\src\main\java\com\yyhn\exam\service\impl\StudentTokenServiceImpl.java
 C:\Users\Administrator\Desktop\学生管理系统\后台后端\exam-system\exam-system-app\src\main\java\com\yyhn\exam\controller\AppLoginController.java

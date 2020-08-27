@@ -47,4 +47,6 @@ public interface StudentMapper extends BaseMapper<Student>  {
      * @return
      */
     public int deleteStudent(int id);
+
+    Student doLogin(String loginName);
 }

@@ -61,7 +61,7 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
                         "/v2/api-docs-ext/**"
                 ).permitAll()
                 // 对登录注册要允许匿名访问
-                .antMatchers("/login", "/captcha","/checkCaptCha","/getUsersState","/swagger-ui.html").permitAll()
+                .antMatchers("/login", "/captcha","/checkCaptCha","/getUsersState","/swagger-ui.html","/app/Student/doLogin").permitAll()
                 // Druid Monitor  允许匿名访问
                 .antMatchers("/druid/**").anonymous()
                 //跨域请求会先进行一次options请求
@@ -80,7 +80,7 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     @Override
-    public void configure(WebSecurity web) throws Exception {
+    public void configure(WebSecurity web)  {
         web.ignoring()
                 .antMatchers("/swagger-ui.html")
                 .antMatchers("/v2/**")

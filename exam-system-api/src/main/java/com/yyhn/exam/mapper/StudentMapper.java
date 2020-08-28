@@ -3,7 +3,7 @@ package com.yyhn.exam.mapper;
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 import com.yyhn.exam.entity.Student;
 import com.yyhn.exam.entity.Teacher;
-import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 import java.util.Map;
@@ -49,4 +49,15 @@ public interface StudentMapper extends BaseMapper<Student>  {
     public int deleteStudent(int id);
 
     Student doLogin(String loginName);
+    @Select("select login_password from exam_student where id = #{id}")
+    String getLoginPassword(int id);
+    @Insert("update exam_student set login_password = #{newPassword} where id = #{id}")
+    int updatePassword(@Param("id") int id ,@Param("newPassword") String newPassword);
+
+
+    @Select("select email from exam_student where login_name = #{loginName}")
+    String getEmailByLoginName(String loginName);
+    @Update("update exam_student set login_password = #{loginPassword} where login_name = #{loginName}")
+    int updatePasswordByName(@Param("loginName")String loginName,@Param("loginPassword")String loginPassword);
+
 }

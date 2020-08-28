@@ -21,6 +21,7 @@ C:\Users\Administrator\Desktop\学生管理系统\后台后端\exam-system\exam-
 C:\Users\Administrator\Desktop\学生管理系统\后台后端\exam-system\exam-system-app\src\main\java\com\yyhn\exam\service\AppJobDayExerciseService.java
 C:\Users\Administrator\Desktop\学生管理系统\后台后端\exam-system\exam-system-app\src\main\java\com\yyhn\exam\service\impl\AppPapersUserResultServiceImpl.java
 C:\Users\Administrator\Desktop\学生管理系统\后台后端\exam-system\exam-system-app\src\main\java\com\yyhn\exam\service\impl\PapersUserServiceImpl.java
+C:\Users\Administrator\Desktop\学生管理系统\后台后端\exam-system\exam-system-app\src\main\java\com\yyhn\exam\service\MailService.java
 C:\Users\Administrator\Desktop\学生管理系统\后台后端\exam-system\exam-system-app\src\main\java\com\yyhn\exam\service\AppPapersTitleService.java
 C:\Users\Administrator\Desktop\学生管理系统\后台后端\exam-system\exam-system-app\src\main\java\com\yyhn\exam\service\impl\AppJobDayExerciseServiceImpl.java
 C:\Users\Administrator\Desktop\学生管理系统\后台后端\exam-system\exam-system-app\src\main\java\com\yyhn\exam\controller\AppPapersUserResultController.java

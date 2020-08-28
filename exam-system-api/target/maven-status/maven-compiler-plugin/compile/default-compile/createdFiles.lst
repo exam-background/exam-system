@@ -40,11 +40,13 @@ com\yyhn\exam\entity\TechnologyDayExerciseItem.class
 com\yyhn\exam\dto\ResultMsg.class
 com\yyhn\exam\common\MD5.class
 com\yyhn\exam\mapper\RoleHasPermissionMapper.class
+com\yyhn\exam\vo\ErrorTechnologyDayExerciseSubmitVO.class
 com\yyhn\exam\common\TokenServiceImpl.class
 com\yyhn\exam\common\Dto.class
 com\yyhn\exam\mapper\PapersTitleMapper.class
 com\yyhn\exam\common\Levenshtein.class
 com\yyhn\exam\App.class
+com\yyhn\exam\mapper\ErrorTechnologyDayExerciseSubmitMapper.class
 com\yyhn\exam\entity\UserHasRole.class
 com\yyhn\exam\mapper\ClassMapper.class
 com\yyhn\exam\common\SysUserLoginParam.class

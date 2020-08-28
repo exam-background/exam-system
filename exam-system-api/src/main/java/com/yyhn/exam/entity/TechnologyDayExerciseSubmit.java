@@ -1,5 +1,8 @@
 package com.yyhn.exam.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.util.Date;
 
 /**
@@ -30,12 +33,19 @@ public class TechnologyDayExerciseSubmit {
     /**
      * 提交时间
      */
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm", timezone = "GMT+8")
     private Date submitDate;
 
     /**
      * 得分
      */
     private int score;
+
+    /**
+     * 是否正确
+     */
+    private Integer right;
 
     public int getId() {
         return id;
@@ -71,6 +81,14 @@ public class TechnologyDayExerciseSubmit {
 
     public Date getSubmitDate() {
         return submitDate;
+    }
+
+    public Integer getRight() {
+        return right;
+    }
+
+    public void setRight(Integer right) {
+        this.right = right;
     }
 
     public void setSubmitDate(Date submitDate) {

@@ -8,14 +8,12 @@
         <id property="id" column="id"/>
         <result column="submit_date" property="submitDate"/>
         <result column="score" property="score"></result>
-        <result column="student_id" property="studentId"></result>
-        <result column="exercise_id" property="exerciseId"></result>
         <result column="submit_answer" property="submitAnswer"></result>
         <result column="right" property="right"></result>
         <association property="technologyDayExercise" javaType="TechnologyDayExercise">
             <id property="id" column="exercise_id"/>
             <result column="title" property="title"></result>
-            <result column="standardAnswer" property="standard_answer"></result>
+            <result column="standard_answer" property="standardAnswer"></result>
             <result column="types" property="types"></result>
             <association property="professional" javaType="Professional">
                 <id property="id" column="Professional_id"/>
@@ -36,4 +34,5 @@
         from exam_technology_day_exercise_submit left join exam_technology_day_exercise on exam_technology_day_exercise_submit.exercise_id = exam_technology_day_exercise.id
         where `right` = 0 and student_id = #{id}
     </select>
+
 </mapper>

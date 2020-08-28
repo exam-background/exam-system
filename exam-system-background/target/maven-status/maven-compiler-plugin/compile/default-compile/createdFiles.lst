@@ -5,11 +5,13 @@ com\yyhn\exam\controller\PapersUserResultController.class
 com\yyhn\exam\service\impl\SysUserRoleServiceImpl.class
 com\yyhn\exam\service\impl\ProfessionalServiceImpl.class
 com\yyhn\exam\service\impl\TechnologyDayExerciseServiceImpl.class
+com\yyhn\exam\service\ErrorTechnologyDayExerciseSubmitService.class
 com\yyhn\exam\security\MySecurityConfig.class
 com\yyhn\exam\controller\JobDayExerciseController.class
 com\yyhn\exam\service\impl\SysUserServiceGetImpl.class
 com\yyhn\exam\service\SysPermissionService.class
 com\yyhn\exam\service\impl\PapersServiceImpl.class
+com\yyhn\exam\controller\ErrorTechnologyDayExerciseSubmitController.class
 com\yyhn\exam\service\ClassService.class
 com\yyhn\exam\controller\ClassController.class
 com\yyhn\exam\controller\CourseController.class
@@ -47,6 +49,7 @@ com\yyhn\exam\service\SysUserService.class
 com\yyhn\exam\controller\StudentController.class
 com\yyhn\exam\service\impl\PapersTitleServiceImpl.class
 com\yyhn\exam\service\PapersUserResultService.class
+com\yyhn\exam\service\impl\ErrorTechnologyDayExerciseSubmitServiceImpl.class
 com\yyhn\exam\service\JobExampleStudyService.class
 com\yyhn\exam\service\SysMenuService.class
 com\yyhn\exam\controller\VoiceController.class

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper  namespace="com.yyhn.exam.mapper.ErrorTechnologyDayExerciseSubmitMapper">
+
+    <resultMap id="errorTechnologyDayExerciseSubmit" type="com.yyhn.exam.vo.ErrorTechnologyDayExerciseSubmitVO">
+        <id property="id" column="id"/>
+        <result column="submit_date" property="submitDate"/>
+        <result column="score" property="score"></result>
+        <result column="submit_answer" property="submitAnswer"></result>
+        <result column="right" property="right"></result>
+        <association property="technologyDayExercise" javaType="TechnologyDayExercise">
+            <id property="id" column="exercise_id"/>
+            <result column="title" property="title"></result>
+            <result column="standard_answer" property="standardAnswer"></result>
+            <result column="analysis" property="analysis"></result>
+            <association property="professional" javaType="Professional">
+                <id property="id" column="Professional_id"/>
+                <result column="professional_name" property="professionalName"></result>
+            </association>
+            <association property="course" javaType="Course">
+                <id property="id" column="course_id"/>
+                <result column="course_name" property="courseName"></result>
+            </association>
+        </association>
+        <association property="student" javaType="Student">
+            <id property="id" column="student_id"/>
+            <id property="stuName" column="stu_name"/>
+        </association>
+    </resultMap>
+
+    <select id="getErrorTechnologyDayExercise" resultMap="errorTechnologyDayExerciseSubmit">
+        select exam_technology_day_exercise_submit.*, exam_technology_day_exercise.title, exam_technology_day_exercise.standard_answer, exam_technology_day_exercise.analysis, exam_technology_day_exercise.Professional_id, exam_professional.professional_name, exam_technology_day_exercise.course_id, exam_course.course_name
+        from exam_technology_day_exercise_submit left join exam_technology_day_exercise on exam_technology_day_exercise_submit.exercise_id = exam_technology_day_exercise.id
+        join exam_professional on exam_technology_day_exercise.Professional_id = exam_professional.id
+        join exam_course on exam_technology_day_exercise.course_id = exam_course.id
+        where 1 = 1
+        <if test="professionalId != null">
+            and exam_technology_day_exercise.Professional_id = #{professionalId}
+        </if>
+        <if test="courseId != null">
+            and exam_technology_day_exercise.course_id = #{courseId}
+        </if>
+        <if test="titleName != null and titleName != ''">
+            and exam_technology_day_exercise.title like concat('%',#{titleName},'%')
+        </if>
+        GROUP BY exercise_id
+    </select>
+
+    <select id="getErrorTechnologyDayExerciseCount" resultType="Integer">
+        select count(id) from exam_technology_day_exercise_submit where `right` = 0 and exercise_id = #{id}
+    </select>
+
+    <select id="getTechnologyDayExerciseCount" resultType="Integer">
+        select count(id) from exam_technology_day_exercise_submit where exercise_id = #{id}
+    </select>
+
+    <select id="getTechnologyDayExerciseStudentByErrorId" resultMap="errorTechnologyDayExerciseSubmit">
+        select exam_technology_day_exercise_submit.*, exam_technology_day_exercise.title, exam_technology_day_exercise.standard_answer, exam_technology_day_exercise.analysis, exam_technology_day_exercise.Professional_id, exam_professional.professional_name, exam_technology_day_exercise.course_id, exam_course.course_name, exam_student.stu_name,exam_technology_day_exercise_submit.submit_date
+        from exam_technology_day_exercise_submit left join exam_technology_day_exercise on exam_technology_day_exercise_submit.exercise_id = exam_technology_day_exercise.id
+        join exam_professional on exam_technology_day_exercise.Professional_id = exam_professional.id
+        join exam_course on exam_technology_day_exercise.course_id = exam_course.id
+        join exam_student on exam_technology_day_exercise_submit.student_id = exam_student.id
+        where exam_technology_day_exercise_submit.exercise_id=#{id}
+    </select>
+</mapper>

@@ -15,14 +15,19 @@
             <id column="professionalId" property="id"></id>
             <result column="professional_name" property="professionalName"></result>
         </association>
+        <association property="course" javaType="Course">
+            <id column="course_id" property="id"></id>
+            <result column="course_name" property="courseName"></result>
+        </association>
     </resultMap>
 
     <select id="getJobDayExerciseByProfessid" resultMap="jobDayExerciseResult">
-        select exam_job_day_exercise.*, exam_professional.id professionalId, exam_professional.professional_name
+        select exam_job_day_exercise.*, exam_professional.id professionalId, exam_professional.professional_name, exam_course.course_name
         from exam_job_day_exercise left join exam_professional on exam_job_day_exercise.Professional_id = exam_professional.id
+        join exam_course on exam_job_day_exercise.course_id = exam_course.id
         where 1=1
         <if test="id != 0">
-            and Professional_id=#{id}
+            and exam_job_day_exercise.Professional_id=#{id}
         </if>
         limit #{startRow},#{pageSize}
     </select>

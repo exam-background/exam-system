@@ -8,6 +8,8 @@ import com.yyhn.exam.entity.PapersUserResult;
 import com.yyhn.exam.service.AppPapersExerciseService;
 import com.yyhn.exam.service.AppPapersTitleService;
 import com.yyhn.exam.service.AppPapersUserResultService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,6 +21,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/app/AppPapersUserResultController")
+@Api( value = "针对手机端试卷做题记录进行维护",description = "手机端试卷做题记录控制器类")
 public class AppPapersUserResultController {
     @Resource
     private AppPapersUserResultService appPapersUserResultService;
@@ -27,6 +30,12 @@ public class AppPapersUserResultController {
     @Resource
     private AppPapersTitleService appPapersTitleService;
 
+    @ApiOperation(value = "手机端根据用户id拿到试卷错误做题记录", httpMethod = "GET",
+            protocols = "HTTP",
+            response = ResultMsg.class, notes = "根据用户id拿到试卷错误做题记录"+
+            "<p>传参说明：</p>"+
+            "<p>papersId: 需要查询的试卷id</p>"+
+            "<p>userId: 参加考试的学生id</p>")
     @GetMapping("/getPapersUserResultByRight")
     public ResultMsg getPapersUserResultByRight(Integer papersId,Integer userId){
         List<PapersUserResult> list = appPapersUserResultService.getPapersUserResultByRight(papersId, userId);
@@ -46,6 +55,9 @@ public class AppPapersUserResultController {
         }
     }
 
+    @ApiOperation(value = "手机端增加试卷作答信息", httpMethod = "POST",
+            protocols = "HTTP",
+            response = ResultMsg.class, notes = "增加试卷作答信息")
     @PostMapping("/insertPapersUserResult")
     public ResultMsg insertPapersUserResult(PapersUserResult papersUserResult){
         //添加作答

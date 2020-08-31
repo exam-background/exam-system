@@ -5,6 +5,8 @@ import com.yyhn.exam.service.AppTechnologyDayExerciseItemService;
 import com.yyhn.exam.service.AppTechnologyDayExerciseSubmitService;
 import com.yyhn.exam.dto.ResultMsg;
 import com.yyhn.exam.entity.TechnologyDayExerciseSubmit;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,12 +18,19 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/app/TechnologyDayExerciseSubmitController")
+@Api( value = "针对手机端技术每日一练做题记录进行维护",description = "手机端技术每日一练做题记录控制器类")
 public class AppTechnologyDayExerciseSubmitController {
     @Resource
     private AppTechnologyDayExerciseSubmitService appTechnologyDayExerciseSubmitService;
     @Resource
     private AppTechnologyDayExerciseItemService appTechnologyDayExerciseItemService;
 
+    @ApiOperation(value = "添加技术每日一练做题记录", httpMethod = "POST",
+            protocols = "HTTP",
+            response = ResultMsg.class, notes = "添加技术每日一练做题记录"+
+            "<p>传参说明：</p>"+
+            "<p>papersId: 需要查询的试卷id</p>"+
+            "<p>userId: 参加考试的学生id</p>")
     @PostMapping("/addTechnologyDayExerciseSubmit")
     public ResultMsg addTechnologyDayExerciseSubmit(TechnologyDayExerciseSubmit technologyDayExerciseSubmit){
         if(appTechnologyDayExerciseSubmitService.addTechnologyDayExerciseSubmit(technologyDayExerciseSubmit) > 0){
@@ -31,6 +40,9 @@ public class AppTechnologyDayExerciseSubmitController {
         }
     }
 
+    @ApiOperation(value = "根据用户id拿到技术每日一练做题记录", httpMethod = "GET",
+            protocols = "HTTP",
+            response = ResultMsg.class, notes = "添加技术每日一练做题记录")
     @GetMapping("/getTechnologyDayExerciseSubmitByUserId")
     public ResultMsg getTechnologyDayExerciseSubmitByUserId(Integer id){
         List<TechnologyDayExerciseSubmit> list = appTechnologyDayExerciseSubmitService.getTechnologyDayExerciseSubmitByUserId(id);
@@ -41,6 +53,9 @@ public class AppTechnologyDayExerciseSubmitController {
         }
     }
 
+    @ApiOperation(value = "根据用户id拿到技术每日一练错题记录", httpMethod = "GET",
+            protocols = "HTTP",
+            response = ResultMsg.class, notes = "添加技术每日一练错题记录")
     @GetMapping("/getTechnologyDayExerciseSubmitByRight")
     public ResultMsg getTechnologyDayExerciseSubmitByRight(Integer id){
         List<TechnologyDayExerciseSubmit> list = appTechnologyDayExerciseSubmitService.getTechnologyDayExerciseSubmitByRight(id);

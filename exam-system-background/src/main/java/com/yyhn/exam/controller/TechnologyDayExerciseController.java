@@ -265,5 +265,17 @@ public class TechnologyDayExerciseController {
         }
     }
 
-
+    @ApiOperation(value = "根据题目id查询技术每日一练", httpMethod = "GET",
+            protocols = "HTTP",
+            response = Dto.class, notes = "根据题目id查询技术每日一练" )
+    @GetMapping("/getTechnologyDayExerciseById")
+    public ResultMsg getTechnologyDayExerciseById(Integer id){
+        TechnologyDayExercise technologyDayExercise = technologyDayExerciseService.getTechnologyDayExerciseById(id);
+        if(technologyDayExercise != null){
+            technologyDayExercise.setExerciseItems(technologyDayExerciseItemService.getTechnologyDayExerciseByExerciseId(technologyDayExercise.getId()));
+            return ResultMsg.BY_SUCCESS("查询技术每日一练成功", technologyDayExercise);
+        }else{
+            return ResultMsg.BY_FAIL("查询技术每日一练失败");
+        }
+    }
 }

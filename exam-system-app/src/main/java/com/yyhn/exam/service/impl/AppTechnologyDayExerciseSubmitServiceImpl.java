@@ -20,7 +20,7 @@ public class AppTechnologyDayExerciseSubmitServiceImpl implements AppTechnologyD
 
     @Override
     public int addTechnologyDayExerciseSubmit(TechnologyDayExerciseSubmit technologyDayExerciseSubmit) {
-        return (technologyDayExerciseSubmitMapper.insert(technologyDayExerciseSubmit));
+        return technologyDayExerciseSubmitMapper.insert(technologyDayExerciseSubmit);
     }
     @Override
     public List<TechnologyDayExerciseSubmit> getTechnologyDayExerciseSubmitByRight(Integer id) {

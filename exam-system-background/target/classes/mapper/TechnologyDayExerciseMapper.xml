@@ -218,9 +218,9 @@
         </foreach>
     </delete>
 
-    <select id="getTechnologyDayExerciseById" parameterType="int">
+    <select id="getTechnologyDayExerciseById" parameterType="int" resultMap="dayExerciseResult">
         select
-        <include refid="base_column_list" />
+        de.id id, de.title title, de.standard_answer standardAnswer, de.set_score setScore, de.types types, de.analysis analysis, de.remark remark, de.build_exercise_date buildExerciseDate, de.update_exercise_date updateExerciseDate, de.id item_id, p.id professionalId, p.professional_name professionalName, c.id courseId, c.course_name courseName
         FROM
         exam_technology_day_exercise de,
         exam_professional p,

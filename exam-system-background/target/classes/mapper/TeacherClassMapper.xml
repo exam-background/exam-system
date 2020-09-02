@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yyhn.exam.mapper.TeacherClassMapper">
+
+    <resultMap id="teacherClass" type="TeacherClass">
+        <id property="id" column="id"></id>
+        <result property="teacherId" column="teacher_id"></result>
+        <result property="classId" column="class_id"></result>
+        <result property="professionalId" column="professional_id"></result>
+        <association property="teacher" javaType="com.yyhn.exam.entity.Teacher">
+            <id property="id" column="teacher_id"></id>
+            <result property="teacherName" column="teacher_name"></result>
+        </association>
+        <association property="professional" javaType="com.yyhn.exam.entity.Professional">
+            <id property="id" column="professional_id"></id>
+            <result property="professionalName" column="professional_name"></result>
+        </association>
+        <association property="classList" javaType="com.yyhn.exam.entity.Class">
+            <id property="id" column="class_id"></id>
+            <result property="className" column="class_name"></result>
+        </association>
+    </resultMap>
+
+    <select id="getTeacherClass" resultMap="teacherClass">
+        select exam_teacher_class.*, exam_teacher.teacher_name, exam_class.class_name, exam_professional.professional_name
+        from exam_teacher_class left join exam_teacher on exam_teacher_class.teacher_id = exam_teacher.id
+        join exam_class on exam_teacher_class.class_id = exam_class.id
+        join exam_professional on exam_teacher_class.professional_id = exam_professional.id
+        where 1 =1
+        <if test="teacherName != null and teacherName != ''">
+            and exam_teacher.teacher_name like concat('%',#{teacherName},'%')
+        </if>
+        <if test="professionalId != null and professionalId != 0">
+            and exam_teacher_class.professional_id = #{professionalId}
+        </if>
+    </select>
+
+</mapper>

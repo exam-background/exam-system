@@ -33,6 +33,7 @@ public class AppTechnologyDayExerciseSubmitController {
             "<p>userId: 参加考试的学生id</p>")
     @PostMapping("/addTechnologyDayExerciseSubmit")
     public ResultMsg addTechnologyDayExerciseSubmit(TechnologyDayExerciseSubmit technologyDayExerciseSubmit){
+        System.out.println(technologyDayExerciseSubmit);
         if(appTechnologyDayExerciseSubmitService.addTechnologyDayExerciseSubmit(technologyDayExerciseSubmit) > 0){
             return ResultMsg.BY_SUCCESS("添加成功", null);
         }else{

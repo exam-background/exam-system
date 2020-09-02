@@ -8,8 +8,10 @@ com\yyhn\exam\service\impl\TechnologyDayExerciseServiceImpl.class
 com\yyhn\exam\service\ErrorTechnologyDayExerciseSubmitService.class
 com\yyhn\exam\security\MySecurityConfig.class
 com\yyhn\exam\controller\JobDayExerciseController.class
+com\yyhn\exam\controller\TeacherClassController.class
 com\yyhn\exam\service\impl\SysUserServiceGetImpl.class
 com\yyhn\exam\service\SysPermissionService.class
+com\yyhn\exam\service\impl\TeacherClassServiceImpl.class
 com\yyhn\exam\service\impl\PapersServiceImpl.class
 com\yyhn\exam\controller\ErrorTechnologyDayExerciseSubmitController.class
 com\yyhn\exam\service\ClassService.class
@@ -18,6 +20,7 @@ com\yyhn\exam\controller\CourseController.class
 com\yyhn\exam\App.class
 com\yyhn\exam\controller\PermissionController.class
 com\yyhn\exam\controller\PapersUserController.class
+com\yyhn\exam\service\TeacherClassService.class
 com\yyhn\exam\controller\LoginController.class
 com\yyhn\exam\controller\SysRoleController.class
 com\yyhn\exam\service\impl\SysUserDetailServiceImpl.class

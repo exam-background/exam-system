@@ -15,9 +15,7 @@ import javax.annotation.Resource;
 import java.util.List;
 
 @RestController
-
 public class ClassController {
-
     @Resource
     ClassService classService;
 

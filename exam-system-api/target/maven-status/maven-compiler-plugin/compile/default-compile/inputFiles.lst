@@ -1,6 +1,7 @@
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\mapper\TechnologyDayExerciseSubmitMapper.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\entity\PapersUser.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\common\UuidUtil.java
+C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\entity\TeacherClass.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\mapper\SysMenuMapper.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\entity\Course.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\entity\TechnologyDayExerciseItem.java
@@ -66,6 +67,7 @@ C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\jav
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\vo\JobExamStudySearchVO.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\entity\RoleHasMenu.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\dto\ResultMsg.java
+C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\mapper\TeacherClassMapper.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\entity\SysUserDetail.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\entity\Papers.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\entity\Teacher.java

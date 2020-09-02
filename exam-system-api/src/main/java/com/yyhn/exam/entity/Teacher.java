@@ -8,7 +8,7 @@ public class Teacher implements java.io.Serializable {
     /**
      * 老师名称
      */
-    private String teacherName;
+        private String teacherName;
     /**
      * 老师描述
      */

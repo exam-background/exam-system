@@ -13,6 +13,7 @@ com\yyhn\exam\mapper\JobExampleStudyMapper.class
 com\yyhn\exam\mapper\TechnologyDayExerciseSubmitMapper.class
 com\yyhn\exam\mapper\SysMenuMapper.class
 com\yyhn\exam\mapper\PapersMapper.class
+com\yyhn\exam\entity\TeacherClass.class
 com\yyhn\exam\common\Page.class
 com\yyhn\exam\entity\JobExampleStudy.class
 com\yyhn\exam\vo\JobExamStudySearchVO.class
@@ -22,6 +23,7 @@ com\yyhn\exam\entity\Student.class
 com\yyhn\exam\entity\Teacher.class
 com\yyhn\exam\mapper\JobDayExerciseMapper.class
 com\yyhn\exam\mapper\TechnologyDayExerciseItemMapper.class
+com\yyhn\exam\mapper\TeacherClassMapper.class
 com\yyhn\exam\entity\TechnologyDayExerciseSubmit.class
 com\yyhn\exam\mapper\PapersUserResultMapper.class
 com\yyhn\exam\mapper\AppPapersUserResultMapper.class

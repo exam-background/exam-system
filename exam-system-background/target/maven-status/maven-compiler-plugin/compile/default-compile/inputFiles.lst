@@ -13,6 +13,7 @@ C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-background\src\m
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-background\src\main\java\com\yyhn\exam\service\impl\SysRoleServiceImpl.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-background\src\main\java\com\yyhn\exam\service\ClassService.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-background\src\main\java\com\yyhn\exam\controller\SysUsersController.java
+C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-background\src\main\java\com\yyhn\exam\controller\TeacherClassController.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-background\src\main\java\com\yyhn\exam\swagger\Swagger2.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-background\src\main\java\com\yyhn\exam\service\impl\TechnologyDayExerciseServiceImpl.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-background\src\main\java\com\yyhn\exam\service\impl\PapersExerciseServiceImpl.java
@@ -29,6 +30,7 @@ C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-background\src\m
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-background\src\main\java\com\yyhn\exam\controller\PapersController.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-background\src\main\java\com\yyhn\exam\service\TechnologyDayExerciseItemService.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-background\src\main\java\com\yyhn\exam\controller\PermissionController.java
+C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-background\src\main\java\com\yyhn\exam\service\impl\TeacherClassServiceImpl.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-background\src\main\java\com\yyhn\exam\service\impl\SysUserServiceGetImpl.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-background\src\main\java\com\yyhn\exam\service\impl\PapersUserResultServiceImpl.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-background\src\main\java\com\yyhn\exam\controller\TeacherController.java
@@ -68,6 +70,7 @@ C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-background\src\m
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-background\src\main\java\com\yyhn\exam\controller\LoginController.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-background\src\main\java\com\yyhn\exam\config\RedisConfig.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-background\src\main\java\com\yyhn\exam\service\impl\TeacherServiceImpl.java
+C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-background\src\main\java\com\yyhn\exam\service\TeacherClassService.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-background\src\main\java\com\yyhn\exam\security\ResultFulAccessDeniedHandler.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-background\src\main\java\com\yyhn\exam\service\impl\ClassServiceImpl.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-background\src\main\java\com\yyhn\exam\controller\VoiceController.java

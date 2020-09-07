@@ -64,11 +64,6 @@
         </if>
     </sql>
 
-    <insert id="addStudent" parameterType="Student">
-        insert into exam_student(stu_name,open_class_time,class_id,professional_id)
-        values(#{stuName},#{openClassTime},#{classId},#{professionalId})
-    </insert>
-
     <update id="updateStudent" parameterType="Student">
         update exam_student
         <set>

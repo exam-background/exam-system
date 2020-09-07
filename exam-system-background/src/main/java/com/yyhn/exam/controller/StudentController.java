@@ -81,7 +81,7 @@ public class StudentController {
             produces = {MediaType.APPLICATION_ATOM_XML_VALUE, MediaType.APPLICATION_JSON_VALUE,})
     public Dto<Object> addStudent(Student student){
         try {
-            System.out.println(" student : "+student);
+            System.out.println(" student : "+student.toString());
             int count = studentService.addStudent(student);
             if(count>0){
                 return DtoUtil.returnSuccess("添加成功！");
@@ -150,9 +150,9 @@ public class StudentController {
     @ApiOperation(value = "根据班级id查询学生信息", httpMethod = "GET",
             protocols = "HTTP", produces = "application/json",
             response = Dto.class, notes = "根据班级id查询学生信息")
-    public ResultMsg selectStudent(Integer id){
-        System.out.println(id+"=======================");
-        List<Student> list = studentService.selectStudent(id);
+    public ResultMsg selectStudent(Integer classId){
+        System.out.println(classId+"=======================");
+        List<Student> list = studentService.selectStudent(classId);
         if(list != null){
             return ResultMsg.BY_SUCCESS("查询成功", list);
         }else{

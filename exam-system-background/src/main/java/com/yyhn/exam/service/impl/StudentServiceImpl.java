@@ -47,7 +47,7 @@ public class StudentServiceImpl implements StudentService {
     public int addStudent(Student student) {
         System.out.println("9999999999999999999999999---"+student.getLoginName());
         student.setLoginPassword(passwordEncoder.encode(student.getLoginPassword()));
-        int count = studentMapper.addStudent(student);
+        int count = studentMapper.insert(student);
         return count;
     }
 

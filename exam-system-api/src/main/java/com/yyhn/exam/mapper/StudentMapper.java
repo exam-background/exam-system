@@ -31,12 +31,6 @@ public interface StudentMapper extends BaseMapper<Student>  {
     public int getCount(Map<String, Object> map);
 
     /**
-     * 添加学生信息
-     * @return
-     */
-    public int addStudent(Student student);
-
-    /**
      * 修改学生信息
      * @return
      */

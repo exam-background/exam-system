@@ -60,4 +60,11 @@ public class StudentServiceImpl implements StudentService {
     public int deleteStudent(int id) {
         return studentMapper.deleteStudent(id);
     }
+
+    @Override
+    public List<Student> selectStudent(Integer id) {
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("class_id", id);
+        return studentMapper.selectByMap(map);
+    }
 }

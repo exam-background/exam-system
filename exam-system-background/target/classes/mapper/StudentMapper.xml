@@ -8,8 +8,10 @@
         <id property="id" column="id"/>
         <result column="stu_name" property="stuName"/>
         <result column="open_class_time" property="openClassTime"/>
-        <result column="csId" property="classId"/>
-        <result column="proId" property="professionalId"/>
+        <result column="class_id" property="classId"/>
+        <result column="professional_id" property="professionalId"/>
+        <result column="login_name" property="loginName"/>
+        <result column="login_password" property="loginPassword"/>
         <association property="clazz" javaType="Class">
             <id property="id" column="class_id"/>
             <result column="class_name" property="className"></result>
@@ -93,16 +95,7 @@
     <select id="selectStudent" resultMap="studentResult">
         select * from exam_student where class_id=#{id}
     </select>
-<select id="doLogin" resultMap="loginStudent">
+<select id="doLogin" resultMap="studentResult">
     select * from exam_student where login_name = #{loginName}
 </select>
-    <resultMap id="loginStudent" type="com.yyhn.exam.entity.Student">
-        <id property="id" column="id"/>
-        <result column="stu_name" property="stuName"/>
-        <result column="open_class_time" property="openClassTime"/>
-        <result column="class_id" property="classId"/>
-        <result column="professional_id" property="professionalId"/>
-        <result column="login_name" property="loginName"/>
-        <result column="login_password" property="loginPassword"/>
-    </resultMap>
 </mapper>

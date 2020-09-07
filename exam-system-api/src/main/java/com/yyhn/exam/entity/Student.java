@@ -1,5 +1,6 @@
 package com.yyhn.exam.entity;
 
+import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
@@ -34,7 +35,9 @@ public class Student {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date openClassTime;
+    @TableField(exist = false)
     private Class clazz = new Class();
+    @TableField(exist = false)
     private Professional professional = new Professional();
     private Integer classId;
     private Integer professionalId;

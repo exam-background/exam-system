@@ -38,4 +38,11 @@ public interface StudentService {
      * @return
      */
     public int deleteStudent(int id);
+
+    /**
+     * 根据班级id查询学生
+     * @param id
+     * @return
+     */
+    public List<Student> selectStudent(Integer id);
 }

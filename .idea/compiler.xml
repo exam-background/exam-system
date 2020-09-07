@@ -7,11 +7,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="exam-system-app" />
+        <module name="test" />
+        <module name="examsystembackground" />
         <module name="exam-system-api" />
         <module name="examsystemapi" />
-        <module name="exam-system-app" />
         <module name="exam-system-background" />
-        <module name="examsystembackground" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -32,6 +33,7 @@
       <module name="examsystemgen" options="-parameters" />
       <module name="examsystemgenerator" options="-parameters" />
       <module name="examsystemshiro" options="-parameters" />
+      <module name="test" options="-parameters" />
     </option>
   </component>
 </project>

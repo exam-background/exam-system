@@ -3,6 +3,7 @@ package com.yyhn.exam.controller;
 import com.yyhn.exam.common.Dto;
 import com.yyhn.exam.common.DtoUtil;
 import com.yyhn.exam.common.Page;
+import com.yyhn.exam.dto.ResultMsg;
 import com.yyhn.exam.entity.Class;
 import com.yyhn.exam.entity.Student;
 import com.yyhn.exam.service.ClassService;
@@ -10,10 +11,7 @@ import com.yyhn.exam.service.StudentService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -148,5 +146,18 @@ public class StudentController {
         return null;
     }
 
+    @GetMapping("/selectStudent")
+    @ApiOperation(value = "根据班级id查询学生信息", httpMethod = "GET",
+            protocols = "HTTP", produces = "application/json",
+            response = Dto.class, notes = "根据班级id查询学生信息")
+    public ResultMsg selectStudent(Integer id){
+        System.out.println(id+"=======================");
+        List<Student> list = studentService.selectStudent(id);
+        if(list != null){
+            return ResultMsg.BY_SUCCESS("查询成功", list);
+        }else{
+            return ResultMsg.BY_FAIL("查询失败");
+        }
+    }
 
 }

@@ -15,8 +15,8 @@ public class KaptchaConfig {
         Properties properties = new Properties();
         properties.setProperty("kaptcha.image.width", "150");
         properties.setProperty("kaptcha.textproducer.char.length", "4");
-        properties.setProperty("kaptcha.textproducer.font.color", "black");
-        properties.setProperty("kaptcha.textproducer.char.space", "3");
+       properties.setProperty("kaptcha.textproducer.font.color", "black");
+       properties.setProperty("kaptcha.textproducer.char.space", "3");
         defaultKaptcha.setConfig(new Config(properties));
         return defaultKaptcha;
     }

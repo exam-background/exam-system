@@ -4,6 +4,7 @@ import com.yyhn.exam.entity.Student;
 import com.yyhn.exam.mapper.StudentMapper;
 import com.yyhn.exam.service.AppStudentService;
 import com.yyhn.exam.service.StudentTokenService;
+import com.yyhn.exam.vo.StudentUserVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -65,5 +66,10 @@ public class AppStudentServiceImpl implements AppStudentService {
     @Override
     public int updatePasswordByName(String loginName, String loginPassword) {
         return studentMapper.updatePasswordByName(loginName,passwordEncoder.encode(loginPassword));
+    }
+
+    @Override
+    public StudentUserVo getStuById(int id) {
+        return studentMapper.getStuById(id);
     }
 }

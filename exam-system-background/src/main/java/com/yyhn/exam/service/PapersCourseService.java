@@ -9,7 +9,7 @@ public interface PapersCourseService {
      * @param id
      * @return
      */
-    void deletePapersCourse(Integer id) throws RuntimeException;
+    int deletePapersCourse(Integer id) throws RuntimeException;
 
     /**
      * 添加试卷科目关系

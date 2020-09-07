@@ -19,12 +19,10 @@ public class PapersUserServiceImpl implements PapersUserService {
 
     @Override
     @Transactional(propagation= Propagation.REQUIRED)
-    public void deletePapersUser(Integer id)  throws RuntimeException{
+    public int deletePapersUser(Integer id)  throws RuntimeException{
         Map<String, Object> map = new HashMap<String, Object>();
         map.put("papers_id", id);
-        if(papersUserMapper.deleteByMap(map) < 0){
-            throw new RuntimeException("试卷考试学生删除失败");
-        }
+        return papersUserMapper.deleteByMap(map);
     }
 
     @Override

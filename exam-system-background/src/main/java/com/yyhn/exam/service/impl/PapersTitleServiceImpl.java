@@ -19,12 +19,10 @@ public class PapersTitleServiceImpl implements PapersTitleService {
 
     @Override
     @Transactional(propagation= Propagation.REQUIRED)
-    public void deletePapersTitle(Integer id)  throws RuntimeException{
+    public int deletePapersTitle(Integer id)  throws RuntimeException{
         Map<String, Object> map = new HashMap<String, Object>();
         map.put("papers_id", id);
-        if(papersTitleMapper.deleteByMap(map) < 0){
-            throw new RuntimeException("试卷题目删除失败");
-        }
+        return papersTitleMapper.deleteByMap(map);
     }
 
     @Override

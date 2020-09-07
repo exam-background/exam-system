@@ -20,13 +20,11 @@ public class PapersUserResultServiceImpl implements PapersUserResultService {
 
     @Override
     @Transactional(propagation= Propagation.REQUIRED)
-    public void deletePapersUserResult(Integer id) throws RuntimeException{
+    public int deletePapersUserResult(Integer id) throws RuntimeException{
         Map<String, Object> map = new HashMap<String, Object>();
         map.put("papers_id", id);
-        if(papersUserResultMapper.deleteByMap(map) < 0){
-            throw new RuntimeException("试卷题目删除失败");
-        }
         System.out.println("考试题目增加完成");
+        return papersUserResultMapper.deleteByMap(map);
     }
 
     @Override

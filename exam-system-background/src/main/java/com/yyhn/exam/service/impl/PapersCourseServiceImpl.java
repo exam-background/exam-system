@@ -18,12 +18,10 @@ public class PapersCourseServiceImpl implements PapersCourseService {
 
     @Override
     @Transactional(propagation= Propagation.SUPPORTS)
-    public void deletePapersCourse(Integer id) throws RuntimeException{
+    public int deletePapersCourse(Integer id) throws RuntimeException{
         Map<String, Object> map = new HashMap<String, Object>();
         map.put("papers_id", id);
-        if(papersCourseMapper.deleteByMap(map) < 0){
-            throw new RuntimeException("试卷，科目关系表删除失败");
-        }
+        return papersCourseMapper.deleteByMap(map);
     }
 
     @Override

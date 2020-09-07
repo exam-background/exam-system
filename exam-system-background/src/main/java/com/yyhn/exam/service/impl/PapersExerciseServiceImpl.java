@@ -19,12 +19,10 @@ public class PapersExerciseServiceImpl implements PapersExerciseService {
 
     @Override
     @Transactional(propagation= Propagation.REQUIRED)
-    public void deletePapersExercise(Integer id) throws RuntimeException{
+    public int deletePapersExercise(Integer id) throws RuntimeException{
         Map<String, Object> map = new HashMap<String, Object>();
         map.put("title_id", id);
-        if(papersExerciseMapper.deleteByMap(map) < 0){
-            throw new RuntimeException("题目备选答案删除失败");
-        }
+        return papersExerciseMapper.deleteByMap(map);
     }
 
     @Override

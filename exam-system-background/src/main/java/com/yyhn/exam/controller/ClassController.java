@@ -15,6 +15,7 @@ import javax.annotation.Resource;
 import java.util.List;
 
 @RestController
+@Api( value = "针对班级信息进行维护",description = "班级管理控制器类")
 public class ClassController {
     @Resource
     ClassService classService;

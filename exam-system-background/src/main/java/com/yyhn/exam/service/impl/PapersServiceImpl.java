@@ -31,6 +31,8 @@ public class PapersServiceImpl implements PapersService {
     private PapersTitleService papersTitleService;
     @Resource
     private PapersExerciseService papersExerciseService;
+    @Resource
+    private PapersUserResultService papersUserResultService;
 
     @Override
     public List<Papers> getPapersAll(Papers papers) {
@@ -179,5 +181,44 @@ public class PapersServiceImpl implements PapersService {
             papersUser.setCount(papers.getSum());
             papersUserService.insertPapersUser(papersUser);
         }
+    }
+
+    @Override
+    public void deletePapersAll(List<Integer> integerList) throws RuntimeException {
+        for (Integer id : integerList) {
+            //删除考试用户表中的数据
+            if(papersUserService.deletePapersUser(id) == 0){
+                throw new RuntimeException("试卷考试学生删除失败");
+            }
+            //删除考生作答表中的该试卷的数据
+            if(papersUserResultService.deletePapersUserResult(id) == 0){
+                throw new RuntimeException("试卷题目删除失败");
+            }
+            //删除题目备选答案表中该试卷的题目的备选答案
+            //查询该id下的所有题目
+            List<PapersTitle> papersTitleList = papersTitleService.getPapersTitleByPapersId(id);
+            for(PapersTitle papersTitle : papersTitleList){
+                if(papersExerciseService.deletePapersExercise(papersTitle.getId()) == 0){
+                    throw new RuntimeException("题目备选答案删除失败");
+                }
+            }
+            //删除该试卷对应试题表中该试卷的题目
+            if(papersTitleService.deletePapersTitle(id) == 0){
+                throw new RuntimeException("试卷题目删除失败");
+            }
+            //删除试卷，科目关系表中与该试卷相关联的记录
+            if(papersCourseService.deletePapersCourse(id) == 0){
+                throw new RuntimeException("试卷，科目关系表删除失败");
+            }
+            //删除试卷表中的试卷
+            if(papersMapper.deleteById(id) == 0){
+                throw new RuntimeException("试卷删除失败");
+            }
+        }
+    }
+
+    @Override
+    public int updatePapers(Papers papers) {
+        return papersMapper.updateById(papers);
     }
 }

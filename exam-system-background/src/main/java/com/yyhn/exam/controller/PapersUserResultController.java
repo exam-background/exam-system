@@ -8,6 +8,10 @@ import com.yyhn.exam.service.PapersExerciseService;
 import com.yyhn.exam.service.PapersTitleService;
 import com.yyhn.exam.service.PapersUserResultService;
 import com.yyhn.exam.service.PapersUserService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,13 +20,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
+@Api( value = "针对试卷学生作答进行维护",description = "试卷管理学生作答控制器类")
 public class PapersUserResultController {
     @Resource
     private PapersUserResultService papersUserResultService;
     @Resource
     private PapersExerciseService papersExerciseService;
 
-    @RequestMapping("/updatePapersUserResult")
+    @ApiOperation(value = "根据学生id修改学生作答题目分数", httpMethod = "PUT",
+            protocols = "HTTP",
+            response = ResultMsg.class, notes = "根据学生id修改学生作答题目分数")
+    @PutMapping("/updatePapersUserResult")
     public ResultMsg updatePapersUserResult(PapersUserResult papersUserResult){
         if(papersUserResultService.updatePapersUserResult(papersUserResult) > 0){
             return ResultMsg.BY_SUCCESS("修改成功", null);
@@ -31,7 +39,10 @@ public class PapersUserResultController {
         }
     }
 
-    @RequestMapping("/getPapersUserByUserId")
+    @ApiOperation(value = "根据学生id和试卷id查询学生作答信息", httpMethod = "GET",
+            protocols = "HTTP",
+            response = ResultMsg.class, notes = "根据学生id和试卷id查询学生作答信息")
+    @GetMapping("/getPapersUserByUserId")
     public ResultMsg getPapersUserByUserId(Integer id, Integer papersId){
         //查询考生答题内容和外键题目信息
         List<PapersUserResult> papersUserResultList = papersUserResultService.getPapersUserResultByUserId(id, papersId);

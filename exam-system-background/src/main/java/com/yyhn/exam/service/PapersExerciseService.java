@@ -10,7 +10,7 @@ public interface PapersExerciseService {
      * @param id
      * @return
      */
-    public void deletePapersExercise(Integer id) throws RuntimeException;
+    public int deletePapersExercise(Integer id) throws RuntimeException;
 
     /**
      * 添加考试题目备选答案

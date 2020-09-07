@@ -11,7 +11,7 @@ public interface PapersUserService {
      * @param id
      * @return
      */
-    public void deletePapersUser(Integer id) throws RuntimeException;
+    public int deletePapersUser(Integer id) throws RuntimeException;
 
     /**
      * 添加考试用户

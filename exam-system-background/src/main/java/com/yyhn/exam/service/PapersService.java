@@ -45,4 +45,17 @@ public interface PapersService {
      * @param papers
      */
     public void insertPapersAll(Papers papers) throws Exception;
+
+    /**
+     * 删除书卷和对应的表数据
+     * @param integerList
+     * @throws RuntimeException
+     */
+    public void deletePapersAll(List<Integer> integerList) throws RuntimeException;
+
+    /**
+     * 修改试卷基础信息
+     * @param papers
+     */
+    public int updatePapers(Papers papers);
 }

@@ -9,7 +9,7 @@ public interface PapersUserResultService {
      * 根据试卷id删除考试表内容
      * @param id
      */
-    public void deletePapersUserResult(Integer id) throws RuntimeException;
+    public int deletePapersUserResult(Integer id) throws RuntimeException;
 
     /**
      * 根据id修改题目分值和正确

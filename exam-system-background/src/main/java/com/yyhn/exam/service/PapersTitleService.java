@@ -11,7 +11,7 @@ public interface PapersTitleService {
      * @param id
      * @return
      */
-    void deletePapersTitle(Integer id) throws RuntimeException;
+    int deletePapersTitle(Integer id) throws RuntimeException;
 
     /**
      * 添加考试用户

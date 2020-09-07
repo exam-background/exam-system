@@ -1,10 +1,13 @@
 package com.yyhn.exam.controller;
 
+import com.yyhn.exam.common.Dto;
 import com.yyhn.exam.common.RandomMaxMin;
 import com.yyhn.exam.dto.ResultMsg;
 import com.yyhn.exam.entity.*;
 import com.yyhn.exam.service.*;
 import com.yyhn.exam.service.impl.PapersUserResultServiceImpl;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
@@ -14,6 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
+@Api( value = "针对试卷进行维护",description = "试卷管理控制器类")
 public class PapersController {
     @Resource
     private PapersService papersService;
@@ -24,12 +28,10 @@ public class PapersController {
     @Resource
     private PapersCourseService papersCourseService;
 
-    /**
-     * 条件查询所有试卷
-     * @param papers
-     * @return
-     */
-    @RequestMapping("/getPapers")
+    @ApiOperation(value = "根据任意条件查询所有试卷", httpMethod = "GET",
+            protocols = "HTTP",
+            response = ResultMsg.class, notes = "根据任意条件查询所有试卷")
+    @GetMapping("/getPapers")
     public ResultMsg getPapers(Papers papers){
         System.out.println(papers);
         List<Papers> list = papersService.getPapersAll(papers);
@@ -61,12 +63,10 @@ public class PapersController {
         }
     }
 
-    /**
-     * 条件查询所有已发布试卷
-     * @param papers
-     * @return
-     */
-    @RequestMapping("/getPapersAllPublish")
+    @ApiOperation(value = "条件任意查询所有已发布试卷", httpMethod = "GET",
+            protocols = "HTTP",
+            response = ResultMsg.class, notes = "条件任意查询所有已发布试卷")
+    @GetMapping("/getPapersAllPublish")
     public ResultMsg getPapersAllPublish(Papers papers){
         System.out.println(papers);
         List<Papers> list = papersService.getPapersAllPublish(papers);
@@ -98,36 +98,24 @@ public class PapersController {
         }
     }
 
-    @RequestMapping("/delPapars")
+    @ApiOperation(value = "根据试卷id删除试卷和试卷相关的表", httpMethod = "POST",
+            protocols = "HTTP",
+            response = ResultMsg.class, notes = "根据试卷id删除试卷和试卷相关的表")
+    @PostMapping("/delPapars")
     @Transactional(propagation= Propagation.SUPPORTS)
     public ResultMsg delPapers(@RequestBody List<Integer> integerList){
         try {
-            for (Integer id : integerList) {
-                System.out.println("============================>" + id);
-                //删除考试用户表中的数据
-//                papersUserService.deletePapersUser(id);
-                //删除考生作答表中的该试卷的数据
-//                papersUserResultService.deletePapersUserResult(id);
-                //删除题目备选答案表中该试卷的题目的备选答案
-                //查询该id下的所有题目
-                List<PapersTitle> papersTitleList = papersTitleService.getPapersTitleByPapersId(id);
-                for(PapersTitle papersTitle : papersTitleList){
-                    papersExerciseService.deletePapersExercise(papersTitle.getId());
-                }
-                //删除该试卷对应试题表中该试卷的题目
-                papersTitleService.deletePapersTitle(id);
-                //删除试卷，科目关系表中与该试卷相关联的记录
-                papersCourseService.deletePapersCourse(id);
-                //删除试卷表中的试卷
-                papersService.deletePapers(id);
-            }
+            papersService.deletePapersAll(integerList);
         }catch (RuntimeException runtimeException){
             return ResultMsg.BY_FAIL(runtimeException.getMessage());
         }
-        return null;
+        return ResultMsg.BY_SUCCESS("成功", null);
     }
 
-    @RequestMapping("/insertPapers")
+    @ApiOperation(value = "增加试卷", httpMethod = "POST",
+            protocols = "HTTP",
+            response = ResultMsg.class, notes = "增加试卷")
+    @PostMapping("/insertPapers")
     public ResultMsg insertPapers(@RequestBody Papers papers){
         try{
             // 添加试卷和相应表的数据
@@ -142,18 +130,28 @@ public class PapersController {
         return ResultMsg.BY_SUCCESS("添加成功", null);
     }
 
-    @RequestMapping("/updatePapers")
-    public ResultMsg updatePapers(@RequestBody Papers papers){
-        System.out.println("Papers:"+papers);
-        return null;
-    }
-
-    @RequestMapping("/publishPapers")
+    @ApiOperation(value = "发布试卷", httpMethod = "PUT",
+            protocols = "HTTP",
+            response = ResultMsg.class, notes = "发布试卷")
+    @PutMapping("/publishPapers")
     public ResultMsg publishPapers(Integer id){
         if(papersService.publishPapers(id) > 0){
             return ResultMsg.BY_SUCCESS("发布成功", null);
         }else{
             return ResultMsg.BY_FAIL("发布失败");
+        }
+    }
+
+    @ApiOperation(value = "修改试卷信息", httpMethod = "PUT",
+            protocols = "HTTP",
+            response = ResultMsg.class, notes = "修改试卷信息")
+    @PutMapping("/updatePapers")
+    public ResultMsg updatePapers(@RequestBody Papers papers){
+        System.out.println("Papers:"+papers);
+        if(papersService.updatePapers(papers) >= 1){
+            return ResultMsg.BY_SUCCESS("修改成功", null);
+        }else{
+            return ResultMsg.BY_FAIL("修改失败");
         }
     }
 }

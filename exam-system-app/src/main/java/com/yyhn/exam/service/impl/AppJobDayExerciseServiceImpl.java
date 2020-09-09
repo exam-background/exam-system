@@ -24,4 +24,9 @@ public class AppJobDayExerciseServiceImpl implements AppJobDayExerciseService {
         page.setTotal(total);
         System.out.println(page);
     }
+
+    @Override
+    public JobDayExercise getJobDayExerciseById(Integer id) {
+        return appJobDayExerciseMapper.selectById(id);
+    }
 }

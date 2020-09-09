@@ -13,10 +13,12 @@ com\yyhn\exam\service\AppPapersUserResultService.class
 com\yyhn\exam\service\impl\AppPapersUserServiceImpl.class
 com\yyhn\exam\service\impl\AppStudentServiceImpl.class
 com\yyhn\exam\controller\AppPapersController.class
+com\yyhn\exam\service\AppPapersService.class
 com\yyhn\exam\service\impl\AppJobDayExerciseSubmitServiceImpl.class
 com\yyhn\exam\service\impl\AppPapersExerciseServiceImpl.class
 com\yyhn\exam\service\PapersUserService.class
 com\yyhn\exam\service\AppStudentService.class
+com\yyhn\exam\service\impl\AppPapersServiceImpl.class
 com\yyhn\exam\service\AppTechnologyDayExerciseItemService.class
 com\yyhn\exam\service\impl\AppPapersTitleServiceImpl.class
 com\yyhn\exam\controller\AppTechnologyDayExerciseController.class

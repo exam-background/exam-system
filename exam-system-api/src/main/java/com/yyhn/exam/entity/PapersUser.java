@@ -36,6 +36,10 @@ public class PapersUser implements Serializable {
      * 题目总数
      */
     private Integer count;
+    /**
+     * 是否考试
+     */
+    private Integer isPapers = 0;
 
     /**
      * 学生信息
@@ -123,6 +127,14 @@ public class PapersUser implements Serializable {
 
     public void setProfessional(Professional professional) {
         this.professional = professional;
+    }
+
+    public Integer getIsPapers() {
+        return isPapers;
+    }
+
+    public void setIsPapers(Integer isPapers) {
+        this.isPapers = isPapers;
     }
 
     public PapersUser(Integer id, Integer papersId, Integer userId, Integer rightExercise, Integer errorExercise, Integer count) {

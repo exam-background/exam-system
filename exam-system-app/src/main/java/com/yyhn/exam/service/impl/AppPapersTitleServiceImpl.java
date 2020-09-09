@@ -17,4 +17,9 @@ public class AppPapersTitleServiceImpl implements AppPapersTitleService {
     public List<PapersTitle> getPapersTitleByPapersid(Integer id) {
         return appPapersTitleMapper.getPapersTitleByPapersid(id);
     }
+
+    @Override
+    public PapersTitle getPapersTitleById(Integer id) {
+        return appPapersTitleMapper.selectById(id);
+    }
 }

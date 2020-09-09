@@ -183,4 +183,15 @@
             Professional_id=#{id}
         </if>
     </select>
+
+    <select id="getJobDayExerciseByCourse" resultType="int">
+        select COUNT(id) from exam_job_day_exercise where Professional_id=#{professionalId} and course_id=#{courseId}
+    </select>
+
+    <select id="getJobDayExerciseBypProfessionalCourse" resultMap="jobDayExerciseResult">
+        select * from exam_job_day_exercise where 1=1
+        and Professional_id=#{professionalId}
+        and course_id=#{courseId}
+        limit #{page},1
+    </select>
 </mapper>

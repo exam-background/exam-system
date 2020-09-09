@@ -9,4 +9,11 @@ import java.util.List;
 
 public interface AppTechnologyDayExerciseService {
     public void getTechnologyDayExerciseSubmit(Integer id, Page<List<TechnologyDayExercise>> page);
+
+    /**
+     * 根据题目id查询题目
+     * @param id
+     * @return
+     */
+    TechnologyDayExercise getTechnologyDayExerciseById(Integer id);
 }

@@ -1,5 +1,6 @@
 package com.yyhn.exam.entity;
 
+import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
@@ -13,10 +14,12 @@ import java.util.List;
 /**
  * 技术每日一练题目
  */
+@TableName("exam_technology_day_exercise")
 public class TechnologyDayExercise {
     /**
      * ID
      */
+    @TableId(value = "id",type = IdType.AUTO)
     private int id;
 
     /**
@@ -53,13 +56,16 @@ public class TechnologyDayExercise {
     /**
      * 对应专业
      */
+    @TableField(exist = false)
     private Professional professional = new Professional();
 
+    @TableField(exist = false)
     private Integer radio;
 
     /**
      * 对应科目
      */
+    @TableField(exist = false)
     private Course course = new Course();
 
     /**
@@ -95,10 +101,13 @@ public class TechnologyDayExercise {
     /**
      * 每日一练备选答案选项
      */
+    @TableField(exist = false)
     private List<TechnologyDayExerciseItem> exerciseItems = new ArrayList<TechnologyDayExerciseItem>();
 
+    @TableField(exist = false)
     private String[] redioItem;
 
+    @TableField(exist = false)
     private String[] redioId;
 
     public String[] getRedioItem() {
@@ -120,8 +129,10 @@ public class TechnologyDayExercise {
     /**
      *每日一练作答信息
      */
+    @TableField(exist = false)
     private List<TechnologyDayExerciseSubmit> submitList = new ArrayList<TechnologyDayExerciseSubmit>();
 
+    @TableField(exist = false)
     private SysDictionary sysDictionary = new SysDictionary();
 
     public SysDictionary getSysDictionary() {

@@ -12,4 +12,11 @@ public interface AppJobDayExerciseService {
      * @return
      */
     public void getJobDayExerciseByProfessid(Integer id, Page<List<JobDayExercise>> page);
+
+    /**
+     * 根据id查询题目信息
+     * @param id
+     * @return
+     */
+    public JobDayExercise getJobDayExerciseById(Integer id);
 }

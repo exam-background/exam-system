@@ -1,7 +1,7 @@
 package com.yyhn.exam.common;
 
 public class Levenshtein {
-    private int compare(String str, String target)
+    private static int compare(String str, String target)
     {
         int d[][];              // 矩阵
         int n = str.length();
@@ -45,7 +45,7 @@ public class Levenshtein {
         return d[n][m];
     }
 
-    private int min(int one, int two, int three)
+    private static int min(int one, int two, int three)
     {
         return (one = one < two ? one : two) < three ? one : three;
     }
@@ -54,28 +54,28 @@ public class Levenshtein {
      * 获取两字符串的相似度
      */
 
-    public float getSimilarityRatio(String str, String target)
+    public static float getSimilarityRatio(String str, String target)
     {
         return 1 - (float) compare(str, target) / Math.max(str.length(), target.length());
     }
 
-    public static void main(String[] args)
-    {
-        Levenshtein lt = new Levenshtein();
-        String str0 = "SSM指的是Spring，SpringMVC，Mybatis组成";
-        String target0 = "SSM是Spring，SpringMVC";
-        System.out.println("similarityRatio_0=" + lt.getSimilarityRatio(str0, target0));
-
-        String str = "SSM指的是Spring，SpringMVC，Mybatis组成";
-        String target = "SSM指的是Spring，SpringMVC组成";
-        System.out.println("similarityRatio=" + lt.getSimilarityRatio(str, target));
-
-        String str1 = "SSM指的是Spring，SpringMVC，Mybatis组成";
-        String target1 = "SSM指的是Spring组成";
-        System.out.println("similarityRatio_1=" + lt.getSimilarityRatio(str1, target1));
-
-        String str2 = "SSM指的是Spring，SpringMVC，Mybatis组成";
-        String target2 = "SSM指的是SpringBoot";
-        System.out.println("similarityRatio_2=" + lt.getSimilarityRatio(str2, target2));
-    }
+//    public static void main(String[] args)
+//    {
+//        Levenshtein lt = new Levenshtein();
+//        String str0 = "SSM指的是Spring，SpringMVC，Mybatis组成";
+//        String target0 = "SSM是Spring，SpringMVC";
+//        System.out.println("similarityRatio_0=" + lt.getSimilarityRatio(str0, target0));
+//
+//        String str = "SSM指的是Spring，SpringMVC，Mybatis组成";
+//        String target = "SSM指的是Spring，SpringMVC组成";
+//        System.out.println("similarityRatio=" + lt.getSimilarityRatio(str, target));
+//
+//        String str1 = "SSM指的是Spring，SpringMVC，Mybatis组成";
+//        String target1 = "SSM指的是Spring组成";
+//        System.out.println("similarityRatio_1=" + lt.getSimilarityRatio(str1, target1));
+//
+//        String str2 = "SSM指的是Spring，SpringMVC，Mybatis组成";
+//        String target2 = "SSM指的是SpringBoot";
+//        System.out.println("similarityRatio_2=" + lt.getSimilarityRatio(str2, target2));
+//    }
 }

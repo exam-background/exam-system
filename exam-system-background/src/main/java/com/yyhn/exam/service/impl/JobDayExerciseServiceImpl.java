@@ -91,4 +91,14 @@ public class JobDayExerciseServiceImpl implements JobDayExerciseService {
             return jobDayExerciseMapper.getAllJobDayExercise(null);
         }
     }
+
+    @Override
+    public int getJobDayExerciseByCourse(Integer professionalId, Integer courseId) {
+        return jobDayExerciseMapper.getJobDayExerciseByCourse(professionalId, courseId);
+    }
+
+    @Override
+    public JobDayExercise getJobDayExerciseBypProfessionalCourse(Integer professionalId, Integer courseId, Integer page) {
+        return jobDayExerciseMapper.getJobDayExerciseBypProfessionalCourse(professionalId, courseId, page);
+    }
 }

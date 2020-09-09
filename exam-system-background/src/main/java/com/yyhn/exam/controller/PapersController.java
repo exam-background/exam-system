@@ -134,8 +134,8 @@ public class PapersController {
             protocols = "HTTP",
             response = ResultMsg.class, notes = "发布试卷")
     @PutMapping("/publishPapers")
-    public ResultMsg publishPapers(Integer id){
-        if(papersService.publishPapers(id) > 0){
+    public ResultMsg publishPapers(@RequestBody Papers papers){
+        if(papersService.publishPapers(papers.getId()) > 0){
             return ResultMsg.BY_SUCCESS("发布成功", null);
         }else{
             return ResultMsg.BY_FAIL("发布失败");

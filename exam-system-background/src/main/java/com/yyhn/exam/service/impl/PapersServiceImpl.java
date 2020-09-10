@@ -24,7 +24,7 @@ public class PapersServiceImpl implements PapersService {
     @Resource
     private TechnologyDayExerciseItemService technologyDayExerciseItemService;
     @Resource
-    private JobExampleStudyService jobExampleStudyService;
+    private JobDayExerciseService jobDayExerciseService;
     @Resource
     private PapersCourseService papersCourseService;
     @Resource
@@ -87,7 +87,7 @@ public class PapersServiceImpl implements PapersService {
             if(papers.getType() == 0){
                 //增加考试题目表
                 //考试的科目在数据库中总共有多少题目
-                int courseCount = jobExampleStudyService.getJobExampleStudyByCourse(papers.getProfessionalId(), Integer.valueOf(papers.getCourseId()[i]));
+                int courseCount = jobDayExerciseService.getJobDayExerciseByCourse(papers.getProfessionalId(), Integer.valueOf(papers.getCourseId()[i]));
                 if(courseCount == 0){
                     throw new Exception("该科目暂无题目");
                 }
@@ -104,9 +104,9 @@ public class PapersServiceImpl implements PapersService {
                     int result = RandomMaxMin.getRandomMaxMin(courseCount-1, 0, list);
                     list.add(result);
                     //拿到本张试卷没拿过的题目
-                    JobExampleStudy jobExampleStudy = jobExampleStudyService.getJobExampleStudyBypProfessionalCourse(papers.getProfessionalId(), Integer.valueOf(papers.getCourseId()[i]), result);
+                    JobDayExercise jobDayExercise = jobDayExerciseService.getJobDayExerciseBypProfessionalCourse(papers.getProfessionalId(), Integer.valueOf(papers.getCourseId()[i]), result);
                     //试卷添加的题目
-                    PapersTitle papersTitle = new PapersTitle(null, papers.getId(), jobExampleStudy.getTitle(), jobExampleStudy.getRemark(), jobExampleStudy.getScore(), jobExampleStudy.getAnswer(), null);
+                    PapersTitle papersTitle = new PapersTitle(null, papers.getId(), jobDayExercise.getTitle(), jobDayExercise.getRemark(), jobDayExercise.getScore(), jobDayExercise.getAnswer(), 1);
                     //设置分数
                     switch (papers.getSum()){
                         case 2:

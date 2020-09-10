@@ -1,7 +1,10 @@
 package com.yyhn.exam.controller;
 
+import com.yyhn.exam.common.Levenshtein;
 import com.yyhn.exam.entity.PapersUserResult;
+import com.yyhn.exam.entity.TechnologyDayExercise;
 import com.yyhn.exam.service.AppTechnologyDayExerciseItemService;
+import com.yyhn.exam.service.AppTechnologyDayExerciseService;
 import com.yyhn.exam.service.AppTechnologyDayExerciseSubmitService;
 import com.yyhn.exam.dto.ResultMsg;
 import com.yyhn.exam.entity.TechnologyDayExerciseSubmit;
@@ -24,6 +27,8 @@ public class AppTechnologyDayExerciseSubmitController {
     private AppTechnologyDayExerciseSubmitService appTechnologyDayExerciseSubmitService;
     @Resource
     private AppTechnologyDayExerciseItemService appTechnologyDayExerciseItemService;
+    @Resource
+    private AppTechnologyDayExerciseService appTechnologyDayExerciseService;
 
     @ApiOperation(value = "添加技术每日一练做题记录", httpMethod = "POST",
             protocols = "HTTP",
@@ -33,7 +38,20 @@ public class AppTechnologyDayExerciseSubmitController {
             "<p>userId: 参加考试的学生id</p>")
     @PostMapping("/addTechnologyDayExerciseSubmit")
     public ResultMsg addTechnologyDayExerciseSubmit(TechnologyDayExerciseSubmit technologyDayExerciseSubmit){
-        System.out.println(technologyDayExerciseSubmit);
+        // 根据题目id拿到正确答案
+        TechnologyDayExercise technologyDayExercise = appTechnologyDayExerciseService.getTechnologyDayExerciseById(technologyDayExerciseSubmit.getExerciseId());
+        // 判断题目是否正确
+        float leven = Levenshtein.getSimilarityRatio(technologyDayExerciseSubmit.getSubmitAnswer(), technologyDayExercise.getStandardAnswer());
+        // 设置分数
+        technologyDayExerciseSubmit.setScore(technologyDayExercise.getSetScore()*1.0f*leven);
+        //是否正确
+        int right = 1;
+        // 如果当前分数小于总分数的90%则当前题目为错题
+        float a = technologyDayExercise.getSetScore()*0.8f;
+        if(a >= technologyDayExerciseSubmit.getScore()){
+            right = 0;
+        }
+        technologyDayExerciseSubmit.setRight(right);
         if(appTechnologyDayExerciseSubmitService.addTechnologyDayExerciseSubmit(technologyDayExerciseSubmit) > 0){
             return ResultMsg.BY_SUCCESS("添加成功", null);
         }else{

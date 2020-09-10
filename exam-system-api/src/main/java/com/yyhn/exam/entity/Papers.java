@@ -94,6 +94,11 @@ public class Papers implements Serializable {
      */
     @TableField(exist = false)
     private String ispublishString = "未发布";
+    /**
+     * 冗余字段，考试类型
+     */
+    @TableField(exist = false)
+    private String typeName = "技术考核";
 
     /**
      * 试卷所属科目
@@ -191,6 +196,14 @@ public class Papers implements Serializable {
 
     public Date getPapersOverDate() {
         return papersOverDate;
+    }
+
+    public String getTypeName() {
+        return typeName;
+    }
+
+    public void setTypeName(String typeName) {
+        this.typeName = typeName;
     }
 
     public void setPapersOverDate(Date papersOverDate) {

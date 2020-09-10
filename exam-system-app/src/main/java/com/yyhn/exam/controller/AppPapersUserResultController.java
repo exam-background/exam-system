@@ -1,5 +1,6 @@
 package com.yyhn.exam.controller;
 
+import com.yyhn.exam.common.Levenshtein;
 import com.yyhn.exam.dto.ResultMsg;
 import com.yyhn.exam.entity.PapersExercise;
 import com.yyhn.exam.entity.PapersTitle;
@@ -10,10 +11,7 @@ import com.yyhn.exam.service.AppPapersTitleService;
 import com.yyhn.exam.service.AppPapersUserResultService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
@@ -27,8 +25,6 @@ public class AppPapersUserResultController {
     private AppPapersUserResultService appPapersUserResultService;
     @Resource
     private AppPapersExerciseService appPapersExerciseService;
-    @Resource
-    private AppPapersTitleService appPapersTitleService;
 
     @ApiOperation(value = "手机端根据用户id拿到试卷错误做题记录", httpMethod = "GET",
             protocols = "HTTP",
@@ -59,19 +55,13 @@ public class AppPapersUserResultController {
             protocols = "HTTP",
             response = ResultMsg.class, notes = "增加试卷作答信息")
     @PostMapping("/insertPapersUserResult")
-    public ResultMsg insertPapersUserResult(PapersUserResult papersUserResult){
-        //添加作答
-        appPapersUserResultService.insertPapersUserResult(papersUserResult);
-        //根据作答表的记录查询正确答案
-        List<PapersTitle> list = appPapersTitleService.getPapersTitleByPapersid(papersUserResult.getPapersId());
-        //根据正确答案修改作答表分数
-        for(PapersTitle papersTitle : list){
-            papersUserResult.setPapersExercise(papersTitle.getStandardAnswer());
-            papersUserResult.setSetScore(papersTitle.getSetScore());
-            if (appPapersUserResultService.updatePapersUserResult(papersUserResult) <=0) {
-                return ResultMsg.BY_FAIL("更改题目信息失败");
-            }
+    public ResultMsg insertPapersUserResult(@RequestBody List<PapersUserResult> papersUserResultList){
+        System.out.println(papersUserResultList);
+        try{
+            appPapersUserResultService.insertPapersUserResult(papersUserResultList);
+            return ResultMsg.BY_SUCCESS("试卷提交成功", null);
+        }catch (RuntimeException re){
+            return ResultMsg.BY_FAIL(re.getMessage());
         }
-        return ResultMsg.BY_SUCCESS("添加考试信息成功", null);
     }
 }

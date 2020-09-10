@@ -59,7 +59,7 @@ public class TechnologyDayExerciseSubmit {
     /**
      * 得分
      */
-    private int score;
+    private float score;
 
     /**
      * 是否正确
@@ -130,11 +130,11 @@ public class TechnologyDayExerciseSubmit {
         this.submitDate = submitDate;
     }
 
-    public int getScore() {
+    public float getScore() {
         return score;
     }
 
-    public void setScore(int score) {
+    public void setScore(float score) {
         this.score = score;
     }
 }

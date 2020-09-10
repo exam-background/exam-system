@@ -21,7 +21,7 @@ public class PapersUserResult implements Serializable {
     /**
      * 题目id
      */
-    private Integer iexerciseId;
+    private Integer exerciseId;
     /**
      * 用户id
      */
@@ -45,12 +45,13 @@ public class PapersUserResult implements Serializable {
     /**
      * 实际分数
      */
-    private Integer mark;
+    private float mark;
 
     /**
      * 与学生答案对应的题目外键
      */
     private PapersTitle papersTitle;
+
     /**
      * 学生信息
      */
@@ -73,12 +74,12 @@ public class PapersUserResult implements Serializable {
         this.papersId = papersId;
     }
 
-    public Integer getIexerciseId() {
-        return iexerciseId;
+    public Integer getExerciseId() {
+        return exerciseId;
     }
 
-    public void setIexerciseId(Integer iexerciseId) {
-        this.iexerciseId = iexerciseId;
+    public void setExerciseId(Integer exerciseId) {
+        this.exerciseId = exerciseId;
     }
 
     public Integer getUserId() {
@@ -121,11 +122,11 @@ public class PapersUserResult implements Serializable {
         this.papersTitle = papersTitle;
     }
 
-    public Integer getMark() {
+    public float getMark() {
         return mark;
     }
 
-    public void setMark(Integer mark) {
+    public void setMark(float mark) {
         this.mark = mark;
     }
 
@@ -146,10 +147,10 @@ public class PapersUserResult implements Serializable {
     }
 
 
-    public PapersUserResult(Integer id, Integer papersId, Integer iexerciseId, Integer userId, String userExercise, String papersExercise, Integer right, Integer setScore, Integer mark) {
+    public PapersUserResult(Integer id, Integer papersId, Integer exerciseId, Integer userId, String userExercise, String papersExercise, Integer right, Integer setScore, Integer mark) {
         this.id = id;
         this.papersId = papersId;
-        this.iexerciseId = iexerciseId;
+        this.exerciseId = exerciseId;
         this.userId = userId;
         this.userExercise = userExercise;
         this.papersExercise = papersExercise;
@@ -166,7 +167,7 @@ public class PapersUserResult implements Serializable {
         return "PapersUserResult{" +
                 "id=" + id +
                 ", papersId=" + papersId +
-                ", iexerciseId=" + iexerciseId +
+                ", exerciseId=" + exerciseId +
                 ", userId=" + userId +
                 ", userExercise='" + userExercise + '\'' +
                 ", papersExercise='" + papersExercise + '\'' +

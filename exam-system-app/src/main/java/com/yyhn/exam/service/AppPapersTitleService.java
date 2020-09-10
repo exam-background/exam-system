@@ -11,4 +11,11 @@ public interface AppPapersTitleService {
      * @return
      */
     public List<PapersTitle> getPapersTitleByPapersid(Integer id);
+
+    /**
+     * 根据题目id查询题目信息
+     * @param id
+     * @return
+     */
+    PapersTitle getPapersTitleById(Integer id);
 }

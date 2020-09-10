@@ -23,4 +23,9 @@ public class AppTechnologyDayExerciseServiceImpl implements AppTechnologyDayExer
         page.setTotal(total);
         System.out.println(page);
     }
+
+    @Override
+    public TechnologyDayExercise getTechnologyDayExerciseById(Integer id) {
+        return appTechnologyDayExerciseMapper.selectById(id);
+    }
 }

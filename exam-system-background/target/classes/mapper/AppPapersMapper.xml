@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yyhn.exam.mapper.AppPapersMapper">
+
+    <resultMap id="papersAll" type="Papers">
+        <id property="id" column="id"></id>
+        <result property="name" column="name"></result>
+        <result property="type" column="type"></result>
+        <result property="sum" column="sum"></result>
+        <result property="ispublish" column="ispublish"></result>
+        <result property="papersName" column="papers_name"></result>
+        <result property="buildPapersDate" column="build_papers_date"></result>
+        <result property="papersStartDate" column="papers_start_date"></result>
+        <result property="papersOverDate" column="papers_over_date"></result>
+        <association property="professional" javaType="com.yyhn.exam.entity.Professional">
+            <id property="id" column="professionalId"></id>
+            <result property="professionalName" column="professionalName"></result>
+        </association>
+        <collection property="courseList" ofType="com.yyhn.exam.entity.Course">
+            <id property="id" column="courseId"></id>
+            <result property="courseName" column="courseName"></result>
+        </collection>
+        <collection property="papersTitleList" ofType="com.yyhn.exam.entity.PapersTitle">
+            <id property="id" column="papersTitleId"></id>
+            <result property="title" column="title"></result>
+            <result property="setScore" column="set_score"></result>
+            <result property="types" column="types"></result>
+            <result property="standardAnswer" column="standard_answer"></result>
+        </collection>
+        <collection property="papersUserResultList" ofType="com.yyhn.exam.entity.PapersUserResult">
+            <id property="id" column="papersUserResultId"></id>
+            <result property="userExercise" column="user_exercise"></result>
+            <result property="mark" column="mark"></result>
+            <result property="setScore" column="setScore"></result>
+        </collection>
+    </resultMap>
+
+    <select id="getPapersByUserIdAndtype" resultMap="papersAll">
+        select exam_papers.*, exam_professional.id professionalId, exam_professional.professional_name professionalName, exam_course.id courseId, exam_course.course_name courseName
+        from exam_papers left join exam_papers_user on exam_papers.id = exam_papers_user.papers_id
+        join exam_papers_course on exam_papers.id = exam_papers_course.papers_id
+        join exam_professional on exam_papers_course.professional_id = exam_professional.id
+        join exam_course on exam_papers_course.course_id = exam_course.id
+        where exam_papers_user.user_id = #{userId} and exam_papers.type = #{type} and exam_papers_user.is_papers = 0
+    </select>
+
+    <select id="getPapersByUserIdAndtypeFinish" resultMap="papersAll">
+        select exam_papers.*, exam_professional.id professionalId, exam_professional.professional_name professionalName, exam_course.id courseId, exam_course.course_name courseName, exam_papers_user_result.mark, exam_papers_user_result.set_score setScore
+        from exam_papers left join exam_papers_user on exam_papers.id = exam_papers_user.papers_id
+        join exam_papers_course on exam_papers.id = exam_papers_course.papers_id
+        join exam_professional on exam_papers_course.professional_id = exam_professional.id
+        join exam_course on exam_papers_course.course_id = exam_course.id
+        join exam_papers_user_result on exam_papers.id = exam_papers_user_result.papers_id
+        where exam_papers_user.user_id = #{userId} and exam_papers.type = #{type} and exam_papers_user.is_papers = 1
+    </select>
+
+    <select id="getPapersById" resultMap="papersAll">
+        select exam_papers.*, exam_papers_title.id papersTitleId, exam_papers_title.title, exam_papers_title.set_score, exam_papers_title.types, exam_papers_title.standard_answer, exam_professional.id professionalId, exam_professional.professional_name professionalName, exam_course.id, exam_course.course_name courseName
+        from exam_papers left join exam_papers_title on exam_papers.id = exam_papers_title.papers_id
+        join exam_papers_course on exam_papers.id = exam_papers_course.papers_id
+        join exam_professional on exam_papers_course.professional_id = exam_professional.id
+        join exam_course on exam_papers_course.course_id = exam_course.id
+        where exam_papers.id = #{id}
+    </select>
+
+    <select id="getPapersByIdStudent" resultMap="papersAll">
+        select exam_papers.*, exam_papers_title.id papersTitleId, exam_papers_title.title, exam_papers_title.set_score, exam_papers_title.types, exam_papers_title.standard_answer, exam_papers_user_result.id papersUserResultId, exam_papers_user_result.user_exercise, exam_papers_user_result.mark, exam_professional.id professionalId, exam_professional.professional_name professionalName, exam_course.id, exam_course.course_name courseName
+        from exam_papers left join exam_papers_title on exam_papers.id = exam_papers_title.papers_id
+        join exam_papers_user_result on exam_papers_title.id = exam_papers_user_result.exercise_id
+        join exam_papers_course on exam_papers.id = exam_papers_course.papers_id
+        join exam_professional on exam_papers_course.professional_id = exam_professional.id
+        join exam_course on exam_papers_course.course_id = exam_course.id
+        where exam_papers.id = #{id}
+    </select>
+</mapper>

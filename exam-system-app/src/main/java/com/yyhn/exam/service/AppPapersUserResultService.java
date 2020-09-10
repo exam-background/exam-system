@@ -18,7 +18,7 @@ public interface AppPapersUserResultService {
      * @param papersUserResult
      * @return
      */
-    public int insertPapersUserResult(PapersUserResult papersUserResult);
+    public void insertPapersUserResult(List<PapersUserResult> papersUserResultList) throws RuntimeException;
 
     /**
      * 根据题目信息修改考生题目信息

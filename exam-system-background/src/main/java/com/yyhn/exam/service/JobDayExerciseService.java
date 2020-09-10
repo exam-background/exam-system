@@ -67,4 +67,21 @@ public interface JobDayExerciseService {
      * @return
      */
     public JobDayExercise getJobDayExerciseById(Integer id);
+
+    /**
+     * 获取题库中该科目的总数量
+     * @param professionalId
+     * @param courseId
+     * @return
+     */
+    public int getJobDayExerciseByCourse(Integer professionalId, Integer courseId);
+
+    /**
+     * 根据科目拿到到随机的题目
+     * @param professionalId
+     * @param courseId
+     * @param page
+     * @return
+     */
+    public JobDayExercise getJobDayExerciseBypProfessionalCourse(Integer professionalId, Integer courseId, Integer page);
 }

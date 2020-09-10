@@ -15,6 +15,7 @@ com\yyhn\exam\mapper\TechnologyDayExerciseSubmitMapper.class
 com\yyhn\exam\mapper\SysMenuMapper.class
 com\yyhn\exam\mapper\PapersMapper.class
 com\yyhn\exam\entity\TeacherClass.class
+com\yyhn\exam\mapper\AppPapersUserMapper.class
 com\yyhn\exam\common\Page.class
 com\yyhn\exam\entity\JobExampleStudy.class
 com\yyhn\exam\vo\JobExamStudySearchVO.class
@@ -41,6 +42,7 @@ com\yyhn\exam\entity\Class.class
 com\yyhn\exam\entity\Professional.class
 com\yyhn\exam\entity\TechnologyDayExerciseItem.class
 com\yyhn\exam\dto\ResultMsg.class
+com\yyhn\exam\mapper\AppPapersMapper.class
 com\yyhn\exam\common\MD5.class
 com\yyhn\exam\mapper\RoleHasPermissionMapper.class
 com\yyhn\exam\vo\ErrorTechnologyDayExerciseSubmitVO.class

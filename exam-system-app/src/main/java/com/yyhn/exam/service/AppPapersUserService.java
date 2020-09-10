@@ -11,4 +11,12 @@ public interface AppPapersUserService {
      * @return
      */
     List<PapersUser> getPapersUserByUserId(Integer id);
+
+    /**
+     * 根据用户id和试卷id缺点是学生已经考试的试卷
+     * @param userId
+     * @param papersId
+     * @return
+     */
+    int updateIsPapers(Integer userId, Integer papersId);
 }

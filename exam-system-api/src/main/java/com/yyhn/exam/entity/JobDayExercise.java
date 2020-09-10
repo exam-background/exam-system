@@ -1,10 +1,17 @@
 package com.yyhn.exam.entity;
 
+import com.baomidou.mybatisplus.annotations.TableField;
+import com.baomidou.mybatisplus.annotations.TableId;
+import com.baomidou.mybatisplus.annotations.TableName;
+import com.baomidou.mybatisplus.enums.IdType;
+
 /**
  * 就业训练每日一练实体类
  */
+@TableName("exam_job_day_exercise")
 public class JobDayExercise {
 
+    @TableId(value = "id",type = IdType.AUTO)
     private int id;
     /**
      * 每日一练题目
@@ -21,10 +28,12 @@ public class JobDayExercise {
     /**
      * 提交的答案
      */
+    @TableField(exist = false)
     private String submitAnswer;
     /**
      * 分数
      */
+    @TableField(exist = false)
     private Integer score;
     /**
      * 备注信息
@@ -33,11 +42,13 @@ public class JobDayExercise {
     /**
      * 所属专业
      */
+    @TableField(exist = false)
     private Professional professional = new Professional();
 
     /**
      *所属科目
      */
+    @TableField(exist = false)
     private Course course = new Course();
 
     private Integer professionalId;

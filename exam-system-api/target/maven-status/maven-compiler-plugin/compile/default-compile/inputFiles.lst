@@ -64,6 +64,7 @@ C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\jav
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\entity\JobDayExercise.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\mapper\RoleHasPermissionMapper.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\mapper\PapersCourseMapper.java
+C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\vo\StudentUserVo.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\mapper\JobDayExerciseSubmitMapper.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\vo\JobExamStudySearchVO.java
 C:\Users\34882\Desktop\SpringBoot项目\exam-system\exam-system-api\src\main\java\com\yyhn\exam\entity\RoleHasMenu.java

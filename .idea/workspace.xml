@@ -19,79 +19,24 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0d90f18-a47d-4b60-87d1-3cfdc91a4cba" name="Default Changelist" comment="增加了考试信息相关的swagger文档说明">
-      <change afterPath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/mapper/AppPapersMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/mapper/AppPapersUserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/service/AppPapersService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/service/impl/AppPapersServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/src/main/resources/mapper/AppPapersMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-background/src/main/resources/mapper/AppPapersUserMapper.xml" afterDir="false" />
+    <list default="true" id="f0d90f18-a47d-4b60-87d1-3cfdc91a4cba" name="Default Changelist" comment="完成了APP端试卷功能">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/common/Levenshtein.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/common/Levenshtein.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/entity/JobDayExercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/entity/JobDayExercise.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/entity/JobDayExerciseSubmit.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/entity/JobDayExerciseSubmit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/entity/Papers.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/entity/Papers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/entity/PapersUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/entity/PapersUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/entity/PapersUserResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/entity/PapersUserResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/entity/TechnologyDayExercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/entity/TechnologyDayExercise.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/entity/TechnologyDayExerciseSubmit.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/entity/TechnologyDayExerciseSubmit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/mapper/JobDayExerciseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/mapper/JobDayExerciseMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/common/Levenshtein.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/common/Levenshtein.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/JobDayExercise.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/JobDayExercise.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/JobDayExerciseSubmit.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/JobDayExerciseSubmit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/Papers.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/Papers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/PapersUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/PapersUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/PapersUserResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/PapersUserResult.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/TechnologyDayExercise.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/TechnologyDayExercise.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/TechnologyDayExerciseSubmit.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/TechnologyDayExerciseSubmit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/JobDayExerciseMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/JobDayExerciseMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/StudentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/StudentMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exam-system-api/target/exam-system-api-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/exam-system-api-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exam-system-api/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exam-system-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/controller/AppJobDayExerciesSubmitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/controller/AppJobDayExerciesSubmitController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/controller/AppPapersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/controller/AppPapersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/controller/AppPapersUserResultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/controller/AppPapersUserResultController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/controller/AppTechnologyDayExerciseSubmitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/controller/AppTechnologyDayExerciseSubmitController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/service/AppJobDayExerciseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/service/AppJobDayExerciseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/service/AppPapersTitleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/service/AppPapersTitleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/service/AppPapersUserResultService.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/service/AppPapersUserResultService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/service/AppPapersUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/service/AppPapersUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/service/AppTechnologyDayExerciseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/service/AppTechnologyDayExerciseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/service/impl/AppJobDayExerciseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/service/impl/AppJobDayExerciseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/service/impl/AppPapersTitleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/service/impl/AppPapersTitleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/service/impl/AppPapersUserResultServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/service/impl/AppPapersUserResultServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/service/impl/AppPapersUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/service/impl/AppPapersUserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/service/impl/AppTechnologyDayExerciseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/service/impl/AppTechnologyDayExerciseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/controller/AppJobDayExerciesSubmitController.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/controller/AppJobDayExerciesSubmitController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/controller/AppPapersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/controller/AppPapersController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/controller/AppPapersUserResultController.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/controller/AppPapersUserResultController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/controller/AppTechnologyDayExerciseSubmitController.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/controller/AppTechnologyDayExerciseSubmitController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/service/AppJobDayExerciseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/service/AppJobDayExerciseService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/service/AppPapersTitleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/service/AppPapersTitleService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/service/AppPapersUserResultService.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/service/AppPapersUserResultService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/service/AppPapersUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/service/AppPapersUserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/service/AppTechnologyDayExerciseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/service/AppTechnologyDayExerciseService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/service/impl/AppJobDayExerciseServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/service/impl/AppJobDayExerciseServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/service/impl/AppPapersTitleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/service/impl/AppPapersTitleServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/service/impl/AppPapersUserResultServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/service/impl/AppPapersUserResultServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/service/impl/AppPapersUserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/service/impl/AppPapersUserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/service/impl/AppTechnologyDayExerciseServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/service/impl/AppTechnologyDayExerciseServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/service/AppStudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/service/AppStudentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/service/impl/AppStudentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/service/impl/AppStudentServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exam-system-app/target/exam-system-app-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/target/exam-system-app-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exam-system-app/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exam-system-app/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/controller/PapersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/controller/PapersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/JobDayExerciseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/JobDayExerciseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/impl/JobDayExerciseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/impl/JobDayExerciseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/impl/PapersServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/impl/PapersServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/resources/mapper/JobDayExerciseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/resources/mapper/JobDayExerciseMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/PapersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/PapersController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/PapersUserResultController.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/PapersUserResultController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/JobDayExerciseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/JobDayExerciseService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/JobDayExerciseServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/JobDayExerciseServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/PapersServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/PapersServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/mapper/JobDayExerciseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/mapper/JobDayExerciseMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/resources/mapper/AppPapersMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/resources/mapper/AppPapersMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/mapper/AppPapersMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/mapper/AppPapersMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exam-system-background/target/exam-system-background-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/exam-system-background-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exam-system-background/target/exam-system-background-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/exam-system-background-1.0-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-background/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-background/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -534,7 +479,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599450579893</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="完成了APP端试卷功能">
+      <created>1599698040589</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1599698040589</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -592,7 +544,8 @@
     <MESSAGE value="整合了所有功能" />
     <MESSAGE value="修复了一些bug" />
     <MESSAGE value="增加了考试信息相关的swagger文档说明" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加了考试信息相关的swagger文档说明" />
+    <MESSAGE value="完成了APP端试卷功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成了APP端试卷功能" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1598843912727">
@@ -625,10 +578,11 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="84" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1598587085060" />
-    <state x="92" y="92" width="1182" height="554" key="DiffContextDialog" timestamp="1598587121014">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state x="129" y="130" width="1182" height="554" key="DiffContextDialog" timestamp="1599697982148">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1182" height="554" key="DiffContextDialog/0.0.1366.738@0.0.1366.738" timestamp="1598587121014" />
+    <state x="129" y="130" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599697982148" />
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1599266910292">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -638,46 +592,46 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="771" y="420" key="Github.CreateGistDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596724145698" />
-    <state width="1647" height="565" key="GridCell.Tab.0.bottom" timestamp="1599640011650">
+    <state width="1647" height="382" key="GridCell.Tab.0.bottom" timestamp="1599700212835">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="904" height="181" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1598592909830" />
-    <state width="1647" height="565" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599640011650" />
-    <state width="1647" height="565" key="GridCell.Tab.0.center" timestamp="1599640011650">
+    <state width="1647" height="382" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599700212835" />
+    <state width="1647" height="382" key="GridCell.Tab.0.center" timestamp="1599700212835">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="904" height="181" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1598592909830" />
-    <state width="1647" height="565" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599640011650" />
-    <state width="1647" height="565" key="GridCell.Tab.0.left" timestamp="1599640011650">
+    <state width="1647" height="382" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599700212835" />
+    <state width="1647" height="382" key="GridCell.Tab.0.left" timestamp="1599700212835">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="904" height="181" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1598592909830" />
-    <state width="1647" height="565" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599640011650" />
-    <state width="1647" height="565" key="GridCell.Tab.0.right" timestamp="1599640011650">
+    <state width="1647" height="382" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599700212835" />
+    <state width="1647" height="382" key="GridCell.Tab.0.right" timestamp="1599700212835">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="904" height="181" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1598592909830" />
-    <state width="1647" height="565" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599640011650" />
-    <state width="1647" height="565" key="GridCell.Tab.1.bottom" timestamp="1599640011651">
+    <state width="1647" height="382" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599700212835" />
+    <state width="1647" height="382" key="GridCell.Tab.1.bottom" timestamp="1599700212836">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="904" height="181" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1598592909830" />
-    <state width="1647" height="565" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599640011651" />
-    <state width="1647" height="565" key="GridCell.Tab.1.center" timestamp="1599640011650">
+    <state width="1647" height="382" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599700212836" />
+    <state width="1647" height="382" key="GridCell.Tab.1.center" timestamp="1599700212836">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="904" height="181" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1598592909830" />
-    <state width="1647" height="565" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599640011650" />
-    <state width="1647" height="565" key="GridCell.Tab.1.left" timestamp="1599640011650">
+    <state width="1647" height="382" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599700212836" />
+    <state width="1647" height="382" key="GridCell.Tab.1.left" timestamp="1599700212835">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="904" height="181" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1598592909830" />
-    <state width="1647" height="565" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599640011650" />
-    <state width="1647" height="565" key="GridCell.Tab.1.right" timestamp="1599640011650">
+    <state width="1647" height="382" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599700212835" />
+    <state width="1647" height="382" key="GridCell.Tab.1.right" timestamp="1599700212836">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="904" height="181" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1598592909830" />
-    <state width="1647" height="565" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599640011650" />
+    <state width="1647" height="382" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599700212836" />
     <state width="1647" height="246" key="GridCell.Tab.2.bottom" timestamp="1599637390487">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -702,10 +656,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="58" y="0" width="1862" height="869" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598368395870" />
-    <state x="416" y="94" width="847" height="563" key="MultipleFileMergeDialog" timestamp="1598368409766">
+    <state x="416" y="94" width="847" height="563" key="MultipleFileMergeDialog" timestamp="1599698101955">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="416" y="94" width="847" height="563" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598368409766" />
+    <state x="416" y="94" width="847" height="563" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599698101955" />
     <state x="234" y="90" key="RollbackChangesDialog" timestamp="1598586651244">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -715,11 +669,11 @@
     </state>
     <state x="324" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1598593034224" />
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1598921011881" />
-    <state x="562" y="156" key="Vcs.Push.Dialog.v2" timestamp="1599450588686">
+    <state x="562" y="156" key="Vcs.Push.Dialog.v2" timestamp="1599698206194">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="400" y="111" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1598593259397" />
-    <state x="562" y="156" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599450588686" />
+    <state x="562" y="156" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599698206194" />
     <state x="362" y="191" key="com.intellij.ide.util.TipDialog" timestamp="1598592705080">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -797,11 +751,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="dock-window-9/0.0.1920.1040@0.0.1920.1040" timestamp="1597891734031" />
-    <state x="629" y="306" key="git4idea.merge.GitPullDialog" timestamp="1599012049925">
+    <state x="629" y="306" key="git4idea.merge.GitPullDialog" timestamp="1599698110765">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="448" y="217" key="git4idea.merge.GitPullDialog/0.0.1366.738@0.0.1366.738" timestamp="1598586679167" />
-    <state x="629" y="306" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599012049925" />
+    <state x="629" y="306" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599698110765" />
     <state x="334" y="180" key="new project wizard" timestamp="1599533082165">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

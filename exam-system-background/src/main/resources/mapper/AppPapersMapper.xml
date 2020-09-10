@@ -47,7 +47,7 @@
     </select>
 
     <select id="getPapersByUserIdAndtypeFinish" resultMap="papersAll">
-        select exam_papers.*, exam_professional.id professionalId, exam_professional.professional_name professionalName, exam_course.id courseId, exam_course.course_name courseName, exam_papers_user_result.mark, exam_papers_user_result.set_score setScore
+        select exam_papers.*, exam_professional.id professionalId, exam_professional.professional_name professionalName, exam_course.id courseId, exam_course.course_name courseName, exam_papers_user_result.mark, exam_papers_user_result.set_score setScore, exam_papers_user_result.id papersUserResultId
         from exam_papers left join exam_papers_user on exam_papers.id = exam_papers_user.papers_id
         join exam_papers_course on exam_papers.id = exam_papers_course.papers_id
         join exam_professional on exam_papers_course.professional_id = exam_professional.id

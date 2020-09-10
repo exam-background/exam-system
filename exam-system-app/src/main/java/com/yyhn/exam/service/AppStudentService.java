@@ -1,5 +1,6 @@
 package com.yyhn.exam.service;
 
+import com.yyhn.exam.vo.StudentUserVo;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Update;
 
@@ -13,4 +14,6 @@ public interface AppStudentService {
     String getEmailByLoginName(String loginName);
 
     int updatePasswordByName(String loginName, String loginPassword);
+
+    StudentUserVo getStuById(int id);
 }

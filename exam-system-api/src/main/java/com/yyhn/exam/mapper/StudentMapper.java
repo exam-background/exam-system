@@ -3,6 +3,7 @@ package com.yyhn.exam.mapper;
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 import com.yyhn.exam.entity.Student;
 import com.yyhn.exam.entity.Teacher;
+import com.yyhn.exam.vo.StudentUserVo;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;
@@ -53,5 +54,6 @@ public interface StudentMapper extends BaseMapper<Student>  {
     String getEmailByLoginName(String loginName);
     @Update("update exam_student set login_password = #{loginPassword} where login_name = #{loginName}")
     int updatePasswordByName(@Param("loginName")String loginName,@Param("loginPassword")String loginPassword);
-
+    @Select("SELECT stu_name studentName ,c.class_name className ,p.professional_name professionalName  FROM exam_student s ,exam_class  c , exam_professional p WHERE s.id = #{id} AND c.id = s.class_id AND p.id = s.professional_id ")
+    StudentUserVo getStuById(@Param("id")int id);
 }

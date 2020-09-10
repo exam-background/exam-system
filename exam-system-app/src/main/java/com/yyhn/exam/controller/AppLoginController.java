@@ -9,8 +9,6 @@ import com.yyhn.exam.service.MailService;
 import com.yyhn.exam.service.StudentTokenService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
@@ -63,11 +61,5 @@ public class AppLoginController {
         }else{
             return ResultMsg.BY_NULL("没有该学生");
         }
-    }
-    @GetMapping("/test")
-    public String test() throws Exception{
-        Document document = Jsoup.parse(new URL("https://www.baidu.com"), 30000);
-        System.out.println(document+"======");
-        return "test";
     }
 }

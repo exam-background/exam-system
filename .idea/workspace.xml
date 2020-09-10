@@ -19,24 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0d90f18-a47d-4b60-87d1-3cfdc91a4cba" name="Default Changelist" comment="完成了APP端试卷功能">
+    <list default="true" id="f0d90f18-a47d-4b60-87d1-3cfdc91a4cba" name="Default Changelist" comment="完善了app端的分数显示和考试倒计时">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/StudentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/StudentMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exam-system-api/target/exam-system-api-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/exam-system-api-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-api/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/service/AppStudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/service/AppStudentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/service/impl/AppStudentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/service/impl/AppStudentServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/controller/AppJobDayExerciesSubmitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/controller/AppJobDayExerciesSubmitController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/controller/AppJobDayExerciesSubmitController.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/controller/AppJobDayExerciesSubmitController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exam-system-app/target/exam-system-app-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/target/exam-system-app-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-app/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-app/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/resources/mapper/AppPapersMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/resources/mapper/AppPapersMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/mapper/AppPapersMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/mapper/AppPapersMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exam-system-background/target/exam-system-background-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/exam-system-background-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exam-system-background/target/exam-system-background-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/exam-system-background-1.0-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -486,7 +476,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599698040589</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="完善了app端的分数显示和考试倒计时">
+      <created>1599720057071</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1599720057071</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -545,7 +542,8 @@
     <MESSAGE value="修复了一些bug" />
     <MESSAGE value="增加了考试信息相关的swagger文档说明" />
     <MESSAGE value="完成了APP端试卷功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成了APP端试卷功能" />
+    <MESSAGE value="完善了app端的分数显示和考试倒计时" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善了app端的分数显示和考试倒计时" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1598843912727">
@@ -592,62 +590,62 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="771" y="420" key="Github.CreateGistDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596724145698" />
-    <state width="1647" height="382" key="GridCell.Tab.0.bottom" timestamp="1599700212835">
+    <state width="1647" height="493" key="GridCell.Tab.0.bottom" timestamp="1599721001006">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="904" height="181" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1598592909830" />
-    <state width="1647" height="382" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599700212835" />
-    <state width="1647" height="382" key="GridCell.Tab.0.center" timestamp="1599700212835">
+    <state width="1647" height="493" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599721001006" />
+    <state width="1647" height="493" key="GridCell.Tab.0.center" timestamp="1599721001005">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="904" height="181" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1598592909830" />
-    <state width="1647" height="382" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599700212835" />
-    <state width="1647" height="382" key="GridCell.Tab.0.left" timestamp="1599700212835">
+    <state width="1647" height="493" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599721001005" />
+    <state width="1647" height="493" key="GridCell.Tab.0.left" timestamp="1599721001005">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="904" height="181" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1598592909830" />
-    <state width="1647" height="382" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599700212835" />
-    <state width="1647" height="382" key="GridCell.Tab.0.right" timestamp="1599700212835">
+    <state width="1647" height="493" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599721001005" />
+    <state width="1647" height="493" key="GridCell.Tab.0.right" timestamp="1599721001005">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="904" height="181" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1598592909830" />
-    <state width="1647" height="382" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599700212835" />
-    <state width="1647" height="382" key="GridCell.Tab.1.bottom" timestamp="1599700212836">
+    <state width="1647" height="493" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599721001005" />
+    <state width="1647" height="493" key="GridCell.Tab.1.bottom" timestamp="1599721001006">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="904" height="181" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1598592909830" />
-    <state width="1647" height="382" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599700212836" />
-    <state width="1647" height="382" key="GridCell.Tab.1.center" timestamp="1599700212836">
+    <state width="1647" height="493" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599721001006" />
+    <state width="1647" height="493" key="GridCell.Tab.1.center" timestamp="1599721001006">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="904" height="181" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1598592909830" />
-    <state width="1647" height="382" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599700212836" />
-    <state width="1647" height="382" key="GridCell.Tab.1.left" timestamp="1599700212835">
+    <state width="1647" height="493" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599721001006" />
+    <state width="1647" height="493" key="GridCell.Tab.1.left" timestamp="1599721001006">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="904" height="181" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1598592909830" />
-    <state width="1647" height="382" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599700212835" />
-    <state width="1647" height="382" key="GridCell.Tab.1.right" timestamp="1599700212836">
+    <state width="1647" height="493" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599721001006" />
+    <state width="1647" height="493" key="GridCell.Tab.1.right" timestamp="1599721001006">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="904" height="181" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1598592909830" />
-    <state width="1647" height="382" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599700212836" />
-    <state width="1647" height="246" key="GridCell.Tab.2.bottom" timestamp="1599637390487">
+    <state width="1647" height="493" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599721001006" />
+    <state width="1647" height="493" key="GridCell.Tab.2.bottom" timestamp="1599721001006">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1647" height="246" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599637390487" />
-    <state width="1647" height="246" key="GridCell.Tab.2.center" timestamp="1599637390487">
+    <state width="1647" height="493" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599721001006" />
+    <state width="1647" height="493" key="GridCell.Tab.2.center" timestamp="1599721001006">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1647" height="246" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599637390487" />
-    <state width="1647" height="246" key="GridCell.Tab.2.left" timestamp="1599637390487">
+    <state width="1647" height="493" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599721001006" />
+    <state width="1647" height="493" key="GridCell.Tab.2.left" timestamp="1599721001006">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1647" height="246" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599637390487" />
-    <state width="1647" height="246" key="GridCell.Tab.2.right" timestamp="1599637390487">
+    <state width="1647" height="493" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599721001006" />
+    <state width="1647" height="493" key="GridCell.Tab.2.right" timestamp="1599721001006">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1647" height="246" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599637390487" />
+    <state width="1647" height="493" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599721001006" />
     <state x="540" y="254" key="IDE.errors.dialog" timestamp="1594253283140">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -669,11 +667,11 @@
     </state>
     <state x="324" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1598593034224" />
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1598921011881" />
-    <state x="562" y="156" key="Vcs.Push.Dialog.v2" timestamp="1599698206194">
+    <state x="562" y="156" key="Vcs.Push.Dialog.v2" timestamp="1599720067272">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="400" y="111" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1598593259397" />
-    <state x="562" y="156" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599698206194" />
+    <state x="562" y="156" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599720067272" />
     <state x="362" y="191" key="com.intellij.ide.util.TipDialog" timestamp="1598592705080">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -778,6 +776,16 @@
           <url>file://$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/controller/LoginController.java</url>
           <line>149</line>
           <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/controller/AppJobDayExerciesSubmitController.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/controller/AppJobDayExerciesSubmitController.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

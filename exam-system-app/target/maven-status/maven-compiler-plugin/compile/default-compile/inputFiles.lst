@@ -11,9 +11,11 @@ D:\Users\Administrator\IdeaProjects\exam-system8.28_2\exam-system-app\src\main\j
 D:\Users\Administrator\IdeaProjects\exam-system8.28_2\exam-system-app\src\main\java\com\yyhn\exam\service\StudentTokenService.java
 D:\Users\Administrator\IdeaProjects\exam-system8.28_2\exam-system-app\src\main\java\com\yyhn\exam\service\AppTechnologyDayExerciseItemService.java
 D:\Users\Administrator\IdeaProjects\exam-system8.28_2\exam-system-app\src\main\java\com\yyhn\exam\service\impl\AppPapersUserServiceImpl.java
+D:\Users\Administrator\IdeaProjects\exam-system8.28_2\exam-system-app\src\main\java\com\yyhn\exam\service\StudentCuoTiService.java
 D:\Users\Administrator\IdeaProjects\exam-system8.28_2\exam-system-app\src\main\java\com\yyhn\exam\service\PapersUserService.java
 D:\Users\Administrator\IdeaProjects\exam-system8.28_2\exam-system-app\src\main\java\com\yyhn\exam\service\AppStudentService.java
 D:\Users\Administrator\IdeaProjects\exam-system8.28_2\exam-system-app\src\main\java\com\yyhn\exam\service\impl\PapersUserServiceImpl.java
+D:\Users\Administrator\IdeaProjects\exam-system8.28_2\exam-system-app\src\main\java\com\yyhn\exam\service\impl\StudentCuoTiServiceImpl.java
 D:\Users\Administrator\IdeaProjects\exam-system8.28_2\exam-system-app\src\main\java\com\yyhn\exam\service\impl\AppTechnologyDayExerciseServiceImpl.java
 D:\Users\Administrator\IdeaProjects\exam-system8.28_2\exam-system-app\src\main\java\com\yyhn\exam\service\AppTechnologyDayExerciseService.java
 D:\Users\Administrator\IdeaProjects\exam-system8.28_2\exam-system-app\src\main\java\com\yyhn\exam\service\impl\AppPapersTitleServiceImpl.java
@@ -25,8 +27,10 @@ D:\Users\Administrator\IdeaProjects\exam-system8.28_2\exam-system-app\src\main\j
 D:\Users\Administrator\IdeaProjects\exam-system8.28_2\exam-system-app\src\main\java\com\yyhn\exam\service\AppTechnologyDayExerciseSubmitService.java
 D:\Users\Administrator\IdeaProjects\exam-system8.28_2\exam-system-app\src\main\java\com\yyhn\exam\controller\AppLoginController.java
 D:\Users\Administrator\IdeaProjects\exam-system8.28_2\exam-system-app\src\main\java\com\yyhn\exam\service\MailService.java
+D:\Users\Administrator\IdeaProjects\exam-system8.28_2\exam-system-app\src\main\java\com\yyhn\exam\controller\AppStudentCuoTiController.java
 D:\Users\Administrator\IdeaProjects\exam-system8.28_2\exam-system-app\src\main\java\com\yyhn\exam\service\AppJobDayExerciseService.java
 D:\Users\Administrator\IdeaProjects\exam-system8.28_2\exam-system-app\src\main\java\com\yyhn\exam\service\impl\AppStudentServiceImpl.java
 D:\Users\Administrator\IdeaProjects\exam-system8.28_2\exam-system-app\src\main\java\com\yyhn\exam\controller\AppTechnologyDayExerciseSubmitController.java
 D:\Users\Administrator\IdeaProjects\exam-system8.28_2\exam-system-app\src\main\java\com\yyhn\exam\service\AppPapersUserService.java
+D:\Users\Administrator\IdeaProjects\exam-system8.28_2\exam-system-app\src\main\java\com\yyhn\exam\controller\AppStudentController.java
 D:\Users\Administrator\IdeaProjects\exam-system8.28_2\exam-system-app\src\main\java\com\yyhn\exam\service\AppJobDayExerciseSubmitService.java

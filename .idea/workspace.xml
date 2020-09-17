@@ -19,12 +19,24 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0d90f18-a47d-4b60-87d1-3cfdc91a4cba" name="Default Changelist" comment="完善了app端的分数显示和考试倒计时">
+    <list default="true" id="f0d90f18-a47d-4b60-87d1-3cfdc91a4cba" name="Default Changelist" comment="增加了就业训练题目没有分数的bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/entity/Papers.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/entity/Papers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/entity/PapersUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/entity/PapersUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/mapper/PapersMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/mapper/PapersMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/Papers.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/Papers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/PapersUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/PapersUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/PapersMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/PapersMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exam-system-api/target/exam-system-api-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/exam-system-api-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/controller/AppJobDayExerciesSubmitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/controller/AppJobDayExerciesSubmitController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/controller/AppJobDayExerciesSubmitController.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/controller/AppJobDayExerciesSubmitController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exam-system-app/target/exam-system-app-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/target/exam-system-app-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/controller/PapersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/controller/PapersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/PapersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/PapersService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/impl/PapersServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/impl/PapersServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/resources/mapper/PapersMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/resources/mapper/PapersMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/PapersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/controller/PapersController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/PapersService.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/PapersService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/PapersServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/PapersServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/mapper/PapersMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/mapper/PapersMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exam-system-background/target/exam-system-background-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/exam-system-background-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exam-system-background/target/exam-system-background-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/exam-system-background-1.0-SNAPSHOT.jar.original" afterDir="false" />
     </list>
@@ -590,62 +602,62 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="771" y="420" key="Github.CreateGistDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596724145698" />
-    <state width="1647" height="493" key="GridCell.Tab.0.bottom" timestamp="1599721001006">
+    <state width="810" height="325" key="GridCell.Tab.0.bottom" timestamp="1600323920426">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="904" height="181" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1598592909830" />
-    <state width="1647" height="493" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599721001006" />
-    <state width="1647" height="493" key="GridCell.Tab.0.center" timestamp="1599721001005">
+    <state width="810" height="325" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1600323920426" />
+    <state width="810" height="325" key="GridCell.Tab.0.center" timestamp="1600323920411">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="904" height="181" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1598592909830" />
-    <state width="1647" height="493" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599721001005" />
-    <state width="1647" height="493" key="GridCell.Tab.0.left" timestamp="1599721001005">
+    <state width="810" height="325" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1600323920411" />
+    <state width="810" height="325" key="GridCell.Tab.0.left" timestamp="1600323920411">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="904" height="181" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1598592909830" />
-    <state width="1647" height="493" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599721001005" />
-    <state width="1647" height="493" key="GridCell.Tab.0.right" timestamp="1599721001005">
+    <state width="810" height="325" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1600323920411" />
+    <state width="810" height="325" key="GridCell.Tab.0.right" timestamp="1600323920411">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="904" height="181" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1598592909830" />
-    <state width="1647" height="493" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599721001005" />
-    <state width="1647" height="493" key="GridCell.Tab.1.bottom" timestamp="1599721001006">
+    <state width="810" height="325" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600323920411" />
+    <state width="810" height="325" key="GridCell.Tab.1.bottom" timestamp="1600323920426">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="904" height="181" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1598592909830" />
-    <state width="1647" height="493" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599721001006" />
-    <state width="1647" height="493" key="GridCell.Tab.1.center" timestamp="1599721001006">
+    <state width="810" height="325" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1600323920426" />
+    <state width="810" height="325" key="GridCell.Tab.1.center" timestamp="1600323920426">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="904" height="181" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1598592909830" />
-    <state width="1647" height="493" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599721001006" />
-    <state width="1647" height="493" key="GridCell.Tab.1.left" timestamp="1599721001006">
+    <state width="810" height="325" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1600323920426" />
+    <state width="810" height="325" key="GridCell.Tab.1.left" timestamp="1600323920426">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="904" height="181" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1598592909830" />
-    <state width="1647" height="493" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599721001006" />
-    <state width="1647" height="493" key="GridCell.Tab.1.right" timestamp="1599721001006">
+    <state width="810" height="325" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1600323920426" />
+    <state width="810" height="325" key="GridCell.Tab.1.right" timestamp="1600323920426">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="904" height="181" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1598592909830" />
-    <state width="1647" height="493" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599721001006" />
-    <state width="1647" height="493" key="GridCell.Tab.2.bottom" timestamp="1599721001006">
+    <state width="810" height="325" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600323920426" />
+    <state width="1647" height="325" key="GridCell.Tab.2.bottom" timestamp="1600323912968">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1647" height="493" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599721001006" />
-    <state width="1647" height="493" key="GridCell.Tab.2.center" timestamp="1599721001006">
+    <state width="1647" height="325" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1600323912968" />
+    <state width="1647" height="325" key="GridCell.Tab.2.center" timestamp="1600323912965">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1647" height="493" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599721001006" />
-    <state width="1647" height="493" key="GridCell.Tab.2.left" timestamp="1599721001006">
+    <state width="1647" height="325" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1600323912965" />
+    <state width="1647" height="325" key="GridCell.Tab.2.left" timestamp="1600323912965">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1647" height="493" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599721001006" />
-    <state width="1647" height="493" key="GridCell.Tab.2.right" timestamp="1599721001006">
+    <state width="1647" height="325" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1600323912965" />
+    <state width="1647" height="325" key="GridCell.Tab.2.right" timestamp="1600323912965">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1647" height="493" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599721001006" />
+    <state width="1647" height="325" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600323912965" />
     <state x="540" y="254" key="IDE.errors.dialog" timestamp="1594253283140">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -786,6 +798,11 @@
           <url>file://$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/controller/AppJobDayExerciesSubmitController.java</url>
           <line>38</line>
           <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/impl/PapersServiceImpl.java</url>
+          <line>246</line>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

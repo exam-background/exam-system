@@ -7,7 +7,7 @@
     <resultMap id="papersUserResultAll" type="PapersUserResult">
         <id property="id" column="id"></id>
         <result property="papersId" column="papers_id"></result>
-        <result property="iexerciseId" column="exercise_id"></result>
+        <result property="exerciseId" column="exercise_id"></result>
         <result property="userId" column="user_id"></result>
         <result property="userExercise" column="user_exercise"></result>
         <result property="papersExercise" column="papers_exercise"></result>

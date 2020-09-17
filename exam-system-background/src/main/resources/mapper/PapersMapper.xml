@@ -18,6 +18,10 @@
             <id property="id" column="professionalId"></id>
             <result property="professionalName" column="professional_name"></result>
         </association>
+        <association property="aClass" javaType="com.yyhn.exam.entity.Class">
+            <id property="id" column="classId"></id>
+            <result property="className" column="className"></result>
+        </association>
         <collection property="courseList" ofType="com.yyhn.exam.entity.Course">
             <id property="id" column="courseId"></id>
             <result property="courseName" column="course_name"></result>
@@ -25,10 +29,12 @@
         <collection property="studentList" ofType="com.yyhn.exam.entity.Student">
             <id property="id" column="studentId"></id>
             <result property="classId" column="classId"></result>
+            <result property="stuName" column="stu_name"></result>
         </collection>
         <collection property="papersUserResultList" ofType="com.yyhn.exam.entity.PapersUserResult">
-            <id property="" column=""></id>
-            <result property="" column=""></result>
+            <id property="id" column="resultId"></id>
+            <result property="setScore" column="set_score"></result>
+            <result property="mark" column="mark"></result>
         </collection>
     </resultMap>
 
@@ -75,6 +81,40 @@
         </if>
         <if test="course_id!=null">
             and exam_course.id = #{course_id}
+        </if>
+    </select>
+
+    <select id="getPapersByUserId" resultMap="papersAll">
+        select exam_papers.*, exam_papers_user_result.id resultId, exam_papers_user_result.set_score, exam_papers_user_result.mark
+        from exam_papers
+        left join exam_papers_user_result on exam_papers.id = exam_papers_user_result.papers_id
+        where exam_papers_user_result.user_id = #{userId}
+    </select>
+
+    <select id="getPapersByUserIdAndtypeFinish" resultMap="papersAll">
+        select exam_papers.*, exam_professional.id professionalId, exam_professional.professional_name professionalName, exam_course.id courseId, exam_course.course_name courseName, exam_papers_user_result.mark, exam_papers_user_result.set_score setScore, exam_papers_user_result.id papersUserResultId
+        from exam_papers left join exam_papers_user on exam_papers.id = exam_papers_user.papers_id
+        join exam_papers_course on exam_papers.id = exam_papers_course.papers_id
+        join exam_professional on exam_papers_course.professional_id = exam_professional.id
+        join exam_course on exam_papers_course.course_id = exam_course.id
+        join exam_papers_user_result on exam_papers.id = exam_papers_user_result.papers_id
+        where exam_papers_user.user_id = #{userId} and exam_papers.type = #{type} and exam_papers_user.is_papers = 1
+    </select>
+
+    <select id="getPapersByType" resultMap="papersAll">
+        select exam_papers.*, exam_student.stu_name, exam_class.id classId, exam_class.class_name className, exam_student.id studentId
+        from exam_papers join exam_papers_user on exam_papers.id = exam_papers_user.papers_id
+        join exam_student on exam_papers_user.user_id = exam_student.id
+        join exam_class on exam_student.class_id = exam_class.id
+        where 1=1
+        <if test="type!=null">
+            and exam_papers.type = #{type}
+        </if>
+        <if test="classId!=null and classId!=''">
+            and exam_class.id = #{classId}
+        </if>
+        <if test="papersName!=null and papersName!=''">
+            and exam_papers.name like concat('%',#{papersName},'%')
         </if>
     </select>
 </mapper>

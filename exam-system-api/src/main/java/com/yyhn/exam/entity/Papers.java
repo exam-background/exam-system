@@ -99,6 +99,18 @@ public class Papers implements Serializable {
      */
     @TableField(exist = false)
     private String typeName = "技术考核";
+    /**
+     * 冗余字段，考试通过人数
+     */
+    @TableField(exist = false)
+    private Integer papersPass = 0;
+    /**
+     * 冗余字段，考试通过率
+     */
+    @TableField(exist = false)
+    private String percentOfPass;
+
+
 
     /**
      * 试卷所属科目
@@ -110,6 +122,11 @@ public class Papers implements Serializable {
      */
     @TableField(exist = false)
     private Professional professional = new Professional();
+    /**
+     * 试卷对应班级
+     */
+    @TableField(exist = false)
+    private Class aClass = new Class();
     /**
      * 试卷对应考试用户
      */
@@ -135,6 +152,11 @@ public class Papers implements Serializable {
      */
     @TableField(exist = false)
     private List<PapersUserResult> papersUserResultList = new ArrayList<PapersUserResult>();
+    /**
+     * 试卷考试学生表
+     */
+    @TableField(exist = false)
+    private List<PapersUser> papersUserList = new ArrayList<PapersUser>();
 
     public Integer getId() {
         return id;
@@ -154,6 +176,14 @@ public class Papers implements Serializable {
 
     public Integer getType() {
         return type;
+    }
+
+    public Class getaClass() {
+        return aClass;
+    }
+
+    public void setaClass(Class aClass) {
+        this.aClass = aClass;
     }
 
     public void setType(Integer type) {
@@ -176,6 +206,14 @@ public class Papers implements Serializable {
         this.papersName = papersName;
     }
 
+    public String getPercentOfPass() {
+        return percentOfPass;
+    }
+
+    public void setPercentOfPass(String percentOfPass) {
+        this.percentOfPass = percentOfPass;
+    }
+
     public Date getBuildPapersDate() {
         return buildPapersDate;
     }
@@ -185,8 +223,6 @@ public class Papers implements Serializable {
     }
 
     public Date getPapersStartDate() {
-
-
         return papersStartDate;
     }
 
@@ -216,6 +252,14 @@ public class Papers implements Serializable {
 
     public void setCourse(String course) {
         this.course = course;
+    }
+
+    public Integer getPapersPass() {
+        return papersPass;
+    }
+
+    public void setPapersPass(Integer papersPass) {
+        this.papersPass = papersPass;
     }
 
     public List<Course> getCourseList() {
@@ -328,6 +372,14 @@ public class Papers implements Serializable {
 
     public void setPapersUserResultList(List<PapersUserResult> papersUserResultList) {
         this.papersUserResultList = papersUserResultList;
+    }
+
+    public List<PapersUser> getPapersUserList() {
+        return papersUserList;
+    }
+
+    public void setPapersUserList(List<PapersUser> papersUserList) {
+        this.papersUserList = papersUserList;
     }
 
     public Papers(Integer id, String name, Integer type, Integer sum, String papersName, Date buildPapersDate, Date papersStartDate, Date papersOverDate, Integer ispublish, Integer course_id, Integer professionalId, String course, String typeString, String[] courseId, String[] userId, String ispublishString, List<Course> courseList, Professional professional, List<SysUser> sysUserList, List<PapersTitle> papersTitleList, List<PapersCourse> papersCourseList, List<Student> studentList, List<PapersUserResult> papersUserResultList) {

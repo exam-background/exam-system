@@ -1,6 +1,10 @@
 package com.yyhn.exam.entity;
 
+import lombok.Data;
+
+@Data
 public class Teacher implements java.io.Serializable {
+    private static final long serialVersionUID = -5179465430732187462L;
     /**
      * ID
      */
@@ -15,51 +19,19 @@ public class Teacher implements java.io.Serializable {
     private String teacherDesc;
 
     /**
-     * 老师所属职位
+     * 老师所属职位professional_name
      */
     private String teacherPosition;
     /**
      * 老师所属专业
      */
+
+    private String professionalName;
     private Professional professional = new Professional();
 
-    public String getTeacherPosition() {
-        return teacherPosition;
-    }
+    private String loginName;
 
-    public void setTeacherPosition(String teacherPosition) {
-        this.teacherPosition = teacherPosition;
-    }
+    private String loginPassword;
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getTeacherName() {
-        return teacherName;
-    }
-
-    public void setTeacherName(String teacherName) {
-        this.teacherName = teacherName;
-    }
-
-    public String getTeacherDesc() {
-        return teacherDesc;
-    }
-
-    public void setTeacherDesc(String teacherDesc) {
-        this.teacherDesc = teacherDesc;
-    }
-
-    public Professional getProfessional() {
-        return professional;
-    }
-
-    public void setProfessional(Professional professional) {
-        this.professional = professional;
-    }
+    private String email;
 }

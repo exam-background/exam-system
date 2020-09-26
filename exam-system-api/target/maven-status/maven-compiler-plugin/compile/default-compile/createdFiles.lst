@@ -12,6 +12,7 @@ com\yyhn\exam\entity\SysPermission.class
 com\yyhn\exam\entity\SysRole.class
 com\yyhn\exam\mapper\JobExampleStudyMapper.class
 com\yyhn\exam\mapper\TechnologyDayExerciseSubmitMapper.class
+com\yyhn\exam\mapper\JobCuoTiMapper.class
 com\yyhn\exam\mapper\SysMenuMapper.class
 com\yyhn\exam\mapper\PapersMapper.class
 com\yyhn\exam\entity\TeacherClass.class
@@ -43,6 +44,7 @@ com\yyhn\exam\entity\Professional.class
 com\yyhn\exam\entity\TechnologyDayExerciseItem.class
 com\yyhn\exam\dto\ResultMsg.class
 com\yyhn\exam\mapper\AppPapersMapper.class
+com\yyhn\exam\mapper\PaperCuoTiMapper.class
 com\yyhn\exam\common\MD5.class
 com\yyhn\exam\mapper\RoleHasPermissionMapper.class
 com\yyhn\exam\vo\ErrorTechnologyDayExerciseSubmitVO.class
@@ -53,6 +55,7 @@ com\yyhn\exam\common\Levenshtein.class
 com\yyhn\exam\App.class
 com\yyhn\exam\mapper\ErrorTechnologyDayExerciseSubmitMapper.class
 com\yyhn\exam\entity\UserHasRole.class
+com\yyhn\exam\mapper\AppClassMapper.class
 com\yyhn\exam\mapper\ClassMapper.class
 com\yyhn\exam\common\SysUserLoginParam.class
 com\yyhn\exam\common\TokenService.class
@@ -65,11 +68,13 @@ com\yyhn\exam\entity\PapersCourse.class
 com\yyhn\exam\entity\SysUserDetail.class
 com\yyhn\exam\entity\RoleHasPermission.class
 com\yyhn\exam\mapper\TeacherMapper.class
+com\yyhn\exam\common\TeacherTokenService.class
 com\yyhn\exam\mapper\JobDayExerciseSubmitMapper.class
 com\yyhn\exam\entity\SysMenu.class
 com\yyhn\exam\entity\JobDayExerciseSubmit.class
 com\yyhn\exam\mapper\TechnologyDayExerciseMapper.class
 com\yyhn\exam\entity\SysUser.class
+com\yyhn\exam\common\TeacherTokenServiceImpl.class
 com\yyhn\exam\common\UserAgentUtil.class
 com\yyhn\exam\common\SysUserUtils.class
 com\yyhn\exam\entity\JobDayExercise.class
@@ -80,4 +85,5 @@ com\yyhn\exam\entity\RoleHasMenu.class
 com\yyhn\exam\mapper\UserHasRoleMapper.class
 com\yyhn\exam\mapper\StudentCuoTiMapper.class
 com\yyhn\exam\mapper\SysUserMapper.class
+com\yyhn\exam\vo\ClassCuoTiVo.class
 com\yyhn\exam\entity\PapersUser.class

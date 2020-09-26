@@ -58,4 +58,28 @@ public interface PapersService {
      * @param papers
      */
     public int updatePapers(Papers papers);
+
+    /**
+     * 根据用户id和试卷类型查询已考试卷
+     * @param userId
+     * @param type
+     * @return
+     */
+    List<Papers> getPapersByUserIdAndtypeFinish(Integer userId, Integer type);
+
+    /**
+     * 根据用户id查询试卷分数
+     * @param userId
+     * @return
+     */
+    List<Papers> getPapersByUserId(Integer userId);
+
+    /**
+     * 根据专业id，科目id，查询类型查询试卷信息
+     * @param classId
+     * @param papersName
+     * @param type
+     * @return
+     */
+    List<Papers> getPapersByType(Integer classId, String papersName, Integer type);
 }

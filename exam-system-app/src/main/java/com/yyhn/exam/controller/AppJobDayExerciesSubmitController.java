@@ -36,6 +36,7 @@ public class AppJobDayExerciesSubmitController {
         JobDayExercise jobDayExercise = appJobDayExerciseService.getJobDayExerciseById(jobDayExerciseSubmit.getExerciseId());
         // 判断题目是否正确
         float leven = Levenshtein.getSimilarityRatio(jobDayExercise.getAnswer(), jobDayExerciseSubmit.getSubmitAnswer());
+        jobDayExerciseSubmit.setScore(leven*10);
         //是否正确
         int right = 0;
         // 如果当前相似度大于0.9则为正确

@@ -154,4 +154,30 @@ public class PapersController {
             return ResultMsg.BY_FAIL("修改失败");
         }
     }
+
+    @ApiOperation(value = "根据类型查询考试信息", httpMethod = "GET",
+            protocols = "HTTP",
+            response = ResultMsg.class, notes = "根据类型查询考试信息")
+    @GetMapping("/getPapersByType")
+    public ResultMsg getPapersByType(Integer classId, String papersName, Integer type){
+        List<Papers> list = papersService.getPapersByType(classId, papersName, type);
+        if(list != null){
+            return ResultMsg.BY_SUCCESS("查询成功", list);
+        }else{
+            return ResultMsg.BY_FAIL("查询失败");
+        }
+    }
+
+    @ApiOperation(value = "根据用户id和试卷类型查询已考试卷", httpMethod = "GET",
+            protocols = "HTTP",
+            response = ResultMsg.class, notes = "根据用户id和试卷类型查询已考试卷")
+    @GetMapping("/getPapersByUserIdAndTypeFinish")
+    public ResultMsg getPapersByUserIdAndTypeFinish(Integer userId, Integer type){
+        List<Papers> list = papersService.getPapersByUserIdAndtypeFinish(userId, type);
+        if(list != null){
+            return ResultMsg.BY_SUCCESS("查询成功", list);
+        }else{
+            return ResultMsg.BY_FAIL("查询失败");
+        }
+    }
 }

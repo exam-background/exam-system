@@ -221,4 +221,61 @@ public class PapersServiceImpl implements PapersService {
     public int updatePapers(Papers papers) {
         return papersMapper.updateById(papers);
     }
+
+    @Override
+    public List<Papers> getPapersByUserIdAndtypeFinish(Integer userId, Integer type) {
+        List<Papers> listAll = papersMapper.getPapersByUserIdAndtypeFinish(userId, type);
+        List<Papers> list = new ArrayList<Papers>();
+        for (Papers papers : listAll){
+            if(papers.getType() == 0){
+                papers.setTypeName("就业训练");
+            }
+            papers.setPapersTitleList(papersTitleService.getPapersTitleByPapersId(papers.getId()));
+            papers.setPapersUserResultList(papersUserResultService.getPapersUserResultByUserId(userId, papers.getId()));
+            list.add(papers);
+        }
+        return list;
+    }
+
+    @Override
+    public List<Papers> getPapersByUserId(Integer userId) {
+        return papersMapper.getPapersByUserId(userId);
+    }
+
+    @Override
+    public List<Papers> getPapersByType(Integer classId, String papersName, Integer type) {
+        List<Papers> list = new ArrayList<Papers>();
+        for(Papers papers : papersMapper.getPapersByType(classId, papersName, type)){
+            // 添加试卷考试学生
+            List<PapersUser> papersUserList = new ArrayList<PapersUser>();
+            // 添加试卷考试学生作答
+            List<PapersUserResult> papersUserResultList = new ArrayList<PapersUserResult>();
+            for(PapersUser papersUser : papersUserService.getPapersUserByPapersId(papers.getId())){
+                float countScore = 0;
+                float studentScore = 0;
+                for(PapersUserResult papersUserResult : papersUserResultService.getPapersUserResultByUserId(papersUser.getUserId(), papers.getId())){
+                    countScore+=papersUserResult.getSetScore();
+                    studentScore+=papersUserResult.getMark();
+                    papersUserResultList.add(papersUserResult);
+                }
+                if(studentScore>=90){
+                    papers.setPapersPass(papers.getPapersPass()+1);
+                }
+                papersUser.setCountScore(countScore);
+                papersUser.setStudentScore(studentScore);
+                papersUserList.add(papersUser);
+            }
+            if(papers.getPapersPass() == 0){
+                papers.setPercentOfPass("0%");
+            }else{
+                float a = papers.getStudentList().size() * 1.0f;
+                float b = papers.getPapersPass() * 1.0f;
+                papers.setPercentOfPass((a / b) + "%");
+            }
+            papers.setPapersUserList(papersUserList);
+            papers.setPapersUserResultList(papersUserResultList);
+            list.add(papers);
+        }
+        return list;
+    }
 }

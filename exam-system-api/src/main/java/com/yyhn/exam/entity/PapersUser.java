@@ -40,6 +40,16 @@ public class PapersUser implements Serializable {
      * 是否考试
      */
     private Integer isPapers = 0;
+    /**
+     *  总分
+     */
+    @TableField(exist = false)
+    private float studentScore;
+    /**
+     * 总得分
+     */
+    @TableField(exist = false)
+    private float countScore;
 
     /**
      * 学生信息
@@ -89,6 +99,14 @@ public class PapersUser implements Serializable {
         this.rightExercise = rightExercise;
     }
 
+    public float getStudentScore() {
+        return studentScore;
+    }
+
+    public void setStudentScore(float studentScore) {
+        this.studentScore = studentScore;
+    }
+
     public Integer getErrorExercise() {
         return errorExercise;
     }
@@ -135,6 +153,14 @@ public class PapersUser implements Serializable {
 
     public void setIsPapers(Integer isPapers) {
         this.isPapers = isPapers;
+    }
+
+    public float getCountScore() {
+        return countScore;
+    }
+
+    public void setCountScore(float countScore) {
+        this.countScore = countScore;
     }
 
     public PapersUser(Integer id, Integer papersId, Integer userId, Integer rightExercise, Integer errorExercise, Integer count) {

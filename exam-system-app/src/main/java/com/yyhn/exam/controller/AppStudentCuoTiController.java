@@ -18,7 +18,6 @@ public class AppStudentCuoTiController {
     @GetMapping("/cuoti/meiriyilian")
     public ResultMsg getMeiRiYiLian(int studentId) {
         List<TechnologyDayExerciseVO> vos = new ArrayList<>();
-
         vos.addAll(studentCuoTiService.getJianDa(studentId));
         vos.addAll(studentCuoTiService.getXuanZe(studentId));
         return ResultMsg.BY_SUCCESS("成功",vos);

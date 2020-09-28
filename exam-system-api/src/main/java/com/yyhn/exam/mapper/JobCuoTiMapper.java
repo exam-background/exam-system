@@ -9,6 +9,6 @@ import java.util.List;
 
 @Mapper
 public interface JobCuoTiMapper {
-    @Select(" SELECT s.`title` , s.`answer` standard_answer , d.`submit_answer` ,d.`score` FROM `exam_job_day_exercise_submit` d ,`exam_job_day_exercise` s  WHERE d.student_id = #{studentId} AND d.`right`=0 AND s.`id` = d.`exercise_id`")
+    @Select(" SELECT s.`title` , s.`answer` standard_answer , d.`submit_answer` submit_answer ,d.`score` FROM `exam_job_day_exercise_submit` d ,`exam_job_day_exercise` s  WHERE d.student_id = #{studentId} AND d.`right`=0 AND s.`id` = d.`exercise_id`")
     List<TechnologyDayExerciseVO> getJobCuoTi(@Param("studentId")int studentId);
 }

@@ -23,7 +23,6 @@ public class StudentCuoTiServiceImpl implements StudentCuoTiService {
     private PaperCuoTiMapper paperCuoTiMapper;
     @Override
     public List<TechnologyDayExerciseVO> getJianDa(int studentId) {
-
         return mapper.getJianDa(studentId);
     }
 

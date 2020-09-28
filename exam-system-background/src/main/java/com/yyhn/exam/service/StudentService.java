@@ -45,4 +45,10 @@ public interface StudentService {
      * @return
      */
     public List<Student> selectStudent(Integer id);
+
+    /**
+     * 查询所有学生信息
+     * @return
+     */
+    public List<Student> getStudentAll(Integer professionalId, Integer classId, String stuName);
 }

@@ -30,12 +30,12 @@ public class AppTechnologyDayExerciseController {
             "<p>pageSize: 每页显示的条数</p><br/>"+
             "<p>currentPage: 当前页数</p>")
     @GetMapping("/getTechnologyDayExerciseSubmit")
-    public ResultMsg getTechnologyDayExerciseSubmit(Integer id, @RequestParam(defaultValue = "2")String pageSize, @RequestParam(defaultValue = "1")Integer currentPage){
+    public ResultMsg getTechnologyDayExerciseSubmit(Integer id, Integer studentid, @RequestParam(defaultValue = "2")String pageSize, @RequestParam(defaultValue = "1")Integer currentPage){
         Page<List<TechnologyDayExercise>> page = new Page<List<TechnologyDayExercise>>();
         page.setPageSize(Integer.valueOf(pageSize));
         page.setCurPage(currentPage);
 
-        appTechnologyDayExerciseService.getTechnologyDayExerciseSubmit(id, page);
+        appTechnologyDayExerciseService.getTechnologyDayExerciseSubmit(id, page, studentid);
         if(page != null){
             return ResultMsg.BY_SUCCESS("查询成功", page);
         }else{

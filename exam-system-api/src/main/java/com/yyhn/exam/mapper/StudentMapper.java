@@ -59,4 +59,10 @@ public interface StudentMapper extends BaseMapper<Student>  {
     int updatePasswordByName(@Param("loginName")String loginName,@Param("loginPassword")String loginPassword);
     @Select("SELECT stu_name studentName ,c.class_name className ,p.professional_name professionalName  FROM exam_student s ,exam_class  c , exam_professional p WHERE s.id = #{id} AND c.id = s.class_id AND p.id = s.professional_id ")
     StudentUserVo getStuById(@Param("id")int id);
+
+    /**
+     * 查询所有学生信息
+     * @return
+     */
+    public List<Student> getStudentAll(@Param("professionalId") Integer professionalId,@Param("classId") Integer classId,@Param("stuName") String stuName);
 }

@@ -62,6 +62,6 @@
         join exam_professional on exam_technology_day_exercise.Professional_id = exam_professional.id
         join exam_course on exam_technology_day_exercise.course_id = exam_course.id
         join exam_student on exam_technology_day_exercise_submit.student_id = exam_student.id
-        where exam_technology_day_exercise_submit.exercise_id=#{id}
+        where exam_technology_day_exercise_submit.exercise_id=#{id} and exam_technology_day_exercise_submit.right = 0
     </select>
 </mapper>

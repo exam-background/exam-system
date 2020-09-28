@@ -5,6 +5,8 @@ import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import org.codehaus.jackson.annotate.JsonIgnore;
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
@@ -14,6 +16,7 @@ import java.util.Date;
 import java.util.List;
 
 @TableName("exam_papers")
+@JsonIgnoreProperties(value={"studentList"})
 public class Papers implements Serializable {
     /**
      * id，主键
@@ -146,6 +149,7 @@ public class Papers implements Serializable {
      * 该试卷考试学生
      */
     @TableField(exist = false)
+    @JsonIgnore
     private List<Student> studentList = new ArrayList<Student>();
     /**
      * 试卷考试作答

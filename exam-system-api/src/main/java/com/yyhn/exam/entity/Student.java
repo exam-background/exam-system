@@ -5,11 +5,16 @@ import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import org.codehaus.jackson.annotate.JsonIgnore;
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @TableName("exam_student")
+@JsonIgnoreProperties("papers")
 public class Student {
 
     @TableId(value = "id",type = IdType.AUTO)
@@ -22,11 +27,24 @@ public class Student {
     private Integer professionalId;
     private String loginName;
     private String loginPassword;
+    /**
+     *  总分
+     */
+    @TableField(exist = false)
+    private float studentScore;
+    /**
+     * 总得分
+     */
+    @TableField(exist = false)
+    private float countScore;
 
     @TableField(exist = false)
     private Class clazz = new Class();
     @TableField(exist = false)
     private Professional professional = new Professional();
+//    @TableField(exist = false)
+//    @JsonIgnore
+//    private List<Papers> papers;
 
     public Integer getId() {
         return id;
@@ -47,6 +65,30 @@ public class Student {
     public Date getOpenClassTime() {
         return openClassTime;
     }
+
+//    public List<Papers> getPapers() {
+//        return papers;
+//    }
+
+    public float getStudentScore() {
+        return studentScore;
+    }
+
+    public void setStudentScore(float studentScore) {
+        this.studentScore = studentScore;
+    }
+
+    public float getCountScore() {
+        return countScore;
+    }
+
+    public void setCountScore(float countScore) {
+        this.countScore = countScore;
+    }
+
+//    public void setPapers(List<Papers> papers) {
+//        this.papers = papers;
+//    }
 
     public void setOpenClassTime(Date openClassTime) {
         this.openClassTime = openClassTime;

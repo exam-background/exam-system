@@ -31,12 +31,12 @@ public class AppJobDayExerciseController {
             "<p>pageSize: 每页显示的条数</p><br/>"+
             "<p>currentPage: 当前页数</p>")
     @GetMapping("/getJobDayExerciseByProfessid")
-    public ResultMsg getJobDayExerciseByProfessid(Integer id, @RequestParam(defaultValue = "2")String pageSize, @RequestParam(defaultValue = "1")Integer currentPage){
+    public ResultMsg getJobDayExerciseByProfessid(Integer id, Integer studentid, @RequestParam(defaultValue = "2")String pageSize, @RequestParam(defaultValue = "1")Integer currentPage){
         Page<List<JobDayExercise>> page = new Page<List<JobDayExercise>>();
         page.setPageSize(Integer.valueOf(pageSize));
         page.setCurPage(currentPage);
 
-        appJobDayExerciseService.getJobDayExerciseByProfessid(id, page);
+        appJobDayExerciseService.getJobDayExerciseByProfessid(id, page, studentid);
         if(page != null){
             return ResultMsg.BY_SUCCESS("查询成功", page);
         }else{

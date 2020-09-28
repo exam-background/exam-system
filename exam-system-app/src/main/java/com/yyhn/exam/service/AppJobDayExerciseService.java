@@ -9,9 +9,10 @@ public interface AppJobDayExerciseService {
     /**
      * 根据科目id查询题目信息
      * @param id
+     * @param studentid
      * @return
      */
-    public void getJobDayExerciseByProfessid(Integer id, Page<List<JobDayExercise>> page);
+    public void getJobDayExerciseByProfessid(Integer id, Page<List<JobDayExercise>> page, Integer studentid);
 
     /**
      * 根据id查询题目信息

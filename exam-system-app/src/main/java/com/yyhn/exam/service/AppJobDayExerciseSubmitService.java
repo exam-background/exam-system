@@ -25,4 +25,11 @@ public interface AppJobDayExerciseSubmitService {
      * @return
      */
     List<JobDayExerciseSubmit> getJobDayExerciseSubmitByRight(Integer id);
+
+    /**
+     * 根据学生id查询每日一练
+     * @param id
+     * @return
+     */
+    List<JobDayExerciseSubmit> getJobDayExerciseSubmit(Integer id);
 }

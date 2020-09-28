@@ -160,4 +160,16 @@ public class StudentController {
         }
     }
 
+    @GetMapping("/selectStudentByClassId")
+    @ApiOperation(value = "根据班级id查询学生信息", httpMethod = "GET",
+            protocols = "HTTP", produces = "application/json",
+            response = Dto.class, notes = "根据班级id查询学生信息")
+    public ResultMsg selectStudentByClassId(Integer professionalId, Integer classId, String stuName){
+        List<Student> list = studentService.getStudentAll(professionalId, classId, stuName);
+        if(list != null){
+            return ResultMsg.BY_SUCCESS("查询成功", list);
+        }else{
+            return ResultMsg.BY_FAIL("查询失败");
+        }
+    }
 }

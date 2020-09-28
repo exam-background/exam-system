@@ -25,4 +25,11 @@ public interface AppTechnologyDayExerciseSubmitService {
      * @return
      */
     public List<TechnologyDayExerciseSubmit> getTechnologyDayExerciseSubmitByRight(Integer id);
+
+    /**
+     * 根据学生id查询做过的题目
+     * @param id
+     * @return
+     */
+    public List<TechnologyDayExerciseSubmit> getTechnologyDayExerciseSubmit(Integer id);
 }

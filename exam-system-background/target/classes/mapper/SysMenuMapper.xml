@@ -3,6 +3,9 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.yyhn.exam.mapper.SysMenuMapper">
+    <select id="getAllMenu" resultMap="sysPermissionMap">
+        select * from exam_menu
+    </select>
     <select id="getPermissionList" resultMap="sysPermissionMap">
        SELECT * FROM exam_menu WHERE id IN(SELECT menu_id FROM `exam_role_menu` WHERE role_id = (SELECT role_id FROM `exam_user_role` WHERE user_id = (SELECT id FROM `exam_sys_user` WHERE id =#{userId})));
 

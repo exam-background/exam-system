@@ -38,6 +38,7 @@ public class AppTechnologyDayExerciseSubmitController {
             "<p>userId: 参加考试的学生id</p>")
     @PostMapping("/addTechnologyDayExerciseSubmit")
     public ResultMsg addTechnologyDayExerciseSubmit(TechnologyDayExerciseSubmit technologyDayExerciseSubmit){
+        System.out.println(technologyDayExerciseSubmit);
         // 根据题目id拿到正确答案
         TechnologyDayExercise technologyDayExercise = appTechnologyDayExerciseService.getTechnologyDayExerciseById(technologyDayExerciseSubmit.getExerciseId());
         // 判断题目是否正确

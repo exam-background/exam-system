@@ -21,23 +21,7 @@ public class AppTechnologyDayExerciseServiceImpl implements AppTechnologyDayExer
 
     @Override
     public void getTechnologyDayExerciseSubmit(Integer id, Page<List<TechnologyDayExercise>> page, Integer studentid) {
-        List<TechnologyDayExercise> lists = appTechnologyDayExerciseMapper.getTechnologyDayExerciseSubmit(id, (page.getCurPage()-1)*page.getPageSize(), page.getPageSize());
-        // 将做过的题排除在外
-        List<TechnologyDayExercise> list = new ArrayList<TechnologyDayExercise>();
-        // 查询做过的题目
-        List<TechnologyDayExerciseSubmit> technologyDayExerciseSubmitlist = appTechnologyDayExerciseSubmitService.getTechnologyDayExerciseSubmit(studentid);
-        for(TechnologyDayExercise technologyDayExercise : lists){
-            int a = 0;
-            for(TechnologyDayExerciseSubmit technologyDayExerciseSubmit:technologyDayExerciseSubmitlist){
-                if(technologyDayExercise.getId() == technologyDayExerciseSubmit.getExerciseId()){
-                    a = 1;
-                    break;
-                }
-            }
-            if(a == 0){
-                list.add(technologyDayExercise);
-            }
-        }
+        List<TechnologyDayExercise> list = appTechnologyDayExerciseMapper.getTechnologyDayExerciseSubmit(id, studentid, (page.getCurPage()-1)*page.getPageSize(), page.getPageSize());
         int total = appTechnologyDayExerciseMapper.getTechnologyDayExerciseSubmitCount(id);
         page.setData(list);
         page.setTotal(total);

@@ -16,7 +16,7 @@ public interface AppJobDayExerciseMapper extends BaseMapper<JobDayExercise> {
      * @param id
      * @return
      */
-    public List<JobDayExercise> getJobDayExerciseByProfessid(@Param("id") Integer id, @Param("startRow") Integer startRow, @Param("pageSize") Integer pageSize);
+    public List<JobDayExercise> getJobDayExerciseByProfessid(@Param("id") Integer id,@Param("studentid") Integer studentid , @Param("startRow") Integer startRow, @Param("pageSize") Integer pageSize);
 
     public int getJobDayExerciseByCount(@Param("id") Integer id);
 }

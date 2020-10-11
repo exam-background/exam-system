@@ -29,6 +29,10 @@
         <if test="id != 0">
             and exam_job_day_exercise.Professional_id=#{id}
         </if>
+        and exam_job_day_exercise.id not in(
+            SELECT exercise_id
+            FROM exam_job_day_exercise_submit
+            WHERE student_id = #{studentid})
         limit #{startRow},#{pageSize}
     </select>
 

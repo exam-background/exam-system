@@ -19,9 +19,94 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0d90f18-a47d-4b60-87d1-3cfdc91a4cba" name="Default Changelist" comment="修复了示范学习的下拉框数字问题&#10;修复了APP端做题后题目还是显示的问题">
+    <list default="true" id="f0d90f18-a47d-4b60-87d1-3cfdc91a4cba" name="Default Changelist" comment="错题本显示学生排除了作对的人">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/resources/mapper/ErroeTechnologyDayExerciseSubmitMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/resources/mapper/ErroeTechnologyDayExerciseSubmitMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/entity/TechnologyDayExerciseSubmit.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/entity/TechnologyDayExerciseSubmit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/mapper/AppJobDayExerciseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/mapper/AppJobDayExerciseMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/mapper/AppTechnologyDayExerciseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/mapper/AppTechnologyDayExerciseMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/common/AutoPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/common/AutoPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/common/Dto.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/common/Dto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/common/DtoUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/common/DtoUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/common/Levenshtein.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/common/Levenshtein.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/common/MD5.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/common/MD5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/common/Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/common/Page.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/common/RandomMaxMin.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/common/RandomMaxMin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/common/SysUserLoginParam.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/common/SysUserLoginParam.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/common/TokenService.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/common/TokenService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/common/TokenServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/common/TokenServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/common/UserAgentUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/common/UserAgentUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/dto/ResultMsg.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/dto/ResultMsg.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/Class.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/Class.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/Course.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/Course.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/JobDayExercise.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/JobDayExercise.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/JobDayExerciseSubmit.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/JobDayExerciseSubmit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/JobExampleStudy.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/JobExampleStudy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/Papers.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/Papers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/PapersCourse.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/PapersCourse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/PapersExercise.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/PapersExercise.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/PapersTitle.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/PapersTitle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/PapersUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/PapersUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/PapersUserResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/PapersUserResult.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/Professional.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/Professional.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/RoleHasMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/RoleHasMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/RoleHasPermission.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/RoleHasPermission.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/Student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/SysDictionary.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/SysDictionary.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/SysMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/SysMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/SysPermission.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/SysPermission.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/SysRole.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/SysRole.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/SysUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/SysUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/SysUserDetail.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/SysUserDetail.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/Teacher.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/Teacher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/TeacherClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/TeacherClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/TechnologyDayExercise.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/TechnologyDayExercise.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/TechnologyDayExerciseItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/TechnologyDayExerciseItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/TechnologyDayExerciseSubmit.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/TechnologyDayExerciseSubmit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/UserHasRole.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/entity/UserHasRole.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/AppJobDayExerciseMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/AppJobDayExerciseMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/AppPapersMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/AppPapersMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/AppPapersTitleMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/AppPapersTitleMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/AppPapersUserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/AppPapersUserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/AppPapersUserResultMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/AppPapersUserResultMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/AppTechnologyDayExerciseMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/AppTechnologyDayExerciseMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/ClassMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/ClassMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/CourseMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/CourseMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/ErrorTechnologyDayExerciseSubmitMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/ErrorTechnologyDayExerciseSubmitMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/JobDayExerciseMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/JobDayExerciseMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/JobDayExerciseSubmitMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/JobDayExerciseSubmitMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/JobExampleStudyMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/JobExampleStudyMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/PapersMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/PapersMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/PapersTitleMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/PapersTitleMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/PapersUserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/PapersUserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/PapersUserResultMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/PapersUserResultMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/ProfessionalMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/ProfessionalMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/StudentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/StudentMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/SysMenuMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/SysMenuMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/SysRoleMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/SysRoleMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/SysUserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/SysUserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/SysUserMapperGet.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/SysUserMapperGet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/SysUserRoleMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/SysUserRoleMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/TeacherClassMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/TeacherClassMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/TeacherMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/TeacherMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/TechnologyDayExerciseItemMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/TechnologyDayExerciseItemMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/TechnologyDayExerciseMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/TechnologyDayExerciseMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/TechnologyDayExerciseSubmitMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/mapper/TechnologyDayExerciseSubmitMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/vo/ErrorTechnologyDayExerciseSubmitVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/vo/ErrorTechnologyDayExerciseSubmitVO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/vo/JobExamStudySearchVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/vo/JobExamStudySearchVO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/vo/SysRoleSearchVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/vo/SysRoleSearchVO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/exam-system-api-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/exam-system-api-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/controller/AppTechnologyDayExerciseSubmitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/controller/AppTechnologyDayExerciseSubmitController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/service/impl/AppJobDayExerciseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/service/impl/AppJobDayExerciseServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/service/impl/AppTechnologyDayExerciseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/service/impl/AppTechnologyDayExerciseServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/controller/AppTechnologyDayExerciseSubmitController.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/controller/AppTechnologyDayExerciseSubmitController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/service/impl/AppJobDayExerciseServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/service/impl/AppJobDayExerciseServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/service/impl/AppTechnologyDayExerciseServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/service/impl/AppTechnologyDayExerciseServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-app/target/exam-system-app-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/target/exam-system-app-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/resources/mapper/AppJobDayExerciseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/resources/mapper/AppJobDayExerciseMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/resources/mapper/AppTechnologyDayExerciseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/resources/mapper/AppTechnologyDayExerciseMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/mapper/AppJobDayExerciseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/mapper/AppJobDayExerciseMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/mapper/AppTechnologyDayExerciseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/mapper/AppTechnologyDayExerciseMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exam-system-background/target/exam-system-background-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/exam-system-background-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exam-system-background/target/exam-system-background-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/exam-system-background-1.0-SNAPSHOT.jar.original" afterDir="false" />
     </list>
@@ -55,9 +140,6 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="MavenRunner">
-    <option name="delegateBuildToMaven" value="true" />
-  </component>
   <component name="ProjectId" id="1eM9PXobhSSC5MMGGVA9FO0dWX7" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -82,7 +164,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -318,7 +400,15 @@
       <workItem from="1601189609228" duration="1319000" />
       <workItem from="1601249461712" duration="4802000" />
       <workItem from="1601255003886" duration="782000" />
-      <workItem from="1601256932264" duration="702000" />
+      <workItem from="1601256932264" duration="1052000" />
+      <workItem from="1601339849278" duration="290000" />
+      <workItem from="1601446414865" duration="494000" />
+      <workItem from="1601468213701" duration="348000" />
+      <workItem from="1601617220026" duration="1997000" />
+      <workItem from="1601711102294" duration="77000" />
+      <workItem from="1601803686012" duration="1148000" />
+      <workItem from="1601883757763" duration="47000" />
+      <workItem from="1602376467650" duration="5658000" />
     </task>
     <task id="LOCAL-00001" summary="增加了用户管理的内容，增加了系统用户实体类，dao层和mapper文件。增加了service和serviceimpl。创建了控制层，提供了删除用户，新增用户，分页查询，根据部门和职位进行分页查询的Swagger接口">
       <created>1594121568996</created>
@@ -516,7 +606,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601255307068</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="错题本显示学生排除了作对的人">
+      <created>1601257968464</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1601257968464</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -552,7 +649,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="针对与前端的连接增加了新的功能" />
     <MESSAGE value="新增了用户修改的功能" />
     <MESSAGE value="增加了用户批量删除相关的接口" />
     <MESSAGE value="修改了技术管理每日一练的选择题功能" />
@@ -577,9 +673,14 @@
     <MESSAGE value="完善了app端的分数显示和考试倒计时" />
     <MESSAGE value="增加了技术和就业毕业统计分析" />
     <MESSAGE value="修复了示范学习的下拉框数字问题&#10;修复了APP端做题后题目还是显示的问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复了示范学习的下拉框数字问题&#10;修复了APP端做题后题目还是显示的问题" />
+    <MESSAGE value="错题本显示学生排除了作对的人" />
+    <option name="LAST_COMMIT_MESSAGE" value="错题本显示学生排除了作对的人" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="0" y="264" key="#Console" timestamp="1602378261540">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="0" y="264" key="#Console/0.0.1920.1040@0.0.1920.1040" timestamp="1602378261540" />
     <state x="440" y="94" key="#Project_Structure" timestamp="1598843912727">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -589,11 +690,11 @@
     </state>
     <state x="272" y="46" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1598509908551" />
     <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598836890074" />
-    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1601254527737">
+    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1602383415680">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="544" y="144" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1598578804126" />
-    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1601254527737" />
+    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1602383415680" />
     <state x="685" y="386" width="550" height="274" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1599484315364">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -615,71 +716,71 @@
     </state>
     <state x="92" y="92" width="1182" height="554" key="DiffContextDialog/0.0.1366.738@0.0.1366.738" timestamp="1598587121014" />
     <state x="129" y="130" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599697982148" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1601121267157">
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1601883803829">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="526" y="194" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1598593033156" />
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1601121267157" />
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1601883803829" />
     <state x="771" y="420" key="Github.CreateGistDialog" timestamp="1596724145698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="771" y="420" key="Github.CreateGistDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596724145698" />
-    <state width="1628" height="311" key="GridCell.Tab.0.bottom" timestamp="1601257402069">
+    <state width="1628" height="250" key="GridCell.Tab.0.bottom" timestamp="1602383426026">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="904" height="181" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1598592909830" />
-    <state width="1628" height="311" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601257402069" />
-    <state width="1628" height="311" key="GridCell.Tab.0.center" timestamp="1601257402069">
+    <state width="1628" height="250" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602383426026" />
+    <state width="1628" height="250" key="GridCell.Tab.0.center" timestamp="1602383426025">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="904" height="181" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1598592909830" />
-    <state width="1628" height="311" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601257402069" />
-    <state width="1628" height="311" key="GridCell.Tab.0.left" timestamp="1601257402069">
+    <state width="1628" height="250" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602383426025" />
+    <state width="1628" height="250" key="GridCell.Tab.0.left" timestamp="1602383426025">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="904" height="181" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1598592909830" />
-    <state width="1628" height="311" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601257402069" />
-    <state width="1628" height="311" key="GridCell.Tab.0.right" timestamp="1601257402069">
+    <state width="1628" height="250" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602383426025" />
+    <state width="1628" height="250" key="GridCell.Tab.0.right" timestamp="1602383426025">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="904" height="181" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1598592909830" />
-    <state width="1628" height="311" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601257402069" />
-    <state width="1628" height="311" key="GridCell.Tab.1.bottom" timestamp="1601257402070">
+    <state width="1628" height="250" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602383426025" />
+    <state width="1628" height="250" key="GridCell.Tab.1.bottom" timestamp="1602383426026">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="904" height="181" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1598592909830" />
-    <state width="1628" height="311" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601257402070" />
-    <state width="1628" height="311" key="GridCell.Tab.1.center" timestamp="1601257402070">
+    <state width="1628" height="250" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602383426026" />
+    <state width="1628" height="250" key="GridCell.Tab.1.center" timestamp="1602383426026">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="904" height="181" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1598592909830" />
-    <state width="1628" height="311" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601257402070" />
-    <state width="1628" height="311" key="GridCell.Tab.1.left" timestamp="1601257402069">
+    <state width="1628" height="250" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602383426026" />
+    <state width="1628" height="250" key="GridCell.Tab.1.left" timestamp="1602383426026">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="904" height="181" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1598592909830" />
-    <state width="1628" height="311" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601257402069" />
-    <state width="1628" height="311" key="GridCell.Tab.1.right" timestamp="1601257402070">
+    <state width="1628" height="250" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602383426026" />
+    <state width="1628" height="250" key="GridCell.Tab.1.right" timestamp="1602383426026">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="904" height="181" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1598592909830" />
-    <state width="1628" height="311" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601257402070" />
-    <state width="1628" height="312" key="GridCell.Tab.2.bottom" timestamp="1601254973950">
+    <state width="1628" height="250" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602383426026" />
+    <state width="1628" height="250" key="GridCell.Tab.2.bottom" timestamp="1602381858006">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1628" height="312" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601254973950" />
-    <state width="1628" height="312" key="GridCell.Tab.2.center" timestamp="1601254973950">
+    <state width="1628" height="250" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602381858006" />
+    <state width="1628" height="250" key="GridCell.Tab.2.center" timestamp="1602381858006">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1628" height="312" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601254973950" />
-    <state width="1628" height="312" key="GridCell.Tab.2.left" timestamp="1601254973950">
+    <state width="1628" height="250" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602381858006" />
+    <state width="1628" height="250" key="GridCell.Tab.2.left" timestamp="1602381858006">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1628" height="312" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601254973950" />
-    <state width="1628" height="312" key="GridCell.Tab.2.right" timestamp="1601254973950">
+    <state width="1628" height="250" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602381858006" />
+    <state width="1628" height="250" key="GridCell.Tab.2.right" timestamp="1602381858006">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1628" height="312" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601254973950" />
+    <state width="1628" height="250" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602381858006" />
     <state x="540" y="254" key="IDE.errors.dialog" timestamp="1594253283140">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -696,16 +797,16 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="234" y="90" key="RollbackChangesDialog/0.0.1366.738@0.0.1366.738" timestamp="1598586651244" />
-    <state x="461" y="164" key="SettingsEditor" timestamp="1598921011881">
+    <state x="461" y="164" key="SettingsEditor" timestamp="1601468274470">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="324" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1598593034224" />
-    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1598921011881" />
-    <state x="562" y="156" key="Vcs.Push.Dialog.v2" timestamp="1601255391107">
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1601468274470" />
+    <state x="562" y="156" key="Vcs.Push.Dialog.v2" timestamp="1601257977670">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="400" y="111" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1598593259397" />
-    <state x="562" y="156" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601255391107" />
+    <state x="562" y="156" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601257977670" />
     <state x="362" y="191" key="com.intellij.ide.util.TipDialog" timestamp="1598592705080">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -815,6 +916,11 @@
           <url>file://$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/impl/PapersServiceImpl.java</url>
           <line>246</line>
           <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/service/impl/AppTechnologyDayExerciseServiceImpl.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

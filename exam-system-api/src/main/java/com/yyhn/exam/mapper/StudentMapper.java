@@ -50,6 +50,9 @@ public interface StudentMapper extends BaseMapper<Student>  {
     int updatePassword(@Param("id") int id ,@Param("newPassword") String newPassword);
 
 
+    @Select("select email from exam_student where id = #{id}")
+    String getEmailById(int id);
+
     @Select("select email from exam_student where login_name = #{loginName}")
     String getEmailByLoginName(String loginName);
     @Update("update exam_student set login_password = #{loginPassword} where login_name = #{loginName}")

@@ -16,9 +16,20 @@ import java.util.List;
 @TableName("exam_student")
 @JsonIgnoreProperties("papers")
 public class Student {
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    private String email;
 
     @TableId(value = "id",type = IdType.AUTO)
     private Integer id;
+
+
     private String stuName;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
@@ -37,6 +48,16 @@ public class Student {
      */
     @TableField(exist = false)
     private float countScore;
+
+    public String getDetail() {
+        return detail;
+    }
+
+    public void setDetail(String detail) {
+        this.detail = detail;
+    }
+
+    private String detail;
 
     @TableField(exist = false)
     private Class clazz = new Class();

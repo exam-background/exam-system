@@ -20,6 +20,7 @@ public class JobDayExerciseServiceImpl implements JobDayExerciseService {
     @Resource
     JobDayExerciseMapper jobDayExerciseMapper;
 
+
     @Override
     public void getAllJobDayExercise(String title, Integer professionalId, Integer courseId, Page<List<JobDayExercise>> page) {
         Map<String,Object> map = new HashMap<>();

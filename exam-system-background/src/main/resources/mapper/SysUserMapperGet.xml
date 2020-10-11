@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yyhn.exam.mapper.SysUserMapperGet">
+<select id="getByUserName" resultMap="users">
+select * from exam_sys_user where login_name = #{userName}
+</select>
+    <resultMap id="users" type="com.yyhn.exam.entity.SysUser" autoMapping="true">
+        <result column="login_name" property="login_name"/>
+        <result column="login_password" property="login_password"/>
+    </resultMap>
+</mapper>

@@ -59,6 +59,7 @@
         <if test="course_id!=null">
             and exam_course.id = #{course_id}
         </if>
+        ORDER BY build_papers_date DESC
     </select>
 
     <select id="getPapersAllPublish" resultMap="papersAll">

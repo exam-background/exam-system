@@ -78,6 +78,7 @@ public class SysRoleController {
     public Dto getAllMenu(){
         List<SysMenu> menus = null;
         menus = sysMenuService.getAllMenu();
+    System.out.println("--------------"+menus.toString());
         if(null != menus){
             return DtoUtil.returnDataSuccess(menus);
         }else{

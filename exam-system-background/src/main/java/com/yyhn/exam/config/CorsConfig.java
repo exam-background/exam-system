@@ -6,7 +6,6 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
-@EnableWebMvc
 public class CorsConfig implements WebMvcConfigurer {
 
     @Override
@@ -14,10 +13,10 @@ public class CorsConfig implements WebMvcConfigurer {
         System.out.println("............ CorsConfig......");
 
         registry.addMapping("/**").allowedOrigins("*")
-         .allowedMethods("GET", "HEAD", "POST", "PUT", "DELETE", "OPTIONS")
-         .allowCredentials(true)
-         .maxAge(3600)
-         .allowedHeaders("*");
+                .allowedMethods("GET", "HEAD", "POST", "PUT", "DELETE", "OPTIONS")
+                .allowCredentials(true)
+                .maxAge(3600)
+                .allowedHeaders("*");
     }
 
 }

@@ -8,14 +8,8 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="D:/ideaProjects/test/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../../ideaProjects/test/pom.xml" />
       </list>
-    </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/exam-system-gen/pom.xml" />
-        <option value="$PROJECT_DIR$/exam_system_background/pom.xml" />
-      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">

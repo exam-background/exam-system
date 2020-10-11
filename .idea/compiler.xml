@@ -16,6 +16,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="config-server" target="1.8" />
       <module name="exam_system_background" target="1.7" />
       <module name="examsystemgen" target="1.8" />
       <module name="examsystemgenerator" target="1.8" />

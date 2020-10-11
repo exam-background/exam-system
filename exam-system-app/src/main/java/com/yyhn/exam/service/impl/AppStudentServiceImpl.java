@@ -41,21 +41,17 @@ public class AppStudentServiceImpl implements AppStudentService {
         }
     }
     @Override
-    public boolean updatePassword(int id, String oldPassword, String newPassword) {
+    public boolean updatePassword(int id, String newPassword) {
         String loginPassword = studentMapper.getLoginPassword(id);
         if(null != loginPassword && !"".equals(loginPassword)){
-            System.out.println(loginPassword+oldPassword + "---"+passwordEncoder.matches(oldPassword,loginPassword));
-            if(passwordEncoder.matches(oldPassword,loginPassword)){
+           // System.out.println(loginPassword+oldPassword + "---"+passwordEncoder.matches(oldPassword,loginPassword));
                 if(studentMapper.updatePassword(id, passwordEncoder.encode(newPassword))>0){
                     return true;
                 }
                 return false;
             }else{
                 return false;
-            }
-        }else{
-            return false;
-        }
+            }   
     }
 
     @Override
@@ -71,5 +67,10 @@ public class AppStudentServiceImpl implements AppStudentService {
     @Override
     public StudentUserVo getStuById(int id) {
         return studentMapper.getStuById(id);
+    }
+
+    @Override
+    public String getEmailById(int id) {
+        return studentMapper.getEmailById(id);
     }
 }

@@ -4,10 +4,19 @@ import com.alibaba.fastjson.annotation.JSONField;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jdk.nashorn.internal.ir.annotations.Ignore;
 import org.springframework.format.annotation.DateTimeFormat;
-
 import java.util.Date;
+import java.util.List;
 
 public class Class  implements java.io.Serializable{
+    public List<Student> getStudentList() {
+        return studentList;
+    }
+
+    public void setStudentList(List<Student> studentList) {
+        this.studentList = studentList;
+    }
+
+    private List<Student> studentList;
 
     private Integer id;
     /**

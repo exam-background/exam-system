@@ -1,9 +1,9 @@
 package com.yyhn.exam.service.impl;
 
 import com.yyhn.exam.common.Page;
-import com.yyhn.exam.entity.Class;
 import com.yyhn.exam.entity.Teacher;
 import com.yyhn.exam.mapper.TeacherMapper;
+import com.yyhn.exam.service.AppTeacherService;
 import com.yyhn.exam.service.TeacherService;
 import org.springframework.stereotype.Service;
 

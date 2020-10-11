@@ -10,16 +10,16 @@ import java.io.File;
 
 @Service
 public class MailService {
-//    @Autowired(required =false)
-//    JavaMailSender mailSender;
+    @Autowired(required =false)
+    JavaMailSender mailSender;
 
     public void sendMail(String from , String to , String cc, String subject,String content){
-//        SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
-//        simpleMailMessage.setFrom(from);
-//        simpleMailMessage.setTo(to);
-//        simpleMailMessage.setCc(cc);
-//        simpleMailMessage.setSubject(subject);
-//        simpleMailMessage.setText(content);
-//        mailSender.send(simpleMailMessage);
+      SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
+      simpleMailMessage.setFrom(from);
+      simpleMailMessage.setTo(to);
+      //simpleMailMessage.setCc(cc);
+      simpleMailMessage.setSubject(subject);
+      simpleMailMessage.setText(content);
+      mailSender.send(simpleMailMessage);
     }
 }

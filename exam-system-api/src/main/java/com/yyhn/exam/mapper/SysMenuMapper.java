@@ -10,7 +10,6 @@ import java.util.List;
 @Mapper
 public interface SysMenuMapper {
     List<SysMenu> getPermissionList(@Param("userId") int userId);
-    @Select("select * from exam_menu")
     List<SysMenu> getAllMenu();
 
     List<Integer> selectMenuIdListByRoleId(int roleId);

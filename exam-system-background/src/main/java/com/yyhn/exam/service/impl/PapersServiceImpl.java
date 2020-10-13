@@ -104,9 +104,12 @@ public class PapersServiceImpl implements PapersService {
                     int result = RandomMaxMin.getRandomMaxMin(courseCount-1, 0, list);
                     list.add(result);
                     //拿到本张试卷没拿过的题目
-                    JobDayExercise jobDayExercise = jobDayExerciseService.getJobDayExerciseBypProfessionalCourse(papers.getProfessionalId(), Integer.valueOf(papers.getCourseId()[i]), result);
+                    JobDayExercise jobDayExercise = jobDayExerciseService.
+                            getJobDayExerciseBypProfessionalCourse(papers.getProfessionalId(), Integer.valueOf(papers.getCourseId()[i]), result);
                     //试卷添加的题目
-                    PapersTitle papersTitle = new PapersTitle(null, papers.getId(), jobDayExercise.getTitle(), jobDayExercise.getRemark(), jobDayExercise.getScore(), jobDayExercise.getAnswer(), 1);
+                    PapersTitle papersTitle = new PapersTitle(
+                            null, papers.getId(), jobDayExercise.getTitle(), jobDayExercise.getRemark(),
+                            jobDayExercise.getScore(), jobDayExercise.getAnswer(), 1);
                     //设置分数
                     switch (papers.getSum()){
                         case 2:
@@ -125,7 +128,9 @@ public class PapersServiceImpl implements PapersService {
             }else{
                 //增加考试题目表
                 //考试的科目在数据库中总共有多少题目
-                int courseCount = technologyDayExerciseService.getTechnologyDayExerciseByCourse(papers.getProfessionalId(), Integer.valueOf(papers.getCourseId()[i]), papers.getSum(), papers.getCourseId().length);
+                int courseCount = technologyDayExerciseService.
+                        getTechnologyDayExerciseByCourse(papers.getProfessionalId(),
+                                Integer.valueOf(papers.getCourseId()[i]), papers.getSum(), papers.getCourseId().length);
                 if(courseCount == 0){
                     throw new Exception("该科目暂无题目");
                 }
@@ -144,7 +149,9 @@ public class PapersServiceImpl implements PapersService {
                     //拿到本张试卷没拿过的题目
                     TechnologyDayExercise technologyDayExercise = technologyDayExerciseService.getTechnologyDayExerciseBypProfessionalCourse(papers.getProfessionalId(), Integer.valueOf(papers.getCourseId()[i]), result);
                     //试卷添加的题目
-                    PapersTitle papersTitle = new PapersTitle(null, papers.getId(), technologyDayExercise.getTitle(), technologyDayExercise.getAnalysis(), technologyDayExercise.getSetScore(), technologyDayExercise.getStandardAnswer(), Integer.valueOf(technologyDayExercise.getTypes()));
+                    PapersTitle papersTitle = new PapersTitle(null, papers.getId(),
+                            technologyDayExercise.getTitle(), technologyDayExercise.getAnalysis(),
+                            technologyDayExercise.getSetScore(), technologyDayExercise.getStandardAnswer(), Integer.valueOf(technologyDayExercise.getTypes()));
                     //简答题设置分数为10分
                     if(papersTitle.getType() == 1){
                         papersTitle.setSetScore(10);
@@ -155,11 +162,13 @@ public class PapersServiceImpl implements PapersService {
 
                     //增加考试题目备选答案表
                     //查询题目的备选答案
-                    List<TechnologyDayExerciseItem> technologyDayExerciseList = technologyDayExerciseItemService.getTechnologyDayExerciseByExerciseId(technologyDayExercise.getId());
+                    List<TechnologyDayExerciseItem> technologyDayExerciseList = technologyDayExerciseItemService.
+                            getTechnologyDayExerciseByExerciseId(technologyDayExercise.getId());
                     //添加备选答案
                     for(TechnologyDayExerciseItem technologyDayExerciseItem : technologyDayExerciseList){
                         if(technologyDayExerciseItem != null){
-                            PapersExercise papersExercise = new PapersExercise(null, papers.getId(), papersTitle.getId(), technologyDayExerciseItem.getContent(), technologyDayExerciseItem.getOrderNum());
+                            PapersExercise papersExercise = new PapersExercise(null,
+                                    papers.getId(), papersTitle.getId(), technologyDayExerciseItem.getContent(), technologyDayExerciseItem.getOrderNum());
                             papersExerciseService.insertPapersExercise(papersExercise);
                         }
                     }

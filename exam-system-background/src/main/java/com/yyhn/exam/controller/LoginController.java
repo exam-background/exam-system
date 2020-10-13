@@ -151,19 +151,20 @@ public class LoginController {
         byte[] captchaChallengeAsJpeg = null;
         ByteArrayOutputStream jpegOutputStream = new ByteArrayOutputStream();
         try {
+            // 生成验证码
             String captcha = defaultKaptcha.createText();
-
-            //存储
-
             //request.getSession().setAttribute("uuid", uuid);
+            // 将验证码转换成图片
             BufferedImage challenge = defaultKaptcha.createImage(captcha);
             ImageIO.write(challenge, "jpg", jpegOutputStream);
             log.info("图形验证码为：" + captcha + "---- uuid：" + uuuid);
+            // 将验证码存入redis中
             stringRedisTemplate.opsForValue().set(uuuid, captcha, 60 * 5, TimeUnit.SECONDS);
         } catch (IllegalArgumentException e) {
             response.sendError(HttpServletResponse.SC_NOT_FOUND);
             return;
         }
+        // 设置返回的图片信息
         captchaChallengeAsJpeg = jpegOutputStream.toByteArray();
         response.setHeader("Cache-Control", "no-store");
         response.setHeader("Pragma", "no-cache");

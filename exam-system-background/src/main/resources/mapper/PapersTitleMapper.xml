@@ -11,6 +11,7 @@
         <result property="analysis" column="analysis"></result>
         <result property="setScore" column="set_score"></result>
         <result property="standardAnswer" column="standard_answer"></result>
+        <result property="types" column="types"></result>
         <collection property="papersExercises" ofType="com.yyhn.exam.entity.PapersExercise">
             <id property="id" column="papersExerciseId"></id>
             <result property="content" column="content"></result>
@@ -26,6 +27,6 @@
     </select>
 
     <update id="updatePapersTitleByScore" parameterType="PapersTitle">
-        update exam_papers_title set set_score = #{setScore} where types not in (#{type}) and papers_id = #{papersId}
+        update exam_papers_title set set_score = #{setScore} where types not in (#{types}) and papers_id = #{papersId}
     </update>
 </mapper>

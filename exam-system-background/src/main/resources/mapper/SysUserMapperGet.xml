@@ -7,7 +7,7 @@
 select * from exam_sys_user where login_name = #{userName}
 </select>
     <resultMap id="users" type="com.yyhn.exam.entity.SysUser" autoMapping="true">
-        <result column="login_name" property="login_name"/>
+        <result column="login_name" property="loginName"/>
         <result column="login_password" property="login_password"/>
     </resultMap>
 </mapper>

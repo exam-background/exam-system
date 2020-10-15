@@ -50,7 +50,7 @@ public class AppPapersServiceImpl implements AppPapersService {
     public Papers getPapersById(Integer id) {
         Papers papersa = appPapersMapper.getPapersById(id);
         for(PapersTitle papersTitle: papersa.getPapersTitleList()){
-            if(papersTitle.getType() == 2){
+            if(papersTitle.getTypes() == 2){
                 papersTitle.setPapersExercises(appPapersExerciseService.getPapersExerciseByTitleId(papersTitle.getId()));
             }
         }
@@ -61,7 +61,7 @@ public class AppPapersServiceImpl implements AppPapersService {
     public Papers getPapersByIdStudent(Integer id) {
         Papers papersa = appPapersMapper.getPapersByIdStudent(id);
         for(PapersTitle papersTitle: papersa.getPapersTitleList()){
-            if(papersTitle.getType() == 2){
+            if(papersTitle.getTypes() == 2){
                 papersTitle.setPapersExercises(appPapersExerciseService.getPapersExerciseByTitleId(papersTitle.getId()));
             }
         }

@@ -23,7 +23,7 @@ public class SysUser implements Serializable {
      * 登录名
      */
 
-    private String login_name;
+    private String loginName;
     /**
      * 真实名称
      */
@@ -43,14 +43,14 @@ public class SysUser implements Serializable {
     /**
      * 手机号码
      */
-    private String mobile_phone;
+    private String mobilePhone;
     /**
      * 创建时间
      */
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     @JSONField(format = "yyyy-MM-dd")
     @JsonFormat(pattern = "yyyy-MM-dd")
-    private Date create_time;
+    private Date createTime;
     /**
      * 备注信息
      */
@@ -77,14 +77,6 @@ public class SysUser implements Serializable {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getLogin_name() {
-        return login_name;
-    }
-
-    public void setLogin_name(String login_name) {
-        this.login_name = login_name;
     }
 
     public String getReal_name() {
@@ -119,20 +111,29 @@ public class SysUser implements Serializable {
         this.position = position;
     }
 
-    public String getMobile_phone() {
-        return mobile_phone;
+
+    public String getMobilePhone() {
+        return mobilePhone;
     }
 
-    public void setMobile_phone(String mobile_phone) {
-        this.mobile_phone = mobile_phone;
+    public void setMobilePhone(String mobilePhone) {
+        this.mobilePhone = mobilePhone;
     }
 
-    public Date getCreate_time() {
-        return create_time;
+    public String getLoginName() {
+        return loginName;
     }
 
-    public void setCreate_time(Date create_time) {
-        this.create_time = create_time;
+    public void setLoginName(String loginName) {
+        this.loginName = loginName;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 
     public String getRemark() {
@@ -143,15 +144,15 @@ public class SysUser implements Serializable {
         this.remark = remark;
     }
 
-    public SysUser(int id, String login_name, String real_name, String login_password, String department, String position, String mobile_phone, Date create_time, String remark) {
+    public SysUser(int id, String loginName, String real_name, String login_password, String department, String position, String mobilePhone, Date createTime, String remark) {
         this.id = id;
-        this.login_name = login_name;
+        this.loginName = loginName;
         this.real_name = real_name;
         this.login_password = login_password;
         this.department = department;
         this.position = position;
-        this.mobile_phone = mobile_phone;
-        this.create_time = create_time;
+        this.mobilePhone = mobilePhone;
+        this.createTime = createTime;
         this.remark = remark;
     }
 

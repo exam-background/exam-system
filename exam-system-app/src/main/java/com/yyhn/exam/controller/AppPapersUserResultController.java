@@ -39,7 +39,7 @@ public class AppPapersUserResultController {
             //判断是否为选择题，如果为选择题则查询选择题选项
             List<PapersUserResult> listAll = new ArrayList<PapersUserResult>();
             for(PapersUserResult papersUserResult : list) {
-                if(papersUserResult.getPapersTitle().getType() == 2){
+                if(papersUserResult.getPapersTitle().getTypes() == 2){
                     //根据题目id查询题目选择题
                     papersUserResult.getPapersTitle().setPapersExercises(appPapersExerciseService.getPapersExerciseByTitleId(papersUserResult.getPapersTitle().getId()));
                 }

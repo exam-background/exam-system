@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.yyhn.exam.mapper.SysUserMapper">
     <select id="getUserIdByUserNameAndPassword" resultType="integer" parameterType="com.yyhn.exam.entity.SysUser">
-        select id from exam_sys_user where login_Name = #{login_name} and login_password = #{login_password}
+        select id from exam_sys_user where login_Name = #{loginName} and login_password = #{login_password}
     </select>
 
 
@@ -34,19 +34,19 @@
         <if test="position != null">
             position,
         </if>
-        <if test="mobile_phone != null">
+        <if test="mobilePhone != null">
             mobile_phone,
         </if>
         create_time
         <if test="remark != null">
             ,remark
         </if>
-        ) values(#{login_name},#{real_name},#{login_password},#{department}
+        ) values(#{loginName},#{real_name},#{login_password},#{department}
         <if test="position != null">
             ,#{position}
         </if>
-        <if test="mobile_phone != null">
-            ,#{mobile_phone}
+        <if test="mobilePhone != null">
+            ,#{mobilePhone}
         </if>
         , now()
         <if test="remark != null">
@@ -56,8 +56,8 @@
     </insert>
     <update id="updateSysUser" parameterType="com.yyhn.exam.entity.SysUser">
         update exam_sys_user set
-        <if test="login_name != null">
-            login_name = #{login_name}
+        <if test="loginName != null">
+            login_name = #{loginName}
         </if>
         <if test="real_name != null">
             , real_name = #{real_name}
@@ -71,8 +71,8 @@
         <if test="position != null">
             , position = #{position}
         </if>
-        <if test="mobile_phone != null">
-            , mobile_phone = #{mobile_phone}
+        <if test="mobilePhone != null">
+            , mobile_phone = #{mobilePhone}
         </if>
         <if test="create_time != null">
             , create_time = #{create_time}

@@ -103,25 +103,25 @@ public class PapersTitle implements Serializable {
         this.papersExercises = papersExercises;
     }
 
-    public Integer getType() {
+    public Integer getTypes() {
         return types;
     }
 
-    public void setType(Integer type) {
-        this.types = type;
+    public void setTypes(Integer types) {
+        this.types = types;
     }
 
     public PapersTitle() {
     }
 
-    public PapersTitle(Integer id, Integer papersId, String title, String analysis, Integer setScore, String standardAnswer, Integer type) {
+    public PapersTitle(Integer id, Integer papersId, String title, String analysis, Integer setScore, String standardAnswer, Integer types) {
         this.id = id;
         this.papersId = papersId;
         this.title = title;
         this.analysis = analysis;
         this.setScore = setScore;
         this.standardAnswer = standardAnswer;
-        this.types = type;
+        this.types = types;
     }
 
     @Override
@@ -133,7 +133,7 @@ public class PapersTitle implements Serializable {
                 ", analysis='" + analysis + '\'' +
                 ", setScore=" + setScore +
                 ", standardAnswer='" + standardAnswer + '\'' +
-                ", type=" + types +
+                ", types=" + types +
                 ", papersExercises=" + papersExercises +
                 '}';
     }

@@ -153,7 +153,7 @@ public class PapersServiceImpl implements PapersService {
                             technologyDayExercise.getTitle(), technologyDayExercise.getAnalysis(),
                             technologyDayExercise.getSetScore(), technologyDayExercise.getStandardAnswer(), Integer.valueOf(technologyDayExercise.getTypes()));
                     //简答题设置分数为10分
-                    if(papersTitle.getType() == 1){
+                    if(papersTitle.getTypes() == 1){
                         papersTitle.setSetScore(10);
                         type1Cont++;
                     }
@@ -176,7 +176,7 @@ public class PapersServiceImpl implements PapersService {
                 //总分减去简答题的分数后剩余的分数分配给选择题
                 int sum = (100-type1Cont*10)/(papers.getSum()-type1Cont);
                 PapersTitle papersTitleScore = new PapersTitle();
-                papersTitleScore.setType(1);
+                papersTitleScore.setTypes(1);
                 papersTitleScore.setSetScore(sum);
                 papersTitleScore.setPapersId(papers.getId());
                 papersTitleService.updatePapersTitleByScore(papersTitleScore);

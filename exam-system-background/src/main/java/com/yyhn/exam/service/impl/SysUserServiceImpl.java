@@ -63,7 +63,7 @@ public class SysUserServiceImpl implements SysUserService {
         System.out.println(login_Name+"--------------"+login_password);
         SysUser sysUser = new SysUser();
         sysUser.setLogin_password(login_password);
-        sysUser.setLogin_name(login_Name);
+        sysUser.setLoginName(login_Name);
         return sysUserMapper.getUserIdByUserNameAndPassword(sysUser);
     }
 
@@ -145,11 +145,11 @@ public class SysUserServiceImpl implements SysUserService {
             // 保存在线信息
             tokenService.save(token, sysUser);
 
-            System.out.println("=============================="+sysUser.getLogin_name());
+            System.out.println("=============================="+sysUser.getLoginName());
             //踢掉之前已经登录的token
             String oldToken = "";
-            if(stringRedisTemplate.hasKey("online:"+sysUser.getLogin_name())){
-                oldToken = stringRedisTemplate.opsForValue().get("online:"+sysUser.getLogin_name());
+            if(stringRedisTemplate.hasKey("online:"+sysUser.getLoginName())){
+                oldToken = stringRedisTemplate.opsForValue().get("online:"+sysUser.getLoginName());
             }
             if("" != oldToken){
                 stringRedisTemplate.delete(oldToken);

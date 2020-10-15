@@ -20,11 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0d90f18-a47d-4b60-87d1-3cfdc91a4cba" name="Default Changelist" comment="排序等">
-      <change afterPath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/controller/LuYinController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/service/VoiceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/service/VoiceServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/common/TokenServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/common/TokenServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/entity/PapersTitle.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/entity/PapersTitle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/entity/SysUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/src/main/java/com/yyhn/exam/entity/SysUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/App.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/common/AutoPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/common/AutoPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/common/Dto.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/common/Dto.class" afterDir="false" />
@@ -97,6 +96,13 @@
       <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/vo/JobExamStudySearchVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/vo/JobExamStudySearchVO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/vo/SysRoleSearchVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/vo/SysRoleSearchVO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/vo/TechnologyDayExerciseVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/classes/com/yyhn/exam/vo/TechnologyDayExerciseVO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/exam-system-api-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/exam-system-api-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-api/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-api/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/controller/AppPapersUserResultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/controller/AppPapersUserResultController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/service/impl/AppPapersServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/service/impl/AppPapersServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/controller/AppJobDayExerciesSubmitController.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/controller/AppJobDayExerciesSubmitController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/controller/AppJobDayExerciseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/controller/AppJobDayExerciseController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/controller/AppLoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/controller/AppLoginController.class" afterDir="false" />
@@ -131,7 +137,15 @@
       <change beforePath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/service/impl/AppTechnologyDayExerciseSubmitServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/service/impl/AppTechnologyDayExerciseSubmitServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/service/impl/PapersUserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/service/impl/PapersUserServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/service/impl/StudentTokenServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/target/classes/com/yyhn/exam/service/impl/StudentTokenServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-app/target/exam-system-app-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/target/exam-system-app-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-app/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-app/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-app/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/controller/SysUsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/controller/SysUsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/impl/PapersServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/impl/PapersServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/impl/SysUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/impl/SysUserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/resources/mapper/PapersTitleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/resources/mapper/PapersTitleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/resources/mapper/SysUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/resources/mapper/SysUserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-background/src/main/resources/mapper/SysUserMapperGet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/src/main/resources/mapper/SysUserMapperGet.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/App.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/BuiderPassword.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/BuiderPassword.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/config/CorsConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/config/CorsConfig.class" afterDir="false" />
@@ -209,13 +223,15 @@
       <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/TechnologyDayExerciseItemServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/TechnologyDayExerciseItemServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/TechnologyDayExerciseServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/service/impl/TechnologyDayExerciseServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/swagger/Swagger2.class" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/com/yyhn/exam/swagger/Swagger2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/mapper/PapersTitleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/mapper/PapersTitleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-background/target/classes/mapper/SysUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/classes/mapper/SysUserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-background/target/exam-system-background-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/exam-system-background-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-background/target/exam-system-background-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/exam-system-background-1.0-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-background/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-background/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-background/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exam-system-background/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/exam-system-background/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/exam-system-app/target/" />
-    <ignored path="$PROJECT_DIR$/exam-system-background/target/" />
-    <ignored path="$PROJECT_DIR$/exam-system-api/target/" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -224,57 +240,6 @@
   <component name="DefaultGradleProjectSettings">
     <option name="testRunner" value="GRADLE" />
     <option name="delegatedBuild" value="true" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/service/VoiceServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="21" selection-start-line="2" selection-start-column="40" selection-end-line="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/service/VoiceService.java">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/controller/LuYinController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="20" column="24" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/exam-system-background/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="36" selection-start-line="36" selection-end-line="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -289,27 +254,18 @@
     <option name="UPDATE_TYPE" value="REBASE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/service/VoiceService.java" />
-        <option value="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/controller/LuYinController.java" />
-        <option value="$PROJECT_DIR$/exam-system-background/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-      </list>
-    </option>
-  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="alwaysUpdateSnapshots" value="true" />
+        <option name="mavenHome" value="D:/software/apache-maven-3.6.3" />
         <option name="printErrorStackTraces" value="true" />
         <option name="usePluginRegistry" value="true" />
+        <option name="userSettingsFile" value="D:\software\apache-maven-3.6.3\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
       <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
         <option name="vmOptionsForImporter" value="-Xmx768m -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true" />
       </MavenImportingSettings>
     </option>
@@ -324,97 +280,6 @@
   <component name="ProjectId" id="1eM9PXobhSSC5MMGGVA9FO0dWX7" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="exam-system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="exam-system" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="exam-system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="exam-system" type="462c0819:PsiDirectoryNode" />
-              <item name="exam-system-app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="exam-system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="exam-system" type="462c0819:PsiDirectoryNode" />
-              <item name="exam-system-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="exam-system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="exam-system" type="462c0819:PsiDirectoryNode" />
-              <item name="exam-system-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="exam-system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="exam-system" type="462c0819:PsiDirectoryNode" />
-              <item name="exam-system-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="exam-system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="exam-system" type="462c0819:PsiDirectoryNode" />
-              <item name="exam-system-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="exam" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="exam-system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="exam-system" type="462c0819:PsiDirectoryNode" />
-              <item name="exam-system-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="exam" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="exam-system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="exam-system" type="462c0819:PsiDirectoryNode" />
-              <item name="exam-system-background" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="exam-system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="exam-system" type="462c0819:PsiDirectoryNode" />
-              <item name="exam-system-background" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="exam-system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="exam-system" type="462c0819:PsiDirectoryNode" />
-              <item name="exam-system-background" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="exam-system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="exam-system" type="462c0819:PsiDirectoryNode" />
-              <item name="exam-system-background" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -432,7 +297,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/service" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -475,16 +340,6 @@
       <set>
         <option value="SpringBootApplicationConfigurationType" />
       </set>
-    </option>
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.App">
@@ -712,6 +567,9 @@
       <workItem from="1602491696934" duration="1484000" />
       <workItem from="1602552189626" duration="262000" />
       <workItem from="1602654007522" duration="2901000" />
+      <workItem from="1602664866432" duration="882000" />
+      <workItem from="1602678586247" duration="37000" />
+      <workItem from="1602721706816" duration="7879000" />
     </task>
     <task id="LOCAL-00001" summary="增加了用户管理的内容，增加了系统用户实体类，dao层和mapper文件。增加了service和serviceimpl。创建了控制层，提供了删除用户，新增用户，分页查询，根据部门和职位进行分页查询的Swagger接口">
       <created>1594121568996</created>
@@ -898,52 +756,8 @@
     <option name="localTasksCounter" value="27" />
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2901000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="Capture Tool" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Web" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Spring" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" visible="true" weight="0.32890365" />
-      <window_info anchor="bottom" id="Java Enterprise" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="MyBatis Log" />
-      <window_info anchor="bottom" id="Run Dashboard" weight="0.32890365" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Bean Validation" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
@@ -961,12 +775,6 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
               <option name="COLUMN_WIDTH">
                 <map>
                   <entry key="2" value="114" />
@@ -992,6 +800,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="增加了用户管理的内容，增加了系统用户实体类，dao层和mapper文件。增加了service和serviceimpl。创建了控制层，提供了删除用户，新增用户，分页查询，根据部门和职位进行分页查询的Swagger接口" />
@@ -1023,21 +832,25 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1598843912727" />
-    <state x="414" y="174" width="1176" height="692" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602422843164">
+    <state x="414" y="174" width="1176" height="692" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602665136001">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="190" y="46" width="1176" height="692" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1599638599840" />
-    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602422843164" />
-    <state x="544" y="90" key="#com.intellij.ide.util.MemberChooser" timestamp="1600937510270">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602665136001" />
+    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1602727408352">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="544" y="90" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1600937510270" />
-    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1599028322714" />
-    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1600153431299">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1602727408352" />
+    <state x="689" y="308" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1602665071351">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="689" y="308" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602665071351" />
+    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1602727332509">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.738@0.0.1366.738" timestamp="1600153431299" />
-    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598280813415" />
+    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602727332509" />
     <state x="695" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598257032082">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -1054,75 +867,75 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="92" y="92" width="1182" height="554" key="DiffContextDialog/0.0.1366.738@0.0.1366.738" timestamp="1598587121014" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1602492002919">
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1602678629454">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="526" y="194" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1600303518812" />
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602492002919" />
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602678629454" />
     <state x="771" y="420" key="Github.CreateGistDialog" timestamp="1596724145698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="771" y="420" key="Github.CreateGistDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596724145698" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1602493358152">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1602733116496">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1165" height="218" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1601390662008" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602493358152" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1602493358152">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602733116496" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1602733116496">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1165" height="218" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1601390662008" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602493358152" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1602493358152">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602733116496" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1602733116496">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1165" height="218" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1601390662007" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602493358152" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1602493358152">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602733116496" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1602733116496">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1165" height="218" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1601390662008" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602493358152" />
-    <state width="1628" height="533" key="GridCell.Tab.1.bottom" timestamp="1602490859678">
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602733116496" />
+    <state width="1628" height="375" key="GridCell.Tab.1.bottom" timestamp="1602732954348">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1165" height="218" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1601390662009" />
-    <state width="1628" height="533" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602490859678" />
-    <state width="1628" height="533" key="GridCell.Tab.1.center" timestamp="1602490859678">
+    <state width="1628" height="375" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602732954348" />
+    <state width="1628" height="375" key="GridCell.Tab.1.center" timestamp="1602732954348">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1165" height="218" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1601390662009" />
-    <state width="1628" height="533" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602490859678" />
-    <state width="1628" height="533" key="GridCell.Tab.1.left" timestamp="1602490859678">
+    <state width="1628" height="375" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602732954348" />
+    <state width="1628" height="375" key="GridCell.Tab.1.left" timestamp="1602732954348">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1165" height="218" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1601390662008" />
-    <state width="1628" height="533" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602490859678" />
-    <state width="1628" height="533" key="GridCell.Tab.1.right" timestamp="1602490859678">
+    <state width="1628" height="375" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602732954348" />
+    <state width="1628" height="375" key="GridCell.Tab.1.right" timestamp="1602732954348">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1165" height="218" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1601390662009" />
-    <state width="1628" height="533" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602490859678" />
-    <state width="1165" height="185" key="GridCell.Tab.2.bottom" timestamp="1600227719014">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state width="1628" height="375" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602732954348" />
+    <state width="1628" height="222" key="GridCell.Tab.2.bottom" timestamp="1602724040150">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1165" height="185" key="GridCell.Tab.2.bottom/0.0.1366.738@0.0.1366.738" timestamp="1600227719014" />
-    <state width="1647" height="318" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599029608155" />
-    <state width="1165" height="185" key="GridCell.Tab.2.center" timestamp="1600227719014">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state width="1628" height="222" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602724040150" />
+    <state width="1628" height="222" key="GridCell.Tab.2.center" timestamp="1602724040150">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1165" height="185" key="GridCell.Tab.2.center/0.0.1366.738@0.0.1366.738" timestamp="1600227719014" />
-    <state width="1647" height="318" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599029608155" />
-    <state width="1165" height="185" key="GridCell.Tab.2.left" timestamp="1600227719014">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state width="1628" height="222" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602724040150" />
+    <state width="1628" height="222" key="GridCell.Tab.2.left" timestamp="1602724040150">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1165" height="185" key="GridCell.Tab.2.left/0.0.1366.738@0.0.1366.738" timestamp="1600227719014" />
-    <state width="1647" height="318" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599029608155" />
-    <state width="1165" height="185" key="GridCell.Tab.2.right" timestamp="1600227719014">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state width="1628" height="222" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602724040150" />
+    <state width="1628" height="222" key="GridCell.Tab.2.right" timestamp="1602724040150">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1165" height="185" key="GridCell.Tab.2.right/0.0.1366.738@0.0.1366.738" timestamp="1600227719014" />
-    <state width="1647" height="318" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599029608155" />
+    <state width="1628" height="222" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602724040150" />
     <state x="540" y="254" key="IDE.errors.dialog" timestamp="1594253283140">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -1140,11 +953,11 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="234" y="90" key="RollbackChangesDialog/0.0.1366.738@0.0.1366.738" timestamp="1598586651244" />
-    <state x="461" y="164" width="1193" height="738" key="SettingsEditor" timestamp="1602492006698">
+    <state x="461" y="164" width="1193" height="738" key="SettingsEditor" timestamp="1602664894020">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="169" y="0" width="1193" height="738" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1601368991183" />
-    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1602492006698" />
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1602664894020" />
     <state x="562" y="156" key="Vcs.Push.Dialog.v2" timestamp="1602422438840">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -1231,10 +1044,11 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="413" y="62" key="extract.method.dialog/0.0.1366.738@0.0.1366.738" timestamp="1600152786086" />
-    <state x="386" y="85" width="595" height="568" key="find.popup" timestamp="1601367319073">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state x="543" y="120" width="837" height="801" key="find.popup" timestamp="1602727063913">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="386" y="85" width="595" height="568" key="find.popup/0.0.1366.738@0.0.1366.738" timestamp="1601367319073" />
+    <state x="543" y="120" width="837" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1602727063913" />
     <state x="448" y="217" key="git4idea.merge.GitPullDialog" timestamp="1601124296032">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -1259,49 +1073,21 @@
     </state>
     <state x="438" y="170" width="672" height="677" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1601214667768" />
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1596500668537" />
-    <state x="623" y="225" width="672" height="160" key="search.everywhere.popup" timestamp="1602482698698">
+    <state x="623" y="225" width="672" height="160" key="search.everywhere.popup" timestamp="1602727057738">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="443" y="160" width="672" height="160" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1601257739888" />
-    <state x="623" y="225" width="672" height="160" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1602482698698" />
+    <state x="623" y="225" width="672" height="160" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1602727057738" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/service/VoiceService.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/controller/LuYinController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="20" column="24" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exam-system-background/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exam-system-app/src/main/java/com/yyhn/exam/service/VoiceServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" selection-start-line="2" selection-start-column="40" selection-end-line="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/exam-system-background/src/main/java/com/yyhn/exam/service/impl/PapersServiceImpl.java</url>
+          <line>74</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

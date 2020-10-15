@@ -4,10 +4,12 @@ com\yyhn\exam\service\impl\AppPapersUserResultServiceImpl.class
 com\yyhn\exam\controller\AppJobDayExerciesSubmitController.class
 com\yyhn\exam\service\impl\AppJobDayExerciseServiceImpl.class
 com\yyhn\exam\service\StudentTokenService.class
+com\yyhn\exam\service\VoiceService.class
 com\yyhn\exam\service\MailService.class
 com\yyhn\exam\service\AppJobDayExerciseSubmitService.class
 com\yyhn\exam\service\impl\AppTeacherServiceImpl.class
 com\yyhn\exam\controller\AppLoginController.class
+com\yyhn\exam\controller\LuYinController.class
 com\yyhn\exam\service\AppJobDayExerciseService.class
 com\yyhn\exam\service\AppTechnologyDayExerciseSubmitService.class
 com\yyhn\exam\controller\AppPapersUserResultController.class
@@ -35,6 +37,7 @@ com\yyhn\exam\service\impl\AppTechnologyDayExerciseItemServiceImpl.class
 com\yyhn\exam\service\impl\AppTechnologyDayExerciseServiceImpl.class
 com\yyhn\exam\service\AppClassService.class
 com\yyhn\exam\service\impl\StudentTokenServiceImpl.class
+com\yyhn\exam\service\VoiceServiceImpl.class
 com\yyhn\exam\controller\AppJobDayExerciseController.class
 com\yyhn\exam\service\AppPapersTitleService.class
 com\yyhn\exam\controller\AppTechnologyDayExerciseSubmitController.class

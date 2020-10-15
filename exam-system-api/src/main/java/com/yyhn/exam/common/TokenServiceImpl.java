@@ -77,7 +77,7 @@ public class TokenServiceImpl implements TokenService {
 			} else
 				sb.append("MOBILE-");
 //			sb.append(user.getUserCode() + "-");
-			sb.append(MD5.getMd5(user.getLogin_name(),32) + "-");//加密用户名称
+			sb.append(MD5.getMd5(user.getLoginName(),32) + "-");//加密用户名称
 			sb.append(user.getId() + "-");
 			sb.append(new SimpleDateFormat("yyyyMMddHHmmss").format(new Date())
 					+ "-");
@@ -95,9 +95,9 @@ public class TokenServiceImpl implements TokenService {
 	public void save(String token, SysUser user) {
 		ValueOperations<String,Object> redis = redisTemplate.opsForValue();
 		if (token.startsWith(tokenPrefix+"PC-"))
-			redis.set(token, user.getLogin_name(),expire, TimeUnit.SECONDS);
+			redis.set(token, user.getLoginName(),expire, TimeUnit.SECONDS);
 		else
-			redis.set(token, user.getLogin_name());// 手机认证信息永不失效
+			redis.set(token, user.getLoginName());// 手机认证信息永不失效
 	}
 
 	@Override
@@ -146,7 +146,7 @@ public class TokenServiceImpl implements TokenService {
 		// 置换token
 		String newToken = "";
 		SysUser user = new SysUser();
-		user.setLogin_name(this.load(token));
+		user.setLoginName(this.load(token));
 		long ttl = redisTemplate.getExpire(token);// token有效期（剩余秒数 ）
 		if (ttl > 0 || ttl == -1) {// 兼容手机与PC端的token在有效期
 			newToken = this.generateToken(agent, user);
